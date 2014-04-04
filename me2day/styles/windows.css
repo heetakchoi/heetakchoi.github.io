@@ -1,0 +1,35 @@
+body{
+  font-family:"나눔고딕", "NanumGothic", "NanumGothicOTF", "맑은고딕", "Malgun Gothic", dotum, "Trebuchet MS", "Lucida Grande", "Tahoma","Helvetica","Arial",sans-serif;
+}
+* html body *{
+  font-family:"나눔고딕","NanumGothic","NanumGothicOTF", "맑은고딕", "Malgun Gothic", dotum,sans-serif;
+}
+
+input {
+  overflow:visible;
+  font-family: "나눔고딕", "NanumGothic", "NanumGothicOTF", "맑은고딕", "Malgun Gothic", dotum, "Trebuchet MS", "Lucida Grande", "Tahoma","Helvetica","Arial",sans-serif;
+}
+
+input[type=text] {
+  font-family: "나눔고딕", "NanumGothic", "NanumGothicOTF", "맑은고딕", "Malgun Gothic", dotum, "Trebuchet MS", "Lucida Grande", "Tahoma","Helvetica","Arial",sans-serif;
+}
+
+select {
+  font-family: "나눔고딕", "NanumGothic", "NanumGothicOTF", "맑은고딕", "Malgun Gothic", dotum, "Trebuchet MS", "Lucida Grande", "Tahoma","Helvetica","Arial",sans-serif;
+}
+
+textarea{
+  font-family:"나눔고딕", "NanumGothic", "NanumGothicOTF", "맑은고딕", "Malgun Gothic", dotum, "Trebuchet MS", "Lucida Grande", "Tahoma","Helvetica",sans-serif;
+}
+select {
+  font-family: "나눔고딕", "NanumGothic", "NanumGothicOTF", "맑은고딕", "Malgun Gothic", dotum, "Trebuchet MS", "Lucida Grande", "Tahoma","Helvetica","Arial",sans-serif;
+}
+
+option {
+  font-family: "나눔고딕", "NanumGothic", "NanumGothicOTF", "맑은고딕", "Malgun Gothic", dotum, "Trebuchet MS", "Lucida Grande", "Tahoma","Helvetica","Arial",sans-serif;
+}
+
+button {
+  overflow:visible;
+  font-family: "나눔고딕", "NanumGothic", "NanumGothicOTF", "맑은고딕", "Malgun Gothic", dotum, "Trebuchet MS", "Lucida Grande", "Tahoma","Helvetica","Arial",sans-serif;
+}

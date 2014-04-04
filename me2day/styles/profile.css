@@ -1,0 +1,10 @@
+﻿.profile{position:relative;width:60px;}
+.profile .profile_img{display:block;line-height:0;}
+.profile .profile_nickname,
+.profile .profile_id{display:block;width:100px;margin-left:-20px;margin-bottom:-5px;padding-top:7px;text-align:center;color:#888;font-size:12px;text-decoration:none;}
+.profile .profile_id{display:none;}
+.profile .action_link{position:absolute;left:-6px;top:-6px;}
+.profile .action_link .action_url,
+.profile .action_link .action_p_layer{display:none;}
+.profile .action_link .action_url{width:72px;height:72px;background:url(http://static1.me2day.com/images/stream/bg_pb_60.png?1384398001) no-repeat 0 0;}
+.profile .action_link .action_p_layer{position:absolute;right:1px;top:1px;}

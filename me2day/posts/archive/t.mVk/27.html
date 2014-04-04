@@ -1,0 +1,1277 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ko">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>eoh님의 돌아보는</title>
+    <link href="../../../styles/write_form.css" media="screen" rel="stylesheet" type="text/css">
+<link href="../../../styles/mystream_1.css" media="screen" rel="stylesheet" type="text/css">
+<link href="../../../styles/mystream_2.css" media="screen" rel="stylesheet" type="text/css">
+<link href="../../../styles/friends.css" media="screen" rel="stylesheet" type="text/css">
+<link href="../../../styles/common_layout.css" media="screen" rel="stylesheet" type="text/css">
+<link href="../../../styles/colorbox.css" media="screen" rel="stylesheet" type="text/css">
+<link href="../../../styles/topbar.css" media="screen" rel="stylesheet" type="text/css">
+<link href="../../../styles/post.css" media="screen" rel="stylesheet" type="text/css">
+<link href="../../../styles/profile.css" media="screen" rel="stylesheet" type="text/css">
+<link href="../../../styles/windows.css" media="screen" rel="stylesheet" type="text/css">
+<link href="../../../styles/safari.css" media="screen" rel="stylesheet" type="text/css">
+<style type="text/css" id="e1_style">
+.menu_navi ul li a {
+  display: block;
+  zoom: 1;
+  line-height: 34px;
+  font-size: 12px;
+  letter-spacing: -1px;
+  color: #666;
+  text-indent: 16px;
+  text-decoration: none;
+  background: url(../../../images/common/side_menu_common_bg.gif) no-repeat;
+}
+
+.c_topbar {
+  position: relative;
+  z-index: 10002;
+  margin-bottom: -2px;
+  padding-bottom: 2px;
+  background: url(../../../images/common/bg_c_topbar_myme2.png) repeat-x scroll 0 0;
+}
+
+.menu_navi ul li .sub_list {
+  padding: 6px 0 20px;
+  background: url(../../../images/stream/side_menu_bg_sub.png) no-repeat left bottom;
+}
+
+.content_breadcrum .parent {
+  float: left;
+  position: relative;
+  top: 6px;
+  display: inline-block;
+  height: 29px;
+  margin-right: 5px;
+  padding-right: 21px;
+  background: url(../../../images/friend_manage/bg_breadcrum1.gif) no-repeat 100% 5px;
+  font-weight: bold;
+  color: #888;
+}
+
+.content_header {
+  position: relative;
+  z-index: 4;
+  background: url(../../../images/stream/bg_mystream_head_tab_49.png) no-repeat scroll left top transparent;
+  color: #353535;
+  font-size: 12px;
+  font-weight: bold;
+  height: 51px;
+  line-height: 50px;
+  padding: 0 25px 0 24px;
+  text-align: center;
+}
+
+* html .content_header {
+  position: static;
+  background: none;
+  filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src=../../../images/stream/bg_mystream_head_tab_49.png, sizingMethod='crop');
+}
+
+.content_breadcrum .all_friend {
+  float: left;
+  position: relative;
+  top: 2px;
+  left: 4px;
+  display: inline-block;
+  height: 29px;
+  padding-right: 24px;
+  color: #565656;
+  text-decoration: none !important;
+}
+
+.content_breadcrum .all_friend .group_name {
+  display: inline-block;
+  height: 29px;
+  padding: 0 0 2px 8px;
+  background: transparent url(../../../images/friend_manage/bg_friend_cate_left.gif) no-repeat 0 0;
+  color: #333;
+  font-weight: bold;
+}
+
+.contents_wrap {
+  position: relative;
+  z-index: 1;
+  min-height: 583px;
+  _height: 583px;
+  padding-bottom: 50px;
+  background: url(../../../images/stream/bg_mystream_repeat_y.png) repeat-y;
+}
+
+.myst_marketing_notice {
+  padding: 15px 0 0 34px;
+  background: url(../../../images/stream/bg_mystream_repeat_y.png) repeat-y scroll 0 0 transparent;
+}
+
+.watch_header {
+  z-index: 2;
+  position: relative;
+  padding: 17px 0 0;
+  background: url(../../../images/stream/bg_mystream_repeat_y.png) repeat-y scroll 0 0 transparent;
+}
+
+.myst_notice {
+  padding: 0 5px 0;
+  background: url(../../../images/stream/bg_mystream_repeat_y.png) repeat-y scroll 0 0 transparent;
+}
+
+.event_banner_view {
+  background: url(../../../images/stream/bg_mystream_repeat_y.png) repeat-y;
+  height: auto;
+  padding: 0px 5px 0 5px;
+  z-index: 4;
+  font-size: 11px;
+}
+
+.setting_moa_view {
+  position: relative;
+  background: url(../../../images/stream/bg_mystream_repeat_y.png) repeat-y;
+  height: auto;
+  padding: 25px 34px 0 35px;
+  z-index: 4;
+  font-size: 11px;
+}
+
+.setting_moa {
+  position: relative;
+  padding: 11px 0 0;
+  background: url(../../../images/stream/bg_mystream_repeat_y.png) repeat-y;
+  font-size: 12px;
+}
+
+.mission_guide {
+  padding: 25px 0 0 37px;
+  background: url(../../../images/stream/bg_mystream_repeat_y.png) repeat-y scroll 0 0 transparent;
+  font-size: 11px;
+  zoom: 1;
+}
+
+.another_tag {
+  overflow: hidden;
+  zoom: 1;
+  position: relative;
+  padding: 15px 0 0 38px;
+  background: url(../../../images/stream/bg_mystream_repeat_y.png) repeat-y;
+  font-size: 12px;
+}
+
+.another_cal {
+  overflow: hidden;
+  zoom: 1;
+  position: relative;
+  padding: 15px 0 0 80px;
+  background: url(../../../images/stream/bg_mystream_repeat_y.png) repeat-y;
+  font-size: 12px;
+}
+
+.me_sub_title {
+  position: relative;
+  z-index: 1;
+  width: 829px;
+  overflow: hidden;
+  padding: 7px 0 9px;
+  background: url(../../../images/stream/bg_mystream_repeat_y.png) repeat-y;
+  zoom: 1;
+}
+
+.friends_view_type {
+  position: relative;
+  z-index: 2;
+  padding: 22px 35px 0 37px;
+  background: url(../../../images/stream/bg_mystream_repeat_y.png) repeat-y 0 0;
+}
+
+.single #friends_list {
+  overflow: hidden;
+  zoom: 1;
+  padding: 30px 38px 15px;
+  font-size: 14px;
+  background: url(../../../images/stream/bg_mystream_repeat_y2.png) repeat-y left top;
+}
+
+.single .single_wrap2 .contents_wrap {
+  overflow: hidden;
+  zoom: 1;
+  padding: 15px 0px 15px;
+  font-size: 14px;
+  background: url(../../../images/stream/bg_mystream_repeat_y2.png) repeat-y left top;
+}
+
+.single .single_wrap2 .common_result {
+  background-image: url(../../../images/stream/bg_mystream_repeat_y2.png)
+}
+
+.single .single_wrap2 .page_navi2 {
+  padding-bottom: 10px;
+  background: url(../../../images/stream/bg_mystream_repeat_y2.png) repeat-y left top;
+}
+
+.belt_bn {
+  padding: 0 5px 0;
+  background: url(../../../images/stream/bg_mystream_repeat_y.png) repeat-y scroll 0 0 transparent;
+}
+
+.activity_noti {
+  position: relative;
+  overflow: hidden;
+  background: url(../../../images/stream/bg_mystream_repeat_y.png) repeat-y;
+  height: auto;
+  padding: 25px 34px 0 35px;
+  z-index: 4;
+  font-size: 11px;
+}
+
+#announcement_section {
+  background: url(../../../images/stream/bg_mystream_repeat_y.png) repeat-y 0 0;
+}
+
+.common_result {
+  position: relative;
+  z-index: 2;
+  padding: 27px 35px 0 37px;
+  background: url(../../../images/stream/bg_mystream_repeat_y.png) repeat-y 0 0;
+}
+
+* html .common_result {
+  height: 46px;
+  zoom: 1;
+  background: none;
+  filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src=../../../, sizingMethod='scale');
+}
+
+.flashback_wrap .me_sub_title {
+  position: relative;
+  padding-top: 14px;
+  background: url(../../../images/stream/bg_mystream_repeat_y.png) repeat-y;
+  zoom: 1;
+}
+
+.btn_type_default_10 {
+  display: inline-block;
+  height: 25px;
+  margin: 0 2px;
+  padding: 0 0 0 2px !important;
+  overflow: visible;
+  vertical-align: top;
+  background: url(../../../images/button/btn_default_type1_l.png) no-repeat left top;
+  text-decoration: none;
+  cursor: pointer;
+  border: 0;
+}
+
+.setting_moa_view button {
+  width: auto;
+  height: 25px;
+  margin-left: 5px;
+  margin-right: 0;
+  padding-bottom: 0;
+  font-size: 12px;
+  letter-spacing: 0;
+  color: #777;
+  text-align: center;
+  border: 0;
+  background-image: url(../../../images/button/btn_default_type1_l.png);
+  vertical-align: baseline;
+}
+
+.btn_type_default_1 {
+  display: inline-block;
+  height: 25px;
+  margin: 0 2px;
+  padding: 0 0 0 2px !important;
+  overflow: visible;
+  vertical-align: top;
+  background: url(../../../images/button/btn_default_type1_l.png) no-repeat left top;
+  border: 0;
+  cursor: pointer;
+}
+
+.btn_type_default_1 .btn_inner {
+  position: relative;
+  top: 0;
+  display: inline-block;
+  height: 25px;
+  margin: 0 !important;
+  padding-right: 2px;
+  background: url(../../../images/button/btn_default_type1_r.png) no-repeat right top;
+  vertical-align: top;
+}
+
+.btn_type_default_1 .btn {
+  display: inline-block;
+  height: 25px;
+  margin: 0 !important;
+  padding: 0 5px;
+  vertical-align: top;
+  border: 0;
+  text-decoration: none !important;
+  text-align: center;
+  background: url(../../../images/button/btn_default_type1.png) repeat-x;
+}
+
+.btn_pressed {
+  cursor: default !important;
+  background-image: url(../../../images/button/btn_default_type1_l_pressed.png);
+}
+
+.btn_type_default_4 .btn_inner {
+  position: relative;
+  top: 0;
+  display: inline-block;
+  height: 25px;
+  margin: 0 !important;
+  padding-right: 2px;
+  background: url(../../../images/button/btn_default_type1_r.png) no-repeat right top;
+  vertical-align: top;
+}
+
+.btn_type_default_4 .btn {
+  display: inline-block;
+  height: 25px;
+  margin: 0 !important;
+  padding: 0 5px;
+  vertical-align: top;
+  border: 0;
+  text-decoration: none !important;
+  text-align: center;
+  background: url(../../../images/button/btn_default_type1.png) repeat-x;
+}
+
+.btn_type_default_4 .status {
+  display: inline-block;
+  width: auto !important;
+  height: 25px;
+  line-height: 25px;
+  padding-left: 17px;
+  background: url(../../../images/button/bul_metoo_1.gif) no-repeat scroll 0 center;
+}
+
+.btn_type_default_4 {
+  display: inline-block;
+  height: 25px;
+  margin: 0 2px 0 0;
+  padding: 0 0 0 2px !important;
+  overflow: visible;
+  vertical-align: top;
+  background: url(../../../images/button/btn_default_type1_l.png) no-repeat left top;
+  text-decoration: none;
+  cursor: pointer;
+  border: 0;
+}
+
+.contents_wrap .sec_post .metoo_count .count_plus {
+  display: inline-block;
+  margin-right: 5px;
+  padding: 0 0 0 19px;
+  white-space: nowrap;
+  font-weight: bold;
+  font-size: 12px;
+  color: #937cd8;
+  text-decoration: none;
+  background: url(../../../images/stream/bg_me2_count_l.gif) no-repeat left top;
+  cursor: pointer;
+  _cursor: hand;
+}
+
+.post .post_body .post_added .metoo_count .metoo_count_number {
+  display: inline-block;
+  height: 25px;
+  line-height: 25px;
+  margin: 0 0 0 -4px;
+  padding: 0 0 0 5px;
+  vertical-align: top;
+  color: #7b5fd4;
+  text-decoration: none;
+  white-space: nowrap;
+  background: url(../../../images/post/bg_me2_count_l.png) no-repeat 0 0;
+}
+
+.contents_wrap .sec_post .metoo_count .count_plus span {
+  display: inline-block;
+  height: 23px;
+  padding: 0 7px 0 3px;
+  line-height: 23px;
+  background: url(../../../images/stream/bg_me2_count_r.gif) no-repeat scroll right top;
+}
+
+.post .post_body .post_added .metoo_count .metoo_count_number .bg {
+  display: inline-block;
+  position: static;
+  width: auto;
+  height: 25px;
+  margin: 0;
+  line-height: 25px;
+  padding: 0 8px 0 6px;
+  vertical-align: top;
+  text-align: center;
+  font-family: tahoma;
+  font-size: 11px;
+  font-weight: bold;
+  background: url(../../../images/post/bg_me2_count_r.png) no-repeat 100% 0;
+}
+
+.no_more_no_navi {
+  padding-bottom: 11px;
+  background: url(../../../images/stream/bg_mystream_bottom2.png) no-repeat bottom right;
+}
+
+.more_view {
+  position: relative;
+  width: 100%;
+  height: 51px;
+  background: url(../../../images/stream/bg_mystream_bottom.png) no-repeat;
+}
+
+.page_navi {
+  position: relative;
+  width: 100%;
+  height: 11px;
+  overflow: visible;
+  background: url(../../../images/stream/bg_mystream_bottom2.png) no-repeat;
+}
+
+.page_navi2 {
+  position: relative;
+  z-index: 3;
+  width: 100%;
+  height: 11px;
+  background: url(../../../images/stream/bg_mystream_bottom2.png) no-repeat;
+}
+
+.single .more_view {
+  background: url(../../../images/stream/bg_mystream_bottom3.png) no-repeat left top;
+}
+
+.btn_type_strong_1 {
+  display: inline-block;
+  height: 33px;
+  vertical-align: top;
+  margin: 0 2px;
+  padding-left: 2px;
+  overflow: visible;
+  background: url(../../../images/button/btn_strong_type1_l.png) no-repeat left top;
+  cursor: pointer;
+  border: 0;
+}
+
+.btn_type_strong_5 {
+  display: inline-block;
+  height: 33px;
+  vertical-align: top;
+  margin: 0 2px;
+  padding-left: 2px;
+  overflow: visible;
+  background: url(../../../images/button/btn_strong_type1_l.png) no-repeat left top;
+  cursor: pointer;
+}
+
+.btn_type_strong_6 {
+  display: inline-block;
+  height: 33px;
+  vertical-align: top;
+  margin: 0 2px;
+  padding-left: 2px;
+  overflow: visible;
+  background: url(../../../images/button/btn_strong_type1_l.png) no-repeat left top;
+  cursor: pointer;
+}
+
+.btn_type_strong_1 .btn_inner {
+  position: relative;
+  top: 0;
+  display: inline-block;
+  height: 33px;
+  margin: 0;
+  padding-right: 2px;
+  background: url(../../../images/button/btn_strong_type1_r.png) no-repeat right top;
+  vertical-align: top;
+}
+
+.btn_type_strong_5 .btn_inner {
+  display: inline-block;
+  height: 33px;
+  margin: 0;
+  padding-right: 2px;
+  background: url(../../../images/button/btn_strong_type1_r.png) no-repeat right top;
+  vertical-align: top;
+}
+
+.btn_type_strong_6 .btn_inner {
+  display: inline-block;
+  height: 33px;
+  margin: 0;
+  padding-right: 2px;
+  background: url(../../../images/button/btn_strong_type1_r.png) no-repeat right top;
+  vertical-align: top;
+}
+
+.btn_type_strong_1 .btn {
+  display: inline-block;
+  height: 33px;
+  padding: 0 12px;
+  vertical-align: top;
+  text-align: center;
+  border: 0;
+  background: url(../../../images/button/btn_strong_type1.png) repeat-x left top;
+}
+
+.btn_type_strong_5 .btn {
+  display: inline-block;
+  height: 33px;
+  padding: 0 12px;
+  vertical-align: top;
+  text-align: center;
+  border: 0;
+  background: url(../../../images/button/btn_strong_type1.png) repeat-x left top;
+}
+
+.btn_type_strong_6 .btn {
+  display: inline-block;
+  height: 33px;
+  padding: 0 12px;
+  vertical-align: top;
+  text-align: center;
+  border: 0;
+  background: url(../../../images/button/btn_strong_type1.png) repeat-x left top;
+}
+
+.btn_type_strong_1.btn_me2 .status {
+  display: inline-block;
+  padding-left: 19px;
+  height: 33px;
+  line-height: 33px;
+  background: url(../../../images/button/bul_me2_w.png) no-repeat scroll 0 center;
+}
+
+.me2box.type_7 .me2_count.big {
+  height: 33px !important;
+  line-height: 32px !important;
+  padding-left: 6px;
+  font-size: 12px !important;
+  background: url(../../../images/discovery/bg_me2count5_l.png) no-repeat left top !important;
+}
+
+.me2box.type_7 .me2_count.big b {
+  height: 33px !important;
+  line-height: 32px !important;
+  font-size: 12px !important;
+  background: url(../../../images/discovery/bg_me2count5_r.png) no-repeat right top !important;
+}
+
+.pi_s .wrap {
+  display: inline-block;
+  width: 30px;
+  height: 30px;
+  background: url(../../../images/stream/fb_pf_s.png) no-repeat scroll 0 0;
+}
+
+.c_topbar .c_search_suggestion .ui-autocomplete li a .wrap:after {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  display: block;
+  width: 30px;
+  height: 30px;
+  background: url(../../../images/stream/fb_pf_s.png) no-repeat 0 0;
+}
+
+.profile_box_inner {
+  position: relative;
+  overflow: hidden;
+  zoom: 1;
+  padding: 33px 36px 25px;
+  background: url(../../../images/single/bg_profile_box_2.gif) no-repeat 60px top;
+}
+
+    .color_set1 {
+      background-color: #3D5668 !important;
+      border-color: #3D5668 !important;
+    }
+
+    /* 상단 띠 */
+    .color_set2 {
+      background-color: #5F86A1 !important;
+    }
+
+    /* 배경 색 */
+    .color_set3 {
+      background-color: #FFFFFF !important;
+    }
+
+    /* 프로필 테두리 */
+    .color_set4,
+    .color_set4 a,
+    .color_set4 p {
+      color:#FFFFFF !important;
+    }
+
+    /* 모든 텍스트 */
+    .color_set5, a.color_set5, .color_set5 a {
+      color:  !important;
+    }
+
+    .skin_btn a.text_link {
+      text-decoration: none;
+      color: #FFFFFF;
+      font-size: 12px;
+      border: 1px solid #FFFFFF;
+      padding: 5px;
+    }
+
+.post .post_body .post_token,
+.post .post_body .post_text_body,
+.post .post_body .pingback_container .post .post_body .post_token,
+.post .post_body .pingback_container .post .post_body .post_text_body,
+.post .post_body .post_added, .type_attached,
+.post .post_body .pingback_container .post .post_body .post_added {
+  margin-left: 50px;
+}
+
+.map_location_alt {
+  padding: 0px 0px 10px 10px;
+  font-size: 13px;
+}
+
+</style>
+    <script src="../../../scripts/jquery-1.10.2.min.js"></script>
+<script>
+  function showProfilePopup(url, frame, x, y) {
+    $(frame).find('iframe').attr('src', url);
+    $(frame).css('left', x);
+    $(frame).css('top', y);
+    $(frame).css('z-index', 100);
+    $(frame).css('display', 'inline');
+    $(frame).css("position", "absolute");
+  }
+
+  function hideProfilePopup() {
+    var frame = "#profile_popup_frame";
+    $(frame).find('iframe').attr('src', "about:blank");
+    $(frame).css('display', 'none');
+  }
+
+  function getPostIdSelector(url) {
+    return escapeSelector(removeExt(url.substr(url.lastIndexOf('/') + 1)));
+  }
+
+  function escapeSelector(selector) {
+    return selector.replace(/\./g, "\\.");
+  }
+
+  function removeExt(filename) {
+    return filename.replace(/\.html$/, '')
+  }
+
+  function toggle(selector) {
+    if ($(selector).is(":visible")) {
+      $(selector).hide();
+    } else {
+      $(selector).show();
+    }
+  }
+
+  function loadUrl(url, placeHolder) {
+    $.get(url, function (data) {
+      $(placeHolder).replaceWith(data);
+    });
+  }
+
+  function selectTab(group, selected) {
+    $(selected).show();
+    var tabs = $(group).not(selected);
+    for (var index = 0; index < tabs.length; index++) {
+      $(tabs[index]).hide();
+    }
+  }
+
+  function hideNotFistPhotos(selector) {
+    var photoBoxes = $(selector);
+    for(var boxIndex = 0; boxIndex < photoBoxes.length; boxIndex++) {
+      var notFristPhotos = $(photoBoxes[boxIndex]).find(".photo").not(":first");
+      for(var photoIndex = 0; photoIndex < notFristPhotos.length; photoIndex++) {
+        $(notFristPhotos[photoIndex]).hide();
+      }
+    }
+  }
+
+  function bindProfilePopup() {
+    $(".profile_popup").on("click", function (event) {
+      event.preventDefault();
+      var frame = "#profile_popup_frame";
+      showProfilePopup( $(this).attr('href'), frame, event.pageX, event.pageY);
+    })
+  }
+
+  function bindMorePostListBtn(button, link, placeHolder) {
+    $(button).on("click", function (event) {
+      event.preventDefault();
+      loadUrl($(link).attr('href'), placeHolder);
+    });
+  }
+
+  function bindTabs(tabSelector) {
+    $(tabSelector).on("click", function (event) {
+      event.preventDefault();
+      var group = ".group_" + escapeSelector($(this).attr("data-rel"));
+      var selected = escapeSelector($(this).attr("href"));
+      selectTab(group, selected);
+    })
+  }
+
+  function bindToggle() {
+    $(".metoo_toggle").on("click", function (event) {
+      event.preventDefault();
+      var id = "#metoo_" + getPostIdSelector($(this).attr('href'));
+      toggle(id);
+    });
+
+    $(".comment_toggle").on("click", function (event) {
+      event.preventDefault();
+      var id = "#comment_" + getPostIdSelector($(this).attr('href'));
+      toggle(id);
+    });
+  }
+
+  function bindNoLink() {
+    $('.no_link').click(function(event)
+    {
+      event.preventDefault();
+    });
+  }
+</script>
+  <script>
+    $(document).ready(function () {
+      hideNotFistPhotos(".photo_box");
+      bindTabs(".multi_photo_thumb .img_link");
+      bindToggle();
+      bindNoLink();
+    });
+  </script>
+</head>
+<body class="skin200">
+<div class="skin_body color_set1 color_set2" id="skin_body_layer"></div>
+<div id="mystream">
+    <div class="c_topbar" id="id_gnb_topbar">
+  <div class="c_topbar_wrap">
+    <h1 class="s_logo">
+      <img src="../../../images/common/c_me2_logo_wt.png" alt="me2day" width="96" height="23" id="image_top_logo_img">
+    </h1>
+  </div>
+</div>
+  <div id="container">
+    <div class="custom_skin_contents2" style="background-image:url(../../../img/images/user/endofhope/skin.png);"></div>
+    <div class="side_mn" id="side_bar">
+      <div class="whoareyou">
+  <div class="profile_image color_set3">
+    <div class="image_box">
+      <a >
+        <img class="profile_img" src="../../../img/images/user/endofhope/profile.png" alt="eoh" height="77" width="77">
+      </a>
+    </div>
+  </div>
+  <div class="user_info">
+    <h2 class="color_set4"><a id="user_info_nickname" >eoh</a></h2>
+    <div class="user_intro" id="user_intro_box">
+      <p id="my_description" class="color_set5">
+        Shut up, Sit down and Relax - Vercetti, Tommy
+      </p>
+    </div>
+  </div>
+</div>
+      <div class="menu_navi" id="sidebar_menu_navi">
+  <ul id="accordion">
+    <li class="mystream_link toggle">
+      <a class="mystream_link land">나는</a>
+      <div>
+        <ul class="sub_list">
+          <li><a href="../../../posts/all/t.mVk/index.html">모든글</a></li>
+          <li><a href="../../../posts/archive/t.mVk/index.html">돌아보는</a></li>
+          <li><a href="../../../posts/photo/t.mVk/index.html">포토</a></li>
+          <li><a href="../../../posts/theme/t.mVk/index.html">글감</a></li>
+        </ul>
+      </div>
+    </li>
+    <li class="mystream_link">
+      <a class="mystream_link land">친구들과</a>
+      <div>
+        <ul class="sub_list">
+          <li><a href="../../../streams/withfriends/t.mVk/index.html">모든글</a></li>
+          <li><a href="../../../streams/received/t.mVk/index.html">받은댓글</a></li>
+          <li><a href="../../../streams/mentioned/t.mVk/index.html">소환받은글</a></li>
+        </ul>
+      </div>
+    </li>
+    <li class="mystream_link">
+      <a class="mystream_link land" href="../../../stats/t.mVk/index.html">활동정보</a>
+    </li>
+  </ul>
+</div>
+
+    </div>
+    <div class="section_wrap">
+      <div class="content_header">
+        <div class="content_breadcrum">
+          <h2 class="parent">나는</h2>
+			<span class="all_friend" id="content_breadcrum_title">
+              <button class="group_name" type="button">돌아보는</button>
+			</span>
+        </div>
+      </div>
+      <div class="contents_wrap flashback_wrap" id="container_contents">
+            <div class="list_view">
+    <h3 class="sec_month"><strong>APR</strong> 2009</h3>
+    <div class="monthly_view">
+      <ul class="archive_daily" id="2013-10-14">
+        <li class="daily_date">
+          <span class="day_h"><a >29일</a></span>
+          <ul class="daily_summ">
+            <li class="daily_posts">
+              <p class="post">
+                <label>
+                          <a href="http://phpschool.com/gnuboard4/data/cheditor/0904/2007102102034_dongchan27_pchw3984_copy2.jpg">라면 끓일 때 순서</a>
+
+                             를 지킵시다.
+
+                </label>
+                <span class="tags">after_water_plz humor</span>
+                <span class="perm"><a href="../../../post/p.kouM.mVk.html"><img src="http://static2.me2day.com/images/stream/ico_permalink.gif?1387189302" width="9" height="9" alt="퍼머링크"></a></span>
+              </p>
+            </li>
+            <li class="daily_posts">
+              <p class="post">
+                <label>
+                          <a href="http://www.idg.co.kr/newscenter/common/newCommonView.do?newsId=55520">아마존 킨들 2 vs. 소니 e북 리더 비교해보니</a>
+
+                             으윽 지름신께서 오시는 소리가 들리는구나~
+
+                </label>
+                <span class="tags">지름신</span>
+                <span class="perm"><a href="../../../post/p.kotI.mVk.html"><img src="http://static2.me2day.com/images/stream/ico_permalink.gif?1387189302" width="9" height="9" alt="퍼머링크"></a></span>
+              </p>
+            </li>
+          </ul>
+        </li>
+      </ul>
+      <ul class="archive_daily" id="2013-10-14">
+        <li class="daily_date">
+          <span class="day_h"><a >28일</a></span>
+          <ul class="daily_summ">
+            <li class="daily_posts">
+              <p class="post">
+                <label>
+                            아이폰이 나와야 미투 포토를 올릴 텐데&hellip; 오늘 AS 맡긴 카메라가 고쳐져야 콩이 사진을 올릴 텐데&hellip; 이놈의 로또가 맞아야 회사 근처로 집을 옮길 텐데&hellip; 훗~ 할 수 있는 거나 열심히 하자.
+
+                </label>
+                <span class="tags">just_do_it</span>
+                <span class="perm"><a href="../../../post/p.kmjI.mVk.html"><img src="http://static2.me2day.com/images/stream/ico_permalink.gif?1387189302" width="9" height="9" alt="퍼머링크"></a></span>
+              </p>
+            </li>
+            <li class="daily_posts">
+              <p class="post">
+                <label>
+                          <a href="http://www.endofhope.com/img/DSC07996.JPG">아내를 모자로 착각한 남자</a>
+
+                             내가 나라는 것을 인식할 수 있음을 얼마나 감사하게 생각하며 살아야 하는가. 인간성이란 과연 무엇인가를 다시 한번 생각할 기회.
+
+                </label>
+                <span class="tags">me2book</span>
+                <span class="perm"><a href="../../../post/p.kmic.mVk.html"><img src="http://static2.me2day.com/images/stream/ico_permalink.gif?1387189302" width="9" height="9" alt="퍼머링크"></a></span>
+              </p>
+            </li>
+            <li class="daily_posts">
+              <p class="post">
+                <label>
+                            콩이가 이상하게 앞 한 음절만 발음하는 버릇이 있다 사~ (사과), 따~(딸기). 어제 오징어는 오지~ 라고 하더라. 그래서 이제 말문이 트이겠구나 하던중에 집사람이 오징어는 영어로 뭐야 라고 급질문을 날렸다. 스쿼~ 라고 대충 얼머무렸는데 방금 찾아봤다. squid
+
+                </label>
+                <span class="tags">english 오징어 cuttlefish inkfish</span>
+                <span class="perm"><a href="../../../post/p.kktM.mVk.html"><img src="http://static2.me2day.com/images/stream/ico_permalink.gif?1387189302" width="9" height="9" alt="퍼머링크"></a></span>
+              </p>
+            </li>
+          </ul>
+        </li>
+      </ul>
+      <ul class="archive_daily" id="2013-10-14">
+        <li class="daily_date">
+          <span class="day_h"><a >27일</a></span>
+          <ul class="daily_summ">
+            <li class="daily_posts">
+              <p class="post">
+                <label>
+                            생각없이 google 홈페이지로 갔다가 발견했다. 
+
+                          <a href="http://www.endofhope.com/img/google.GIF">google img</a>
+
+                             이건 뭘까? 잠시 생각했다. 결론은 Samuel Morse&#39;s Birthday
+
+                </label>
+                <span class="tags">google joke</span>
+                <span class="perm"><a href="../../../post/p.khJE.mVk.html"><img src="http://static2.me2day.com/images/stream/ico_permalink.gif?1387189302" width="9" height="9" alt="퍼머링크"></a></span>
+              </p>
+            </li>
+            <li class="daily_posts">
+              <p class="post">
+                <label>
+                          <a href="http://www.endofhope.com/img/DSC08300.jpg">허삼관 매혈기</a>
+
+                             한번 읽어 봄이 어떠한가. 아버지란 건 바로 이런 것이 아닐까.
+
+                </label>
+                <span class="tags">me2book</span>
+                <span class="perm"><a href="../../../post/p.kedA.mVk.html"><img src="http://static2.me2day.com/images/stream/ico_permalink.gif?1387189302" width="9" height="9" alt="퍼머링크"></a></span>
+              </p>
+            </li>
+          </ul>
+        </li>
+      </ul>
+      <ul class="archive_daily" id="2013-10-14">
+        <li class="daily_date">
+          <span class="day_h"><a >25일</a></span>
+          <ul class="daily_summ">
+            <li class="daily_posts">
+              <p class="post">
+                <label>
+                          <a href="http://www.hani.co.kr/arti/economy/economy_general/351553.html">&lsquo;사이버 망명&rsquo;이 는다</a>
+
+                             는 기사가 떴다. 외국 기업의 서비스를 쓴다고 망명 이라고까지 하는 건 오버지만 정말 문제는 내국 기업 역차별이란 것 아닐까? 경기 부양을 위해 뭐든 한다고 하지만 언로 통제가 더 시급한 일이라 생각하나 보다.
+
+                </label>
+                <span class="tags">business_friendly 구글_반자이</span>
+                <span class="perm"><a href="../../../post/p.kW5w.mVk.html"><img src="http://static2.me2day.com/images/stream/ico_permalink.gif?1387189302" width="9" height="9" alt="퍼머링크"></a></span>
+              </p>
+            </li>
+          </ul>
+        </li>
+      </ul>
+      <ul class="archive_daily" id="2013-10-14">
+        <li class="daily_date">
+          <span class="day_h"><a >24일</a></span>
+          <ul class="daily_summ">
+            <li class="daily_posts">
+              <p class="post">
+                <label>
+                            누구도 피해갈수 없다는 
+
+                          <a href="http://kldp.org/node/104873">우분투 9.04 폰트문제</a>
+
+                             를 미리 봤기 때문에 바로 쉭쉭 해결 ㅎㅎ
+
+                </label>
+                <span class="tags">ubuntu 9.04 aa</span>
+                <span class="perm"><a href="../../../post/p.kQuM.mVk.html"><img src="http://static2.me2day.com/images/stream/ico_permalink.gif?1387189302" width="9" height="9" alt="퍼머링크"></a></span>
+              </p>
+            </li>
+            <li class="daily_posts">
+              <p class="post">
+                <label>
+                          <a href="http://www.ubuntu.com">Ubuntu</a>
+
+                             9.04님 자동 업그레이드로 영접중. 삭제할 패키지 10, 새로 설치할 패키지 111, 업그레이드 할 패키지 1000 이라고 나와서 2-7-8 스러운 숫자에 깜놀!
+
+                </label>
+                <span class="tags">ubuntu 9.04 자동업그레이드 이진법</span>
+                <span class="perm"><a href="../../../post/p.kQtU.mVk.html"><img src="http://static2.me2day.com/images/stream/ico_permalink.gif?1387189302" width="9" height="9" alt="퍼머링크"></a></span>
+              </p>
+            </li>
+          </ul>
+        </li>
+      </ul>
+      <ul class="archive_daily" id="2013-10-14">
+        <li class="daily_date">
+          <span class="day_h"><a >22일</a></span>
+          <ul class="daily_summ">
+            <li class="daily_posts">
+              <p class="post">
+                <label>
+                            Emacs shell 에서 ls 결과가 ansi color 코드가 좌우로 붙어 아주 아름답게 보이는 것 아닌가. 급 구글링 후 color 를 켰기 때문이란 걸 확인 후 
+
+                          <a href="http://www.nerdgene.com/emacs-shell-ansi-colors">emacs 에서 color 를 보이도록 수정</a>
+
+                             하는 방식으로 바꿔서 해결.
+
+                </label>
+                <span class="tags">emacs 아직도_헤맨다</span>
+                <span class="perm"><a href="../../../post/p.kGE8.mVk.html"><img src="http://static2.me2day.com/images/stream/ico_permalink.gif?1387189302" width="9" height="9" alt="퍼머링크"></a></span>
+              </p>
+            </li>
+            <li class="daily_posts">
+              <p class="post">
+                <label>
+                            아무리 청해도 잠이 오지 않아 뒤척이다 일어났다. 먹다 남은 파전에 맥주 한잔 하고 밖을 보니 이미 어둠이 가시고 있다. 어제 대화중에 우연히 나이 이야기가 나왔는데 솔직히 난 내가 그렇게 나이를 많이 먹은 줄 몰랐다. 나도 모르게 스멀스멀 세월이 도망가고 있었구나.
+
+                </label>
+                <span class="tags">불면 나이 한탄</span>
+                <span class="perm"><a href="../../../post/p.kExo.mVk.html"><img src="http://static2.me2day.com/images/stream/ico_permalink.gif?1387189302" width="9" height="9" alt="퍼머링크"></a></span>
+              </p>
+            </li>
+            <li class="daily_posts">
+              <p class="post">
+                <label>
+                            Oracle 의 관리하에서 
+
+                          <a href="http://java.sun.com">Java</a>
+
+                             는 어디로 갈까? 
+
+                          <a href="http://openjdk.java.net">OpenJDK</a>
+
+                             와 같은 기반에 대한 오픈소스화가 지금처럼 support를 꾸준히 받을 수 있을까? 
+
+                          <a href="http://picasaweb.google.com/endofhope">작년에 갔던 JavaOne</a>
+
+                             이 Sun 의 이름을 건 마지막 자바원이 되어 버렸구나.
+
+                </label>
+                <span class="tags">Java Sun Oracle JavaOne</span>
+                <span class="perm"><a href="../../../post/p.kEn4.mVk.html"><img src="http://static2.me2day.com/images/stream/ico_permalink.gif?1387189302" width="9" height="9" alt="퍼머링크"></a></span>
+              </p>
+            </li>
+          </ul>
+        </li>
+      </ul>
+      <ul class="archive_daily" id="2013-10-14">
+        <li class="daily_date">
+          <span class="day_h"><a >21일</a></span>
+          <ul class="daily_summ">
+            <li class="daily_posts">
+              <p class="post">
+                <label>
+                            Oracle 이 SUN 을 사 버렸다. 썬은 왠지 좀 느슨하고 자유로운 느낌을 주어서, 존재하고 있다는 것 자체로도 의미가 있는 회사였는데. 비평가에게야 썬의 실책을 들기에 열 손가락이 부족하겠지만, romantic에겐 세상의 여유로움이 또 하나 줄어들었다는 느낌이다.
+
+                </label>
+                <span class="tags">Sun Oracle Java</span>
+                <span class="perm"><a href="../../../post/p.kD1I.mVk.html"><img src="http://static2.me2day.com/images/stream/ico_permalink.gif?1387189302" width="9" height="9" alt="퍼머링크"></a></span>
+              </p>
+            </li>
+          </ul>
+        </li>
+      </ul>
+      <ul class="archive_daily" id="2013-10-14">
+        <li class="daily_date">
+          <span class="day_h"><a >16일</a></span>
+          <ul class="daily_summ">
+            <li class="daily_posts">
+              <p class="post">
+                <label>
+                            아침에 콩순이 30분간 놀이방 맛뵈기 행사가 있었다. 약간 어리버리하긴 했지만 잘 적응하는 것도 같다. 내일부터 적응 시간을 점점 늘이기로 했다. 그리곤 퇴촌 스파 그린으로 몸 불리기 행사를 했다. 콩이가 처음엔 물 싫어하는 것 같더니 좀 적시고 난 후부턴 좋아하더라.
+
+                </label>
+                <span class="tags">콩순이 놀이방 적응 온천</span>
+                <span class="perm"><a href="../../../post/p.jrUk.mVk.html"><img src="http://static2.me2day.com/images/stream/ico_permalink.gif?1387189302" width="9" height="9" alt="퍼머링크"></a></span>
+              </p>
+            </li>
+            <li class="daily_posts">
+              <p class="post">
+                <label>
+                            어제 출발 전 놀이방도 알아봤다. 단지 내 영아 전문 놀이방이었는데 의외로 보육 선생도 많고 나쁘지 않더라. 오늘부터 30분씩 시간을 늘려가며 적응 기간을 가지고, 콩이가 잘 적응하면 맡겨볼까 한다. 언제까지 장모님 신세를 질 수도 없으니 말이다. 콩이도 이젠 사회인.
+
+                </label>
+                <span class="tags">콩이_세상으로</span>
+                <span class="perm"><a href="../../../post/p.jnPo.mVk.html"><img src="http://static2.me2day.com/images/stream/ico_permalink.gif?1387189302" width="9" height="9" alt="퍼머링크"></a></span>
+              </p>
+            </li>
+            <li class="daily_posts">
+              <p class="post">
+                <label>
+                            어제 주말에 못간 동물원을 가려 나섰더니 비가 좌르륵 쏟아지는 바람에 코엑스 아쿠아리움으로 급 변경. 두시간 가까이 세상의 온갖 괘기들을 눈으로 쩝쩝. 콩순이는 상어 보고 &ldquo;무~무~&rdquo; (무섭다고). 돌아오는 길에 결혼기념일 겸 콩이 생일 축하 촛불 점화및 케잌 냠냠.
+
+                </label>
+                <span class="tags">물고기 생일 결혼기념일</span>
+                <span class="perm"><a href="../../../post/p.jnNg.mVk.html"><img src="http://static2.me2day.com/images/stream/ico_permalink.gif?1387189302" width="9" height="9" alt="퍼머링크"></a></span>
+              </p>
+            </li>
+            <li class="daily_posts">
+              <p class="post">
+                <label>
+                            콩순이의 두번째 생신을 축하합니다.
+
+                </label>
+                <span class="tags">장하다_콩아 생일</span>
+                <span class="perm"><a href="../../../post/p.jnMs.mVk.html"><img src="http://static2.me2day.com/images/stream/ico_permalink.gif?1387189302" width="9" height="9" alt="퍼머링크"></a></span>
+              </p>
+            </li>
+          </ul>
+        </li>
+      </ul>
+      <ul class="archive_daily" id="2013-10-14">
+        <li class="daily_date">
+          <span class="day_h"><a >12일</a></span>
+          <ul class="daily_summ">
+            <li class="daily_posts">
+              <p class="post">
+                <label>
+                            한 이주일 전에 카메라가 고장났는데 아직 고치질 않아서 오늘의 그 장한 광경을 남기지 못했다. 요즈음 콩순이가 얼마나 예쁜짓을 하는지, 학교 벚꽃이 얼마나 장관이었는지, 아아 집에 한주일 있으면서 딴건 다 고치고 AS 불렀는데 이놈의 카메라만 빠뜨린게 무쟈게 후회된다.
+
+                </label>
+                <span class="tags">카메라 bare necessity</span>
+                <span class="perm"><a href="../../../post/p.jUug.mVk.html"><img src="http://static2.me2day.com/images/stream/ico_permalink.gif?1387189302" width="9" height="9" alt="퍼머링크"></a></span>
+              </p>
+            </li>
+            <li class="daily_posts">
+              <p class="post">
+                <label>
+                            일요일인데도 불구하고 학교에 의외로 얘들이 상당히 많았다. 알고보니 내일부터 시험 기간이라고. 갑자기 다시 한번 학교를 다닌다면 열심히 공부하게 될까? 란 생각이 스쳐 지나갔다. 뭐 먹여살릴 가족이 있는 주제에 참으로 느긋한 망상이로세~
+
+                </label>
+                <span class="tags">공부 time_to_market</span>
+                <span class="perm"><a href="../../../post/p.jUto.mVk.html"><img src="http://static2.me2day.com/images/stream/ico_permalink.gif?1387189302" width="9" height="9" alt="퍼머링크"></a></span>
+              </p>
+            </li>
+            <li class="daily_posts">
+              <p class="post">
+                <label>
+                            주차비가 아까워 학교 후문 바로 밑에 차 박아 놓고 등반 시작, 바람이라도 불성 싶으면 벛꽃닢들이 눈보라를 일으키고 약간 더운 듯 했으나 바람은 시원했다. 간만에 학관 밥 먹었는데 2500 원 하더라. 그 옛날 학관 밥 550원이었던 것 같은데. 나만 변한게 아니더라.
+
+                </label>
+                <span class="tags">학교 벚꽃 학관밥</span>
+                <span class="perm"><a href="../../../post/p.jUsw.mVk.html"><img src="http://static2.me2day.com/images/stream/ico_permalink.gif?1387189302" width="9" height="9" alt="퍼머링크"></a></span>
+              </p>
+            </li>
+            <li class="daily_posts">
+              <p class="post">
+                <label>
+                            온가족이 9시에 일어나 서울대공원 동물원으로 출동. 얼마나 막히는지 11시 반까지 주차장 문짝도 못 보고, 콩순이는 도시락 차에서 다 까먹었다. 기다리다 지쳐 결국 학교 벚꽃 구경으로 목적지 변경.
+
+                </label>
+                <span class="tags">유원지는_평일날_가자</span>
+                <span class="perm"><a href="../../../post/p.jUsI.mVk.html"><img src="http://static2.me2day.com/images/stream/ico_permalink.gif?1387189302" width="9" height="9" alt="퍼머링크"></a></span>
+              </p>
+            </li>
+          </ul>
+        </li>
+      </ul>
+      <ul class="archive_daily" id="2013-10-14">
+        <li class="daily_date">
+          <span class="day_h"><a >9일</a></span>
+          <ul class="daily_summ">
+            <li class="daily_posts">
+              <p class="post">
+                <label>
+                          <a href="http://www.hani.co.kr/arti/science/science_general/348852.html">1차원과 2차원 구분하는 기준 찾았다</a>
+
+                             그런데 내가 아는 
+
+                          <a href="http://ko.wikipedia.org/wiki/%EC%B0%A8%EC%9B%90">차원</a>
+
+                             이거 말고 내가 모르는 딴 차원을 말하는 건가? 그야말로 사차원 이야기로세.
+
+                </label>
+                <span class="tags">math 차원이_다르다</span>
+                <span class="perm"><a href="../../../post/p.jGOM.mVk.html"><img src="http://static2.me2day.com/images/stream/ico_permalink.gif?1387189302" width="9" height="9" alt="퍼머링크"></a></span>
+              </p>
+            </li>
+          </ul>
+        </li>
+      </ul>
+      <ul class="archive_daily" id="2013-10-14">
+        <li class="daily_date">
+          <span class="day_h"><a >8일</a></span>
+          <ul class="daily_summ">
+            <li class="daily_posts">
+              <p class="post">
+                <label>
+                            피아노를 거실로 옮겼다. 이사올 때 건반 뚜껑이 떨어져서 구석에 처박아 놓았는데 그제 AS 신청 했더니 전화가 와서 어떻게 고치는지 물어봤다. 먼지 닦고 뚜껑 열고 건반뚜껑 붙이고 옮기느라 힘들었지만 간만에 피아노를 치니 좋더라. (근데 건반 하나 먹통이라 급 시무룩)
+
+                </label>
+                <span class="tags">piano</span>
+                <span class="perm"><a href="../../../post/p.jBqY.mVk.html"><img src="http://static2.me2day.com/images/stream/ico_permalink.gif?1387189302" width="9" height="9" alt="퍼머링크"></a></span>
+              </p>
+            </li>
+            <li class="daily_posts">
+              <p class="post">
+                <label>
+                            영화 원작의 뮤지컬을 소개하는 프로에서 연출자에게 원작 영화와 다른 점을 묻자 &ldquo;뮤지컬은 노래로 진행되고, 영화는 스크린에서 보는 반면 뮤지컬은 직접 볼 수 있다&rdquo; 라고 말하더라. 과연 뮤지컬과 영화의 다른 점이 궁금해서 질문했을까? 아님 엿먹이려고 이렇게 대답했을까?
+
+                </label>
+                <span class="tags">궁금하다</span>
+                <span class="perm"><a href="../../../post/p.jBTk.mVk.html"><img src="http://static2.me2day.com/images/stream/ico_permalink.gif?1387189302" width="9" height="9" alt="퍼머링크"></a></span>
+              </p>
+            </li>
+            <li class="daily_posts">
+              <p class="post">
+                <label>
+                            콩이랑 집에 있다 보면 EBS만 보게 되는데 정선희가 진행하는 어린이 프로가 있더라. 혼자서 뭔가 깡통으로 만드는 내용이었는데, 내가 그렇게 봐서 그런지 모르겠지만 왠지 흥이 나지 않고 슬퍼 보였다. 어쨋든 지금부터의 그녀의 인생은 평탄하기를.
+
+                </label>
+                <span class="tags">타인의_상처</span>
+                <span class="perm"><a href="../../../post/p.jBRo.mVk.html"><img src="http://static2.me2day.com/images/stream/ico_permalink.gif?1387189302" width="9" height="9" alt="퍼머링크"></a></span>
+              </p>
+            </li>
+            <li class="daily_posts">
+              <p class="post">
+                <label>
+                            금일 콩님께선 아침엔 베이컨 반찬을 마다하고 멸치 반찬으로 밥 반공기 뚝딱 하시었고 실컷 나가서 노시다가 피자 한판 사가지고 와서 한조각 뚝딱 하시고선 현제 편안히 쇼팽을 들으시며 오수를 즐기고 계십니다. 아멘, 알라 아크바르, 나마스떼, 기타 등등.
+
+                </label>
+                <span class="tags">예쁘구나_콩이</span>
+                <span class="perm"><a href="../../../post/p.jBP0.mVk.html"><img src="http://static2.me2day.com/images/stream/ico_permalink.gif?1387189302" width="9" height="9" alt="퍼머링크"></a></span>
+              </p>
+            </li>
+          </ul>
+        </li>
+      </ul>
+      <ul class="archive_daily" id="2013-10-14">
+        <li class="daily_date">
+          <span class="day_h"><a >7일</a></span>
+          <ul class="daily_summ">
+            <li class="daily_posts">
+              <p class="post">
+                <label>
+                            냉장고 얼음이 잘 안 나와서 서비스를 불렀다. 출장비 2만원에 부품비 5만 천원. 제너럴 일렉트릭, 요즘 힘들다며? 왜 힘든 줄 알아? 부품값이 너무 비싸. 3년 된 냉장고가 고장이 난 것도 문제지만 고칠때 마음 단단히 먹고 고쳐야 되면 다음에 또 GE 사겠어?
+
+                </label>
+                <span class="tags">GE_요즘_어렵다며</span>
+                <span class="perm"><a href="../../../post/p.i7S0.mVk.html"><img src="http://static2.me2day.com/images/stream/ico_permalink.gif?1387189302" width="9" height="9" alt="퍼머링크"></a></span>
+              </p>
+            </li>
+            <li class="daily_posts">
+              <p class="post">
+                <label>
+                            나가자고 양말을 신겨 주니 콩이도 내 발에 양말을 신겨 주려고 한다. 이런 콩만한 것이 예쁜짓 할 때 마다 귀여워 죽겠다.
+
+                </label>
+                <span class="tags">예쁘구나_콩이</span>
+                <span class="perm"><a href="../../../post/p.i7RY.mVk.html"><img src="http://static2.me2day.com/images/stream/ico_permalink.gif?1387189302" width="9" height="9" alt="퍼머링크"></a></span>
+              </p>
+            </li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+  </div>
+<div id="next-post-list" style="display:none;">
+  <a id="next-post-list-link" href="BIH83wrA.p.i7RY.mVk.html">more</a>
+</div>
+      </div>
+      <div class="more_view">
+          <div class="page_nate kor">
+          <a href="20.html" class="btn_prev">이전</a>
+      <span class="page_num">
+            <a href="21.html" >21</a>
+            <a href="22.html" >22</a>
+            <a href="23.html" >23</a>
+            <a href="24.html" >24</a>
+            <a href="25.html" >25</a>
+            <a href="26.html" >26</a>
+            <a href="27.html" class="on">27</a>
+            <a href="28.html" >28</a>
+      </span>
+</div>
+      </div>
+    </div>
+  </div>
+</div>
+<div id="footer" class="color_set2 color_set4">
+  <div class="footer_contents" style="position:relative">
+    <address>copyright © NAVER Corp.</address>
+  </div>
+</div>
+<iframe id="profile_popup_frame" width="358" height="285" frameBorder="0" src="about:blank" style="display: none;"></iframe>
+</body>
+</html>

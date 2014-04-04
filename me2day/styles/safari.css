@@ -1,0 +1,10 @@
+/* 미투 버튼 스타일 */
+.entry .post_image dd.count {
+	padding: 9px 0 9px 0;
+	font-size:12px;
+	text-align: center;
+}
+
+/* post renew */
+.contents_wrap .sec_post .metoo_count .metoo_count_number{top:-1px;}
+.function_link_box .function_link .comment_list_toggle .comment_count{top:-1px;}

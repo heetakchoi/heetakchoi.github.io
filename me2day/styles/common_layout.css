@@ -1,0 +1,1512 @@
+﻿
+/*******************************************************/
+/* Container - common layout */
+/*******************************************************/
+.skip_navigation{position:absolute;top:0;left:0;z-index:10004;width:100%;padding:0;}
+/*.skip_navigation .sn_id_gnb_topbar{position:absolute;width:200px;height:20px;left:50px;top:50px;}
+.skip_navigation .sn_container,
+.skip_navigation .sn_id_me2home_body_wrap{position:absolute;width:200px;height:150px;left:50px;top:80px;}
+.skip_navigation .sn_side_bar,
+.skip_navigation .sn_side_menu{position:absolute;width:50px;height:150px;left:50px;top:80px;}
+.skip_navigation .sn_me2write_box{position:absolute;width:150px;height:40px;left:100px;top:80px;}
+.skip_navigation .sn_container_contents{position:absolute;width:150px;height:110px;left:100px;top:120px;}
+.skip_navigation .sn_footer{position:absolute;width:200px;height:20px;left:50px;top:230px;}*/
+.skip_navigation li{position:absolute;left:0;top:0;width:100%;height:0;overflow:visible;}
+.skip_navigation a{position:relative;z-index:-1;left:-9999px;display:block;width:100%;padding:15px 0;text-align:center;font-weight:bold;font-size:14px;background:#765bb4;background:rgba(117,91,180,0.6);color:#fff;}
+.skip_navigation a:focus,
+.skip_navigation a:hover,
+.skip_navigation a:active{z-index:10004;left:0;color:#fff !important;text-decoration:none;}
+
+.common_wrap2 .contents_wrap, .wrap_no_gnb .contents_wrap{margin-top:0;background:url(http://static1.me2day.com/images/new_sub/bg_homesub_contents_wrap_re_2.gif?1384398001) repeat-y 0 0;zoom:1;}
+.common_wrap2 .contents_wrap .round_box_2,
+.wrap_no_gnb .contents_wrap .round_box_2{background:url(http://static1.me2day.com/images/new_sub/bg_homesub_contents_wrap_b_2.gif?1384398001) no-repeat 0% 100%;}
+
+.wrap_no_gnb .join{position:relative;width:690px;margin:35px auto 80px;font-size:12px;zoom:1;}
+.wrap_no_gnb  .round_box_2{min-height:auto;}
+
+.wrap_small{width:500px;margin:110px auto 138px;font-size:12px;}
+.wrap_small .login{padding:32px 32px 25px 32px;}
+.wrap_small .login_naver,.wrap_small .login_me2day{padding:32px 59px 18px 59px;}
+.wrap_small .me2pw_find{padding:24px 30px 12px 31px;}
+.wrap_small .header_wrap,
+.wrap_small .menu_wrap,
+.wrap_small .contents_wrap,
+.wrap_small .footer_wrap{width:500px;margin:0 auto;}
+.wrap_small .footer_wrap .footer_copyright{padding-left:0;}
+.wrap_small .footer_wrap address{float:none;text-align:center;}
+.wrap_small .header_wrap .relation_wrap{top:16px;padding-top:10px;padding-right:10px;}
+.wrap_small .header_wrap .relation_wrap .util_menu a{position:static;}
+.wrap_small .header_wrap .relation_wrap .util_msg,
+.wrap_small .header_wrap .relation_wrap .util_msg2{font-size:12px;color:#888;}
+.wrap_small .header_wrap .relation_wrap .util_msg a{position:static;margin:0;top:0;font-size:12px;font-weight:bold;text-decoration:none;color:#5ba8d5;}
+.wrap_small .header_wrap .relation_wrap .util_msg2{padding-top:25px;padding-right:11px;}
+.wrap_small .header_wrap .relation_wrap .util_msg2 a{font-size:11px;color:#727270;margin-left:25px;text-decoration:none;}
+
+
+/* contents wrap style */
+.wrap_small .contents_wrap{margin-top:0;background-image:url(http://static1.me2day.com/images/common_page/bg_common_3_contents.gif?1384398001);}
+.wrap_small .contents_wrap .round_box_1{background-image:url(http://static1.me2day.com/images/common_page/bg_common_3_header.gif?1384398001);}
+.wrap_small .contents_wrap .round_box_2{min-height:100%;background-image:url(http://static1.me2day.com/images/common_page/bg_common_3_bottom.gif?1384398001);}
+* html .wrap_small .contents_wrap .round_box_2{height:auto;}
+
+
+/* Join */
+.join .header_tab{width:479px;height:37px;overflow:hidden;margin-bottom:34px;margin-left:105px;}
+.join .header_tab h2, .join .header_tab a{float:left;text-decoration:none;}
+.join fieldset legend{position:absolute;top:0;left:0;height:0;overflow:hidden;}
+
+.join .auth_naver{overflow:hidden;background:url(http://static2.me2day.com/images/common_page/bg_rnd_box1_bottom.gif?1384398001) no-repeat scroll 0 100%;border:0;padding:0;}
+.join .noti{margin-left:172px;margin-bottom:12px;padding-top:5px;font-size:12px;color:#23af0e;}
+.join .auth_naver{position:relative;padding:0 0 25px 0;}
+.join .auth_naver .frm_tt{padding-bottom:10px;font-size:12px;font-weight:bold;color:#444;}
+.join .auth_naver .frm_section{padding-top:20px;padding-left:162px;background:url(http://static2.me2day.com/images/common_page/bg_rnd_box1_top.gif?1384398001) no-repeat scroll 0 0;zoom:1;}
+.join .auth_naver .frm_section p{position:relative;}
+.join .auth_naver .frm_section .naver_id{padding-bottom:10px;}
+* html .join .auth_naver .frm_section .naver_id{padding-bottom:8px;}
+*:first-child+html .join .auth_naver .frm_section .naver_id{padding-bottom:8px;}
+.join .auth_naver .frm_section .naver_pw .txt_field,
+.join .auth_naver .frm_section .naver_id .txt_field{height:23px;line-height:25px;background-color:#fff;width:290px;}
+.login .txt_field,.join .txt_field{width:358px;height:29px;line-height:27px;padding:7px 0 0 12px;border:1px solid #c6c6c6;border-bottom:1px solid #eee;border-right:1px solid #eee;vertical-align:top;font-size:14px;color:#000;font-weight:bold;background-color:#f9f9f9;}
+* html .join .txt_field{padding:6px 0 3px 12px;}
+*:first-child+html .join .txt_field{padding:6px 0 3px 12px;}
+.join.me2day_make .txt_field{width:343px;}
+.txt_field.a_type{padding:5px 0 4px 12px;font-size:18px;font-weight:normal;color:#000;}
+.txt_field.b_type{padding:4px 0 5px 12px;font-size:16px;font-weight:bold;color:#000;}
+*:first-child+html .txt_field.b_type{padding:5px 0 4px 12px;}
+*:first-child+html .login_naver .txt_field.b_type{padding:4px 0 5px 12px;}
+*:first-child+html .login_me2day .txt_field.b_type{padding:4px 0 5px 12px;}
+*:first-child+html .login_naver .user_id .txt_field.b_type{padding:4px 0 5px 156px;}
+*:first-child+html .login_me2day .me2day_addr .txt_field.b_type{padding:4px 0 5px 156px;}
+.txt_field.d_type{font-size:15px;font-weight:normal;padding:5px 0 4px 8px;}
+*:first-child+html .txt_field.d_type{padding:5px 0 4px 12px;}
+.user_birth_year .txt_field.d_type,
+.user_birth_month .txt_field.d_type,
+.user_birth_day .txt_field.d_type{font-family:arial,sans-serif;font-weight:normal !important;}
+.join .auth_naver .frm_section label{position:absolute;top:9px;left:12px;color:#ccc;}
+.join .auth_naver .frm_section .btn_confirm{position:absolute;top:93px;left:476px;width:50px;height:31px;line-height:30px;border:0;overflow:visible;background:#fff url(http://static1.me2day.com/images/common_page/btn_naver_login_confirm.gif?1384398001) no-repeat scroll 0 0;text-align:center;font-size:14px;color:#646464;padding:0 0 3px 0;font-weight:bold;cursor:pointer;}
+.join .auth_naver .frm_section.logged{padding-top:22px;padding-left:105px;padding-right:110px;color:#888;letter-spacing:-1px;overflow:hidden;}
+.join .auth_naver .frm_section.logged .welcome_msg{float:left;}
+.join .auth_naver .frm_section.logged strong{position:relative;top:2px;font-size:24px;color:#333;letter-spacing:0;font-weight:normal;}
+.join .auth_naver .frm_section.logged .other_naver_login, .join .auth_naver .frm_section.logged .other_naver_login:link{float:right;width:135px;white-space:nowrap;margin-top:14px;font-size:11px;color:#5ba8d5;text-decoration:none;font-weight:normal;text-align:right;}
+.join .auth_naver .frm_section.logged .other_naver_login:hover{text-decoration:underline;}
+.login #nickname_area .txt_field,
+.join #nickname_area .txt_field{line-height:25px;font-family:"나눔고딕","NanumGothic","NanumGothicOTF", dotum,sans-serif;}
+.login.me2day_make #nickname_area .txt_field,
+.join.me2day_make #nickname_area .txt_field{line-height:27px;font-family:"나눔고딕","NanumGothic","NanumGothicOTF", dotum,sans-serif;}
+
+.join .frm_section{overflow:hidden;padding-top:22px;padding-left:98px;padding-right:97px;color:#888;}
+.join .frm_section .frm_head{overflow:hidden;padding:20px 0 8px;zoom:1;}
+.join .frm_section .tt{float:left;font-size:16px;font-weight:bold;color:#000;letter-spacing:-1px;}
+.join .frm_section .tt .naver_txt{color:#42b421;}
+.join .frm_section .tt img{vertical-align:top;}
+.join .frm_section .other_naver_login,
+.join .frm_section .other_naver_login:link{float:right;_width:150px;white-space:nowrap;margin-top:4px;font-size:11px;color:#b8b8b8;text-decoration:none;font-weight:normal;text-align:right;}
+.join .frm_section .preview_id{clear:both;padding-top:21px;padding-bottom:13px;border-top:2px solid #e6e6e6;text-align:center;color:#5ba8e2;font-size:24px;}
+.join .frm_section .me2day_make_msg{clear:both;padding-top:31px;border-top:2px solid #e6e6e6;margin-left:0;}
+.join .frm_section .error_msg{clear:both;padding-top:32px;border-top:2px solid #e6e6e6;margin-left:0;font-weight:normal;color:red;}
+.join .frm_section .btn_back{display:block;width:90px;height:22px;margin-top:20px;padding-top:4px;background:url(http://static2.me2day.com/images/common_page/btn_back.gif?1384398001) no-repeat scroll 0 0;color:#4b4b4b;text-align:center;}
+
+.join .join_form{position:relative;z-index:2;margin-top:34px;padding-bottom:13px;}
+.join.naver_id_start .join_form{padding-bottom:8px;}
+.join .join_form .login_bts{text-align:right;padding-right:106px;margin-top:10px;}
+.join.me2day_make .join_form{padding-bottom:2px;}
+.join .join_form.ballon_pop_active{z-index:1;}
+.join.naver_id_start .join_form .naver_id_wrap,
+.join.naver_id_start .join_form .naver_pw_wrap,
+.join.naver_id_start .join_form .me2day_addr,
+.join.naver_id_start .join_form .nick,
+.join.naver_id_start .join_form .phone_regist{clear:both;position:relative;padding-left:115px;zoom:1;}
+.join.naver_id_start .join_form .nick{margin-bottom:16px;}
+.join.me2day_make .join_form .me2day_addr,
+.join.me2day_make .join_form .nick,
+.join.me2day_make .join_form .phone_regist,
+.join.me2day_make .join_form .profile,
+.join.me2day_make .join_form .passwd,
+.join.me2day_make .join_form .passwd_confirm,
+.join.me2day_make .join_form .email{clear:both;position:relative;padding-left:121px;zoom:1;}
+.join.me2day_make .join_form .email{padding-top:5px;}
+.join.naver_id_start .join_form .naver_id_wrap,
+.join .join_form .me2day_addr,
+.join .join_form .nick,
+.join .join_form .profile,
+.join .join_form .passwd,
+.join .join_form .passwd_confirm,
+.join .join_form .phone_regist{margin-bottom:7px;}
+.join .join_form .phone_regist{z-index:2;margin-bottom:8px;}
+.join .join_form .profile{margin-bottom:13px;}
+.join .join_form .passwd,
+.join .join_form .me2day_addr{overflow:hidden;}
+.join .join_form .passwd{margin-bottom:6px;}
+.join .join_form .passwd_confirm{margin-bottom:33px;}
+.join .join_form .nick{margin-bottom:16px;}
+.join.me2day_make .join_form .nick{margin-bottom:6px;}
+.join .join_form .item_lb,
+.join .user_rule_agreement .item_lb,
+.join .user_agreement .item_lb{position:relative;float:left;display:block;width:106px;height:40px;line-height:40px;font-size:12px;font-weight:bold;color:#666;letter-spacing:-1px;}
+.join .user_agreement .item_lb{position:relative;top:6px;line-height:12px;}
+.join .user_rule_agreement .item_lb{position:relative;top:3px;line-height:12px;height:12px;}
+.naver_id_start .join_form .item_lb img{position:absolute;top:14px;left:-17px;}
+.join .user_rule_agreement .item_lb img{position:absolute;top:0;left:-17px;}
+.naver_id_start .join_form .item_lb{color:#666;}
+.join .join_form .profile .item_lb{line-height:34px;}
+.join .join_form .phone_regist .item_lb{top:3px;line-height:31px;}
+.join .join_form .phone_regist .unregisted{margin-top:3px;}
+
+.join .join_form .me2day_addr .prefix_url .me2url{display:inline-block;height:26px;line-height:22px;width:auto;margin-top:0;margin-right:4px;font-size:15px;font-weight:bold;vertical-align:middle;letter-spacing:-1px;}
+* html .join .me2day_addr .prefix_url .me2url{margin-top:0;}
+*:first-child+html .join .me2day_addr .prefix_url .me2url{margin-top:0;}
+.login .frm_section .user_id .prefix_url .me2url,
+.login .frm_section .me2day_addr .prefix_url .me2url,
+.join .join_form .me2day_addr.validate_err .prefix_url .me2url,
+.login.me2pw_find .frm_section .me2day_addr .prefix_url .me2url{display:inline-block;width:147px;margin-left:6px;vertical-align:middle;font-weight:bold;font-size:14px;}
+.join .join_form .editable.validate_err .prefix_url .me2url{width:auto;background:none;margin-left:0;}
+.pop_new_login .me2day_addr .prefix_url .me2url .txt,
+.login .frm_section .user_id .prefix_url .me2url .txt,
+.login .frm_section .me2day_addr .prefix_url .me2url .txt,
+.login.me2pw_find .frm_section .me2day_addr .prefix_url .me2url .txt,
+.join .join_form .prefix_url .me2url .txt{position:absolute;top:0;left:0;z-index:-1;height:0;overflow:hidden;}
+*:first-child+html .join .join_form .prefix_url.display img{position:relative;top:1Px;}
+
+.join .join_form .prefix_url .default_naver_id{position:relative;top:0;font:normal 18px arial;color:#000;}
+* html .join .join_form .prefix_url .default_naver_id{top:0;}
+*:first-child+html .join .join_form .prefix_url .default_naver_id{top:0;}
+*:first-child+html .join .join_form .prefix_url{top:5px;}
+.join .join_form .me2day_addr .txt_field{width:150px;font-family:arial,sans-serif;color:#000;font-size:18px;border:0;outline:none;}
+.join .join_form .me2day_addr.validate_err .txt_field,
+.join .join_form .me2day_addr.update .txt_field{width:194px;padding-left:160px;}
+.join .join_form .phone_regist .btn_phone_regist{width:91px;height:31px;margin-right:6px;padding:0 29px 0px 0;background:url(http://static2.me2day.com/images/common_page/btn_mobile_regist.gif?1384398001) no-repeat scroll 0 0;text-align:right;border:0;cursor:pointer;vertical-align:middle;}
+.join .join_form .info_msg{color:#999;font-size:11px;letter-spacing:-1px;}
+.join .join_form .phone_regist .unregisted .info_msg{position:relative;top:0px;left:-2px;}
+.err_msg{display:none;width:336px;margin:1px 0 -8px 106px;padding-top:6px;padding-left:18px;padding-bottom:8px;clear:both;color:#ef3800;background:url(http://static1.me2day.com/images/common_page/ico_validate_err.gif?1384398001) no-repeat scroll 0 7px;font-size:11px;letter-spacing:-1px;}
+.join .join_form .phone_regist .regist_frm .txt_field{width:119px;height:28px;margin-right:2px;font-size:18px;line-height:27px;color:#000;font-family:arial,sans-serif;font-weight:normal;}
+* html .join .join_form .phone_regist .regist_frm .txt_field,
+*:first-child+html .join .join_form .phone_regist .regist_frm .txt_field{padding:5px 0 4px 12px;}
+*:first-child+html .join .join_form .phone_regist .regist_frm .certification .txt_field{padding:4px 0 0 12px;}
+.me2pw_find .err_msg{margin-left:72px;}
+.err_msg2{margin-left:0px !important;}
+.validate_err_birth .err_msg,.validate_err_name .err_msg,.validate_err .err_msg{display:block;}
+
+.join .user_agreement{position:relative;z-index:1;}
+.join .user_agreement input,.join .user_agreement img{vertical-align:middle;}
+.join .user_agreement input{position:absolute;top:4px;left:0;}
+.join .user_agreement .tab_rule input{position:relative;top:0;}
+.join .user_rule_agreement{margin:0 97px 0 98px;padding-left:17px;overflow:hidden;padding-bottom:31px;margin-bottom:8px;border-bottom:1px solid #e6e6e6;}
+.join .user_rule_agreement input{position:relative;top:1px;margin-right:5px;}
+.join .user_rule_agreement a{color:#5ba8d5;}
+.join .user_agreement .naver_fri_recommend{position:relative;padding:0 0 7px 22px;}
+.join .user_agreement .recommend_agreement{position:relative;padding:0 0 19px 22px;zoom:1;}
+.join .user_agreement .recommend_agreement input{position:absolute;top:4px;left:0;}
+.join .user_agreement .recommend_agreement label{font-size:11px;}
+.join .user_agreement .recommend_agreement label .br{display:block;}
+.join .user_agreement .recommend_agreement .footnote{color:#7f7f7f;font-size:11px;}
+.join .user_agreement .user_public_policy label,.join .user_agreement .naver_fri_recommend label,.join .user_agreement .user_rule_agreement label{margin-right:4px;font-size:11px;color:#333;}
+
+.join .user_agreement .list_wrap{margin-left:106px;}
+.join .user_agreement .user_public_policy{position:relative;padding:0 0 7px 22px;}
+
+.join .user_agreement .user_rule_agreement{width:506px;margin-left:0;padding-top:17px;padding-left:0;padding-bottom:27px;}
+.join .user_agreement .user_rule_agreement a:link, .join .user_agreement .user_rule_agreement a:visited{text-decoration:none;color:#5ba8d5;font-size:11px;}
+.join .user_agreement .user_rule_agreement a:hover{text-decoration:underline;}
+.join .btn_wrap{padding-top:37px;text-align:center;}
+.join .btn_join_complete{width:185px;height:46px;padding:0 0 5px 0;line-height:44px;border:0;overflow:visible;background:url(http://static2.me2day.com/images/common_page/btn_join_complete.gif?1384398001) no-repeat scroll 0 0;text-align:center;font-size:16px;font-weight:bold;color:#fff;cursor:pointer;}
+.join.naver_id_start .join_form .btn_confirm{width:50px;height:31px;line-height:30px;border:0;overflow:visible;background:#fff url(http://static2.me2day.com/images/common_page/btn_naver_login_confirm.gif?1314345726) no-repeat scroll 0 0;text-align:center;font-size:14px;color:#646464;padding:0 0 3px 0;font-weight:bold;cursor:pointer;}
+
+.join .naver_startpage{width:495px;margin-left:97px;padding-top:11px;padding-left:0;}
+.join .naver_startpage input{position:relative;top:1px;margin-right:5px;}
+.join .naver_startpage .lb{color:#888;letter-spacing:-1px;}
+.join .pop_help{position:absolute;top:0;left:0;z-index:10;width:205px;background:url(http://static1.me2day.com/images/common_page/bg_ballon_top.png?1384398001) no-repeat scroll 0 0;}
+* html .join .pop_help{background:none;filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='/images/bg_ballon_top.png',sizingMethod='crop');}
+.join .pop_help .help_wrap{padding-bottom:12px;background:url(http://static1.me2day.com/images/common_page/bg_ballon_bottom.png?1384398001) no-repeat scroll 0 100%;}
+* html .pop_help .help_wrap{background:none;filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='/images/bg_ballon_bottom.png',sizingMethod='crop');}
+.join .pop_help .help_content{margin:5px 0 0;padding:5px 9px 6px !important;letter-spacing:-1px;background:url(http://static2.me2day.com/images/common_page/bg_ballon_content.png?1384398001) repeat-y scroll 0 0;color:#fff;}
+.join .user_public_policy_help{top:-70px;left:322px;}
+.join .fir_recommned_help{top:-45px;left:359px;}
+
+.join .regist_frm .txt_field{float:left;width:123px;margin-right:5px;}
+.join .regist_frm .btn_mobile_company{display:inline-block;height:40px;margin-top:0;background:url(http://static2.me2day.com/images/new_sub/btn_mobile_company_2.gif?1384398001) no-repeat scroll 100% 0 transparent;cursor:pointer;vertical-align:middle;}
+.join .regist_frm .btn_mobile_company .btn{border:0;height:40px;padding:0 29px 0 7px;line-height:30px;letter-spacing:-1px;background:url(http://static1.me2day.com/images/new_sub/btn_mobile_company_left_2.gif?1384398001) no-repeat scroll 0 0 transparent;cursor:pointer;}
+* html .join .regist_frm .btn_mobile_company .btn{padding:0 23px 0 10px;}
+*:first-child+html .join .regist_frm .btn_mobile_company .btn{width:102px;padding:0 23px 0 10px;}
+.join .regist_frm .btn_mobile_company.on{background-position:100% -40px;}
+.join .regist_frm .btn_mobile_company.on.btn{background-position:0 -40px;}
+
+.join .regist_frm .btn_c_number_recive{display:inline-block;width:86px;height:40px;margin-top:0;background:url(http://static2.me2day.com/images/new_sub/btn_mobile_auth.gif?1384398001) no-repeat scroll 0 0;border:0;font-size:11px;color:#fff;letter-spacing:-1px;text-align:center;cursor:pointer;}
+.join .regist_frm .btn_auth_cancel{position:relative;top:11px;left:8px;border:0;overflow:visible;background-color:transparent;vertical-align:top;}
+* html .join .regist_frm .btn_auth_cancel{top:15px;left:15px;}
+*:first-child+html .join .regist_frm .btn_auth_cancel{top:15px;left:15px;}
+.join .mobile_company_group{position:relative;float:left;margin-right:2px;z-index:2;}
+.join .mobile_company_group  .mobile_companies{position:absolute;top:41px;left:0;z-index:2;}
+.join .mobile_company_group  .mobile_companies li{vertical-align:top;}
+.join .mobile_company_group  .mobile_companies li a{display:block;width:102px;height:24px;padding:6px 0 0;background:url(http://static2.me2day.com/images/common_page/bg_mobile_item.gif?1384398001) repeat-y scroll 0 0;text-indent:10px;}
+.join .mobile_company_group  .mobile_companies li.first_child a{background:url(http://static1.me2day.com/images/common_page/bg_mobile_item_top.gif?1384398001) no-repeat scroll 0 0;}
+.join .mobile_company_group  .mobile_companies li.end_child a{background:url(http://static1.me2day.com/images/common_page/bg_mobile_item_bottom.gif?1384398001) no-repeat scroll 0 100%;}
+.join .mobile_company_group  .mobile_companies li a{text-decoration:none;color:#000;}
+.join .mobile_company_group  .mobile_companies li a:hover{background-position:100% 0;color:#6e4bd4;}
+.join .regist_frm .certification{clear:both;padding-top:1px;margin-left:0 !important;padding-left:106px;}
+.join .regist_frm .certification .txt_field{width:230px;}
+.join .phone_regist .regist_frm .certification .txt_field{height:28px;}
+.join .phone_regist .regist_frm .certification{position:relative;clear:both;padding-top:5px;padding-bottom:10px;margin-left:106px;zoom:1;z-index:1;}
+.join .phone_regist .regist_frm .certification .placeholder{left:115px;top:15px;}
+.join .phone_regist .regist_frm .certification .txt_field{width:223px;height:28px;}
+*:first-child+html .join .phone_regist .regist_frm .certification .txt_field{height:34px;}
+.join .regist_frm .btn_certification{display:inline-block;width:73px;height:40px;padding:0 0 1px 0;margin-top:0;background:url(http://static2.me2day.com/images/new_sub/btn_mobile_auth_num_ok.gif?1384398001) no-repeat scroll 0 0;border:0;font-size:12px;color:#000;text-align:center;}
+.join .regist_frm .certification_phone{display:inline-block;height:40px;line-height:32px;font-size:14px;color:#333;font-weight:bold;}
+
+
+.join.me2day_make .header_tab h2{float:right;}
+.join .me2day_make_msg{padding-top:5px;font-size:12px;font-weight:bold;color:#333;margin-left:115px;}
+.join.me2day_make .join_form{margin-top:19px;}
+.join.me2day_make .join_form .item_lb{position:relative;color:#7f7f7f;}
+.join.me2day_make .join_form .item_lb img{position:absolute;top:15px;left:-17px;}
+.join.naver_id_start .join_form .me2day_addr .txt_field,
+.join.naver_id_start .join_form .me2day_addr .err_msg{display:none;}
+.join.naver_id_start .join_form .me2day_addr .prefix_url .default_naver_id{display:inline-block;height:26px;line-height:26px;}
+.join.naver_id_start .join_form .me2day_addr.validate_err .txt_field{display:inline;font-size:16px;}
+* html .join.naver_id_start .join_form .me2day_addr.validate_err .txt_field{padding-top:5px;padding-bottom:4px;}
+*:first-child+html .join.naver_id_start .join_form .me2day_addr.validate_err .txt_field{padding-top:5px;padding-bottom:4px;}
+.join.naver_id_start .join_form .me2day_addr.validate_err .err_msg{display:block}
+.join.naver_id_start .join_form .me2day_addr.validate_err .prefix_url{position:static;width:358px;height:31px;line-height:27px;margin-left:0;padding:7px 0 0 12px;border:1px solid red;}
+* html .join.naver_id_start .join_form .me2day_addr.validate_err .prefix_url{top:2px;}
+*:first-child+html .join.naver_id_start .join_form .me2day_addr.validate_err .prefix_url{top:2px;}
+.join.naver_id_start .join_form .me2day_addr.validate_err .prefix_url .default_naver_id{display:none;}
+.join.naver_id_start .join_form .me2day_addr.update .txt_field{border-color:#c6c6c6 #eee #eee #c6c6c6;border-style:solid;border-width:1px;line-height:19px;}
+.join.naver_id_start .join_form .me2day_addr.update .err_msg{display:none;}
+
+.header_tab .me2day_id,
+.header_tab .naver_id,
+.header_tab h2,
+.header_tab a{position:relative;display:inline-block;text-decoration:none;}
+.header_tab a:hover{text-decoration:none;}
+.header_tab .header_text_naver{position:absolute;left:78px;top:8px;white-space:nowrap;font-size:12px;color:#fff;}
+.header_tab .header_text_me2{position:absolute;left:78px;top:8px;white-space:nowrap;font-size:12px;font-weight:bold;color:#fff;}
+.header_tab a .header_text_naver,
+.header_tab a .header_text_me2{color:#a9a9a9;font-weight:bold;}
+
+.join.me2day_make .join_form .me2day_addr .prefix_url{position:absolute;top:0px;left:227px;height:17px;padding-left:0;font-size:18px;color:#adadad;}
+.join.naver_id_start .join_form .me2day_addr .prefix_url{position:static;width:343px;height:31px;font-size:18px;color:#adadad;}
+* html .join.me2day_make .join_form .me2day_addr .txt_field{padding-top:4px;}
+*:first-child+html .join.me2day_make .join_form .me2day_addr .txt_field{width:190px;padding-top:4px;padding-left:165px;}
+.join .profile .txt_field{width:40px;}
+*:first-child+html .join .profile .user_birth_year .txt_field{width:40px;}
+.join .profile .user_name,.join .profile .user_birth_year,.join .profile .user_birth_month,.join .profile .user_birth_day{position:relative;zoom:1;}
+.join .profile .user_birth_year{margin-right:1px;}
+.join .profile .user_name label,.join .profile .user_birth_year label,.join .profile .user_birth_month label,.join .profile .user_birth_day label{position:absolute;right:12px;top:8px;font-size:14px;font-weight:bold;color:#ccc;}
+* html .join .profile label{top:10px;}
+*:first-child+html .join .profile label{top:10px;}
+.join.me2day_make .join_form .email{padding-top:1px;}
+.join .join_form .me2day_addr .prefix_url{display:block;float:left;position:static;width:358px;height:31px;padding-top:5px;font:normal 18px arial;color:#adadad;line-height:27px;padding:7px 0 0 0;border:1px solid #fff;}
+.join.naver_id_start .join_form .me2day_addr .prefix_url{padding-top:5px;height:33px;}
+.join .join_form .me2day_addr.editable .prefix_url{width:343px;height:31px;line-height:27px;margin-left:0;padding:7px 0 0 12px;border:1px solid #c6c6c6;border-bottom:1px solid #eee;border-right:1px solid #eee;zoom:1;background-color:#f9f9f9;}
+.join.naver_id_start .join_form .me2day_addr.editable .prefix_url{width:358px;}
+.join .join_form .me2day_addr.editable .prefix_url .other_me2id{width:170px;border:0;height:26px;line-height:26px;outline:none;vertical-align:middle;color:#000;font-weight:bold;background-color:#f9f9f9;}
+* html .join .join_form .me2day_addr.editable .prefix_url .other_me2id{margin-top:-3px;}
+*:first-child+html .join .join_form .me2day_addr.editable .prefix_url .other_me2id{margin-top:-3px;}
+
+.join .profile .txt_field{height:28px;line-height:25px;}
+.join .profile .user_name label{left:12px;}
+.join .profile .user_name .txt_field,.join .profile .user_birth_year .txt_field,.join .profile .user_birth_month .txt_field,.join .profile .user_birth_day .txt_field{font-size:14px;color:#000;font-weight:bold;text-align:left;padding-right:31px;}
+.join .profile .user_name .txt_field{width:78px;font-weight:bold;text-align:left;margin-right:16px;}
+* html .join .profile .user_name .txt_field{width:74px;}
+*:first-child+html .join .profile .user_name .txt_field{width:74px;}
+.join.me2day_make .join_form .profile{margin-bottom:17px;}
+.join.me2day_make .profile .item_lb{top:3px;}
+.join .profile .user_birth_year .txt_field{width:44px;text-align:right;}
+.join .profile .user_birth_month .txt_field,
+.join .profile .user_birth_day .txt_field{width:25px;text-align:right;}
+.join .profile .user_birth_month .txt_field{margin:0 2px 0 2px;}
+*:first-child+html .join .profile .user_birth_month .txt_field,
+*:first-child+html .join .profile .user_birth_day .txt_field{width:21px;}
+
+.join .join_form .editable.validate_err .prefix_url,
+.join .join_form .validate_err .prefix_url,
+.join .join_form .validate_err .txt_field,
+.join .join_form .validate_err_name .user_name .txt_field,
+.join .join_form .validate_err_birth .user_birth_year .txt_field,
+.join .join_form .validate_err_birth .user_birth_month .txt_field,
+.join .join_form .validate_err_birth .user_birth_day .txt_field{border:1px solid red;background-color:#f9f9f9;}
+* html .join .join_form .validate_err .txt_field{padding:4px 0 5px 12px;width:343px;}
+.join .join_form .me2day_addr.validate_err .prefix_url{padding-left:12px;height:29px;margin-left:0;zoom:1;}
+
+.join .profile .user_public_policy *{vertical-align:middle;}
+.join .profile .user_public_policy{margin-top:9px;margin-left:106px;}
+.join .profile .user_public_policy label{font-size:11px;color:#333;letter-spacing:-1px;}
+* html .join .profile .user_public_policy{margin-left:92px;}
+*:first-child+html .join .profile .user_public_policy{margin-left:102px;}
+.join .email{margin-bottom:28px;}
+.join .email .info_msg{margin-top:8px;margin-left:106px;}
+.join .email .recommend_agreement{position:relative;padding:1px 0 1px 20px;zoom:1;margin-top:8px;margin-left:106px;}
+.join .email .recommend_agreement input{position:absolute;top:3px;left:0;}
+* html .join .email .recommend_agreement input{top:-2px;left:-3px;}
+*:first-child+html .join .email .recommend_agreement input{top:-2px;left:-3px;}
+.join .email .recommend_agreement label{font-size:11px;}
+.join .email .recommend_agreement .br{display:block;}
+.join .email .recommend_agreement .footnote{margin-top:-2px;color:#7f7f7f;font-size:11px;}
+.join .placeholder{position:absolute;top:11px;left:241px;font-size:14px;color:#ccc;letter-spacing:-1px;font-weight:bold;}
+.join.naver_id_start .join_form .nick .placeholder{left:230px;}
+.join.me2day_make .user_public_policy_help{left:340px;top:-30px;}
+* html .join.me2day_make .user_public_policy_help{left:356px;top:-35px;}
+*:first-child+html .join.me2day_make .user_public_policy_help{left:356px;top:-35px;}
+.join .pop_help{padding:0;border:0;}
+.send_mail{width:690px;padding-top:70px;margin:0 140px 101px;font-size:12px;}
+.send_mail .head_msg{margin-bottom:39px;font-size:20px;font-weight:bold;color:#333;letter-spacing:-1px;}
+.send_mail .return_msg{background:url(http://static2.me2day.com/images/common_page/bg_rnd_box1_bottom.gif?1384398001) no-repeat scroll 0 100% transparent;}
+.send_mail .return_msg .return_msg_wrap{padding:40px 47px 45px 32px;background:url(http://static2.me2day.com/images/common_page/bg_rnd_box1_top.gif?1384398001) no-repeat 0 0 transparent;text-align:left;color:#a2a2a2;}
+.send_mail .return_msg .send_msg{font-size:12px;color:#666;}
+.send_mail .return_msg .sub_msg{margin-top:6px;}
+.send_mail .return_msg p .mail{position:relative;top:1px;font-size:20px;font-family:arial,sans-serif;font-weight:bold;color:#7b5fd4;text-decoration:none;}
+
+.send_mail .caution{width:690px;color:#777;margin-top:28px;padding-left:5px;font-size:12px;}
+.send_mail .caution_tt{float:left;padding-left:20px;background:url(http://static2.me2day.com/images/common_page/ico_caution.gif?1384398001) no-repeat 0 2px;margin-right:13px;color:#333;font-size:11px;}
+.send_mail .caution .caution_msg{float:left;color:#777;font-size:11px;color:#999;}
+.send_mail .caution2{position:relative;zoom:1;}
+.send_mail .caution2 .caution_tt{float:none;}
+.send_mail .caution2 .caution_msg{float:none;margin-top:3px;}
+
+.send_mail .caution2 .resend{display:block;margin-top:11px;}
+.send_mail .caution2 .email_addr{width:184px;height:21px;padding-left:8px;color:#999;font-size:12px;font-family:arial,sans-serif;border:1px solid #c7c7c7;border-right:1px solid #efefef;border-bottom:1px solid #efefef;}
+.send_mail .caution2 .btn_send_mail{width:83px;height:23px;margin-left:4px;font-size:11px;color:#666;background:url(http://static1.me2day.com/images/common_page/btn_send_mail.gif?1384398001) no-repeat 0 0;text-align:center;border:0;}
+.send_mail.auth_complete_mail .head_msg{text-align:center;}
+.send_mail.auth_complete_mail .return_msg .send_msg{color:#7b5fe2;font-weight:bold;}
+.send_mail.auth_complete_mail .return_msg .send_msg .login{display:inline-block;width:124px;height:30px;margin-left:20px;padding:11px 0 0;text-align:center;vertical-align:middle;font-size:14px;font-weight:bold;color:#000;background:#fff url(http://static2.me2day.com/images/common_page/bg_btn_10.gif?1384398001) no-repeat scroll 0 0;text-decoration:none;}
+
+/* Container - common layout 3 */
+.common_layout3{width:500px;margin:0 auto;font-size:0.75em;}
+.common_layout3 #container{padding-bottom:4px;background:#fff url(http://static1.me2day.com/images/common_page/bg_common_3_bottom.gif?1384398001) no-repeat scroll 0 100%;}
+.common_layout3 .wrap{padding-top:4px;background:#fff url(http://static1.me2day.com/images/common_page/bg_common_3_header.gif?1384398001) no-repeat scroll 0 0;}
+.common_layout3 .contents{overflow:hidden;padding:32px 60px 32px 60px;background:url(http://static1.me2day.com/images/common_page/bg_common_3_contents.gif?1384398001) repeat-y scroll 0 0;zoom:1}
+
+.common_layout3 #topbar{margin-top:125px;margin-left:0;}
+.common_layout3 #topbar .util_msg,.common_layout3 #topbar .util_msg2{float:right;padding-top:24px;padding-right:13px;font-weight:bold;color:#494949;}
+.common_layout3 #topbar .util_msg a{font-weight:bold;text-decoration:none;color:#5ba8d5;}
+.common_layout3 #topbar .util_msg2{padding-top:25px;padding-right:11px;}
+.common_layout3 #topbar .util_msg2 a{font-size:11px;color:#727270;margin-left:25px;text-decoration:none;}
+.common_layout3 #footer .footer_contents{width:100%;}
+.common_layout3 #footer .footer_contents address{float:none;padding:0;text-align:center;line-height:30px;}
+
+.login .header_tab{position:relative;width:328px;height:33px;overflow:hidden;}
+.login .temp_header_tab{padding-left:0;width:auto;}
+.login .header_tab h2{position:absolute;top:0;left:0;}
+.login .header_tab .naver_id{left:56px;width:136px;}
+.login .header_tab a{overflow:hidden;text-decoration:none;}
+.login .header_tab a:hover{text-decoration:none;}
+.login .header_tab a img{float:left;}
+.login_me2day .header_tab .me2day_id{position:absolute;top:0;left:192px;}
+.login_naver .header_tab .me2day_id{left:192px;}
+
+.header_tab .naver_id{overflow:hidden;width:135px;height:32px;vertical-align:top;background:url(http://static1.me2day.com/images/common_page/tt_naver_id_off.gif?1384398001) no-repeat left top;}
+.header_tab .naver_id a{display:block;width:135px;height:32px;text-indent:-9999px;}
+.header_tab .naver_id_tt{text-indent:-9999px;background:url(http://static2.me2day.com/images/common_page/tt_naver_id_on.gif?1384398001) no-repeat left top;}
+.header_tab .me2day_id{overflow:hidden;width:135px;height:32px;vertical-align:top;background:url(http://static2.me2day.com/images/common_page/tt_me2day_id_off.gif?1384398001) no-repeat left top;}
+.header_tab .me2day_id a{display:block;width:135px;height:32px;text-indent:-9999px;}
+.header_tab .me2day_id_tt{text-indent:-9999px;background:url(http://static2.me2day.com/images/common_page/tt_me2day_id_on.gif?1384398001) no-repeat left top;}
+.header_tab .naver_id_tt2{overflow:hidden;display:inline;width:161px;height:32px;margin-left:41px;vertical-align:top;background:url(../img/tt_naver_id2.png) no-repeat}
+.header_tab .naver_id_tt2 a{display:block;width:161px;height:32px;text-indent:-9999px;}
+
+.login .frm_section{padding-top:15px;zoom:1;}
+.login .frm_section .user_id,.login .frm_section .me2day_addr,.login .frm_section .user_pw,.login .frm_section .new_pw,.login .frm_section .new_pw_confirm{position:relative;padding-left:1px;zoom:1;}
+.login_naver .naver_id,.login_me2day .me2day_id{padding-bottom:2px;}
+.login .frm_section .email_find{position:relative;padding-top:1px;padding-bottom:4px;}
+.login .frm_section .email_find .item_lb,.login .frm_section .user_id .item_lb,.login .frm_section .me2day_addr .item_lb,.login .frm_section .user_pw .item_lb,.login .frm_section .new_pw .item_lb,.login .frm_section .new_pw_confirm .item_lb{display:block;margin:8px 0 4px;font-weight:bold;color:#7f7f7f;}
+.login .frm_section .user_pw .item_lb{margin:7px 0 3px;}
+.login .frm_section .user_pw .txt_field,.login .frm_section .new_pw .txt_field,.login .frm_section .new_pw_confirm .txt_field{width:366px;line-height:1.6;}
+.login .frm_section .email_find .txt_field{margin:-1px 0 0 1px;width:422px;line-height:1.6;}
+.login .frm_section .user_id .txt_field,.login .frm_section .me2day_addr .txt_field{padding-left:160px;width:217px;line-height:1.6;padding-bottom:2px;}
+*:first-child+html .login .frm_section .me2day_addr .txt_field{padding-left:162px;}
+.login_naver .frm_section .user_id .txt_field{width:366px;padding:5px 0 4px 12px;line-height:1.6;}
+*:first-child+html .login_naver .frm_section .user_id .txt_field{padding-left:12px;}
+* html .login .frm_section .user_id .b_type,* html .login .frm_section .me2day_addr .b_type{font-size:18px;font-weight:normal;padding-top:5px;padding-bottom:4px;}
+.login .frm_section .me2day_addr .prefix_url,.login .frm_section .user_id .prefix_url{position:absolute;top:27px;left:10px;font-size:18px;color:#adadad;}
+* html .login .frm_section .me2day_addr .prefix_url{top:40px;}
+* html .login .frm_section .user_id .prefix_url{top:40px;}
+*:first-child+html .login .frm_section .me2day_addr .prefix_url{top:40px;}
+*:first-child+html .login .frm_section .user_id .prefix_url{top:40px;}
+
+.captcha{position:relative;}
+.captcha_box{margin:50px 0 10px;border:1px solid #eee;padding:10px 5px;overflow:hidden;}
+.captcha_box .img_captcha{float:left;margin-right:10px;padding:5px;border-right:1px solid #eee;}
+.captcha_box .sound_captcha_message{text-align:center;width:150px;height:67px;float:left;margin-right:10px;padding:5px;border-right:1px solid #eee;}
+.captcha_box .alert{margin:17px 0;font-size:11px;}
+.captcha_box input{width:100px;height:12px;line-height:12px;padding:2px;border:1px solid #c6c6c6;border-bottom:1px solid #eee;border-right:1px solid #eee;vertical-align:top;font-size:12px;color:#000;background-color:#f9f9f9;}
+.captcha_box  .btn_refresh{margin-left:5px;color:#999;text-decoration:underline;}
+.captcha .err_chptcha{position:absolute;bottom:-25px;left:0;padding-top:6px;padding-left:18px;clear:both;color:#ef3800;background:url(http://static1.me2day.com/images/common_page/ico_validate_err.gif?1384398001) no-repeat scroll 0 7px;font-size:11px;letter-spacing:-1px;}
+
+.join .captcha{width:479px;margin:0 auto;}
+.join .captcha .captcha_box{margin-top:0;margin-bottom:20px;}
+
+.pw_change .frm_section .new_pw{margin-bottom:5px;}
+.pw_change .frm_section .new_pw .txt_field,
+.pw_change .frm_section .new_pw_confirm .txt_field{height:34px;width:422px;}
+.me2pw_find .frm_section .me2day_addr .txt_field{width:272px;font-size:16px;color:#000;font-weight:bold;font-family:arial,sans-serif;}
+
+.login .frm_section .me2day_url{width:434px;margin-bottom:15px;font-size:18px;color:#adadad;border:1px solid #e9e9e9;padding:18px 0;text-align:center;}
+.login .frm_section .me2day_url strong{color:#7b5fe2;}
+.login_me2day .temp_header_tab .me2day_id{float:left;}
+.login .frm_section_footer{overflow:hidden;margin-top:18px;}
+.login.me2pw_find .frm_section_footer{clear:both;overflow:hidden;margin-top:5px;}
+.login .frm_section_footer .find{float:left;margin-top:12px;}
+.login .frm_section_footer .find a{font-size:11px;color:#a6a6a6;letter-spacing:-1px;text-decoration:none;}
+.login .frm_section_footer .find a:hover{text-decoration:underline;}
+.login .frm_section_footer .find .id_find{padding-right:8px;background:url(http://static1.me2day.com/images/stream/bg_bar_2.gif?1384398001) no-repeat 100% 0;}
+.login .frm_section_footer .find .pw_find{margin-left:7px;}
+.login .frm_section_footer .login_bts{float:right;padding-right:2px;}
+.login .frm_section_footer .login_bts *{vertical-align:middle;}
+.login .frm_section_footer .login_bts label{font-size:11px;color:#777;}
+.login .frm_section_footer .btn_confirm,.login .frm_section_footer .btn_find,.login .frm_section .btn_login{width:96px;height:39px;margin-left:10px;background:url(http://static1.me2day.com/images/common_page/bg_btn_8.gif?1384398001) no-repeat scroll 0 0;border:0;text-align:center;font-size:14px;color:#000;font-weight:bold;cursor:pointer;}
+.login_naver .frm_section_footer .login_bts,.login_me2day .frm_section_footer .login_bts{padding-right:1px;}
+.login_naver .frm_section .btn_login,.login_me2day .frm_section .btn_login{width:90px;height:41px;margin-left:6px;background-image:url(http://static1.me2day.com/images/common_page/bg_btn_login_1.gif?1384398001);font-weight:bold;}
+.login .common_tt{margin-bottom:7px;font-size:16px;font-weight:bold;color:#333;letter-spacing:-1px;}
+.login.me2pw_find .advice{position:absolute;bottom:-29px;left:0;color:#b3b3b3;margin-top:5px;z-index:2;word-spacing:-3px;}
+.login.me2pw_find .advice.short{word-spacing:0;font-size:11px;letter-spacing:-1px;}
+.login.me2pw_find .email_find .advice{bottom:-28px;font-size:11px;word-spacing:0;letter-spacing:-1px;}
+
+
+
+.common_layout4{width:500px;margin:0 auto;font-size:0.75em;}
+.common_layout4 #container{overflow:visible;padding-bottom:4px;background:#fff url(http://static1.me2day.com/images/common_page/bg_common_3_bottom.gif?1384398001) no-repeat scroll 0 100%;}
+.common_layout4 .wrap{padding-top:4px;background:#fff url(http://static1.me2day.com/images/common_page/bg_common_3_header.gif?1384398001) no-repeat scroll 0 0;}
+.common_layout4 .contents{overflow:visible;padding:24px 30px 25px 31px;background:url(http://static1.me2day.com/images/common_page/bg_common_3_contents.gif?1384398001) repeat-y scroll 0 0;zoom:1}
+.common_layout4 #topbar{margin-top:125px;margin-left:0;}
+.common_layout4 #topbar .util_msg,
+.common_layout4 #topbar .util_msg2{float:right;padding-top:25px;padding-right:11px;font-weight:bold;color:#494949;}
+.common_layout4 #topbar .util_msg a{font-weight:bold;text-decoration:none;color:#5ba8d5;}
+.common_layout4 #topbar .util_msg2 a{font-size:11px;color:#727270;margin-left:25px;text-decoration:none;}
+.common_layout4 #footer .footer_contents{width:100%;}
+.common_layout4 #footer .footer_contents address{float:none;padding:0;text-align:center;line-height:40px;}
+
+.login.me2pw_find .box{padding:20px;background-color:#fafafa;}
+.login.me2pw_find input{vertical-align:middle;}
+.login.me2pw_find .certification_type{margin-top:1px;margin-bottom:11px;}
+.login.me2pw_find .certification_type label{margin-right:35px;}
+.login.me2pw_find .email{padding-bottom:2px;}
+.me2pw_find .frm_section .phone_regist .item_lb,.login.me2pw_find .email .item_lb,.login.me2pw_find .certification_type .item_lb{display:block;float:left;width:72px;color:#7d7d7d;font-weight:bold;}
+.login.me2pw_find .phone_regist .item_lb,
+.login.me2pw_find .email .item_lb{padding-top:12px;}
+.login.me2pw_find .email .txt_field{width:351px;line-height:1.6;}
+.login.me2pw_find .email .info_msg{margin-top:5px;margin-left:72px;color:#afafaf;font-size:11px;word-spacing:-1px;letter-spacing:-1px;}
+.login.me2pw_find .email .err_msg{display:none;margin-left:72px;background:url(http://static1.me2day.com/images/common_page/ico_validate_err.gif?1384398001) no-repeat scroll 0 8px transparent;padding-left:18px;padding-top:5px;clear:both;color:#EF3800;
+}
+.login.pw_change .new_pw.validate_err .txt_field,
+.login.pw_change .new_pw_confirm.validate_err .txt_field,
+.login.me2pw_find .email_find.validate_err .txt_field,
+.login.me2pw_find .me2day_addr.validate_err .txt_field,
+.login.me2pw_find .phone_regist.validate_err .certification .txt_field,
+.login.me2pw_find .email.validate_err .txt_field{border:1px solid red;}
+
+.login.me2pw_find .frm_section .me2day_addr .prefix_url{top:26px;}
+* html .login.me2pw_find .frm_section .me2day_addr .prefix_url{top:40px;}
+*:first-child+html .login.me2pw_find .frm_section .me2day_addr .prefix_url{top:40px;}
+
+.me2pw_find .frm_section .phone_regist .txt_field{float:left;width:166px;margin-right:6px;line-height:1.6;}
+.me2pw_find .frm_section .phone_regist .btn_mobile_company{position:relative;top:2px;display:inline-block;height:29px;background:url(http://static1.me2day.com/images/common_page/btn_mobile_company.gif?1384398001) no-repeat scroll 100% 0 transparent;cursor:pointer;}
+.me2pw_find .frm_section .phone_regist .btn_mobile_company .btn{float:left;border:0;width:102px;height:29px;padding:0 20px 0 7px;letter-spacing:-1px;line-height:29px;background:url(http://static2.me2day.com/images/common_page/btn_mobile_company_left.gif?1384398001) no-repeat scroll 0 0 transparent;cursor:pointer;overflow:visible;border:0;}
+* html .me2pw_find .frm_section .phone_regist .btn_mobile_company .btn{padding:0 23px 3px 10px;}
+*:first-child+html .me2pw_find .frm_section .phone_regist .btn_mobile_company .btn{padding:0 23px 3px 10px;}
+.me2pw_find .frm_section .phone_regist .btn_mobile_company:hover{background-position:100% -29px;}
+.me2pw_find .frm_section .phone_regist .btn_mobile_company:hover .btn{background-position:0 -29px;}
+
+.me2pw_find .frm_section .phone_regist .btn_c_number_recive{display:inline-block;width:73px;height:23px;margin-top:8px;background:url(http://static1.me2day.com/images/common_page/btn_thin_1.gif?1384398001) no-repeat scroll 0 0;border:0;font-size:11px;letter-spacing:-1px;color:#888;text-align:center;cursor:pointer;}
+.me2pw_find .frm_section .phone_regist .btn_cancel{width:59px;height:23px;background:url(http://static1.me2day.com/images/common_page/btn_thin_2.gif?1384398001) no-repeat scroll 0 0;border:0;font-size:11px;color:#888;text-align:center;}
+.me2pw_find .frm_section .phone_regist{position:relative;padding-bottom:14px;}
+.me2pw_find .frm_section .phone_regist .mobile_company_group{position:relative;float:left;margin-right:6px;margin-top:3px;}
+.me2pw_find .frm_section .phone_regist .mobile_company_group  .mobile_companies{position:static;top:33px;left:0;margin-top:3px;}
+.me2pw_find .frm_section .phone_regist .mobile_company_group  .mobile_companies li{vertical-align:top;}
+.me2pw_find .frm_section .phone_regist .mobile_company_group  .mobile_companies li a{display:block;width:102px;height:24px;padding:6px 0 0;background:url(http://static2.me2day.com/images/common_page/bg_mobile_item.gif?1384398001) repeat-y scroll 0 0;text-indent:10px;}
+.me2pw_find .frm_section .phone_regist .mobile_company_group  .mobile_companies li.first_child a{background:url(http://static1.me2day.com/images/common_page/bg_mobile_item_top.gif?1384398001) no-repeat scroll 0 0;}
+.me2pw_find .frm_section .phone_regist .mobile_company_group  .mobile_companies li.end_child a{background:url(http://static1.me2day.com/images/common_page/bg_mobile_item_bottom.gif?1384398001) no-repeat scroll 0 100%;}
+.me2pw_find .frm_section .phone_regist .mobile_company_group  .mobile_companies li a{text-decoration:none;color:#000;}
+.me2pw_find .frm_section .phone_regist .mobile_company_group  .mobile_companies li a:hover{background-position:100% 0;color:#6e4bd4;}
+.me2pw_find .frm_section .phone_regist .regist_frm .certification{overflow:hidden;zoom:1;clear:both;margin-left:72px;padding-top:4px;padding-bottom:1px;}
+.me2pw_find .frm_section .phone_regist .regist_frm .certification .txt_field{width:353px;line-height:1.6;}
+.me2pw_find .frm_section .phone_regist .regist_frm .btn_certification{display:inline-block;width:73px;height:23px;padding:0 0 1px 0;margin-top:7px;background:url(http://static1.me2day.com/images/common_page/btn_thin_1.gif?1384398001) no-repeat scroll 0 0;border:0;font-size:12px;color:#000;text-align:center;}
+.me2pw_find .frm_section .phone_regist .regist_frm .certification_phone{display:inline-block;height:40px;line-height:40px;font-size:15px;color:#000;}
+
+.me2pw_find .already_id{margin-bottom:4px;}
+.me2pw_find .already_id, .me2pw_find .naver_pw_find{color:#646464;}
+.me2pw_find .already_id strong{color:#000;}
+.me2pw_find .other_pw_find a{color:#5ba9d5;text-decoration:none;}
+.pop_under_14_parent_agreement .login_layer .create_l_form{padding-top:16px;}
+.pop_under_14_parent_agreement .login_layer .layer_header h1{font-weight:bold;}
+.sec_under_14_parent_agreement{font-size:12px;margin:0 10px 0 5px;padding:0 20px;}
+.sec_under_14_parent_agreement p{line-height:17px;}
+.sec_under_14_parent_agreement .msg_1{margin-bottom:15px;color:#5932c0;font-weight:bold;}
+.sec_under_14_parent_agreement .msg_2{margin-bottom:4px;color:#999;}
+.sec_under_14_parent_agreement .msg_initailize{margin-bottom:18px;color:#e75b00;}
+.sec_under_14_parent_agreement .foot{border-top:1px solid #eee;padding:15px 0 5px 11px;}
+.sec_under_14_parent_agreement .btn_parent_agreement,.sec_under_14_parent_agreement .btn_no_birth_join{width:187px;height:34px;border:0;background:url(http://static2.me2day.com/images/common_page/bg_btn_6.gif?1384398001) no-repeat scroll 0 0;text-align:center;font-size:14px;padding:0 0 5px 0;cursor:pointer;}
+.sec_under_14_parent_agreement .btn_parent_agreement{font-weight:bold;color:#000;margin-right:2px;}
+.sec_under_14_parent_agreement .btn_no_birth_join{color:#757575;}
+
+.login_layer .create_l_form .sec_under_14_parent_agreement h2{text-indent:1px;color:#000;font-size:13px;padding-bottom:6px;}
+.sec_under_14_parent_agreement .box{padding:11px 0 11px 14px;margin-bottom:10px;border:2px solid #eaeaea;}
+.sec_under_14_parent_agreement .c_mobilephone,
+.sec_under_14_parent_agreement .c_telephone{padding-left:15px;background:url(http://static2.me2day.com/images/common_page/bul_dot_2.gif?1384398001) no-repeat scroll 0 center;}
+.sec_under_14_parent_agreement .c_mobilephone{margin-bottom:5px;}
+.sec_under_14_parent_agreement .c_mobilephone .run,
+.sec_under_14_parent_agreement .c_telephone .run{display:inline-block;width:111px;height:23px;padding:4px 0 0;background:url(http://static1.me2day.com/images/common_page/bg_btn_7.gif?1384398001) no-repeat scroll 0 0;text-align:center;text-decoration:none;color:#333;vertical-align:middle;}
+.sec_under_14_parent_agreement .c_mobilephone .run{margin-left:41px;}
+.sec_under_14_parent_agreement .c_telephone .run{margin-left:16px;}
+
+
+.login_layer2{position:relative;width:472px;padding-bottom:10px;background:url(http://static1.me2day.com/images/common_page/bg_layer_b_472.png?1384398001) no-repeat scroll 0 100%;}
+* html .login_layer2{background-image:url(http://static2.me2day.com/images/common_page/bg_layer_b_472.gif?1384398001);}
+.pop_naver_id .login_layer2 .layer_contents{padding-bottom:25px;}
+.login_layer2 .layer_wrap{padding-top:8px;background:url(http://static1.me2day.com/images/common_page/bg_layer_t_472.png?1384398001) no-repeat scroll 0 0;}
+* html .login_layer2 .layer_wrap{background-image:url(http://static2.me2day.com/images/common_page/bg_layer_t_472.gif?1384398001);}
+.login_layer2 .layer_contents{background:url(http://static2.me2day.com/images/common_page/bg_layer_y_472.png?1384398001) repeat-y scroll 0 0;font-size:12px;padding:27px 5px 36px;zoom:1;}
+* html .login_layer2 .layer_contents{background-image:url(http://static1.me2day.com/images/common_page/bg_layer_y_472.gif?1384398001);}
+.pop_new_login .layer_tt{margin-left:40px;margin-bottom:17px;font-size:14px;color:#000;font-weight:bold;letter-spacing:-1px;}
+.pop_new_login .layer_tt .naver_txt{color:#42b421;}
+.pop_new_login .frm_section_footer .msg{float:left;margin-top:13px;color:#999;}
+.login_layer2 .layer_close{position:absolute;top:21px;right:20px;width:15px;overflow:visible;background-color:#fff;border:0;padding:0;}
+
+.pop_new_login .header_tab{width:271px;overflow:hidden;margin-left:41px;padding-left:59px;padding-bottom:17px;zoom:1;}
+*:first-child+html .pop_new_login #layer_me2day_login .header_tab{padding-bottom:18px;}
+.pop_new_login .header_tab *{float:left;}
+.pop_new_login .header_tab img{vertical-align:top;}
+.pop_new_login .auth_naver{margin-left:41px;}
+.pop_new_login .auth_naver.auth_openid{margin-top:35px;}
+.pop_new_login .auth_naver .password_addr.validate_err .err_msg,
+.pop_new_login .auth_naver .me2day_id.validate_err .err_msg,
+.pop_new_login .auth_naver .me2day_pw.validate_err .err_msg,
+.pop_new_login .auth_naver .naver_id.validate_err .err_msg,
+.pop_new_login .auth_naver .naver_pw.validate_err .err_msg{margin-left:0;}
+.pop_new_login .auth_naver .naver_id,
+.pop_new_login .auth_naver .naver_pw{position:relative;}
+.pop_new_login #layer_naver_login .auth_naver .naver_id{margin-bottom:1px;}
+*:first-child+html .pop_new_login #layer_naver_login .auth_naver .naver_id{margin-bottom:0;}
+.pop_new_login .auth_naver label{position:absolute;top:12px;left:13px;display:block;font-weight:bold;color:#ccc;font-size:14px;letter-spacing:-1px;}
+.pop_new_login .auth_naver .btn label{display:inline;font-size:11px;font-weight:normal;}
+.pop_new_login .auth_naver .login_bts label{font-weight:normal;}
+.pop_new_login .auth_naver .txt_field{width:366px;height:29px;margin-top:1px;padding:4px 0 5px 12px;border:1px solid #c6c6c6;border-bottom:1px solid #eee;border-right:1px solid #eee;vertical-align:top;font-size:18px;color:#000;font-family:arial,sans-serif;font-weight:bold;background-color:#f9f9f9;outline:none;}
+* html .pop_new_login .auth_naver .txt_field{padding:5px 0 4px 12px;}
+*:first-child+html .pop_new_login .auth_naver .txt_field{padding:5px 0 4px 12px;}
+.pop_new_login .auth_naver .btn_login{width:90px;border:0 none;color:#000;font-size:14px;font-weight:bold;height:41px;overflow:visible;
+padding:0 0 3px;text-align:center;background:url(http://static1.me2day.com/images/common_page/bg_btn_login_1.gif?1384398001) no-repeat scroll 0 0 #fff;cursor:pointer;}
+.pop_new_login .auth_naver .btn_linkage{width:103px;border:0 none;color:#000;font-size:14px;font-weight:bold;height:41px;overflow:visible;
+padding:0 0 3px;margin:2px 0 0 10px;text-align:center;background:url(../img/bg_btn_linkage.gif) no-repeat scroll 0 0 #fff;cursor:pointer;}
+.pop_new_login .auth_naver .btn{width:380px;overflow:hidden;margin-top:18px;}
+.pop_new_login .auth_naver .btn .btn_login{float:right;}
+.pop_new_login .foot{width:380px;border-top:1px solid #ececec;margin:29px auto 0;padding:11px 0 6px;}
+.pop_new_login .foot p{text-align:center;font-size:12px;color:#888;}
+.pop_new_login .foot p .join{color:#5cabd8;text-decoration:none;font-weight:bold;}
+.pop_new_login .foot p.noti_pw_change{height:17px;line-height:21px;letter-spacing:-1px;font-size:11px;text-align:left;}
+.pop_new_login .foot p.noti_pw_change a{color:#5ba8d5;text-decoration:underline;font-size:11px;}
+.pop_new_login .frm_section_footer{width:380px;overflow:hidden;margin-top:8px;padding-bottom:10px;zoom:1;}
+.pop_new_login .frm_section_footer *{vertical-align:middle;}
+.pop_new_login .frm_section_footer .join{float:left;margin-top:13px;margin-right:7px;padding-right:7px;color:#777;font-weight:bold;background:url(http://static1.me2day.com/images/common_page/bg_bar_1.gif?1384398001) no-repeat scroll 100% center;}
+.pop_new_login .frm_section_footer .msg_naver_id_pw{margin-top:20px;float:left;color:#999;letter-spacing:-1px;}
+.pop_new_login .frm_section_footer .msg_naver_id_pw a{color:#777;text-decoration:none}
+.pop_new_login .frm_section_footer .id_pw_bar{padding:0 5px;color:#e0e0e0}
+.pop_new_login .frm_section_footer .find{float:left;margin-top:13px;color:#999;}
+.pop_new_login .frm_section_footer .find a{color:#999;letter-spacing:-1px;text-decoration:none;font-size:12px;}
+.pop_new_login .frm_section_footer .find .id_find{padding-right:0;background:url(http://static1.me2day.com/images/stream/bg_bar_2.gif?1384398001) no-repeat 100% 0;}
+.pop_new_login .frm_section_footer .find a:hover{text-decoration:underline;}
+.pop_new_login .frm_section_footer .find .pw_find{margin-left:0;}
+.pop_new_login .frm_section_footer .login_bts{float:right;margin-top:8px;}
+.pop_new_login .frm_section_footer .login_bts label{position:relative;top:1px;left:5px;display:inline;font-size:11px;color:#777;}
+.pop_new_login .frm_section_footer .btn_login{margin-top:2px;margin-left:10px;}
+
+.box_loading{padding:46px 48px 35px}
+.box_loading .process_txt{width:223px;height:39px;margin:0 auto 19px;background:url(../img/txt_loading.gif) no-repeat;text-indent:-5000px}
+.box_loading .process_box{font-size:16px;color:#666;text-align:center}
+.box_loading .process_bar{height:8px;margin-top:7px;background:#d6d7d7;border-top:1px solid #a8a9a9;border-bottom:1px solid #c6c7c7;border-left:1px solid #bcbdbd;border-bottom:1px solid #bcbdbd}
+.box_loading .process_bar span{display:block;height:8px;background:#7b5fbd}
+
+.pop_new_login .auth_naver .me2day_id{padding:1px 0;}
+* html .pop_new_login .auth_naver .me2day_id{padding:2px 0 3px;}
+.pop_new_login .auth_naver .me2day_addr{position:relative;overflow:hidden;width:366px;height:33px;margin-top:0;padding:0 0 5px 12px;border:1px solid #c6c6c6;border-bottom:1px solid #eee;border-right:1px solid #eee;vertical-align:top;font-size:18px;color:#000;font-family:arial,sans-serif;font-weight:bold;background-color:#f9f9f9;}
+.pop_new_login .auth_naver .me2day_addr label{position:relative;display:inline;top:5px;left:0;margin-right:3px;}
+* html .pop_new_login .auth_naver .me2day_addr label{top:7px;}
+*:first-child+html .pop_new_login .auth_naver .me2day_addr label{top:7px;}
+.pop_new_login .auth_naver .me2day_addr label .lb{display:none;}
+.pop_new_login .auth_naver .me2day_addr .txt_field{padding-left:0;width:180px;padding-bottom:2px;line-height:27px;height:32px;border:0;background:none;outline:none;}
+* html .pop_new_login .auth_naver .me2day_addr .txt_field{margin-top:0;padding-left:0;width:180px;height:29px;}
+*:first-child+html .pop_new_login .auth_naver .me2day_addr .txt_field{margin-top:0;padding-left:0;width:180px;height:29px;}
+
+.naver_mem_msg{padding-top:5px;margin-bottom:14px;padding-left:172px;color:#23af0e;}
+.join .join_err{padding-top:19px;}
+.join .join_err .frm_section{padding-left:126px;padding-bottom:23px;}
+.join .join_err .err{margin-bottom:11px;padding-left:42px;background:url(http://static1.me2day.com/images/common_page/ico_alert_1.gif?1384398001) no-repeat scroll 0 8px;font-size:14px;font-weight:bold;color:#444;line-height:21px;}
+.join .join_err .other_way{padding-left:43px;color:#7d7d7d;text-decoration:underline;}
+
+.pop_page_not_use .layer_header h1{font-size:13px;font-weight:bold;padding-left:24px;}
+.page_not_use{padding:20px 0 31px;font-size:12px;text-align:center;}
+.page_not_use .alert_tt{margin-bottom:7px;font-size:16px;font-weight:bold;color:#7b5fe2;}
+.page_not_use .noti_msg{margin-bottom:27px;color:#666;}
+.page_not_use .foot .btn_join_page{display:inline-block;width:119px;height:22px;padding-top:5px;text-align:center;font-size:12px;color:#000;background:url(http://static2.me2day.com/images/common_page/bg_btn_9.gif?1384398001) no-repeat scroll 0 0;}
+.btn_join_page:hover{text-decoration:none;}
+
+.pop_new_login .temp_header_tab{width:381px;margin-left:0;}
+.me2_login_comment{padding:7px 0 9px;color:#777}
+
+/* Common Page */
+.common_page  {padding:130px 0 90px 183px;overflow:hidden;zoom:1}
+.common_page .alert {padding-left:70px;background:url(http://static1.me2day.com/images/common_page/ico_page_not_found.gif?1384398001) no-repeat scroll 1px 4px;}
+.common_page .alert {padding-left:70px;background:url(http://static1.me2day.com/images/common_page/ico_page_not_found.gif?1384398001) no-repeat scroll 1px 4px;}
+.common_page .alert h2 {margin-bottom:17px;color:#7a32b3;font-size:18px;font-weight:bold;letter-spacing:-1px;}
+.common_page .alert a {color:#e75b00;text-decoration:none;}
+.common_page .alert a:hover {text-decoration:underline;}
+.common_page .alert .btn_back {display:block;width:90px;height:22px;margin-top:20px;padding-top:4px;background:url(http://static2.me2day.com/images/common_page/btn_back.gif?1384398001) no-repeat scroll 0 0;color:#4b4b4b;text-align:center;}
+.common_page .alert p {line-height:19px;font-size:12px;}
+.common_page .util_box {width:510px;margin:25px 0 0 32px;padding:17px 0 17px 40px;border:1px solid #efefef;background-color:#fbfbfb;}
+.common_page .util_box p {color:#000;font-weight:bold;}
+.common_page .util_box.size_595 {width:536px;}
+.common_page .util_box .find label {margin-right:20px;color:#000000;font-weight:bold;}
+.common_page .util_box .find .input_type1 {position:relative;top:3px;width:146px;height:20px;margin:0 3px 0 1px;padding:5px 6px 0;border-width:1px;border-style:solid;border-color:#C4C4C4 #EAEAEA #EAEAEA #C4C4C4;background:none repeat scroll 0 0 #FFFFFF;font-size:14px;font-weight:bold;line-height:20px;vertical-align:middle;}
+
+/* page not found */
+.page_not_found .util_box .list {width:530px;margin-top:18px;margin-bottom:20px;}
+.page_not_found .util_box .list ul {width:450px;margin-top:12px;padding-top:6px;overflow:hidden;}
+.page_not_found .util_box .list ul li {float:left;margin:4px 0 5px;padding-right:3px;}
+.page_not_found .util_box .find.list_top {clear:both;width:470px;padding-top:14px;border-top:1px solid #efefef;}
+.page_not_found .util_box .find label {margin-right:20px;color:#000;font-weight:bold;}
+.page_not_found .util_box .find .input_type1 {position:relative;top:3px;width:146px;height:20px;margin:0 3px 0 1px;padding:5px 6px 0;border-width:1px;border-style:solid;border-color:#c4c4c4 #eaeaea #eaeaea #c4c4c4;background:none repeat scroll 0 0 #fff;font-size:14px;font-weight:bold;line-height:20px;vertical-align:middle;}
+.page_not_found .util_box .find .button_type3 {position:relative;top:3px;width:44px;height:28px;border:0 none;background:url(http://static2.me2day.com/images/bg_btn_3.gif?1384398001) no-repeat scroll 0 0 transparent;text-align:center;vertical-align:middle;}
+.page_not_found .util_box .profile_master {position:relative;top:0;left:6px;width:72px;height:63px;margin-top:0;overflow:visible;border:0;}
+.page_not_found .util_box .profile_master .image_box {position:relative;width:60px;height:60px;margin:0;overflow:hidden;border-width:1px;border-style:solid;border-color:#eee #ccc #ccc #eee;}
+.page_not_found .util_box .profile_master .name_text {position:absolute;left:1px;bottom:0;width:56px;height:16px;padding:0 2px 2px;overflow:hidden;background:#797979;opacity:0.8;color:#fff;font-size:8pt;text-align:center;text-indent:0;line-height:19px;zoom:1;letter-spacing:0.1em;filter:alpha(opacity=80);-ms-filter:"alpha(opacity=80)";}
+.page_not_found .util_box .profile_master .name_text a {color:#fff;text-decoration:none;zoom:1;}
+.page_not_found .util_box .profile_master .action_link {position:absolute;top:-6px;left:-6px;width:72px;height:72px;background:url(http://static1.me2day.com/images/stream/bg_pb_60.png?1384398001) no-repeat left top;cursor:pointer;_cursor:hand;}
+* html .page_not_found .util_box .profile_master .action_link {background:none;filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='/images/stream/bg_pb_60.png',sizingMethod='scale');}
+.page_not_found .util_box .profile_master .action_link a {position:absolute;top:1px;left:45px;}
+* html .page_not_found .util_box .profile_master .action_link img {visibility:hidden;}
+* html .page_not_found .util_box .profile_master .action_link a {display:block;width:26px;height:26px;margin-top:0px;background:none;cursor:hand;filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='/images/stream/bg_p.png',sizingMethod='crop');}
+.util_box .profile_master .action_link .action_url {display:block;top:1px !important;left:1px !important;width:70px !important;height:70px !important;}
+* html .page_not_found .util_box .profile_master .action_link .action_url {filter:none;}
+*:first-child+html .page_not_found .util_box .profile_master .name_text {top:28px !important;}
+* html .page_not_found .util_box .profile_master .name_text {bottom:48px;}
+
+/* Allow Access */
+.allow_access .hgroup{position:relative;height:61px;margin-bottom:24px;padding-left:31px;background:url(http://static1.me2day.com/images/common_page/ico_allow_access.gif?1384398001) no-repeat scroll 0 4px;}
+.allow_access .hgroup.background_style2{background:none;}
+.allow_access h2{width:551px;margin-bottom:7px;font-size:18px;font-weight:bold;color:#7a32b3;letter-spacing:-1px;text-align:center;}
+.allow_access .sub_tt{width:551px;text-align:center;letter-spacing:-1px;}
+.allow_access .util_box{width:488px;margin:24px 0 0 31px;padding:24px 19px 31px 42px;border:1px solid #efefef;}
+.allow_access .util_box h3{margin-bottom:15px;font-weight:bold;font-size:12px;color:#000;}
+.allow_access .util_box .by{margin-left:4px;color:#777;font-size:12px;font-weight:normal;}
+.allow_access .util_box .by .author{color:#000;text-decoration:none;}
+.allow_access .util_box p {color:#777;font-weight:normal;}
+.allow_access ul.noti{margin-top:24px;}
+.allow_access ul.noti li{padding-left:30px;background:url(http://static2.me2day.com/images/common_page/bul_dot_1.gif?1384398001) no-repeat scroll 17px 6px;color:#4c4c4c;}
+.allow_access .bts{width:551px;margin-top:30px;margin-left:28px;text-align:center;}
+.allow_access .bts a{display:inline-block;height:27px;padding-top:5px;text-align:center;text-decoration:none;}
+.allow_access .bts a.btn_allow{width:88px;background:url(http://static1.me2day.com/images/common_page/bg_btn_4.gif?1384398001) no-repeat scroll 0 0;color:#fff;}
+.allow_access .bts a.btn_deny{width:81px;background:url(http://static2.me2day.com/images/common_page/bg_btn_5.gif?1384398001) no-repeat scroll 0 0;color:#646464;}
+
+/* Service Check */
+.service_check .util_box strong{color:#5932b3;}
+.service_check .alert .contact_mail{margin-top:12px;}
+
+/** Openid Close Notice **/
+.pop_login_type_change{position:absolute;top:300px;left:400px;width:471px;z-index:9999;}
+.pop_login_type_change .pop_head{position:relative;height:31px;padding:14px 0 0 25px;background:url(http://static1.me2day.com/images/band/bg_pop_head_2.png?1384398001) no-repeat scroll 0 0;font-size:13px;font-weight:bold;color:#fff;}
+.pop_login_type_change .pop_head .pop_tt{font-weight:bold;}
+.pop_login_type_change .pop_head .pop_tt_noti{font-size:11px;color:#bea6e5;margin-left:5px;}
+.pop_login_type_change .pop_content{overflow:hidden;padding:24px 25px 16px 26px;font-size:12px;background:url(http://static1.me2day.com/images/band/bg_pop_body_2.png?1384398001) repeat-y scroll 0 0;}
+.pop_login_type_change .pop_foot{height:11px;overflow:hidden;background:url(http://static1.me2day.com/images/band/bg_pop_foot_2.png?1384398001) no-repeat scroll 0 0;}
+.pop_login_type_change .pop_head .btn_close{position:absolute;top:14px;right:17px;border:0;padding:5px;background:none;}
+.pop_login_type_change .dear_msg{color:#333;}
+.pop_login_type_change .msg_cont{line-height:16px;}
+.pop_login_type_change .dear_msg .msg_aside{color:#777;}
+.pop_login_type_change .dear_msg .msg_aside a{color:#e75b00;text-decoration:none;}
+.pop_login_type_change .frm_pw_chk{margin-top:17px;padding:16px 20px;border:1px solid #e3dbfe;color:#727174;background-color:#f4f3f9;}
+.pop_login_type_change .frm_pw_chk .frm_tt{margin-bottom:3px;color:#512eb7;font-weight:bold;}
+.pop_login_type_change .frm_pw_chk .frm_msg{margin-bottom:14px;}
+.pop_login_type_change .frm_pw_chk .lb{display:inline-block;width:83px;}
+.pop_login_type_change .frm_pw_chk .me2addr{margin-bottom:10px;}
+.pop_login_type_change .frm_pw_chk .me2addr .addr{color:#333;}
+.pop_login_type_change .frm_pw_chk .me2addr .addr strong{color:#000;font-size:14px;}
+.pop_login_type_change .frm_pw_chk .txt_field{border:1px solid #c3c3c3;width:280px;height:21px;padding:3px 0 0 3px;background-color:#fbfbfb;border-right:1px solid #eaeaea;border-bottom:1px solid #eaeaea;}
+.pop_login_type_change .frm_pw_chk .me2pw .lb,
+.pop_login_type_change .frm_pw_chk .me2pwchk .lb{position:relative;top:-5px;}
+.pop_login_type_change .frm_pw_chk .me2pw{margin-bottom:5px;}
+.pop_login_type_change .frm_pw_chk .err_msg{display:none;padding-top:5px;color:#f40000;text-indent:83px;}
+.pop_login_type_change .frm_pw_chk .validate_err .err_msg{margin-left:82px;text-indent:0;display:block;background-position:0 6px;}
+.pop_login_type_change .frm_foot{position:relative;margin-top:16px;text-align:center;}
+.pop_login_type_change .frm_foot .no_more_show{position:absolute;top:3px;left:-3px;}
+.pop_login_type_change .frm_foot .no_more_show input{position:relative;top:2px;}
+.pop_login_type_change .frm_foot .no_more_show label{color:#777;}
+.pop_login_type_change .frm_foot .btn_login_type_change{width:124px;height:28px;background:#fff url(http://static1.me2day.com/images/stream/bg_btn_login_type_change.png?1384398001) no-repeat scroll 0 0;border:0;text-align:center;color:#000;font-weight:bold;line-height:20px;}
+
+/* Openid Close */
+.openid_close{position:relative;left:-10px;width:410px;}
+.openid_close .openid_close_tt{padding:13px 0 15px;color:#7b5fd4;font-weight:bold;font-size:12px;letter-spacing:-1px;}
+.openid_close .openid_close_tt .close_link{display:inline-block;width:62px;height:19px;margin-left:2px;text-align:center;text-decoration:none;line-height:20px;color:#fff;letter-spacing:0;font-size:11px;font-weight:normal;background:url(http://static1.me2day.com/images/stream/bg_btn_link_.gif?1384398001) no-repeat left top;}
+.openid_close .openid_close_msg{font-size:12px;letter-spacing:-1px;color:#777;line-height:19px;}
+.openid_close .openid_close_msg p{padding-bottom:13px;}
+.openid_close .openid_close_btn{padding:20px 0 0px;text-align:center;}
+.pop_new_login .openid_close .openid_close_btn{padding:6px 0 35px;}
+.openid_close .openid_close_btn .btn{position:relative;left:-3px;width:146px;margin-top:0;
+padding:0 0 3px;border:0 none;color:#000;font-size:14px;font-weight:bold;height:41px;overflow:visible;text-align:center;background:url(http://static2.me2day.com/images/common_page/bg_btn_pwfind.png?1384398001) no-repeat scroll 0 0 #fff;cursor:pointer;}
+
+/* Rules CSS */
+.user_agreement{position:relative;width:506px;padding-top:4px;margin-left:115px;}
+.user_agreement .tab_rule{position:absolute;top:0;left:0;display:block;height:25px;padding:7px 0 0 5px;border:1px solid #ccc;border-bottom:0;border-left:0;letter-spacing:-1px;text-align:center;}
+* html .user_agreement .tab_rule{height:26px;}
+* html .user_agreement .tab_rule{padding-top:5px;}
+*:first-child+html .user_agreement .tab_rule{padding-top:5px;}
+.user_agreement .lb{margin-right:3px;cursor:pointer;vertical-align:middle;}
+.user_agreement input{position:relative;top:-1px;vertical-align:middle;}
+.user_agreement .rule_1 .tab_rule{width:120px;border-left:1px solid #ccc;}
+.user_agreement .rule_2 .tab_rule{width:180px;left:127px;}
+/*.user_agreement .rule_3 .tab_rule{width:119px;left:228px;}*/
+.user_agreement .rule_4 .tab_rule{width:160px;left:313px;}
+.user_agreement .rule_box{position:absolute;z-index:1;visibility:hidden;width:437px;height:500px;margin-top:28px;padding:20px;overflow:auto;border:1px solid #ccc;border-top:1px solid #ccc;}
+*:first-child+html .user_agreement .rule_box{margin-top:30px}
+.user_agreement .selected .tab_rule{background-color:#f8f8f7;border-top:1px solid #ccc;border-right:1px solid #ccc;}
+.user_agreement .selected .lb{color:#5ba8d5;}
+.user_agreement .selected .rule_box{position:relative;visibility:visible;}
+.user_agreement .alert{padding:17px 0 26px;color:#5ba8d5;letter-spacing:-1px;}
+.rule_container .articles{overflow:hidden;zoom:1;}
+.rule_container .articles.line_style{padding-bottom:9px;border-bottom:1px solid #e7e7e7;}
+.rule_container .articles_title{padding:0 0 9px 0;font-size:1.08em;color:#5932b3;font-weight:bold;letter-spacing:-1px;}
+.rule_container .articles .section{clear:both;padding:0 0 23px;}
+.rule_container .articles .section .section_title{margin:0 0 10px 0;font-size:1.08em;font-weight:bold;color:#000;}
+.rule_container .articles .section ul,
+.rule_container .articles .section ol{margin-left:20px;}
+.rule_container .articles .section p{padding-bottom:10px;}
+.rule_container .articles .section li{padding-bottom:10px;line-height:1.6;list-style-type:upper-alpha;list-style-position:outside;}
+.rule_container .articles .section ol li{list-style-type:decimal;}
+.rule_container .articles .section .sub_section{margin-left:11px;padding-top:4px;}
+.rule_container .articles .section ol.sub_section{margin-left:34px;padding:5px 0;}
+.rule_container .articles .section ul.sub_section li,
+.rule_container .articles .section li li{margin-left:0;padding:0 0 0 7px;list-style:none;background:url(http://static1.me2day.com/images/rules/bg_sub_section.gif?1384398001) no-repeat left 10px;}
+.rule_container .articles .section ol li li{padding:0;background:none;list-style-type:lower-alpha;}
+
+.rule_container .articles .section ol.hangul_ordering{margin-left:20px;}
+.rule_container .articles .section ol.hangul_ordering li{clear:both;list-style:none;}
+.rule_container .articles .section ol.hangul_ordering li ul{margin-left:25px;}
+.rule_container .articles .section ol.hangul_ordering li ul li{list-style:lower-alpha;}
+.rule_container .articles .section .list_dl dt {float:left;}
+.rule_container .articles .section .list_dl dd {float:left;margin-left:3px;}
+
+.rule_container .articles .section ul.indent{margin-left:45px;}
+.rule_container .articles .section ul.indent li{list-style:lower-alpha;padding:0;}
+.rule_container .articles .section p.indent{margin-left:23px;}
+.rule_container .articles .section ul.none{margin-left:20px;}
+.rule_container .articles .section ul.none li{list-style:none;padding:0;}
+.rule_container .articles .section ol.tight li{padding:0;}
+
+.rule_container .articles .section2{margin-top:-10px;padding:0 0 23px;}
+.rule_container .articles .section2 .section_title{margin:0 0 7px 20px;padding-left:25px;font-size:1.08em;font-weight:bold;color:#000;background:url(http://static2.me2day.com/images/rules/bg_section_title.gif?1304356077) no-repeat left 3px }
+.rule_container .articles .section2 p{margin-left:25px;padding-bottom:10px;}
+
+.rule_container .articles .section3{margin-top:-10px;padding:0 0 23px;}
+.rule_container .articles .section3 .section_title{margin:0 0 9px 20px;font-size:1.08em;font-weight:bold;color:#000;}
+.rule_container .articles .section3 ul,
+.rule_container .articles .section3 ol{margin-left:45px;margin-bottom:15px;}
+.rule_container .articles .section3 li{margin-left:0;padding:0 0 0 7px;line-height:1.6;list-style:none;background:url(http://static1.me2day.com/images/rules/bg_sub_section.gif?1384398001) no-repeat left 10px;}
+.rule_container .articles .section3 p{margin-left:45px;padding-bottom:10px;}
+.rule_container .articles .section3 ol li{list-style-type:decimal;}
+.rule_container .articles .section3 .sub_section{margin-left:11px;padding-top:4px;}
+.rule_container .articles .section3 ol.sub_section{margin-left:34px;padding:5px 0;}
+.rule_container .articles .section3 ol li li{padding:0;background:none;list-style-type:lower-alpha;}
+
+.rule_container .highlight_article{overflow:hidden;zoom:1;background:#f4f3fa;margin-bottom:27px;padding:17px 25px;}
+.rule_container .highlight_article2{overflow:hidden;zoom:1;background:#f4f3fa;padding:17px 25px;}
+.rule_container .highlight_article.center_background{background:#f4f3fa url(http://static1.me2day.com/images/rules/bg_highlight_article.gif?1384398001) no-repeat 50% ;}
+.rule_container .highlight_article strong{color:#846ac5;}
+.rule_container .highlight_article .paragraph1{color:#846ac5;font-weight:bold;line-height:1.75;letter-spacing:-1px;}
+.rule_container .highlight_article .paragraph3{margin-top:10px;color:#846ac5;line-height:1.75;font-weight:bold;letter-spacing:-1px;}
+.rule_container .highlight_article .paragraph3{margin-top:10px;color:#846ac5;line-height:1.75;letter-spacing:-1px;}
+.rule_container .highlight_article .paragraph3 a{color:#846ac5;line-height:1.75;letter-spacing:-1px;}
+.rule_container .highlight_article2 .paragraph1{color:#846ac5;font-weight:bold;line-height:1.75;}
+.rule_container .define_section{float:left;width:40%;}
+.rule_container .define_section dl{overflow:hidden;zoom:1;padding-top:9px;color:#7a797d;}
+.rule_container .define_section dt{clear:both;float:left;margin-right:3px;line-height:1.6;}
+.rule_container .define_section dd{line-height:1.6;}
+.rule_container .define_section dd a{color:#7a797d;}
+.rule_container .define_section.dt_left{float:left;width:40%;margin-right:50px;}
+.rule_container .highlight_article .contact,
+.rule_container .highlight_article .contact a{color:#846ac5;font-weight:bold;}
+.rule_container .highlight_article .btn_agreement{float:right;width:128px;height:30px;margin-top:-32px;text-align:center;font-weight:bold;border:0;background:url(http://static2.me2day.com/images/rules/bg_btn_agreement_local.gif?1384398001) no-repeat left top;cursor:pointer;_cursor:hand;}
+
+
+.rule_container .define_section dl.define_list{margin-left:25px;}
+.rule_container .articles span.naver_id_join{margin-left:57px;}
+
+.rule_box .articles .section table{border-collapse:collapse;border:0 none;}
+.rule_box .articles .section table caption{position:absolute;top:0;left:0;height:1px;overflow:hidden;text-indent:-1000em;}
+.rule_box .articles .section table th,.rule_box .articles .section table td{padding:0.5em 0.2em;border:0 hidden;word-spacing:-0.2em;}
+.rule_box .articles .section table th{background-color:#efefef;font-weight:bold;vertical-align:middle;}
+.rule_box .articles .section table thead th{border-top:1px solid #8F8F8F;}
+.rule_box .articles .section table tbody td{border-width:1px 0;border-style:solid hidden solid none;border-color:#999;}
+
+.join .join_form .passwd{overflow:visible;}
+.pw_alert_pop{display:none;position:absolute;z-index:2;top:0;left:581px;width:225px;height:53px;background:url(http://static1.me2day.com/images/settings/bg_pw_level_2.png?1384398001) no-repeat scroll 100% 0;}
+* html .pw_alert_pop{top:1px;background-image:url(http://static2.me2day.com/images/settings/bg_pw_level_2.gif?1384398001);}
+*:first-child+html .pw_alert_pop{top:1px;}
+.pw_level{padding:9px 12px 0 16px;height:52px;font-size:11px;letter-spacing:-1px;}
+.pw_level strong{margin-left:4px;font-weight:bold;}
+.pw_level .level .value{display:inline-block;width:62px;height:5px;overflow:hidden;margin-top:-1px;margin-left:5px;background:url(http://static1.me2day.com/images/settings/bg_pw_level.gif?1384398001) no-repeat scroll 0 0;vertical-align:middle;}
+.pw_level.lv1 strong{color:#e75200;}
+.pw_level.lv2 strong{color:#72c408;}
+.pw_level.lv2 .value{background-position:0 -5px !important;}
+.pw_level.lv3 strong{color:#0ea1e5;}
+.pw_level.lv3 .value{background-position:0 -10px !important;}
+.pw_level.lv_alert .level{color:#eb5200;}
+.pw_level.lv_alert strong{color:#333;}
+.pw_level.lv_alert .value{background:none;}
+.pw_level .desc{margin-top:1px;color:#999;}
+
+.login_bridge{overflow:hidden;width:749px;margin:86px auto;font-size:12px;}
+.login_bridge .bridge_naver,
+.login_bridge .bridge_me2day{float:left;width:324px;padding-bottom:10px;}
+.login_bridge .bridge_naver{padding-right:50px;border-right:1px solid #e1e1e1;}
+.login_bridge .bridge_me2day{padding-left:50px;}
+.login_bridge .tt{margin-bottom:19px;padding-top:7px;padding-bottom:12px;border-bottom:2px solid #e1e1e1;font-size:24px;line-height:30px;font-weight:bold;color:#303030;letter-spacing:-1px;font-family:gulim,sans-serif;text-align:center;}
+.login_bridge .join_benefit{height:153px;color:#888;margin-left:10px;}
+.login_bridge .list_tt{font-size:14px;margin-bottom:9px;font-weight:bold;letter-spacing:-1px;}
+.login_bridge .join_benefit li{line-height:16px;margin-bottom:12px;padding-left:7px;background:url(http://static1.me2day.com/images/common_page/bul_dot_3.gif?1384398001) no-repeat scroll 1px 6px;}
+.login_bridge .bridge_me2day .join_benefit ul{margin-top:2px;}
+.login_bridge .bridge_me2day .join_benefit li{margin-bottom:6px;}
+.login_bridge .bridge_me2day .join_benefit li.jp{font-family:arial,sans-serif;}
+.login_bridge .bridge_me2day .join_benefit li.jp .en{font-family:dotum,sans-serif;}
+.login_bridge .bridge_me2day .join_benefit li.cn{font-family:arial,sans-serif;}
+.login_bridge .bridge_me2day .join_benefit li.cn .en{font-family:dotum,sans-serif;}
+.login_bridge .bridge_me2day .join_benefit li.en,
+.login_bridge .bridge_me2day .join_benefit li.jp,
+.login_bridge .bridge_me2day .join_benefit li.cn{background-position:1px 7px;}
+.login_bridge .btn_join{display:block;width:324px;height:56px;background-repeat:no-repeat;background-attachment:scroll;background-position:0 0;color:#fff;font-weight:bold;text-align:center;text-decoration:none;font-size:14px;letter-spacing:-1px;}
+.login_bridge .join_benefit li.jp{font-family:verdana,sans-serif;}
+.login_bridge .btn_join img{vertical-align:middle;}
+.login_bridge .bridge_naver .btn_join{text-indent:-9999px;background-image:url(http://static1.me2day.com/images/common_page/btn_bridge_naver.gif?1384398001);}
+.login_bridge .bridge_me2day .btn_join{text-indent:-9999px;background-image:url(http://static2.me2day.com/images/common_page/btn_bridge_me2day.gif?1384398001);}
+
+.validate_err .err_msg{display:block !important;}
+
+/* After Recommendation */
+.login_layer3{position:relative;width:347px;padding-bottom:10px;background:url(http://static1.me2day.com/images/common_page/bg_layer_b_347.png) no-repeat scroll 0 100%;}
+* html .login_layer3{background-image:url(http://static1.me2day.com/images/common_page/bg_layer_b_347.gif);}
+.pop_naver_id .login_layer3 .layer_contents{padding-bottom:25px;}
+.login_layer3 .layer_wrap{padding-top:8px;background:url(http://static2.me2day.com/images/common_page/bg_layer_t_347.png) no-repeat scroll 0 0;}
+* html .login_layer3 .layer_wrap{background-image:url(http://static2.me2day.com/images/common_page/bg_layer_t_347.gif);}
+.login_layer3 .layer_contents{background:url(http://static1.me2day.com/images/common_page/bg_layer_y_347.png) repeat-y scroll 0 0;font-size:12px;padding:16px 25px 22px 26px;zoom:1;}
+* html .login_layer3 .layer_contents{background-image:url(http://static1.me2day.com/images/common_page/bg_layer_y_347.gif);}
+.pop_new_login .layer_tt{margin-left:40px;margin-bottom:17px;}
+.pop_new_login .frm_section_footer .msg{float:left;margin-top:13px;color:#999;}
+.login_layer3 .layer_close{position:absolute;top:17px;right:20px;width:11px;height:11px;overflow:visible;background-color:#fff;border:0;padding:0;cursor:pointer;}
+.login_layer3 .layer_close img{vertical-align:top;}
+
+.pop_recommend_fri_req .recommend_friend .pre_label strong{color:#ed5702;}
+.pop_recommend_fri_req .friend_msg fieldset{position:relative;}
+.pop_recommend_fri_req .friend_msg legend{display:none;}
+.pop_recommend_fri_req .friend_msg .msg_box{position:relative;z-index:2;zoom:1;padding-top:7px;}
+.pop_recommend_fri_req .friend_msg .msg_box .tokenizer_wrap{position:relative;z-index:2;zoom:1;padding-top:6px;float:none;}
+.pop_recommend_fri_req .friend_msg .msg_box label{position:absolute;z-index:1;left:7px;top:5px;width:200px;color:#aeaeae;cursor:text;font-size:12px;}
+.pop_recommend_fri_req .friend_msg .recommend_friend .tokenizer{position:relative;top:0;width:286px;height:auto;margin-right:0;padding:7px 0 3px 7px;}
+* html .pop_recommend_fri_req .friend_msg .recommend_friend .tokenizer{padding:5px 0 5px 7px;}
+*:first-child+html .pop_recommend_fri_req .friend_msg .recommend_friend .tokenizer{padding:5px 0 5px 7px;}
+.pop_recommend_fri_req .friend_msg .recommend_friend .mrg_l_sp{float:left;width:0;overflow:hidden;margin-left:0px;}
+.pop_recommend_fri_req .tokenizer_autocomplete{float:left;}
+.pop_recommend_fri_req .tokenizer_autocomplete input{border:0;height:14px;line-height:14px;overflow:visible;outline-color:-moz-use-text-color;outline-style:none;outline-width:medium;font-size:12px;}
+
+.pop_recommend_fri_req .autocomplete_populate{position:absolute;z-index:2;width:294px;clear:both;left:0;top:35px;padding-bottom:3px;background:#fff url(http://static1.me2day.com/images/common_page/bg_nick_result_b_295.gif) no-repeat left bottom;font-size:11px;zoom:1;}
+* html .pop_recommend_fri_req .tokenizer_wrap .autocomplete_populate{width:294px;top:37px;}
+*:first-child+html .pop_recommend_fri_req .tokenizer_wrap .autocomplete_populate{top:37px;padding-bottom:4px;}
+.pop_recommend_fri_req .autocomplete_populate li{vertical-align:top;}
+.pop_recommend_fri_req .autocomplete_populate li.last_child{background:url(http://static2.me2day.com/images/bg_d_list_r_last3.gif?1384398001) no-repeat scroll right bottom;}
+.pop_recommend_fri_req .autocomplete_populate li a{width:294px;_width:294px;}
+.pop_recommend_fri_req .autocomplete_populate li.hasFocus a,
+.pop_recommend_fri_req .autocomplete_populate li a:hover,
+.pop_recommend_fri_req .autocomplete_populate li a:focus{width:294px;}
+* html .pop_recommend_fri_req .autocomplete_populate li.hasFocus a,
+* html .pop_recommend_fri_req .autocomplete_populate li a:hover,
+* html .pop_recommend_fri_req .autocomplete_populate li a:focus{background-position:99% 100%;}
+.pop_recommend_fri_req .autocomplete_populate li.group_item{height:37px;}
+.pop_recommend_fri_req .autocomplete_populate li.group_item a{width:183px;padding:3px 5px 3px 4px;margin-right:1px;line-height:30px;background-color:#f9f9f9;}
+.pop_recommend_fri_req .autocomplete_populate li.group_item a:hover,
+.pop_recommend_fri_req .autocomplete_populate li.group_item a:focus{width:184px;height:31px;}
+* html .pop_recommend_fri_req .autocomplete_populate li.group_item a:hover,
+* html .pop_recommend_fri_req .autocomplete_populate li.group_item a:focus{width:183px;height:31px;background-position:99% 100%;}
+.pop_recommend_fri_req .autocomplete_populate li.group_item a .count{position:absolute;top:10px;right:5px;}
+.pop_recommend_fri_req .autocomplete_populate li.group_item a:hover .count{color:#000;}
+.pop_recommend_fri_req .autocomplete_populate li.group_item a .count strong{margin-right:3px;font-weight:normal;color:#795dd6;}
+.pop_recommend_fri_req .autocomplete_populate li.group_item.end_child,
+.pop_recommend_fri_req .autocomplete_populate li.group_item.end_child a:hover{background-image:url(http://static2.me2day.com/images/bg_d_list_r_last3.gif?1384398001);}
+.pop_recommend_fri_req .autocomplete_populate ul{border-top:1px solid #bcbcbc;border-left:1px solid #bcbcbc;}
+.pop_recommend_fri_req .autocomplete_populate li{width:100%;position:relative;_left:1px;padding-right:1px;list-style:none;color:#000100;background:url(http://static1.me2day.com/images/bg_d_list_r.gif?1384398001) no-repeat right bottom;}
+.pop_recommend_fri_req .autocomplete_populate li .phone_numok{position:absolute;right:7px;top:10px;zoom:1;}
+.pop_recommend_fri_req .autocomplete_populate li.last_child{_margin:-3px 0 -2px;background:none;background:url(http://static1.me2day.com/images/bg_d_list_r_last2.gif?1384398001) no-repeat right bottom;}
+*:first-child+html .pop_recommend_fri_req .autocomplete_populate li.last_child{margin:-3px 0 -2px;}
+.pop_recommend_fri_req .autocomplete_populate li a{display:block;width:191px;text-decoration:none;height:30px;padding:3px 0 3px;line-height:19px;color:#010101;zoom:1;}
+.pop_recommend_fri_req .autocomplete_populate li a img{margin-right:5px;margin-left:4px;}
+.pop_recommend_fri_req .autocomplete_populate li.last_child a{zoom:1;}
+*:first-child+html .pop_recommend_fri_req .autocomplete_populate li.last_child a{padding-top:6px;}
+.pop_recommend_fri_req .autocomplete_populate li a *{vertical-align:middle;}
+.pop_recommend_fri_req .autocomplete_populate li.hasFocus a,
+.pop_recommend_fri_req .autocomplete_populate li a:hover,
+.pop_recommend_fri_req .autocomplete_populate li a:focus{background:#f4f4f4 url(http://static1.me2day.com/images/bg_d_list_r.gif?1384398001) no-repeat right bottom;color:#1ca7ac;}
+.pop_recommend_fri_req .autocomplete_populate li.last_child.hasFocus a,
+.pop_recommend_fri_req .autocomplete_populate li.last_child a:hover,
+.pop_recommend_fri_req .autocomplete_populate li.last_child a:focus{background:#f4f4f4 url(http://static2.me2day.com/images/bg_d_list_r_last3.gif?1384398001) no-repeat right bottom;color:#1ca7ac;}
+
+.pop_recommend_fri_req .friend_msg .msg_box textarea{width:288px;height:94px;margin-top:2px;padding:4px 0 0 4px;font-size:12px;border:1px solid #d0d0d0;background:#f9f9f9;}
+* html .pop_recommend_fri_req .friend_msg .msg_box textarea{width:285px;height:92px;padding:7px 0 0 8px;}
+*:first-child+html .pop_recommend_fri_req .friend_msg .msg_box textarea{width:285px;height:92px;padding:7px 0 0 8px;}
+.pop_recommend_fri_req .friend_msg .msg_box .msg_area label{top:11px;left:8px;}
+.pop_recommend_fri_req .friend_msg .recommend_friend.msg_box .msg_area{clear:both;position:relative;padding-top:2px;}
+
+.pop_recommend_fri_req .write_control{clear:both;position:relative;text-align:right;}
+.pop_recommend_fri_req .write_control .text_count{position:relative;top:8px;color:#aaa;}
+.pop_recommend_fri_req .write_control .ico_mobile{position:relative;top:6px;}
+.pop_recommend_fri_req .write_control .text_count strong{margin-right:2px;color:#666;}
+.pop_recommend_fri_req .btn_box .btn_submit,
+.pop_recommend_fri_req .btn_box .btn_cancel{position:relative;top:3px;vertical-align:top;width:38px;height:27px;padding-bottom:4px;line-height:26px;font-size:12px;text-align:center;background:url(http://static1.me2day.com/images/stream/bg_btn_cancel_38_27.gif?1384398001) no-repeat left top;border:0;color:#7d7d7d;cursor:pointer;}
+.pop_recommend_fri_req .btn_box .btn_submit{color:#333;font-weight:bold;margin-right:3px;}
+
+.interest_fri{position:relative;display:inline-block;width:19px;height:19px;background:url(http://static1.me2day.com/images/stream/ico_rel_friend_off.png?1384398001) no-repeat scroll 0 0;vertical-align:middle;}
+.interest_fri .alt{position:absolute;top:0;left:0;text-indent:-999em;}
+.interest_fri.on,
+.interest_fri:hover{background-image:url(http://static2.me2day.com/images/stream/ico_rel_friend_on.png?1384398001);}
+
+/* Profile Box */
+.pbox{position:absolute;z-index:9999;font-size:12px;font-family:"나눔고딕", "NanumGothic","NanumGothicOTF", dotum, sans-serif;
+width:358px;border:1px solid #929292;background-color:#fff;
+width:370px\9;border:0\9;background-color:transparent\9;
+-ms-box-shadow:0 0 4px rgba(0, 0, 0, 0.3);
+-o-box-shadow:0 0 4px rgba(0, 0, 0, 0.3);
+-moz-box-shadow:0 0 4px rgba(0, 0, 0, 0.3);
+-webkit-box-shadow:0 0 4px rgba(0, 0, 0, 0.3);
+box-shadow:0 0 4px rgba(0, 0, 0, 0.3);
+-ms-border-radius:5px;
+-o-border-radius:5px;
+-moz-border-radius:5px;
+-webkit-border-radius:5px;
+border-radius:5px;
+}
+:root .pbox{width:358px;border:0;background-color:#fff;}
+.pbox .profile{width:100%;height:231px;-ms-border-radius:5px 5px 0 0;-o-border-radius:5px 5px 0 0;-moz-border-radius:5px 5px 0 0;-webkit-border-radius:5px 5px 0 0;border-radius:5px 5px 0 0;background:url(http://static2.me2day.com/images/common/bg_pbox_ie_t.png?1384398001) no-repeat scroll 0 0\9;}
+:root .pbox .profile{background:none;}
+.pbox .profile .bg{width:313px;height:71px;padding:130px 0 0 45px;position:relative\9;left:5px\9;top:5px\9;}
+:root .pbox .profile .bg{margin-left:0;left:0;top:0;-ms-border-radius:2px 2px 0 0;-o-border-radius:2px 2px 0 0;-moz-border-radius:2px 2px 0 0;-webkit-border-radius:2px 2px 0 0;border-radius:2px 2px 0 0;}
+.pbox .profile .bg .btn_pf_cover{display:none;width:34px;height:27px;position:absolute;top:162px;left:311px;z-index:99;overflow:visible;background:transparent url(http://static1.me2day.com/images/common/bg_pbox_menu.png?1384398001) no-repeat scroll 0 -63px;cursor:pointer;}
+.pbox .profile .bg .btn_pf_cover .alt{position:absolute;top:0;left:0;text-indent:-999em;}
+.pbox .profile .bg .btn_pf_cover .fileupload{position:absolute;top:0;left:-130px;opacity:0;cursor:pointer;filter: alpha(opacity=0);-ms-filter: "alpha(opacity=0)";outline-color: -moz-use-text-color;outline-style: none;outline-width: medium;}
+.pbox .profile .bg .img_pf_cover{position:absolute;left:0;top:0;-ms-border-radius:5px 5px 0 0;-o-border-radius:5px 5px 0 0;-moz-border-radius:5px 5px 0 0;-webkit-border-radius:5px 5px 0 0;border-radius:5px 5px 0 0;}
+.pbox .profile .bg.selected .btn_pf_cover{background-position:0 -91px;}
+.pbox .my_pbox .profile .bg.selected .btn_pf_cover,
+.pbox .my_pbox .profile .bg.hover .btn_pf_cover,
+.pbox .my_pbox .profile .bg:hover .btn_pf_cover{display:block;}
+.pbox .profile .gradient{position:absolute;top:0;left:0;width:355px;width:358px\9;height:200px;height:201px\9;background:url(http://static2.me2day.com/images/common/shadow_profile_cover.png?1384398001) no-repeat scroll 0 0;border: 1px solid rgba(255, 255, 255, 0.08);border-bottom:0;-ms-border-radius: 5px 5px 0 0;-moz-border-radius: 5px 5px 0 0;-o-border-radius: 5px 5px 0 0;-webkit-border-radius: 5px 5px 0 0;border-radius: 5px 5px 0 0;}
+*:first-child+html .pbox .profile .gradient{width:358px;height:201px;border:0;}
+:root .pbox .profile .gradient{width:355px;height:200px;}
+.pbox .profile .pf_master{position:absolute;left:17px;top:147px;}
+.pbox .profile .image_box{width:81px;height:82px;padding:3px 0 0 4px;background:url(http://static2.me2day.com/images/common/bg_image_box_frame.png?1384398001) no-repeat scroll 0 0;}
+.pbox .profile .image_box img{border:0;}
+.pbox .profile .pf_info{position:absolute;left:115px;top:143px;width:242px;}
+.pbox .profile .nick{display:block;padding:1px 0 0;font-size:16px;height:26px;line-height:26px;font-weight:bold;color:#fff;}
+.pbox .profile .nick .rel_friend{display:inline-block;height:19px;position:relative;top:-2px;vertical-align:middle;}
+.pbox .profile .nick .rel_friend a{vertical-align:top;}
+.pbox .profile .interest_fri{top:-2px;}
+.pbox .profile .sub_group{padding-top:1px;}
+.pbox .profile .userid{display:inline-block;color:#fff;padding-left:1px;line-height:18px;vertical-align:top;}
+.pbox .profile .official{display:block;max-width:140px;line-height:13px;margin-top:22px;margin-left:2px;color:#aaa;padding-left:0;background:none;}
+.pbox .profile .official img{position:relative;top:2px;}
+.pbox .profile .shop_wrap{line-height:13px;margin-top:24px;margin-left:2px;}
+.pbox .profile .pf_info .btn_group{position:absolute;top:68px;right:15px;}
+.pbox .my_friends_in_band .friend_item{margin-left:3px;}
+.pbox .my_friends_in_band,
+.pbox .detail{position:relative;z-index:2;width:330px;padding:15px 14px 0;color:#888;zoom:1;}
+.pbox .my_friends_in_band{font-size:0;}
+.pbox .detail .inner{padding-bottom:6px}
+.pbox .detail .msg{padding:0 0 1px 0;margin-bottom:3px;color:#666;}
+.pbox .detail  .pbox_frm_decline .msg,
+.pbox .detail  .pbox_frm_part_with .msg{color:#7b5fc9;}
+.pbox .detail .msg .nick{color:#e65802;text-decoration:none;}
+.pbox .detail .msg .btn_other_opt{display:inline-block;height:12px;padding-right:10px;background:url(http://static2.me2day.com/images/common/bul_collapse_1.gif?1384398001) no-repeat 100% 2px;text-decoration:none;color:#666;}
+.pbox .detail .msg .btn_other_opt.selected{background-position:100% -12px;}
+.pbox .detail .msg .btn_other_opt .alt{position:absolute;top:0;left:0;height:0;overflow:hidden;text-indent:-999em;}
+.pbox .detail .official_info{padding:0 3px 1px;margin-bottom:3px;}
+.pbox .detail .introduce{padding:0 3px 5px;line-height:16px;word-wrap:break-word;}
+.pbox .detail .introduce a{text-decoration:none;color:#e65802;}
+.pbox .detail .introduce a:hover{text-decoration:underline;}
+.pbox .detail .locale{padding:4px 3px 4px 15px;background:url(http://static1.me2day.com/images/common/bg_pbox_menu.png?1384398001) no-repeat scroll 4px -125px;color:#aaa;}
+.pbox .detail .locale a{color:#aaa;text-decoration:none;}
+.pbox .detail .locale a:hover{text-decoration:underline;}
+.pbox .detail .name{color:#888;font-weight:bold;}
+.pbox .detail .feed_wrap{padding:10px 0 11px 1px;border-bottom:1px solid #ebebeb;}
+.pbox .detail .feed_wrap,
+.pbox .detail .noti{color:#888;line-height:16px;}
+.pbox .detail .feed_wrap a{color:#E65802;text-decoration:none;}
+.pbox .detail .feed_wrap .opt input{height:auto;line-height:1;}
+
+.pbox .detail .noti{color:#888;line-height:16px;}
+.pbox .detail .part_with{margin-top:13px;margin-left:-4px;padding-left:2px;margin-bottom:-2px;}
+.pbox .detail .part_with .opt input{height:auto;line-height:1;}
+.pbox .detail .part_with .opt .btn_help{position:relative;top:-2px;display:inline-block;height:13px;vertical-align:middle;}
+.pbox .detail .part_with .opt .btn_help img{vertical-align:top;}
+.pbox .detail .part_with .help{display:none;border-top:1px solid #ebebeb;margin-top:15px;padding:15px 0 0;color:#aaa;}
+.pbox .detail .pbox_frm{position:relative;padding:0;}
+.pbox .detail .pbox_frm .lb{position:absolute;top:9px;left:10px;color:#888;padding-right:10px;}
+.pbox .detail .pbox_frm textarea{width:312px;height:61px;overflow:hidden;padding:9px;border:1px solid #ebebeb;resize:none;color:#444;outline:none;}
+.pbox .detail .pbox_frm input{color:#444;height:17px;line-height:17px;}
+.pbox .detail .pbox_frm_part_with,
+.pbox .detail .pbox_frm_decline,
+.pbox .detail .pbox_frm_token,
+.pbox .detail .pbox_frm_blocking{padding:0 0 0 4px;color:#666;padding-bottom:14px;border-bottom:1px solid #ebebeb;zoom:1;}
+.pbox .detail .pbox_frm_blocking select{width:80px;}
+.pbox .detail .pbox_frm_blocking .wrap{margin-bottom:12px;}
+.pbox .detail .pbox_frm_suggestion{position:relative;z-index:1;margin-top:4px;margin-bottom:0;}
+.pbox .detail .pbox_frm .tokenizer_wrap{position:relative;z-index:2;float:none;margin-top:10px;}
+.pbox .detail .pbox_frm .tokenizer_wrap .tokenizer{float:none;width:320px;min-height:19px;padding:7px 0 6px 10px;border:1px solid #ebebeb;}
+.pbox .detail .pbox_frm .tokenizer_wrap .tokenizer .default_txt{font-size:12px;}
+.pbox .detail .pbox_frm .tokenizer_wrap .autocomplete_populate li.group_item a .count{position:static;}
+.pbox .detail .pbox_frm .opt{position:relative;}
+.pbox .detail .pbox_frm .opt p{padding-bottom:3px;}
+.pbox .detail .pbox_frm .opt input{position:relative;top:0;vertical-align:middle;}
+.pbox .detail .pbox_frm .opt .lb{position:static;vertical-align:middle;line-height:12px;}
+.pbox .bottom_wrap{padding-top:5px;background:url(http://static1.me2day.com/images/common/bg_pbox_ie_y.png?1384398001) repeat-y scroll 0 0\9;}
+.pbox .action_pane,
+.pbox .count_wrap{padding:12px 20px 13px 24px;font-size:11px;letter-spacing:-1px;background:url(http://static1.me2day.com/images/common/bg_pbox_ie_y.png?1384398001) repeat-y scroll 0 0\9;}
+:root .pbox .bottom_wrap,
+:root .pbox .action_pane,
+:root .pbox .count_wrap{background:none;}
+.pbox .count_wrap strong{color:#7152D4;font-size:16px;font-family:tahoma,sans-serif;font-weight:normal;letter-spacing:0;}
+.pbox .count_wrap .cnt_post{margin-left:4px;}
+.pbox .footer{height:7px;background:url(http://static2.me2day.com/images/common/bg_pbox_ie_b.png?1384398001) no-repeat scroll 0 100%\9;}
+.pbox .menu{position:absolute;top:10px;right:9px;width:50px;}
+.pbox .menu .alt{position:absolute;top:0;left:0;height:0;overflow:hidden;text-indent:-999em;}
+.pbox .menu a{float:left;display:inline-block;background:url(http://static1.me2day.com/images/common/bg_pbox_menu.png?1384398001) no-repeat scroll 0 0;}
+.pbox .menu span{height:20px;}
+.pbox .menu a{padding:5px;height:11px;}
+.pbox .menu .btn_option a{width:11px;background-position:0 0;}
+.pbox .menu .btn_option.selected a{background-position:0 -20px;}
+.pbox .menu .btn_block a{width:11px;background-position:-90px 0;}
+.pbox .menu .btn_block.selected a{background-position:-90px -20px;}
+.pbox .menu .btn_homepage a{width:11px;background-position:-26px 0;margin-left:5px;}
+.pbox .menu .btn_close a{width:9px;background-position:-50px 0;margin-left:3px;}
+.pbox .menu .btn_block,.pbox .menu .btn_option{padding-right:2px;background-image:none;}
+/*.pbox .menu .btn_homepage,
+.pbox .menu .btn_close{padding:0 2px 0 3px;background:url(http://static1.me2day.com/images/common/bg_pb_bar_1.gif?1384398001) no-repeat scroll 0 5px;}*/
+.pbox .menu .btn_close{padding-right:0;}
+.pbox .mnu_opt{display:none;position:absolute;z-index:99;background-color:#fff;border:1px solid #888;}
+.pbox .mnu_opt a{display:block;padding:5px 9px 6px;color:#666;text-decoration:none;line-height:1;zoom:1;}
+.pbox .mnu_opt a.selected,.pbox .mnu_opt a:hover{background-color:#ebebeb;}
+.pbox .mnu_opt.mnu_setting_my,
+.pbox .mnu_opt.mnu_setting_friend{top:34px;right:61px;}
+.pbox .mnu_opt.mnu_res_friend,
+.pbox .mnu_opt.mnu_req_friend{top:234px;right:18px;}
+.pbox .mnu_opt.mnu_recommend_fri{top:159px;}
+.pbox .mnu_opt.mnu_groups{top:190px;right:15px;width:180px;}
+.pbox .mnu_opt.mnu_groups_btm{top:261px;right:auto;left:50px;}
+.pbox .mnu_opt.mnu_groups .wrap{width:180px;max-height:230px;overflow:auto;border-bottom:1px solid #cfcfcf;height:auto}
+.pbox .mnu_opt.mnu_groups .f_pane{height:25px;padding:7px 4px 4px;background:url(http://static2.me2day.com/images/common/bg_f_pane.png?1384398001) repeat-x scroll 0 0;}
+.pbox .mnu_opt.mnu_groups .f_pane .group_moderate{display:inline-block;float:left;position:relative;padding:2px;}
+.pbox .mnu_opt.mnu_groups .f_pane .group_moderate .lb{position:absolute;left:5px;top:5px;color:#aaa;}
+.pbox .mnu_opt.mnu_groups .f_pane .group_moderate .fld{width:116px;border:0;height:23px;line-height:25px;padding-left:4px;color:#444;}
+.pbox .mnu_opt.mnu_groups .f_pane .f_pane_bts{float:right;}
+.pbox .mnu_opt.mnu_groups .f_pane .f_pane_bts button{margin-right:0;}
+.pbox .group_select_wrap{position:relative;top:0;display:inline-block;margin-left:4px;padding-left:8px;background:url(http://static1.me2day.com/images/common/bg_pb_bar_1.gif?1384398001) no-repeat scroll 0 2px;vertical-align:top;}
+.pbox .group_select_wrap .group_name{padding-right:10px;background:url(http://static2.me2day.com/images/common/bul_arrow_updown.png?1384398001) no-repeat scroll 100% 2px;color:#fff;text-decoration:none;}
+.pbox .action_pane .group_select_wrap .group_name{color:#888;}
+.pbox .group_select_wrap .group_name.selected{background-position:100% -18px;}
+.pbox .action_pane{overflow:hidden;letter-spacing:0;padding-bottom:4px;zoom:1;}
+.pbox .action_pane .pb_action{float:left;padding-top:5px;}
+.pbox .action_pane .pb_action .group_select_wrap{margin-left:3px;}
+.pbox .action_pane .pb_action .chk_box input{position:relative;top:2px;vertical-align:baseline;}
+.pbox .action_pane .pb_action .chk_box .lb{color:#888;font-size:12px;}
+.pbox .action_pane .pb_bts{float:right;padding-top:1px;padding-right:2px;}
+.pbox .action_pane .pb_bts .btn{min-width:23px;}
+.pbox .action_pane .rel_friend{display:inline-block;position:relative;top:-2px;left:-2px;width:19px;height:19px;vertical-align:middle;}
+.pbox .action_pane .interest_fri{top:-2px;left:-2px;}
+
+.form_format_wrap .form_format.pbox_cover{position:absolute;z-index:10001;width:630px;height:587px;padding:0 7px 0;background:url(http://static1.me2day.com/images/common/bg_crop_img.png?1384398001) no-repeat scroll 0 0;}
+.form_format_wrap .form_format.pbox_cover .hgroup{height:41px;}
+.form_format_wrap .form_format.pbox_cover .hgroup .tt{padding-left:10px;line-height:47px;font-size:12px;color:#333;font-weight:bold;}
+.form_format_wrap .pbox_cover.crop_img .crop_box{border:0;background:none;}
+.form_format_wrap .pbox_cover.crop_img .crop_box .crop_bts{background:none;top:-30px;right:4px;}
+
+/* imgAreaSelect default style */
+
+.imgareaselect-border1 {background:url(http://static2.me2day.com/images/settings/border-v.gif?1384398001) repeat-y scroll 0 0;}
+.imgareaselect-border2 {background:url(http://static1.me2day.com/images/settings/border-h.gif?1384398001) repeat-x scroll 0 0;}
+.imgareaselect-border3 {background:url(http://static2.me2day.com/images/settings/border-v.gif?1384398001) repeat-y scroll 100% 0;}
+.imgareaselect-border4 {background:url(http://static1.me2day.com/images/settings/border-h.gif?1384398001) repeat-x scroll 0 100%;}
+.imgareaselect-handle {background-color:#bbb;}
+.imgareaselect-outer {background-color: #000;opacity:0.5;filter:alpha(opacity=50);-ms-filter:"alpha(opacity=50)";}
+.imgareaselect-selection {}
+
+
+/* Profile Image Crop */
+.form_format_wrap .format_body.crop_img{width:638px;padding:0;border:0;margin:0;}
+.crop_img .crop_box{position:relative;width:634px;height:538px;border:0;background:url(http://static1.me2day.com/images/settings/bg_crop_box.png?1384398001) repeat scroll 0 0;text-align:center;}
+.crop_img .crop_box .origin{position:relative;top:50%;}
+.crop_img .crop_box .crop_bts{position:absolute;z-index:1001;top:0;right:0;height:30px;padding:0 0 0 1px;background:url(http://static1.me2day.com/images/settings/bg_crop_bts.png?1384398001) no-repeat scroll 0 0;}
+.crop_img .crop_box .crop_bts button{margin-left:4px;margin-right:0;}
+.btn_crop_img{position:absolute;z-index:10010;}
+
+/* MOVED .btn_type_default_10{display:inline-block;height:25px;margin:0 2px;padding:0 0 0 2px !important;overflow:visible;vertical-align:top;background:url(http://static1.me2day.com/images/button/btn_default_type1_l.png?1384398001) no-repeat left top;text-decoration:none;cursor:pointer;border:0;} */
+.btn_type_default_10 .btn_inner{position:relative;top:0;display:inline-block;height:25px;margin:0 !important;padding-right:2px;background:url(http://static2.me2day.com/images/button/btn_default_type1_r.png?1384398001) no-repeat right top;vertical-align:top;}
+.btn_type_default_10 .btn{display:inline-block;height:25px;margin:0 !important;padding:0 5px;vertical-align:top;border:0;text-decoration:none !important;text-align:center;background:url(http://static2.me2day.com/images/button/btn_default_type1.png?1384398001) repeat-x;}
+.btn_type_default_10 .btn .label{height:25px;line-height:25px;font-size:12px;color:#444;font-weight:normal;vertical-align:bottom;}
+.btn_type_default_10 .status{display:inline-block;width:auto !important;height:25px;line-height:25px;padding-left:14px;background:url(http://static2.me2day.com/images/button/bul_rollback.gif?1384398001) no-repeat scroll 0 center;}
+a.btn_type_default_10:link,a.btn_type_default_10:visited,a.btn_type_default_10:hover{text-decoration:none;}
+
+.tmp_crop_img_wrap{display:none;position:absolute;z-index:10011;background:url(http://static1.me2day.com/images/settings/bg_crop_box.png?1384398001) repeat scroll 0 0;}
+.tmp_crop_img_wrap .temp_img{position:absolute;top:50%;left:50%;overflow:hidden;background-repeat:no-repeat;background-attachment:scroll;}
+
+
+/**:first-child+html .pbox{}
+*:first-child+html .pbox .profile{}
+*:first-child+html .pbox .profile .bg{}
+
+*:first-child+html .pbox .action_pane{background:url(http://asset1.me2day.comimages/common/bg_pbox_ie_y.png?1384398001) repeat-y scroll 0 0;}
+*:first-child+html .pbox .count_wrap{background:url(http://asset1.me2day.comimages/common/bg_pbox_ie_y.png?1384398001) repeat-y scroll 0 0;}
+*:first-child+html .pbox .footer{}*/
+
+/* Friend Request flash massage */
+.friend_request{position:relative;width:396px;padding-top:72px;font-size:12px;background:url(http://static1.me2day.com/images/friend_manage/bg_popup_header.png?1384398001) no-repeat 0 0;}
+.friend_request .container{padding-bottom:19px;background:url(http://static1.me2day.com/images/friend_manage/bg_popup_footer.png?1384398001) no-repeat 0 bottom;}
+.friend_request .content{padding:0 9px 0 5px;background:url(http://static2.me2day.com/images/friend_manage/bg_popup_new.png?1384398001) repeat-y 0 0;}
+.friend_request .request_friend{position:relative;z-index:2;padding:14px 22px 0;}
+.friend_request .btnClose{position:absolute;right:22px;top:18px;width:9px;height:10px;text-indent:-9999px;background:url(http://static2.me2day.com/images/friend_manage/close_btn.png?1384398001) no-repeat 0 0;}
+.friend_request .request_header{position:absolute;z-index:2;top:4px;left:5px;height:68px;}
+.friend_request .request_header .friend{position:absolute;left:21px;top:20px;}
+.friend_request .request_header .tt{position:relative;left:66px;top:26px;color:#444;}
+.friend_request .request_header .tt a{color:#444;text-decoration:none;}
+.friend_request .edge{position:absolute;left:30px;bottom:-6px;width:12px;height:7px;background:url(http://static1.me2day.com/images/friend_manage/bg_popup_edge.png?1384398001) no-repeat 0 0;}
+.friend_request .request_friend .fri_profile{padding-bottom:4px;}
+.friend_request .request_friend .accept_request{padding:9px 0;}
+.friend_request .request_friend .btn_wrap{padding-top:13px;text-align:right;}
+.friend_request .request_friend .desc{color:#888;}
+.friend_request .request_friend .desc2{line-height:25px;}
+.friend_request .request_friend .desc2 a{color:#e65802;text-decoration:none;}
+.friend_request .request_friend .response_msg{}
+.friend_request .request_friend .msg_wrap{width:100%;border:1px solid;border-color:#c6c6c6 #eee #eee #c6c6c6;background:#fff;}
+.friend_request .request_friend .request_msg{width:331px;height:21px;overflow:hidden;padding-top:6px;margin-left:7px;border:0;}
+.friend_request .request_friend .lb{display:none;}
+.friend_request .request_friend .group_list{padding-top:11px;}
+.friend_request .request_friend .interest_friend{position:relative;top:4px;display:inline-block;width:19px;height:19px;}
+/*.friend_request .request_friend a.interest_friend:hover{background:url(http://static2.me2day.com/images/stream/ico_rel_friend_on.png?1384398001) no-repeat 0 0;}*/
+/*.friend_request .request_friend a.interest_friend:hover img{visibility:hidden;}*/
+.friend_request .request_friend .band_dir_label{width:auto;height:12px;padding-right:10px;line-height:12px;color:#aaa;border-left:1px solid #e0e0e0;background:url(http://static1.me2day.com/images/friend_manage/bg_row.gif?1384398001) no-repeat 100% 3px;}
+
+.autocomplete_populate_parent{position:absolute;top:34px;left:0;}
+.autocomplete_populate{width:330px;max-height:327px;overflow:auto;overflow-x:hidden;top:0;padding-bottom:0;background:none;border:1px solid #888;background-color:#fff;}
+.autocomplete_populate ul{border:0;}
+.autocomplete_populate li{padding:0;background:none;}
+.autocomplete_populate li.last_child{background:none;}
+.autocomplete_populate li a{display:block;position:relative;z-index:1;width:auto;padding:5px !important;color:#666;text-decoration:none;line-height:1;height:auto;padding:0;border-bottom:1px solid #d9d9d9;color:#aaa;}
+.autocomplete_populate li.last_child a{border-bottom:0;}
+.autocomplete_populate li a span{color:#999;}
+.autocomplete_populate li a:hover{width:auto;background-color:#ebebeb;padding:5px;background-image:none;color:#aaa;}
+.autocomplete_populate li a:hover span{color:#666;}
+.autocomplete_populate li a img{vertical-align:middle;margin:0;}
+.autocomplete_populate li.group_item a .group_name{padding:0;}
+.autocomplete_populate li.group_item a .count strong{margin-left:10px;margin-right:0;color:#7b5fbd;font-family:tahoma, "sans-serif";vertical-align:baseline;font-weight:bold;}
+.tokenizer_wrap .token{position:relative;top:1px;height:15px;line-height:15px;padding:0 2px 0 5px;margin:0 4px 4px 0;background-image:none;background-color:#bbb;color:#fff;}
+.tokenizer_wrap .token a{position:relative;top:3px;display:inline-block;width:10px;height:10px;vertical-align:top;}
+.tokenizer_wrap .token .bt_close{position:static;vertical-align:top;}
+
+* html .pbox .profile .official{line-height:16px;}
+* html .pbox .mnu_opt a{width:80px;}
+* html .pbox .mnu_groups a{width:145px;}
+* html .pbox .mnu_opt.mnu_groups .wrap{height:162px;}
+* html .autocomplete_populate{height:122px;}
+* html .autocomplete_populate li a{padding:5px !important;}
+* html .autocomplete_populate li.last_child a{border-bottom:1px solid #d9d9d9;}
+
+.effect_box .cont_me2day a{color:#eb5b00;text-decoration:none;}
+.effect_box .cont_me2day a:hover{text-decoration:underline;}
+.effect_box .cont_me2day .myme2_write{display:inline-block;width:94px;height:26px;margin-right:25px;padding-left:25px;letter-spacing:-1px;text-decoration:none !important;color:#000000;line-height:25px;background:url(http://static2.me2day.com/images/new_sub/btn_myme2_write.gif?1384398001) no-repeat left top;}
+
+.tooltip_box_layer{position:relative;width:300px;padding:4px 6px 9px 11px;}
+.tooltip_box_layer .tooltip_box_inner_1{position:relative;left:-11px;top:-1px;background:url(http://static2.me2day.com/images/map/map_addr_left_tail.png?1384398001) repeat-y left top;}
+.tooltip_box_layer .tooltip_box_inner_2{position:relative;left:11px;top:-3px;background:url(http://static1.me2day.com/images/map/map_addr_top_x.png?1384398001) repeat-x left top;}
+.tooltip_box_layer .tooltip_box_inner_3{position:relative;left:6px;top:3px;background:url(http://static2.me2day.com/images/map/map_addr_right_y.png?1384398001) repeat-y right top;}
+.tooltip_box_layer .tooltip_box_inner_4{position:relative;left:-6px;top:9px;background:url(http://static1.me2day.com/images/map/map_addr_bottom_x.png?1384398001) repeat-x left bottom;}
+.tooltip_box_layer .tooltip_box_inner_5{position:relative;left:0;top:-8px;padding:5px 25px 8px 5px;background:#fff;}
+.tooltip_box_layer .tooltip_box_inner_5 *{font-size:12px;}
+.tooltip_box_layer .tooltip_box_tl{width:6px;height:4px;position:absolute;left:5px;top:0;background:url(http://static1.me2day.com/images/map/map_addr_left_top.png?1384398001) no-repeat left top;}
+.tooltip_box_layer .tooltip_box_tr{width:6px;height:4px;position:absolute;right:0;top:0;background:url(http://static1.me2day.com/images/map/map_addr_right_top.png?1384398001) no-repeat left top;}
+.tooltip_box_layer .tooltip_box_bl{width:6px;height:9px;position:absolute;left:5px;bottom:1px;background:url(http://static2.me2day.com/images/map/map_addr_left_bottom.png?1384398001) no-repeat left top;}
+.tooltip_box_layer .tooltip_box_br{width:6px;height:9px;position:absolute;right:0;bottom:1px;background:url(http://static1.me2day.com/images/map/map_addr_right_bottom.png?1384398001) no-repeat left top;}
+.tooltip_box_layer .tooltip_box_close{position:absolute;right:12px;top:6px;}
+
+.pi_s{display:inline-block;width:30px;height:30px;cursor:pointer;}
+/* MOVED .pi_s .wrap{display:inline-block;width:30px;height:30px;background:url(http://static1.me2day.com/images/stream/fb_pf_s.png?1384398001) no-repeat scroll 0 0;} */
+* html .pi_s .wrap{background:none;}
+.pi_s .wrap img{position:relative;z-index:-1;}
+.know_friends{margin-top:15px;color:#888;font-size:12px;}
+.post_section .know_friends{margin-top:9px;margin-bottom:18px;}
+.friend_wrap .post_section .know_friends{margin-top:16px;margin-bottom:11px;}
+.pbox .know_friends{margin-top:5px;margin-bottom:9px;padding-left: 3px;}
+.know_friends .pf_list{display:inline-block;vertical-align:middle;}
+.know_friends .pf_list a{margin-right:2px;}
+.know_friends .tt{display:block;padding-bottom:5px;color:#888;}
+.friend_request .request_friend .know_friends{margin-top:15px;padding-bottom:13px;border-bottom:1px solid #ebebeb;}
+.friend_request .request_friend .know_friends a{margin-right:2px;}
+.pbox .detail .pbox_frm .know_friends{margin-top:15px;padding-bottom:18px;border-bottom:1px solid #ebebeb;}
+.my_friends_in_band{clear:both;padding-top:10px;}
+#topbar .message_popup .msg_noti_box .msg_noti_wrap a.pi_s{position:relative;z-index:2;width:auto;}
+
+.know_friends .pf_list .o_rel_wrap{position:relative;display:inline-block;width:32px;height:32px;}
+.know_friends .pf_list .o_rel_wrap a{text-decoration:none;}
+.know_friends .pf_list .tooltip_wrap{display:none;position:absolute;left:0;top:-25px;height:30px;line-height:0;font-size:0;}
+.know_friends .pf_list .tooltip{float:left;position:relative;top:0;left:-50%;margin-left:30px;display:inline-block;height:24px;line-height:24px;background: url(http://static1.me2day.com/images/bg_post_issue_tooltip.gif?1384398001) no-repeat center 0;text-align:center;}
+.know_friends .pf_list .tooltip .txt{display: inline-block;position: relative;left: 0;top: 0;height: 21px;white-space: nowrap;line-height: 21px;padding: 0 8px;font-size: 11px;letter-spacing: 0;color: white;background-color: #4D4D4D;vertical-align: top;}
+.know_friends .pf_list .o_rel_wrap:hover .tooltip_wrap{display:block;}
+
+/* Home Naver Agreement Popup */
+.home_layer_wrap{position:absolute;z-index:9999;width:470px;}
+.home_layer{height:30px;padding:11px 0 0 23px;background:url(http://static2.me2day.com/images/bg_home_layer_top.png?1384398001) no-repeat;_background:none;_filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='/images/search/bx_layer1_top.png', sizingMethod='crop');color:#fff;font-size:14px;font-weight:bold;}
+.home_layer img{vertical-align:top;position:relative;top:0;}
+.s_btn_close{display:block;position:absolute;right:16px;top:13px;padding:3px;line-height:1;}
+.home_layer_body{_height:1%;padding:0 4px;background:url(http://static2.me2day.com/images/bg_home_layer_mid.png?1384398001) repeat-y;font-size:12px;_background:none;_filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='/images/search/bx_layer1_mid.png', sizingMethod='scale');}
+.home_layer_btm{height:13px;background:url(http://static1.me2day.com/images/bg_home_layer_btm.png?1384398001) no-repeat left top;_background:none;_filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='/images/search/bx_layer1_btm.png', sizingMethod='crop');}
+.home_layer_body{padding:20px 23px;}
+.home_layer_body .naver_agree_box{position:relative;padding:13px 14px 8px;border:2px solid #f2f3f4;background-color:#f4f4f5;}
+.home_layer_body .naver_agree_box p{position:relative;padding-left:22px;zoom:1;padding-bottom:11px;line-height:1;}
+.home_layer_body .naver_agree_box input{position:absolute;top:2px;left:0;}
+* html .home_layer_body .naver_agree_box input{top:-1px;}
+*:first-child+html .home_layer_body .naver_agree_box input{top:-1px;}
+.home_layer_body .naver_agree_box .note{color:#888;font-size:11px;}
+.home_layer_body .naver_agree_box .help_msg{position:relative;top:3px;}
+.home_layer_body .user_rule_agreement{padding:8px 16px;}
+.home_layer_body .user_rule_agreement input{position:relative;top:1px;}
+.home_layer_body .user_rule_agreement .lb{margin-left:8px;}
+* html .home_layer_body .user_rule_agreement .lb{margin-left:3px;}
+*:first-child+html .home_layer_body .user_rule_agreement .lb{margin-left:3px;}
+.home_layer_body .user_rule_agreement a:link, .home_layer_body .user_rule_agreement a:visited{color:#e75b00;}
+.home_layer_body .btn_wrap{padding-top:15px;border-top:1px solid #eee;text-align:center;}
+.pop_help{position:absolute;z-index:98;padding:10px;border:1px solid #959595;background-color:#fff;font-size:11px;}
+.pop_help p{padding:0 !important;line-height:1.6 !important;}
+.pop_help .box_lt,.pop_help .box_rt,.pop_help .box_lb,.pop_help .box_rb{position:absolute;width:3px;height:3px;overflow:hidden;z-index:99;}
+.pop_help .box_lt{left:-1px;top:-1px;background:url(http://static2.me2day.com/images/common_page/bg_rnd_box_lt.gif?1384398001) no-repeat scroll;}
+.pop_help .box_lb{left:-1px;bottom:-1px;background:url(http://static2.me2day.com/images/common_page/bg_rnd_box_lb.gif?1384398001) no-repeat scroll;}
+.pop_help .box_rt{right:-1px;top:-1px;background:url(http://static1.me2day.com/images/common_page/bg_rnd_box_rt.gif?1384398001) no-repeat scroll;}
+.pop_help .box_rb{right:-1px;bottom:-1px;background:url(http://static1.me2day.com/images/common_page/bg_rnd_box_rb.gif?1384398001) no-repeat scroll;}
+.btn_type_submit_2 .btn{overflow:visible;cursor:pointer;}
+
+.home_layer_body .under_14_msg_1{color:#5932c0;}
+.home_layer_body .under_14_msg_2{margin-top:20px;color:#999;}
+.home_layer_body .under_14_msg_3{margin-top:10px;margin-bottom:20px;color:#e75b00;}
+
+.home_layer_body .naver_agree_box{position:relative;padding:13px 14px 8px 18px;}
+.home_layer_body .naver_agree_box p{padding-bottom:10px;padding-left:18px;}
+.home_layer_body .naver_agree_box p.recommend_agreement{padding-bottom:5px;}
+.home_layer_body .naver_agree_box .note{display:block;}
+.home_layer_body .naver_agree_box .lb{line-height:18px;}
+.home_layer_body .user_rule_agreement{padding:19px 15px 16px 19px;}
+.home_layer_body .user_rule_agreement .lb{margin-left:4px;}
+.home_layer_body .btn_wrap.ie{overflow:hidden;padding:15px 15px 0 19px;}
+.home_layer_body .btn_wrap.ie .startpage{float:left;position:relative;top:4px;}
+.home_layer_body .btn_wrap.ie .startpage input{position:relative;top:1px;}
+.home_layer_body .btn_wrap.ie .startpage .lb{margin-left:4px;color:#888;}
+.home_layer_body .btn_wrap.ie button{float:right;}
+
+.layer_blocking{position:absolute;z-index:9999;width:314px;padding:27px 17px 14px;border:1px solid #888888;background-color:#fff;font-size:12px;font-family:"NanumGothic","NanumGothicOTF", dotum, sans-serif;}
+.layer_blocking .tt{margin-bottom:14px;color:#000;}
+.layer_blocking .tt .nick{color:#E65802;text-decoration:none;font-weight:bold;}
+.layer_blocking .desc{margin-bottom:11px;color:#777;line-height:16px;}
+.layer_blocking .i_list{color:#b2b2b2;}
+.layer_blocking .i_list li{padding-left:9px;padding-bottom:4px;line-height:11px;background:url(http://static1.me2day.com/images/stream/bul_dot.gif?1384398001) no-repeat scroll 1px 2px;color:#b2b2b2;font-size:11px;}
+.layer_blocking .btn_close{position:absolute;top:10px;right:10px;}
+.layer_blocking .btn_wrap{margin-top:15px;padding-top:14px;border-top:1px solid #ededed;text-align:right;}
+
+/* flash messages NEW */
+#flash_container{z-index:2000;position:fixed;top:30px;right:5px;}
+* html #flash_container{position:absolute;}
+.flashmsg {position:relative;opacity:1;width:320px;background:url(http://static2.me2day.com/images/common/bg_flash_me2_header2.png?1384398001) no-repeat left top;padding:12px 0 0;margin-left:10px;}
+.flashmsg .container{width:320px;padding-bottom:19px;background:url(http://static2.me2day.com/images/common/bg_flash_me2_bottom2.png?1384398001) no-repeat left bottom;color:#000;}
+* html .flashmsg {background:url(http://static1.me2day.com/images/common/bg_flash_me2_header2.gif?1384398001) no-repeat left top;}
+* html .flashmsg .container{background:url(http://static1.me2day.com/images/common/bg_flash_me2_bottom2.gif?1384398001) no-repeat left bottom;}
+.flashmsg .btnClose{width:15px;height:15px;position:absolute;z-index:3;top:14px;right:17px;background:url(http://static1.me2day.com/images/common/btn_player_close.gif?1384398001) no-repeat;overflow:hidden;display:block;text-indent:-9999px;}
+.flashmsg .btnClose a:hover{background-position:0 -26px;}
+.flashmsg .icon{left:11px;top:6px;position:absolute;}
+.flashmsg .friend{left:19px;top:15px;position:absolute;}
+.flashmsg .content{position:static;top:0;margin:0;padding:17px 26px 17px 74px;font-weight:bold;font-size:12px;color:#444;background:url(http://static2.me2day.com/images/common/bg_flash_me2_repeat_y2.png?1384398001) repeat-y;}
+* html .flashmsg .content{background:url(http://static1.me2day.com/images/common/bg_flash_me2_repeat_y2.gif?1384398001) repeat-y;}
+.flashmsg .content a{color:#E65802;text-decoration:none;border-bottom:0;}
+.flashmsg .content a:hover{text-decoration:underline;}
+.flashmsg .content2{background:url(http://static2.me2day.com/images/common/bg_flash_me2_repeat_y2.png?1384398001) repeat-y;font-size:12px;font-weight:bold;margin-top:0;overflow:hidden;padding:12px 20px 12px 74px;position:relative;top:0;-ms-filter:"none";}
+* html .flashmsg div.content2{background:url(http://static1.me2day.com/images/common/bg_flash_me2_repeat_y2.gif?1384398001) repeat-y;}
+.flashmsg dl{padding:0;}
+.flashmsg dt{color:#444;padding-bottom:10px;}
+.flashmsg dt a{color:#444;text-decoration:none;}
+.flashmsg dt strong{font-size:14px;color:#444;}
+.flashmsg dd{margin-left:0;color:#444;}
+.flashmsg dd a{color:#444;text-decoration:none;border-bottom:0;}
+.flashmsg dl a:hover{border-bottom:1px solid #000;}
+
+/* Chat Notification */
+.chat_notification{font-size:11px; color:#999;margin-top: 20px;text-align:right;}
+.chat_notification ._set_noti_anchor{text-decoration:none;margin-right:0;}
+.chat_notification ._set_noti{display:none;margin: 5px 0 0 0;}
+.chat_notification ._turn_noti_off{text-align:right;}
+.chat_notification ._turn_noti_off select{margin-right:3px;}
+
+#flash_container .flashmsg .content3{background:url(http://static2.me2day.com/images/common/bg_flash_me2_repeat_y2.png?1384398001) repeat-y;font-size:13px;font-weight:bold;margin-top:0;padding:7px 23px 15px 63px;position:relative;top:0;-ms-filter:"none";zoom:1;}
+* html #flash_container .flashmsg .content3{padding-bottom:2px;}
+*:first-child+html #flash_container .flashmsg .content3{padding-bottom:2px;}
+#flash_container .flashmsg .friend {left:24px;top:10px;position:absolute;z-index:2;}
+#flash_container .flashmsg dt{padding-bottom:0;}
+#flash_container .flashmsg dt a, #flash_container .flashmsg dt strong{font-size:13px;}
+#flash_container .flashmsg .desc, #flash_container .flashmsg .desc a{color:#727272;font-size:12px;}
+* html #flash_container .flashmsg div.content3{background:url(http://static1.me2day.com/images/common/bg_flash_me2_repeat_y2.gif?1384398001) repeat-y;}
+#flash_container .flashmsg .recommend_friend{position:relative;padding-top:11px;zoom:1;width:242px;}
+#flash_container .flashmsg .recommend_friend .fri_profile{position:relative;background-color:#e7e7e7;padding:4px 75px 7px 49px;zoom:1;}
+#flash_container .flashmsg .recommend_friend .friend{left:10px;}
+#flash_container .flashmsg .recommend_friend .auto_accept_msg{width: 100%;margin: 5px 0 0;background: #E7E7E7;}
+#flash_container .flashmsg .recommend_friend .auto_accept_msg p{padding: 8px;color:#727272;font-size:11px}
+#flash_container .flashmsg .recommend_friend dt, .flashmsg .recommend_friend a, .flashmsg .recommend_friend strong{font-size:12px;}
+#flash_container .flashmsg .recommend_friend .btn_recommend_friend{position:absolute;top:14px;right:10px;border:0;overflow:visible;color:#fff;cursor:pointer;letter-spacing:-1px;}
+#flash_container .flashmsg .recommend_friend .nick a{color:#333;font-size:12px;text-decoration:none;}
+#flash_container .flashmsg .recommend_friend .userid{color:#898989;font-size:12px;}
+#flash_container .flashmsg .response_msg{position:relative;padding:8px 0 10px;zoom:1;}
+#flash_container .flashmsg .response_msg .recommend_msg_wrap{display:block;position:relative;}
+#flash_container .flashmsg .response_msg .recommend_msg_wrap .lb{position:absolute;top:5px;left:8px;width:233px;color:#b3b3b3;}
+#flash_container .flashmsg .response_msg input, #flash_container .flashmsg .response_msg label{vertical-align:middle;}
+#flash_container .flashmsg .response_msg textarea{display:block;width:241px;height:51px;margin-bottom:6px;border:1px solid #d0d0d0;}
+#flash_container .flashmsg .response_msg label{font-size:12px;}
+#flash_container .flashmsg .response_msg .interest_friend{float:left;}
+#flash_container .flashmsg .response_msg .btn_send{float:right;width:51px;height:23px;background:url(http://static2.me2day.com/images/common/bg_btn_type07.gif?1384398001) no-repeat scroll 0 0;font-size:12px;cursor:pointer;overflow:visibile;border:0;text-align:center;}
+
+#flash_container .flashmsg .content4{background:url(http://static2.me2day.com/images/common/bg_flash_me2_repeat_y2.png?1384398001) repeat-y;font-size:12px;font-weight:bold;margin-top:0;overflow:visible;padding:6px 20px 12px 24px;position:relative;top:0;-ms-filter:"none";}
+* html #flash_container .flashmsg div.content4{background:url(http://static1.me2day.com/images/common/bg_flash_me2_repeat_y2.gif?1384398001) repeat-y;}
+#flash_container .flashmsg .content4 .tt{color:#333;}
+#flash_container .flashmsg .content4 .tt a{color:#333;text-decoration:none;}
+#flash_container .flashmsg .content4 .request_friend{position:relative;margin-left:-10px;}
+#flash_container .flashmsg .content4 .request_friend .fri_profile{padding:8px 0 0 50px;zoom:1;min-height:35px;}
+#flash_container .flashmsg .content4 .request_friend .fri_profile .desc{color:#727272;}
+#flash_container .flashmsg .content4 .request_friend .friend{left:10px;top:12px;z-index:2;}
+#flash_container .flashmsg .content4 .request_friend .btn_wrap{padding-top:8px;padding-right:2px;text-align:right;}
+#flash_container .flashmsg .request_friend .btn .btn_accept,
+#flash_container .flashmsg .request_friend .btn .btn_reject{width:39px;height:23px;background:url(http://static2.me2day.com/images/common/bg_btn_type08.gif?1384398001) no-repeat scroll 0 0;border:0;text-align:center;overflow:visible;cursor:pointer;font-size:12px;margin-left:4px;}
+#flash_container .flashmsg .request_friend .btn .btn_reject{color:#787878;}
+#flash_container .flashmsg .content4 .response_msg{min-height:63px;padding-left:10px;}
+#flash_container .flashmsg .response_msg .btn_accept{float:right;width:61px;height:23px;background:url(http://static1.me2day.com/images/common/bg_btn_type09.gif?1384398001) no-repeat scroll 0 0;font-size:12px;cursor:pointer;overflow:visibile;border:0;text-align:center;color:#333;}
+#flash_container .flashmsg .content4 .response_msg textarea{width:263px;padding:0 5px;}
+* html #flash_container .flashmsg .content4 .response_msg textarea{position:relative;left:10px;}
+
+.flashmsg .profile_info_contents{clear:both;position:relative;margin-top:3px;padding-left:10px;font-size:11px;zoom:1;}
+* html .flashmsg .profile_info_contents .friend_msg{float:left;overflow:hidden;zoom:1;}
+*:first-child+html .flashmsg .profile_info_contents .friend_msg{float:left;overflow:hidden;zoom:1;}
+* html .flashmsg .profile_info_contents .friend_msg fieldset{float:left;zoom:1;}
+*:first-child+html .flashmsg .profile_info_contents .friend_msg fieldset{float:left;zoom:1;}
+.flashmsg .function_box{position:relative;height:32px;margin-top:7px;padding:9px 75px 9px 10px;color:#807e7f;border:1px solid #ececec;background:#fff;}
+.flashmsg .function_box .nick a, .flashmsg .function_box .nick a:link, .flashmsg .function_box .nick a:visited{color:#f15700;text-decoration:none;}
+.flashmsg .function_box .btn_fri_recommend{display:block;position:absolute;right:10px;top:11px;width:57px;height:27px;padding-bottom:2px;line-height:25px;font-size:11px;text-align:center;color:#fff !important;text-decoration:none;border:0;background:url(http://static1.me2day.com/images/stream/bg_fri_recommend_2.gif?1384398001) no-repeat left top;cursor:pointer;_cursor:hand;}
+.flashmsg .profile_info_contents_btn_box{padding-top:5px;text-align:right;}
+.flashmsg .profile_info_contents_btn_box .btn_cancel{position:relative;top:3px;vertical-align:top;width:38px;height:27px;line-height:26px;padding-bottom:4px;font-size:12px;text-align:center;background:url(http://static1.me2day.com/images/stream/bg_btn_cancel_38_27.gif?1384398001) no-repeat left top;border:0;color:#7d7d7d;}
+
+.flashmsg .friend_msg{margin-top:-5px;}
+.flashmsg .friend_msg legend{display:none;}
+.flashmsg .friend_msg .msg_box{position:relative;z-index:2;zoom:1;padding-top:7px;margin-bottom:1px;}
+.flashmsg .friend_msg .msg_box .tokenizer_wrap{position:relative;z-index:2;zoom:1;padding-top:4px;float:none;}
+.flashmsg .friend_msg .msg_box label{position:absolute;z-index:1;left:6px;top:12px;width:200px;color:#aeaeae;cursor:text;}
+.flashmsg .friend_msg .msg_box textarea{width:268px;height:84px;padding:4px 0 0 4px;font-size:12px;border:1px solid #d0d0d0;background:#f9f9f9;}
+* html .flashmsg .friend_msg .msg_box textarea{width:264px;height:82px;padding:7px 0 0 8px;}
+*:first-child+html .flashmsg .friend_msg .msg_box textarea{width:264px;height:82px;padding:7px 0 0 8px;}
+.flashmsg .friend_msg .write_control{position:relative;height:27px;width:273px;}
+* html .flashmsg .friend_msg .write_control{width:273px;}
+*:first-child+html .flashmsg .friend_msg .write_control{width:273px;}
+.flashmsg .friend_msg fieldset .write_control{margin-top:1px;}
+.flashmsg .friend_msg fieldset .write_control .option{padding-top:9px;height:20px;}
+.flashmsg .friend_msg .write_control .text_count{position:relative;top:8px;}
+.flashmsg .friend_msg .write_control .ico_mobile{position:relative;top:6px;}
+.flashmsg .friend_msg .write_contro .text_count strong{margin-right:2px;}
+.flashmsg .friend_msg .write_control .sms_friend_request,
+.flashmsg .friend_msg .write_control label,
+.flashmsg .friend_msg .write_control .assign_group{float:left;display:inline-block;height:20px;vertical-align:middle;line-height:18px;}
+.flashmsg .friend_msg .write_control .sms_friend_request{position:relative;top:-1px;width:13px;height:13px;}
+.flashmsg .friend_msg .write_control label{position:relative;top:-3px;margin:0 5px 0 2px;}
+.flashmsg .friend_msg .write_control .assign_group{position:relative;top:-3px;width:70px;}
+.flashmsg .recommend_friend .pre_label strong{color:#ed5702;}
+.flashmsg .recommend_friend .tokenizer{position:relative;top:0;width:270px;min-height:17px;height:auto;zoom:1;padding:2px 0 2px 2px;border:1px solid #e1e1e1;font-size:11px;cursor:text;overflow:hidden;}
+.flashmsg .recommend_friend .tokenizer.enableScroll{overflow:auto;height:54px;}
+* html .flashmsg .recommend_friend .tokenizer{margin-right:0;}
+.flashmsg .friend_msg .recommend_friend.msg_box textarea{clear:both;height:38px;}
+*:first-child+html .flashmsg .friend_msg .recommend_friend.msg_box textarea{height:38px;}
+* html .flashmsg .friend_msg .recommend_friend.msg_box textarea{height:38px;}
+.flashmsg .friend_msg .recommend_friend.msg_box .msg_area{clear:both;position:relative;padding-top:2px;}
+.flashmsg .friend_msg .recommend_friend.msg_box label{top:7px;left:6px;font-size:12px;}
+.flashmsg .friend_msg .recommend_friend.msg_box .tokenizer label{top:2px;left:6px;}
+.flashmsg .write_control img{vertical-align:middle;}
+.flashmsg .friend_msg .write_control .btn_box .btn_recommend{position:relative;width:38px;height:27px;top:3px;line-height:26px;margin-right:3px;padding-bottom:4px;text-align:center;vertical-align:top;background:url(http://static1.me2day.com/images/stream/bg_btn_confirm_38_27.gif?1384398001) no-repeat scroll left top transparent;border:0 none;cursor:pointer;font-size:12px;color:#fff;}
+.flashmsg .friend_msg fieldset .write_control{margin-top:1px;}
+.flashmsg .write_control .btn_box{position:absolute;right:-1px;top:0;}
+.flashmsg .btn_box .btn_submit,
+.flashmsg .btn_box .btn_cancel{position:relative;top:3px;vertical-align:top;width:38px;height:27px;padding-bottom:4px;line-height:26px;font-size:12px;text-align:center;background:url(http://static1.me2day.com/images/stream/bg_btn_cancel_38_27.gif?1384398001) no-repeat left top;border:0;color:#7d7d7d;}
+.flashmsg .btn_box .btn_submit{color:#333;font-weight:bold;margin-right:3px;}
+.flashmsg .btn_box .btn_submit2{position:relative;top:3px;vertical-align:top;width:47px;height:27px;margin-right:3px;padding-bottom:4px;line-height:26px;font-size:12px;text-align:center;background:url(http://static2.me2day.com/images/stream/bg_btn_cancel_47_27.gif?1384398001) no-repeat left top;border:0;color:#333;font-weight:bold;}
+#flash_container .flashmsg .msg_box.recommend_friend{left:0;}
+* html #flash_container .flashmsg .msg_box.recommend_friend{float:left;}
+*:first-child+html #flash_container .flashmsg .msg_box.recommend_friend{float:left;}
+.flashmsg .recommend_friend .autocomplete_populate_parent{clear:both;position:relative;line-height:1;zoom:1;}
+.flashmsg .recommend_friend .autocomplete_populate{padding-bottom:0;background-image:none;}
+.flashmsg .recommend_friend .autocomplete_populate ul{border-top:0;border-left:0;}
+.flashmsg .recommend_friend .autocomplete_populate li{width:auto;padding-right:0;background-image:none;}
+.flashmsg .recommend_friend .autocomplete_populate li.group_item{height:auto;}
+
+.flashmsg .recommend_friend .autocomplete_populate{position:absolute;z-index:2;width:274px;left:0;top:2px;}
+.flashmsg .recommend_friend .autocomplete_populate li{position:relative;border-top:1px solid #e9e9e9;background-color:#fff;border-left:1px solid #bcbcbc;border-right:1px solid #bcbcbc;zoom:1;}
+.flashmsg .recommend_friend .autocomplete_populate li *{vertical-align:middle;}
+.flashmsg .recommend_friend .autocomplete_populate li a{display:inline-block;width:264px;height:28px;line-height:28px;padding:2px 4px;color:#000;text-decoration:none;zoom:1;font-size:11px;}
+* html .flashmsg .recommend_friend .autocomplete_populate li a{padding:2px 4px;}
+.flashmsg .recommend_friend .autocomplete_populate li a:link, .autocomplete_populate li a:visited{color:#000;}
+.flashmsg .recommend_friend .autocomplete_populate li.hasFocus a,
+.flashmsg .recommend_friend .autocomplete_populate li a:hover{color:#1ca7ac;background-color:#f4f4f4;background-image:none;}
+.flashmsg .recommend_friend .autocomplete_populate li a img{margin-right:10px;}
+.flashmsg .recommend_friend .autocomplete_populate li .phone_numok{position:absolute;top:9px;right:7px;}
+.flashmsg .recommend_friend .autocomplete_populate li.first_child{border:0;}
+.flashmsg .recommend_friend .autocomplete_populate li.first_child a{width:266px;background:#fff url(http://static1.me2day.com/images/bg_acp_memo_2_top.gif?1384398001) no-repeat scroll 0 0;}
+.flashmsg .recommend_friend .autocomplete_populate li.hasFocus a,
+.flashmsg .recommend_friend .autocomplete_populate li.first_child a:hover{background-position:-274px 0;}
+.flashmsg .recommend_friend .autocomplete_populate li.last_child{border-left:0;border-right:0;}
+* html .flashmsg .recommend_friend .autocomplete_populate li.last_child{margin-top:0;}
+*:first-child+html .flashmsg .recommend_friend .autocomplete_populate li.last_child{margin-top:0;}
+.flashmsg .recommend_friend .autocomplete_populate li.last_child a{width:266px;background:url(http://static2.me2day.com/images/bg_acp_memo_2_btm.gif?1384398001) no-repeat scroll 0 100%;}
+.flashmsg .recommend_friend .autocomplete_populate li.last_child a:hover{background-position:-274px 100%;}
+.flashmsg .recommend_friend .autocomplete_populate li.first_child.last_child a{width:266px;height:30px;background:url(http://static1.me2day.com/images/bg_acp_memo_2_single.gif?1384398001) no-repeat scroll 0 100%;}
+.flashmsg .recommend_friend .autocomplete_populate li.first_child.last_child a:hover{background-position:-274px 100%;}
+
+.flashmsg .recommend_friend .autocomplete_populate li.group_item a{width:259px;padding-left:9px;background-color:#f9f9f9;}
+.flashmsg .recommend_friend .autocomplete_populate li.group_item a .count{position:absolute;top:9px;right:7px;}
+.flashmsg .recommend_friend .autocomplete_populate li.group_item a:hover{background-color:#f4f4f4;padding-bottom:0;height:30px;}
+.flashmsg .recommend_friend .autocomplete_populate li.group_item.hasFocus a .count,
+.flashmsg .recommend_friend .autocomplete_populate li.group_item a:hover .count{color:#000;}
+.flashmsg .recommend_friend .autocomplete_populate li.group_item a .count strong{margin-right:2px;color:#795dd6;font-weight:normal;font-size:11px;}
+.flashmsg .recommend_friend .autocomplete_populate li.group_item.first_child{border:0;}
+.flashmsg .recommend_friend .autocomplete_populate li.group_item.first_child a{width:261px;background:#f9f9f9 url(http://static1.me2day.com/images/bg_acp_memo_2_top2.gif?1384398001) no-repeat scroll 0 0;}
+.flashmsg .recommend_friend .autocomplete_populate li.group_item.first_child a:hover{background-position:-274px 0;}
+.flashmsg .recommend_friend .autocomplete_populate li.group_item.last_child{border-left:0;border-right:0;}
+.flashmsg .recommend_friend .autocomplete_populate li.group_item.last_child a{width:261px;background:url(http://static1.me2day.com/images/bg_acp_memo_2_btm2.gif?1384398001) no-repeat scroll 0 100%;}
+.flashmsg .recommend_friend .autocomplete_populate li.group_item.last_child a:hover{background-position:-274px 100%;}
+.flashmsg .recommend_friend .autocomplete_populate li.group_item.first_child.last_child a{width:261px;background:url(http://static1.me2day.com/images/bg_acp_memo_2_single2.gif?1384398001) no-repeat scroll 0 100%;}
+.flashmsg .recommend_friend .autocomplete_populate li.group_item.first_child.last_child a:hover{background-position:-274px 100%;}
+
+* html .flashmsg .recommend_friend .autocomplete_populate{border-top:1px solid #bcbcbc !important;border-bottom:1px solid #bcbcbc !important;}
+* html .flashmsg .recommend_friend .autocomplete_populate li{border-left:1px solid #bcbcbc !important;border-right:1px solid #bcbcbc !important;}
+* html .flashmsg .recommend_friend .autocomplete_populate li.first_child{padding-top:0 !important;}
+* html .flashmsg .recommend_friend .autocomplete_populate li a{width:264px !important;background:none !important;zoom:1;}
+* html .flashmsg .recommend_friend .autocomplete_populate li.group_item a{width:259px !important;}
+* html .flashmsg .recommend_friend .autocomplete_populate li a:hover,
+* html .flashmsg .recommend_friend .autocomplete_populate li.group_item a:hover{background-color:#f4f4f4 !important;}
+
+.flashmsg2 {position:relative;opacity:1;width:394px;background:url(http://static1.me2day.com/images/common/bg_flash_me2_header3.png?1384398001) no-repeat left top;padding:12px 0 0;margin-left:10px;}
+.flashmsg2 .container{width:394px;padding-bottom:19px;background:url(http://static1.me2day.com/images/common/bg_flash_me2_bottom3.png?1384398001) no-repeat left bottom;color:#000;}
+* html .flashmsg2 {background:url(http://static2.me2day.com/images/common/bg_flash_me2_header3.gif) no-repeat left top;}
+* html .flashmsg2 .container{background:url(http://static2.me2day.com/images/common/bg_flash_me2_bottom3.gif) no-repeat left bottom;}
+#flash_container .flashmsg2 .content3{background:url(http://static1.me2day.com/images/common/bg_flash_me2_repeat_y3.png?1384398001) repeat-y;font-size:13px;font-weight:bold;margin-top:0;padding:13px 23px 15px 61px;position:relative;top:0;-ms-filter:"none";zoom:1;}
+* html #flash_container .flashmsg2 .content3{padding-bottom:2px;}
+*:first-child+html #flash_container .flashmsg2 .content3{padding-bottom:8px;}
+#flash_container .flashmsg2 .recommend_friend{width:313px;}
+#flash_container .flashmsg2 .response_msg textarea{width:311px;}
+#flash_container .flashmsg2 .fri_profile .btn_wrap{position:absolute;top:16px;right:10px;}
+#flash_container .flashmsg2 .response_msg .btn_wrap{position:relative;left:2px;float:right;}
+
+.page_nate{padding-top:15px;font-size:0;text-align:center}
+.page_nate a{display:inline-block;height:15px;margin:0 -1px 0 0;border-left:1px solid #ccc;border-right:1px solid #ccc;font-size:12px;line-height:12px;color:#a0a1a3}
+.page_nate a:hover{color:#b742b9;text-decoration:none}
+.page_nate a.on{color:#b742b9}
+.page_nate .page_num a{padding:0 8px}
+.page_nate .btn_prev{padding:0 10px 0 8px;border-left:0;background:url('data:image/gif;base64,R0lGODlhAwAFAIABAKCho////yH/C1hNUCBEYXRhWE1QPD94cGFja2V0IGJlZ2luPSLvu78iIGlkPSJXNU0wTXBDZWhpSHpyZVN6TlRjemtjOWQiPz4gPHg6eG1wbWV0YSB4bWxuczp4PSJhZG9iZTpuczptZXRhLyIgeDp4bXB0az0iQWRvYmUgWE1QIENvcmUgNS4zLWMwMTEgNjYuMTQ1NjYxLCAyMDEyLzAyLzA2LTE0OjU2OjI3ICAgICAgICAiPiA8cmRmOlJERiB4bWxuczpyZGY9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkvMDIvMjItcmRmLXN5bnRheC1ucyMiPiA8cmRmOkRlc2NyaXB0aW9uIHJkZjphYm91dD0iIiB4bWxuczp4bXA9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC8iIHhtbG5zOnhtcE1NPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvbW0vIiB4bWxuczpzdFJlZj0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL3NUeXBlL1Jlc291cmNlUmVmIyIgeG1wOkNyZWF0b3JUb29sPSJBZG9iZSBQaG90b3Nob3AgQ1M2IChXaW5kb3dzKSIgeG1wTU06SW5zdGFuY2VJRD0ieG1wLmlpZDo3NDlEQTc3RDczOTAxMUUzODM2ODkwRTJDOTBGOTA2OCIgeG1wTU06RG9jdW1lbnRJRD0ieG1wLmRpZDo3NDlEQTc3RTczOTAxMUUzODM2ODkwRTJDOTBGOTA2OCI+IDx4bXBNTTpEZXJpdmVkRnJvbSBzdFJlZjppbnN0YW5jZUlEPSJ4bXAuaWlkOjc0OURBNzdCNzM5MDExRTM4MzY4OTBFMkM5MEY5MDY4IiBzdFJlZjpkb2N1bWVudElEPSJ4bXAuZGlkOjc0OURBNzdDNzM5MDExRTM4MzY4OTBFMkM5MEY5MDY4Ii8+IDwvcmRmOkRlc2NyaXB0aW9uPiA8L3JkZjpSREY+IDwveDp4bXBtZXRhPiA8P3hwYWNrZXQgZW5kPSJyIj8+Af/+/fz7+vn49/b19PPy8fDv7u3s6+rp6Ofm5eTj4uHg397d3Nva2djX1tXU09LR0M/OzczLysnIx8bFxMPCwcC/vr28u7q5uLe2tbSzsrGwr66trKuqqainpqWko6KhoJ+enZybmpmYl5aVlJOSkZCPjo2Mi4qJiIeGhYSDgoGAf359fHt6eXh3dnV0c3JxcG9ubWxramloZ2ZlZGNiYWBfXl1cW1pZWFdWVVRTUlFQT05NTEtKSUhHRkVEQ0JBQD8+PTw7Ojk4NzY1NDMyMTAvLi0sKyopKCcmJSQjIiEgHx4dHBsaGRgXFhUUExIREA8ODQwLCgkIBwYFBAMCAQAAIfkEAQAAAQAsAAAAAAMABQAAAgZMcKCoBgUAOw==') 0 5px no-repeat;font-weight:normal}
+.page_nate .btn_next{padding:0 8px 0 10px;border-right:0;background:url('data:image/gif;base64,R0lGODlhAwAFAIABAKCho////yH/C1hNUCBEYXRhWE1QPD94cGFja2V0IGJlZ2luPSLvu78iIGlkPSJXNU0wTXBDZWhpSHpyZVN6TlRjemtjOWQiPz4gPHg6eG1wbWV0YSB4bWxuczp4PSJhZG9iZTpuczptZXRhLyIgeDp4bXB0az0iQWRvYmUgWE1QIENvcmUgNS4zLWMwMTEgNjYuMTQ1NjYxLCAyMDEyLzAyLzA2LTE0OjU2OjI3ICAgICAgICAiPiA8cmRmOlJERiB4bWxuczpyZGY9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkvMDIvMjItcmRmLXN5bnRheC1ucyMiPiA8cmRmOkRlc2NyaXB0aW9uIHJkZjphYm91dD0iIiB4bWxuczp4bXA9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC8iIHhtbG5zOnhtcE1NPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvbW0vIiB4bWxuczpzdFJlZj0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL3NUeXBlL1Jlc291cmNlUmVmIyIgeG1wOkNyZWF0b3JUb29sPSJBZG9iZSBQaG90b3Nob3AgQ1M2IChXaW5kb3dzKSIgeG1wTU06SW5zdGFuY2VJRD0ieG1wLmlpZDo0RTUzMDAwNDczOTAxMUUzQjFCQkQ3OUVCOENFQkI1OSIgeG1wTU06RG9jdW1lbnRJRD0ieG1wLmRpZDo0RTUzMDAwNTczOTAxMUUzQjFCQkQ3OUVCOENFQkI1OSI+IDx4bXBNTTpEZXJpdmVkRnJvbSBzdFJlZjppbnN0YW5jZUlEPSJ4bXAuaWlkOjRFNTMwMDAyNzM5MDExRTNCMUJCRDc5RUI4Q0VCQjU5IiBzdFJlZjpkb2N1bWVudElEPSJ4bXAuZGlkOjRFNTMwMDAzNzM5MDExRTNCMUJCRDc5RUI4Q0VCQjU5Ii8+IDwvcmRmOkRlc2NyaXB0aW9uPiA8L3JkZjpSREY+IDwveDp4bXBtZXRhPiA8P3hwYWNrZXQgZW5kPSJyIj8+Af/+/fz7+vn49/b19PPy8fDv7u3s6+rp6Ofm5eTj4uHg397d3Nva2djX1tXU09LR0M/OzczLysnIx8bFxMPCwcC/vr28u7q5uLe2tbSzsrGwr66trKuqqainpqWko6KhoJ+enZybmpmYl5aVlJOSkZCPjo2Mi4qJiIeGhYSDgoGAf359fHt6eXh3dnV0c3JxcG9ubWxramloZ2ZlZGNiYWBfXl1cW1pZWFdWVVRTUlFQT05NTEtKSUhHRkVEQ0JBQD8+PTw7Ojk4NzY1NDMyMTAvLi0sKyopKCcmJSQjIiEgHx4dHBsaGRgXFhUUExIREA8ODQwLCgkIBwYFBAMCAQAAIfkEAQAAAQAsAAAAAAMABQAAAgVEApaLVwA7') 100% 5px no-repeat;font-weight:normal}
+.page_nate.kor  .btn_prev,.page_nate.kor .btn_next{padding-top:1px;height:14px}
+.page_nate.kor .btn_prev{background-position:0 6px}
+.page_nate.kor .btn_next{background-position:100% 6px}
+@media screen and (-webkit-min-device-pixel-ratio:1.0){
+.page_nate a{line-height:14px}
+}
