@@ -1,0 +1,17 @@
+body{
+    background-color: gainsboro;
+}
+.header ul {
+    text-align: right;
+}
+.header li {
+    display:inline;
+    list-style-type:none;
+    margin-right: 2px;
+}
+.footer{
+    margin-top: 10px;
+    text-align: center;
+    font-size: small;
+}
+

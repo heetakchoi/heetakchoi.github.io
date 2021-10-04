@@ -1,0 +1,31 @@
+h2. 최 희탁 (Heetak Choi)
+endofhope at naver.com
+
+h3. 경력
+| 2009 ~ 현재: NAVER corp. 책임리더
+| 2002 ~ 2009: TmaxSoft co. 책임연구원
+
+h3. 학력
+| 서울대학교 수학과 졸업
+| 대구 경신 고등학교
+
+h3. 쓴 책
+h4. 좋은 선택, 나쁜 선택
+h5. 합리적인 선택을 위한 데이터 바로 읽기 (한빛미디어 2019)
+- at yes24
+- at 한빛 미디어
+h5. 웹 프로그래머를 위한 서블릿 컨테이너의 이해 (한빛미디어 2012)
+- at yes24
+- at 한빛 미디어
+
+h3. 내가 만든 것들
+h4. Neurasthenia
+| 서블릿 컨테이너
+| Servlet specification 2.5 구현체
+| 코멧(Comet) 구현 What is comet?
+| Repository in github
+h4. Board system
+| Perl, CGI, MySQL로 구성
+| endofhope.com 구축에 사용
+| Repository in github
+
