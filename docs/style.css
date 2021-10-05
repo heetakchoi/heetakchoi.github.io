@@ -1,5 +1,12 @@
-body{
+body {
     background-color: gainsboro;
+}
+a {
+    text-decoration-line: none;
+    color: royalblue;
+}
+a:hover {
+    text-decoration: underline;
 }
 .header ul {
     text-align: right;
@@ -9,9 +16,45 @@ body{
     list-style-type:none;
     margin-right: 2px;
 }
-.footer{
-    margin-top: 10px;
+.header h1 {
+    text-align: center;
+}
+.footer {
+    margin-top: 20px;
     text-align: center;
     font-size: small;
 }
+.x {
+    text-decoration: line-through;
+}
+.main img {
+    width: 160px;
+    /* margin-left: 40px; */
+}
+.main h2, h3, h4, h5 {
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+.main h2{
+    margin-left: 10px;
+}
+.main h3 {
+    margin-left: 20px;
+}
+.main h4 {
+    margin-left: 20px;
+}
 
+.main ul {
+    margin-top: 5px;
+    list-style: none;
+}
+.main blockquote {
+    margin-top: 5px;
+    color: MediumSlateBlue;
+    border-left-style: solid;
+    border-color: silver;
+    margin-right: 5px;
+    margin-left: 5px;
+    padding-left: 5px;
+}
