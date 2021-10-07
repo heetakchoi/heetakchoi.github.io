@@ -1,3 +1,4 @@
+@import url("//cdn.jsdelivr.net/gh/wan2land/d2coding/d2coding-full.css");
 body {
     background-color: gainsboro;
 }
@@ -27,37 +28,64 @@ a:hover {
 .x {
     text-decoration: line-through;
 }
-.main img {
-    width: 160px;
-    /* margin-left: 40px; */
+.b {
+    font-weight: bold;
 }
-.main h2, h3, h4, h5 {
-    margin-top: 5px;
+.main {
+    line-height: 1.7em;
+}
+img {
+    width: 320px;
+}
+.s_img{
+    width: 160px;
+}
+.main h1, h2, h3, h4, h5 {
+    margin-top: 15px;
     margin-bottom: 5px;
 }
 .main h2{
-    margin-left: 10px;
 }
 .main h3 {
-    margin-left: 20px;
 }
 .main h4 {
-    margin-left: 20px;
+}
+.main h5{
+    margin-top: 5px;
+    text-align: right;
 }
 
 .main ul {
     margin-top: 5px;
-    list-style: none;
+    margin-bottom: 5px;
+    list-style-type: circle;
 }
 .main blockquote {
-    margin-top: 5px;
+    margin: 5px;
     color: MediumSlateBlue;
     border-left-style: solid;
     border-color: silver;
-    margin-right: 5px;
-    margin-left: 5px;
     padding-left: 5px;
 }
 .main div{
     margin-left: 10px;
+}
+.navigator{
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+.article{
+    margin-top:10px;
+    margin-bottom: 10px;
+}
+.article pre{
+    border-style: solid;
+    border-width: 1px;
+    background-color: darkslategrey;
+    color: white;
+    padding: 5px;
+    /* width: 100%; */
+    /* height: 100%; */
+    /* overflow: auto; */
+    font-family: 'D2Coding', monospace;
 }

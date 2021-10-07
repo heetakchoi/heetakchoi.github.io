@@ -41,17 +41,18 @@ foreach my $article_srno (@article_srnos){
 		$main_string .= $mark->get_html();
 	    }elsif($1 eq "PREV"){
 		if($index >0){
-		    $main_string .= sprintf "<a href=\"article-%d.html\">PREV</a>", $article_srnos[$index-1];
+		    $main_string .= sprintf "<a href=\"article-%d.html\">이전 글 가기</a>", $article_srnos[$index-1];
 		}else{
-		    $main_string .= "최신입니다.";
+		    $main_string .= "최신 글 입니다.";
 		}
 	    }elsif($1 eq "PADDING"){
-		$main_string .= sprintf " %d ", $article_srno;
+		# $main_string .= sprintf " %d ", $article_srno;
+		$main_string .= sprintf " &nbsp; &nbsp; ";
 	    }elsif($1 eq "NEXT"){
 		if($index < $#article_srnos){
-		    $main_string .= sprintf "<a href=\"article-%d.html\">NEXT</a>", $article_srnos[$index+1];
+		    $main_string .= sprintf "<a href=\"article-%d.html\">다음 글 보기</a>", $article_srnos[$index+1];
 		}else{
-		    $main_string .= "마지막입니다.";
+		    $main_string .= "첫 글 입니다.";
 		}
 	    }else{
 		die "____".$1."_ 은 기대하지 않은 값. A\n";
