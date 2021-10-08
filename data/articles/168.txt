@@ -13,10 +13,10 @@ h5. 2016 0330
 의 순으로 사고가 흘러가다가 <span class="x">그냥 그만 둘까로 반 쯤 마음이 돌아선 그때</span> 연산자 3개면 괄호 넣는 방법도 \( 3! \) 즉 6개 밖엔 없잖아, 나열하자 라고 결정했다.
 
 이러쿵 저러쿵 말은 많지만 그래서 만든 코드는
-<a href="/data/ten.pl" >ten.pl</a>
+<a href="data/ten.pl">ten.pl</a>
 이고 돌려 보니 10이 되지 않는 결과가 와장창 나와서
 <img src="img/ten_result.png" />
-<img src="https://cdn.mirror.wiki/https://attachment.namu.wiki/wajangchang.jpg" />
+<img src="img/wajangchang.jpg" />
 뭐 틀렸구만 이라고 생각하고 그제서야 <span class="x">너희들이 틀린 거야 라고 말하고 싶어서</span> 그 글의 내용을 읽기 시작했다.
 확인해 보니 그 글에서는 일단 0도 포함하지 않고 중복도 허용하지 않는 조건으로 문제를 푼 것이고 그러한 조건을 추가해 넣고 보니 정말 4개의 숫자를 가지고 사칙연산을 하면 10을 모두 만들 수 있었다.
 
