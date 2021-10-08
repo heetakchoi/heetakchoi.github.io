@@ -74,7 +74,7 @@ h5. 2020 1030
 그리그, 페터귄트 모음곡, 마운틴 킹의 궁전에서.
 <span class="b">Grieg / Ginzburg: Peer Gynt "In the Hall of the Mountain King"</span>
 <iframe width="320" height="180" src="https://www.youtube.com/embed/0nZhw3wifeY" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-<img style="width: 80px;" src="/data/mountain_king.gif" /> 마운틴 킹이라니 자꾸 이 분이 생각난다.
+<img style="width: 80px;" src="img/mountain_king.gif" /> 마운틴 킹이라니 자꾸 이 분이 생각난다.
 <hr />
 사실 다쓰베이더는 화성 출신이라고 합니다. (거짓말)
 <span class="b">Holst - Mars From The Planets</span>
