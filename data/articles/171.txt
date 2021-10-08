@@ -29,4 +29,4 @@ h5. 2016 0911
 <img src="img/good_terran.jpg" />
 <img src="img/100000.png" />
 
-직접 숫자를 바꿔가며 확인해 볼 수 있다. 초기값을 변경해도 동일한 현상이 발생하는지 확인하려면 <a href="ant.cgi">ant.cgi</a> 의 black_hash 에 검은 점을 추가해주면 된다. <span class="x">갑자기 귀찮아졌다.</span>
+직접 숫자를 바꿔가며 확인해 볼 수 있다. 초기값을 변경해도 동일한 현상이 발생하는지 확인하려면 <a href="data/ant.cgi">ant.cgi</a> 의 black_hash 에 검은 점을 추가해주면 된다. <span class="x">갑자기 귀찮아졌다.</span>
