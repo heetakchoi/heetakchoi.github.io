@@ -1,5 +1,5 @@
-좋은 선택, 나쁜 선택
-(2019 01 26) - book
+h2. 좋은 선택, 나쁜 선택
+h5. 2019 01 26
 
 <img src="img/good_choice_bad_choice.jpg" />
 <a href="http://www.yes24.com/24/Goods/69250118?Acode=101">http://www.yes24.com/24/Goods/69250118?Acode=101</a>
