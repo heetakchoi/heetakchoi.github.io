@@ -26,7 +26,7 @@ h5. 2020 10 14
 어찌되었건 이걸 다 하고 난 후 곰곰히 다시 "나는 왜 이런 짓을 하면서 시간을 버렸나" 를 생각해 보았는데 아무리 생각해도 이건 그냥 나의 <a href="https://namu.wiki/w/%EC%9D%80%EC%A0%84%20%ED%95%9C%20%EB%8B%A2">은전 한 닢</a> 이었던 것 외엔 설명이 되지 않았다.
 <img src="img/qn_5.png" />
 
-<span class="x">설마 그런 사람은 없겠지만</span> 이 코드는 https://github.com/heetakchoi/volken에서 찾아볼 수 있다.
+<span class="x">설마 그런 사람은 없겠지만</span> 이 코드는 <a href="https://github.com/heetakchoi/volken">https://github.com/heetakchoi/volken</a>에서 찾아볼 수 있다.
 관계된 코드는
 - /lib/Volken/ZN.pm - 정수 표현형
 - /lib/Volken/PF.pm - 정수의 소수 제곱의 곱 표현형
