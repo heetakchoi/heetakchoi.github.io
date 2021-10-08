@@ -1,0 +1,58 @@
+eoh@eoh-ubuntu:~/tmp/bulk$ java Factorial 1
+use thread : 1
+delta : 100000
+1 - 100000 end
+bit length : 1516705
+total time (ms) : 46433
+eoh@eoh-ubuntu:~/tmp/bulk$ java Factorial 2
+use thread : 2
+delta : 50000
+1 - 50000 end
+50001 - 100000 end
+bit length : 1516705
+total time (ms) : 16903
+eoh@eoh-ubuntu:~/tmp/bulk$ java Factorial 4
+use thread : 4
+delta : 25000
+1 - 25000 end
+25001 - 50000 end
+50001 - 75000 end
+75001 - 100000 end
+bit length : 1516705
+total time (ms) : 7924
+eoh@eoh-ubuntu:~/tmp/bulk$ java Factorial 8
+use thread : 8
+delta : 12500
+12501 - 25000 end
+1 - 12500 end
+37501 - 50000 end
+50001 - 62500 end
+62501 - 75000 end
+25001 - 37500 end
+75001 - 87500 end
+87501 - 100000 end
+bit length : 1516705
+total time (ms) : 6746
+eoh@eoh-ubuntu:~/tmp/bulk$ java Factorial 16
+use thread : 16
+delta : 6250
+31251 - 37500 end
+12501 - 18750 end
+6251 - 12500 end
+93751 - 100000 end
+50001 - 56250 end
+37501 - 43750 end
+87501 - 93750 end
+68751 - 75000 end
+25001 - 31250 end
+18751 - 25000 end
+56251 - 62500 end
+81251 - 87500 end
+1 - 6250 end
+75001 - 81250 end
+43751 - 50000 end
+62501 - 68750 end
+bit length : 1516705
+total time (ms) : 6908
+eoh@eoh-ubuntu:~/tmp/bulk$ 
+
