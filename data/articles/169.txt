@@ -38,8 +38,7 @@ working ratio 99.58 478/480, 평균 대기인 48.25
 <span class="x">뭐 경영 합리화 화신의 눈으로 보면 저 working ratio 가 99.58% 인 것이 모든 것을 압도하겠지만.</span>
 
 실제 코드는 아래에서 확인할 수 있다.
-<a href="img//queue.pl">queue.pl</a>
-<a onclick="this.nextSibling.style.display=(this.nextSibling.style.display=='none')?'block':'none';"href="javascript:void(0)">expand</a><div style="DISPLAY: none;">
+<a href="data/queue.pl">queue.pl</a>
 <pre>
 #!/usr/bin/perl
 

@@ -66,7 +66,6 @@ working ratio 99.58 478/480, 평균 대기인 48.25
 </div>
 <div>
 실제 코드는 아래에서 확인할 수 있다.<br />
-<a href="img//queue.pl">queue.pl</a><br />
 <pre>
 #!/usr/bin/perl
 
@@ -116,7 +115,7 @@ foreach my $tick ( @total_ticks ){
 my $total_tick = scalar(@total_ticks);
 printf "working ratio %.2f %d/%d, 평균 대기인 %.2f\n", 100*($total_tick - $idle_tick)/$total_tick, $total_tick - $idle_tick, $total_tick, $total_waiting_customer/$total_tick;
 </pre>
-<a onclick="this.nextSibling.style.display=(this.nextSibling.style.display=='none')?'block':'none';"href="javascript:void(0)">expand</a><div style="DISPLAY: none;"><br />
+<a href="data/queue.pl">queue.pl</a><br />
 </div>
 </div>
 </div>
