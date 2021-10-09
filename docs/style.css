@@ -34,11 +34,18 @@ a:hover {
 .main {
     line-height: 1.7em;
 }
-img {
+.main img {
     width: 320px;
+    cursor: pointer;
+    border-style: solid;
+    border-color: silver;
 }
-.s_img{
+.main .s_img{
     width: 160px;
+}
+#full_size_image {
+    with: 100%;
+    height: 100%;
 }
 .main h1, h2, h3, h4, h5 {
     margin-top: 10px;

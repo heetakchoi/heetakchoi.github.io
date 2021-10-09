@@ -1,5 +1,5 @@
 h2. 차량 번호판으로 10을 만들자
-h5. 2016 0330
+h5. 3/30/2016
 
 퇴근 길 지하철을 기다리면서 들어간 유머 사이트에서 "과게 레전드" 란 단어를 보고 <span class="x">전설의</span> 레전드라니 읽지 않을 수 없었다.
 <a target="_blank" href="http://www.todayhumor.co.kr/board/view.php?table=bestofbest&no=237072&s_no=237072&page=1">데이터]스압]다시보는 과게 레전드.jpgs</a>

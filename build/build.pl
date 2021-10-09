@@ -84,6 +84,7 @@ foreach my $article_srno (@article_srnos){
 # data/front, data/info, data/sf 파일을 읽어들인 후 포매팅을 한 후, tmpl의 placeholder에 끼워 넣는다.
 $mark = Volken::Mark->new->load_file("../data/front.txt");
 my $frontcontent = $mark->get_html();
+$frontcontent =~ s/__ARTICLELINK_/$latest_article_link/g;
 $mark = Volken::Mark->new->load_file("../data/info.txt");
 my $infocontent = $mark->get_html();
 $mark = Volken::Mark->new->load_file("../data/sf.txt");
