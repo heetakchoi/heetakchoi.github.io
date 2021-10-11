@@ -43,10 +43,12 @@
 싸구려 손님이라 그런지 바로 문전 박대.jpg <span class="x">깨알같은 줄거운 의 압박, 못 해, 이용 해</span>
 </div>
 <div>
+<span class="x">아, SSH 로 호스팅 서버에 접근하니까 분명 이미 SSH 라이브러리는 깔려 있을테고 그냥</span>
+</div>
 <pre>
 root# cpan install SSL
 </pre>
-<span class="x">아, SSH 로 호스팅 서버에 접근하니까 분명 이미 SSH 라이브러리는 깔려 있을테고 그냥</span><br />
+<div>
 <span class="x">로 perl 에서 접근할 수 있도록 한 줄만 쳐 주면 될 것 같은데.</span>
 </div>
 <div>
@@ -69,6 +71,8 @@ root# cpan install SSL
   </ul>
 </div>
 <div>
+대충 만든 것이라 사용법이 좀 괴랄하지만 어찌 동작은 하는 것 같다.
+</div>
 <pre>
 #!/usr/bin/perl
 
@@ -92,7 +96,7 @@ foreach (@data){
             ->get;
 }
 </pre>
-대충 만든 것이라 사용법이 좀 괴랄하지만 어찌 동작은 하는 것 같다.<br />
+<div>
 실은 아직 하나 더 문제가 남아있다.<br />
 API 결과 중 한글 문자열이 \u 포맷의 유니코드로 변환되어 오는데 <span class="x">이미 덕력이 다했는지</span> 갑자기 급 피곤해져서 훗날을 기약하기로 한다.<br />
 <img src="img/sorry.jpg" />

@@ -70,6 +70,8 @@
 </div>
 <div>
 정말 그런지 실재 랜덤신의 가호를 받아 처리해 보자<br />
+아래는 카드의 종류를 \( n \)을 10부터 1000까지 변경하면서 시뮬레이션하는 코드이다.
+</div>
 <pre>
 #!/usr/bin/perl
 
@@ -97,8 +99,6 @@ foreach ( sort {$a<=>$b} keys %n_count_hash ){
         , $_, $n_count_hash{$_};
 }
 </pre>
-아래는 카드의 종류를 \( n \)을 10부터 1000까지 변경하면서 시뮬레이션하는 코드이다.
-</div>
 <div>
 그 결과는 <a href="data/card_result.xlsx">card result</a> 이며 이를 그래프로 그리면 아래와 같다.<br />
 <img src="img/card.png" /><br />

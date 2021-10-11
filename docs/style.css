@@ -82,8 +82,8 @@ a:hover {
     margin-bottom: 10px;
 }
 .article{
-    margin-top:40px;
-    margin-bottom: 40px;
+    /* margin-top:40px; */
+    /* margin-bottom: 40px; */
 }
 .article pre{
     border-style: solid;

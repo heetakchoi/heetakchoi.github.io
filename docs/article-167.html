@@ -37,6 +37,8 @@
 <img src="img/step2.jpg" /><br />
 이제 [0, 1] 구간에서 \( \frac{1}{n} \) 단위로 \( y \) 좌표를 자른 후 \( x \) 가 \( \frac{k}{n} \) 일 경우 \( \sqrt{ 1 - (\frac{k}{n})^{2}} \) 보다 작은 점 - 아래 그림에서는 동그라미로 표시된 격자들의 수를 전체 격자의 수로 나누면 사분원의 넓이의 근사값이 된다.<br />
 <img src="img/step3.jpg" /><br />
+위의 시나리오를 코드로 표현하면 아래와 같다.
+</div>
 <pre>
 #!/usr/bin/perl
 # aaction.pl [x 축 격자수]
@@ -57,7 +59,9 @@ foreach my $k (1..$n){
 }
 printf "pi is %s\n", 4*$in_count/($n**2);
 </pre>
-위의 시나리오를 코드로 표현하면 아래와 같다.<br />
+<div>
+결과는 아래와 같다.
+</div>
 <pre>
 $ perl aaction.pl 10
 pi is 2.72
@@ -76,9 +80,11 @@ pi is 3.14159225309212
 $ perl aaction.pl 100000000
 pi is 3.14159261741863
 </pre>
-결과는 아래와 같다.<br />
+<div>
 대충 이렇게 생각하다가 갑자기 아 뭐 이렇게 힘들게 하고 있나, 그냥 [0,1] 구간으로 정사각형을 만든 후 랜덤하게 점을 찍어서 원 안에 들어가는지 - 다시말해 원점과의 거리가 1보다 큰지 비교하면 되지 않나 란 생각이 들었다. 도식하자면 아래와 같으며<br />
 <img src="img/step4.jpg" /><br />
+코드는 아래와 같다.
+</div>
 <pre>
 #!/usr/bin/perl
 # baction.pl [랜덤하게 수행할 횟수]
@@ -99,8 +105,10 @@ foreach my $k (1..$n){
 }
 printf "pi is %s\n", 4*$in_count / $n;
 </pre>
-코드는 아래와 같다.<br />
+<div>
 보면 알겠지만 그냥 변이 1인 정사각형안에 점을 랜덤하게 찍어대서 원점과의 거리가 1보다 작은 것들의 수를 구한다.<br />
+결과는 아래와 같다.
+</div>
 <pre>
 $ perl baction.pl 10
 pi is 3.6
@@ -119,7 +127,7 @@ pi is 3.142596
 $ perl baction.pl 100000000
 pi is 3.14151104
 </pre>
-결과는 아래와 같다.<br />
+<div>
 이제 당분간 \( \pi \) 는 생각이 안 날 것 같다.
 </div>
 </div>
