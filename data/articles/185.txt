@@ -11,6 +11,7 @@ Github Page 에 블로깅을 가능하게 해 준다는 Jekyll 이라는 것 잠
 이런 저런 생각을 좀 하다가 <span class="x">대체 휴일이 3일 연휴를 만드는 바람에</span> 내가 하는 결정이 다 그러하듯, 결론은 <span class="x">일본을 공격한다</span> 없으면 그냥 만든다 가 되어버려 홀린 듯 몇몇 태그를 지원하는 마크업 생성기를 만들기 시작했고 그 결과 <a href="https://github.com/heetakchoi/volken/blob/develop/lib/Volken/Mark.pm">Volken::Mark</a> 이 되었습니다. ㅇ.ㅇ
 <img src="img/grammar.jpg" />
 예를 들어 <a href="info.html">Info</a>는 아래와 같이 구성할 수 있다.
+
 <pre>
 <div style="text-align: center;" />
 <img class="s_img" src="img/최희탁.jpg" />
