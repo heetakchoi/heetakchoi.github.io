@@ -54,6 +54,7 @@ foreach my $article_srno (@article_srnos){
 		}else{
 		    $main_string .= "첫 글 입니다.";
 		}
+		$main_string .= "\n";
 	    }else{
 		die "____".$1."_ 은 기대하지 않은 값. A\n";
 	    }
@@ -69,7 +70,7 @@ foreach my $article_srno (@article_srnos){
 	    if($1 eq "MAIN"){
 		print $fh_article $main_string;
 	    }elsif($1 eq "ARTICLELINK"){
-		printf $fh_article $latest_article_link;
+		print $fh_article $latest_article_link, "\n";
 	    }else{
 		die "____".$1."_ 은 기대하지 않은 값. B\n";
 	    }
@@ -100,9 +101,9 @@ foreach (@skeleton_lines){
 	    print $fh_info $infocontent;
 	    print $fh_sf $sfcontent;
 	}elsif($1 eq "ARTICLELINK"){
-	    print $fh_index $latest_article_link;
-	    print $fh_info $latest_article_link;
-	    print $fh_sf $latest_article_link;
+	    print $fh_index $latest_article_link, "\n";
+	    print $fh_info $latest_article_link, "\n";
+	    print $fh_sf $latest_article_link, "\n";
 	}else{
 	    die "____".$1."_ 은 기대하지 않은 값. C\n";
 	}

@@ -32,5 +32,6 @@ sub set_environment{
 sub change_enc{
     #return $_[0];
     return encode("euc-kr", $_[0]);
-}</pre>
+}
+</pre>
 -  *nix 계열에서는 XML::DOM 설치만 하면 잘 돌아가는 듯 싶다.
