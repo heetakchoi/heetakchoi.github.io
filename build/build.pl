@@ -6,47 +6,38 @@ use warnings;
 use lib "../../volken/lib";
 use Volken::Mark;
 
+sub get_array_from_file;
 sub article_srno;
 sub book_srno;
 
 my $fh;
 
-my @base_lines = ();
-open($fh, "<", "../template/base.html");
-while(<$fh>){
-    push(@base_lines, $_);
-}
-close($fh);
-
-my @article_lines = ();
-open($fh, "<", "../template/article.html");
-while(<$fh>){
-    push(@article_lines, $_);
-}
-close($fh);
-
-my @book_lines = ();
-open($fh, "<", "../template/book.html");
-while(<$fh>){
-    push(@book_lines, $_);
-}
-close($fh);
+my @base_lines = get_array_from_file("../template/base.html");
+my @article_lines = get_array_from_file("../template/article.html");
+my @book_lines = get_array_from_file("../template/book.html");
 
 my $mark;
 
-# article
+################################################################################
+#  info article
 my %article_hash = map { article_srno($_)=>$_ } grep /\/articles\/\d+\.txt$/, glob "../data/articles/*.txt";
 my @article_srnos = reverse sort {$a<=>$b} keys %article_hash;
-my $latest_article_link = sprintf "<a href=\"articles/article-%d.html\">Article</a>", $article_srnos[0];
-my $latest_article_link_indepth = sprintf "<a href=\"../articles/article-%d.html\">Article</a>", $article_srnos[0];
-
+my $latest_article_link = sprintf "<a href=\"articles/article-%d.html\">Articles</a>", $article_srnos[0];
+my $latest_article_link_indepth = sprintf "<a href=\"../articles/article-%d.html\">Articles</a>", $article_srnos[0];
+#  info book
+my %book_hash = map { book_srno($_)=>$_ } grep /\/books\/\d+\.txt$/, glob "../data/books/*.txt";
+my @book_srnos = reverse sort {$a<=>$b} keys %book_hash;
+my $latest_book_link = sprintf "<a href=\"books/book-%d.html\">Books</a>", $book_srnos[0];
+my $latest_book_link_indepth = sprintf "<a href=\"../books/book-%d.html\">Books</a>", $book_srnos[0];
+################################################################################
+# write article down
 my $index = -1;
 foreach my $article_srno (@article_srnos){
     $index ++;
     $mark = Volken::Mark->new->load_file($article_hash{$article_srno});
     my $main_string = "";
     foreach (@article_lines){
-	if(/____(\w+)_/){
+	if(/____(\w+)____/){
 	    if($1 eq "ARTICLE"){
 		$main_string .= $mark->get_html();
 	    }elsif($1 eq "PREV"){
@@ -56,7 +47,6 @@ foreach my $article_srno (@article_srnos){
 		    $main_string .= "최신 글 입니다.";
 		}
 	    }elsif($1 eq "PADDING"){
-		# $main_string .= sprintf " %d ", $article_srno;
 		$main_string .= sprintf " &nbsp; &nbsp; ";
 	    }elsif($1 eq "NEXT"){
 		if($index < $#article_srnos){
@@ -66,7 +56,7 @@ foreach my $article_srno (@article_srnos){
 		}
 		$main_string .= "\n";
 	    }else{
-		die "[".$1."] 은 기대하지 않은 값. 69\n";
+		die "[".$1."] 은 기대하지 않은 값. A\n";
 	    }
 	}else{
 	    $main_string .= $_;
@@ -86,13 +76,15 @@ foreach my $article_srno (@article_srnos){
 	    }elsif($1 eq "MENUINDEX"){
 		print $fh_article "<a href=\"../index.html\">Home</a>", "\n";
 	    }elsif($1 eq "MENUARTICLE"){
-		print $fh_article $latest_article_link, "\n";
+		print $fh_article $latest_article_link_indepth, "\n";
 	    }elsif($1 eq "MENUSF"){
 		print $fh_article "<a href=\"../sf.html\">SF</a>", "\n";
 	    }elsif($1 eq "MENUINFO"){
 		print $fh_article "<a href=\"../info.html\">Info</a>", "\n";
+	    }elsif($1 eq "MENUBOOK"){
+		print $fh_article $latest_book_link_indepth, "\n";
 	    }else{
-		die "[".$1."] 는 기대하지 않은 값. 95\n";
+		die "[".$1."] 는 기대하지 않은 값. B\n";
 	    }
 	}else{
 	    print $fh_article $_;
@@ -100,21 +92,15 @@ foreach my $article_srno (@article_srnos){
     }
     close($fh_article);
 }
-
-####
-# book
-my %book_hash = map { book_srno($_)=>$_ } grep /\/books\/\d+\.txt$/, glob "../data/books/*.txt";
-my @book_srnos = reverse sort {$a<=>$b} keys %book_hash;
-my $latest_book_link = sprintf "<a href=\"book/book-%d.html\">Book</a>", $book_srnos[0];
-my $latest_book_link_indepth = sprintf "<a href=\"../book/book-%d.html\">Book</a>", $book_srnos[0];
-
+################################################################################
+# write book down
 $index = -1;
 foreach my $book_srno (@book_srnos){
     $index ++;
     $mark = Volken::Mark->new->load_file($book_hash{$book_srno});
     my $main_string = "";
     foreach (@book_lines){
-	if(/____(\w+)_/){
+	if(/____(\w+)____/){
 	    if($1 eq "BOOK"){
 		$main_string .= $mark->get_html();
 	    }elsif($1 eq "PREV"){
@@ -133,7 +119,7 @@ foreach my $book_srno (@book_srnos){
 		}
 		$main_string .= "\n";
 	    }else{
-		die "[".$1."] 은 기대하지 않은 값. 136\n";
+		die "[".$1."] 은 기대하지 않은 값. C\n";
 	    }
 	}else{
 	    $main_string .= $_;
@@ -158,8 +144,10 @@ foreach my $book_srno (@book_srnos){
 		print $fh_book "<a href=\"../sf.html\">SF</a>", "\n";
 	    }elsif($1 eq "MENUINFO"){
 		print $fh_book "<a href=\"../info.html\">Info</a>", "\n";
+	    }elsif($1 eq "MENUBOOK"){
+		print $fh_book $latest_book_link_indepth, "\n";
 	    }else{
-		die "[".$1."] 는 기대하지 않은 값. 162\n";
+		die "[".$1."] 는 기대하지 않은 값. D\n";
 	    }
 	}else{
 	    print $fh_book $_;
@@ -167,8 +155,7 @@ foreach my $book_srno (@book_srnos){
     }
     close($fh_book);
 }
-####
-
+################################################################################
 # front-file, info-file, sf-file 을 만든다.
 # data/front, data/info, data/sf 파일을 읽어들인 후 포매팅을 한 후, tmpl의 placeholder에 끼워 넣는다.
 $mark = Volken::Mark->new->load_file("../data/front.txt");
@@ -201,8 +188,10 @@ my @handlers = ($fh_index, $fh_info, $fh_sf);
 		map { print $_ "<a href=\"sf.html\">SF</a>", "\n"} @handlers;
 	    }elsif($1 eq "MENUINFO"){
 		map { print $_ "<a href=\"info.html\">Info</a>", "\n"} @handlers;
+	    }elsif($1 eq "MENUBOOK"){
+		map { print $_ $latest_book_link, "\n";} @handlers;
 	    }else{
-		die "[".$1."] 는 기대하지 않은 값. 205\n";
+		die "[".$1."] 는 기대하지 않은 값. E\n";
 	    }
 	}else{
 	    map { print $_ $line } @handlers;
@@ -212,6 +201,16 @@ close($fh_index);
 close($fh_info);
 close($fh_sf);
 
+sub get_array_from_file{
+    my ($filename) = @_;
+    my @lines = ();
+    open($fh, "<", $filename);
+    while(<$fh>){
+	push(@lines, $_);
+    }
+    close($fh);
+    return @lines;
+}
 sub article_srno{
     my ($article_name) = @_;
     $article_name =~ /\/articles\/(\d+)\.txt$/;
