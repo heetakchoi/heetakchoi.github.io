@@ -10,7 +10,7 @@ OPEN 플랫폼이니 매쉬업이니 하는 것들이 서비스 제공자와 이
 
 자 잡설은 그만두고, 
 UTF-8 locale 용 console dictionary
-<a href="data/endic.plx">endic.plx</a>
+<a href="../data/endic.plx">endic.plx</a>
 
 주의사항
 - DAUM open api 를 사용한다. (따라서 네트워크 연결된 상태에서만 동작한다.)

@@ -1,0 +1,144 @@
+<html>
+  <head>
+    <title>Life Logging in github</title>
+<script src="../script.js"></script>
+<link rel="stylesheet" href="../style.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta charset="UTF-8">
+    <script type="text/javascript" async
+	    src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-MML-AM_CHTML">
+    </script>
+  </head>
+  <body>
+    <div class="header">
+      <h1>Life Logging</h1>
+      <ul>
+	<li>
+<a href="../index.html">Home</a>
+	</li>
+	<li>
+<a href="articles/article-185.html">Article</a>
+	</li>
+	<li>
+<a href="../sf.html">SF</a>
+	</li>
+	<li>
+<a href="../info.html">Info</a>
+	</li>
+      </ul>
+    </div>
+    <div class="main">
+      <div class="navigator">
+<a href="article-109.html">이전 글 가기</a> &nbsp; &nbsp; <a href="article-107.html">다음 글 보기</a>
+      </div>
+      <hr />
+      <div class="article">
+<div>
+  <h2>숫자 넣어 때려 맞추기</h2>
+  <h5>1/26/ 2010</h5>
+</div>
+<div>
+누군가 a t + b sin( c t ) = d 의 해를 어떻게 구할까 라고 <a href="http://kldp.org/node/112110">질문</a>을 올렸다.
+</div>
+<div>
+허리도 아프고 퇴근시간도 거의 다 되었고 해서 잠시 생각해 보았다.<br />
+at + bsin(ct) = d<br />
+bsin(ct) = d - at<br />
+sin(ct) = (d - at) / b<br />
+Therefore, |(d-at)/ b| <= 1<br />
+-1 <= (d - at)/b <= 1<br />
+if b>0<br />
+-b <= d - at <= b<br />
+-b + d <= at <= b + d<br />
+if a>0<br />
+(-b + d)/a <= t <= (b + d)/a
+</div>
+<div>
+여기서 f(t) = at + bsin(ct) -d 라고 하고<br />
+N 개로 잘라내서 f(t) 의 부호가 바뀌는 걸 확인한다면,<br />
+전체 길이가 (b + d)/a - (-b + d)/a = 2b /a<br />
+따라서 단위 t 의 길이는 ( 2b / a )/N
+</div>
+<div>
+Java 로 만든 코드<br />
+ <a href="../data/Calc.java">Calc.java</a>
+</div>
+<div>
+몇몇 결과<br />
+(a, b, c, d) = (1, 1, 1, 1) 이고 N 이 10 이라면
+</div>
+<div>
+a 1.000000 b 1.000000 c 1.000000 d 1.000000<br />
+ F(0.000000)= -1.000000<br />
+ F(0.200000)= -0.601331<br />
+ F(0.400000)= -0.210582<br />
+ F(0.600000)= 0.164642<br />
+ F(0.800000)= 0.517356<br />
+ F(1.000000)= 0.841471<br />
+ F(1.200000)= 1.132039<br />
+ F(1.400000)= 1.385450<br />
+ F(1.600000)= 1.599574<br />
+ F(1.800000)= 1.773848<br />
+ F(2.000000)= 1.909297
+</div>
+<div>
+따라서 대충 0.4 ~ 0.6 사이에 있을 듯.
+</div>
+<div>
+좀 더 정확히 하기 위해 N 을 100 으로 했더니<br />
+... 생략<br />
+ F(0.480000)= -0.058221<br />
+ F(0.500000)= -0.020574<br />
+ F(0.520000)= 0.016880<br />
+ F(0.540000)= 0.054136<br />
+... 생략
+</div>
+<div>
+고로 대충 0.5xx 인 것 처럼 보인다.
+</div>
+<div>
+하나 더,<br />
+(a, b, c, d) = (1, 2, 3, 4) 이고 N 이 20 이라면<br />
+a 1.000000 b 2.000000 c 3.000000 d 4.000000<br />
+ F(2.000000)= -2.558831<br />
+ F(2.200000)= -1.176917<br />
+ F(2.400000)= -0.012664<br />
+ F(2.600000)= 0.597087<br />
+ F(2.800000)= 0.509198<br />
+ F(3.000000)= -0.175763<br />
+ F(3.200000)= -1.148654<br />
+ F(3.400000)= -1.999749<br />
+ F(3.600000)= -2.361872<br />
+ F(3.800000)= -2.038657<br />
+ F(4.000000)= -1.073146<br />
+ F(4.200000)= 0.267246<br />
+ F(4.400000)= 1.584147<br />
+ F(4.600000)= 2.487391<br />
+ F(4.800000)= 2.731316<br />
+ F(5.000000)= 2.300576<br />
+ F(5.200000)= 1.415507<br />
+ F(5.400000)= 0.455156<br />
+ F(5.600000)= -0.175134<br />
+ F(5.800000)= -0.185319<br />
+ F(6.000000)= 0.498026
+</div>
+<div>
+이건 대충 2.4~2.5 와 2.8 ~ 3.0, 그리고 4.0 ~ 4.2, 5.4 ~ 5.6, 5.8 ~ 6.0 사이에 있겠구만.
+</div>
+      </div>
+      <hr />
+      <div class="navigator">
+<a href="article-109.html">이전 글 가기</a> &nbsp; &nbsp; <a href="article-107.html">다음 글 보기</a>
+      </div>
+    </div>
+    <div class="footer">
+      Copyright endofhope.com All rights reserved.
+    </div>
+  </body>
+</html>
+<script type="text/javascript">
+  var img = document.getElementsByTagName("img");
+  for(let x=0; x<img.length; x++){
+      img.item(x).onclick=function(){window.open(this.src)};
+  }
+</script>

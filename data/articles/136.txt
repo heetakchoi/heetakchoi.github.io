@@ -6,5 +6,5 @@ h5. 2/29/2012
 너는 이미 인생 막장.
 
 정말 무슨 약을 빠셨길래 그러셨어요? ㅎ.﻿
-<img src="img/limit.jpeg" />
-<img src="img/drug.jpg" />
+<img src="../img/limit.jpeg" />
+<img src="../img/drug.jpg" />

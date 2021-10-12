@@ -18,17 +18,17 @@ h5. 6/16/2015
 \(0\) 과 \(P_{1}, P_{1}\) 과 \(P_{2}, \ldots P_{k}\) 와 \(20\) 사이에 각 페인트 통이 가진 영역의 끝점인 \(x_{1}, x_{2}, \ldots x_{2k}\) 을 잡을 수 있다.
 결국 페인트공이 움직이는 거리는 아래 그림의 \(d_{1}, d_{2}, \ldots d_{2k}, d_{2k+1}\) 를 왕복하는 거리의 합이 된다.
 \(P_{k}\) 까지의 부분합은 \( d_{1}(d_{1}+1) + d_{2}(d_{2}+1) + \ldots + d_{k}(d_{k}+1)\) 이다.
-<img width="640px" src="img/paint1.jpg" />
+<img width="640px" src="../img/paint1.jpg" />
 \(P_{2k}\) 부터 20m 지점인 끝 부분의 경우 페인트통을 끝에 옮기는지 여부에 따라 페인트통의 옮긴 횟수가 달라진다.
 옮기는 경우 즉 \(d_{i} (i=1, 2, \ldots N)\) 에서 \(N\)이 짝수였다면 페인트 통을 \(\frac{N}{2}\) 번 움직이는 것이 되고 \(20*(\frac{N}{2})\) m가 페인트통 이동으로 인해 추가된 거리가 된다.
 \(N\)이 홀수인 경우 \(\frac{(N-1)}{2}\)회 움직이게 되므로 \(20*\frac{(N-1)}{2}\) m 를 추가한다.
 위 내용을 표현한 코드가 <a href="https://github.com/heetakchoi/spiegel/blob/develop/perl/painting/painting.pl">painting.pl</a> 이고
 거리 순으로 결과값을 정렬한 결과값은
-<img width="640px" src="img/paint2.jpg" />
+<img width="640px" src="../img/paint2.jpg" />
 가 된다.
 
 최소 거리를 가지는 경우의 페인트통 이동 경로는 아래와 같다.
-<img width="640px" src="img/paint3.jpg" />
+<img width="640px" src="../img/paint3.jpg" />
 
 
 꼬릿말 1. 원래 문제를 만들 때는 별 생각없이 100m 의 담으로 지정했는데 풀다 보니 \(x_{i}\) 를 결정하는 방법이 \(2^{100}\) 이라는 어마무시한 경우의 수가 나와서 <span style="text-decoration:line-through;">포기가 빠른 남자 답게</span> 리저너블한 20으로 숫자를 바꾸었다.

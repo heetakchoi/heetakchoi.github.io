@@ -1,0 +1,80 @@
+<html>
+  <head>
+    <title>Life Logging in github</title>
+<script src="../script.js"></script>
+<link rel="stylesheet" href="../style.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta charset="UTF-8">
+    <script type="text/javascript" async
+	    src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-MML-AM_CHTML">
+    </script>
+  </head>
+  <body>
+    <div class="header">
+      <h1>Life Logging</h1>
+      <ul>
+	<li>
+<a href="../index.html">Home</a>
+	</li>
+	<li>
+<a href="articles/article-185.html">Article</a>
+	</li>
+	<li>
+<a href="../sf.html">SF</a>
+	</li>
+	<li>
+<a href="../info.html">Info</a>
+	</li>
+      </ul>
+    </div>
+    <div class="main">
+      <div class="navigator">
+<a href="article-93.html">이전 글 가기</a> &nbsp; &nbsp; <a href="article-91.html">다음 글 보기</a>
+      </div>
+      <hr />
+      <div class="article">
+<div>
+  <h2>10만 펙토리얼</h2>
+  <h5>8/31/2009</h5>
+</div>
+<div>
+자주 방문하는 프로그래밍 관련 포럼에 글이 하나 올라온 적이 있다.<br />
+<a href="http://kldp.org/node/107470">10만 펙토리얼 계산 속도</a><br />
+윈도우 계산기로 계산 결과를 올려 놓는 사람부터 함수형 언어로 계산해 본 결과까지 하나의 목적을 위해 서로 다른 접근을 볼 수 있어서 즐거운 글이었다.<br />
+나도 당연히? 프로그램을 짜서 돌려 보았는데, 해당 글타래엔 올리지 않았다.<br />
+java 로 뭔가 하면 뻑하면 flame 이 생기는 걸 보았던 터라 간만에 생긴 흥을 내가 나서서 깨어버리곤 싶지 않아서였다.
+</div>
+<div>
+어제 메일이 왔는데, 서버 계정 만료일이 다가왔다고 알려주는 메일이었다.<br />
+뭐 몇푼 되진 않지만, 그렇다고 이용하지 않는 계정을 놀릴 필요도 없고 해서 블로그를 써야할 마음이 들었다.
+</div>
+<div>
+첨부한 코드는 Java 로 10만 펙토리얼을 구하는 코드이다.<br />
+ <a href="../data/Factorial.java">Factorial.java</a>
+</div>
+<div>
+argument 없이 돌리면 thread 를 4개 생성하여 부분곱을 구하고 나중에 해당 부분곱들의 결과를 합하여 최종 값을 구해 낸다.<br />
+이 코드를 테스트할때 4개짜리 프로세서를 가진 기계에서 돌렸기 때문에 쓰레드를 3~4개가 가장 성능이 좋을 줄 알았는데, 쓰레드 숫자가 16개 까진 상당히 좋은 결과가 나와서 의외? 였다.<br />
+결과는<br />
+<a href="../data/result.txt">result.txt</a>
+</div>
+<div>
+4개 이상이면 context switching 비용이 분명 들 텐데, 분명 인생의 오묘함도 이런 게 아닐까?
+</div>
+      </div>
+      <hr />
+      <div class="navigator">
+<a href="article-93.html">이전 글 가기</a> &nbsp; &nbsp; <a href="article-91.html">다음 글 보기</a>
+      </div>
+    </div>
+    <div class="footer">
+      Copyright endofhope.com All rights reserved.
+    </div>
+  </body>
+</html>
+<script type="text/javascript">
+  var img = document.getElementsByTagName("img");
+  for(let x=0; x<img.length; x++){
+      img.item(x).onclick=function(){window.open(this.src)};
+  }
+</script>

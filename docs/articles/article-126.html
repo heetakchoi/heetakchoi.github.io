@@ -1,0 +1,95 @@
+<html>
+  <head>
+    <title>Life Logging in github</title>
+<script src="../script.js"></script>
+<link rel="stylesheet" href="../style.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta charset="UTF-8">
+    <script type="text/javascript" async
+	    src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-MML-AM_CHTML">
+    </script>
+  </head>
+  <body>
+    <div class="header">
+      <h1>Life Logging</h1>
+      <ul>
+	<li>
+<a href="../index.html">Home</a>
+	</li>
+	<li>
+<a href="articles/article-185.html">Article</a>
+	</li>
+	<li>
+<a href="../sf.html">SF</a>
+	</li>
+	<li>
+<a href="../info.html">Info</a>
+	</li>
+      </ul>
+    </div>
+    <div class="main">
+      <div class="navigator">
+<a href="article-127.html">이전 글 가기</a> &nbsp; &nbsp; <a href="article-125.html">다음 글 보기</a>
+      </div>
+      <hr />
+      <div class="article">
+<div>
+  <h2>몬티 홀 문제</h2>
+  <h5>6/14/2014</h5>
+</div>
+<div>
+문득 “에르되시(에어디쉬)가 몬티 홀 문제의 결론을 받아들이지 못하다가 결국 <a href="http://ko.wikipedia.org/wiki/%EB%AA%AC%ED%85%8C%EC%B9%B4%EB%A5%BC%EB%A1%9C_%EB%B0%A9%EB%B2%95">몬테카를로 시행</a>을 하고 나서야 인정했다” 란 구절이 머릿속을 지나갔다.<br />
+생각해 보니 <a href="http://ko.wikipedia.org/wiki/%EB%AA%AC%ED%8B%B0_%ED%99%80_%EB%AC%B8%EC%A0%9C">몬티 홀 문제</a>를 그렇게 명확하게 이해하였던 것 같지 않아 이번 기회에 몬테카를로 시행을 반복해 주는 코드를 만들어 <span style="text-decoration:line-through;">도랑치고 가재잡고</span> 몬티 홀 문제도 풀어볼 생각으로 시작했다.
+</div>
+<div>
+몬테카를로 시행이란 게 결국 랜덤하게 흩뿌려 주는 거지만 <span class="x">랜덤이야 rand() 가 하는 거고</span> 그것으로 무엇을 해결해야 가치가 있는 것이니 우선 문제 자체를 명확히 하기 위해 오랫만에 몬티 홀 문제를 다시 읽어 보았다.
+</div>
+<div>
+<span style="font-style:italic;">세 개의 문 중에 하나를 선택하여 문 뒤에 있는 선물을 가질 수 있는 게임쇼에 참가했다. 한 문 뒤에는 자동차가 있고, 나머지 두 문 뒤에는 염소가 있다. 이때 어떤 사람이 예를 들어 1번 문을 선택했을 때, 게임쇼 진행자는 3번 문을 열어 문뒤에 염소가 있음을 보여주면서 1번 대신 2번을 선택하겠냐고 물었다. 이때 원래 선택했던 번호를 바꾸는 것이 유리할까?</span>
+</div>
+<div>
+문이 세 개 있으니 gates[3] = {a0, a1, a2}, a_i 는 0 혹은 1 (i는 0, 1, 2) 까지 쓰다가 이거 경우의 수가 몇 개 없는데? 써 볼까 란 생각이 들었다.
+</div>
+<div>
+문을 A, B, C 그리고 차를 1, 염소를 0 이라 하자. 그러면 가능한 경우는 아래와 같이<br />
+<img src="../img/case1.png" /><br />
+이 될 거고, A 를 택했다면<br />
+<img src="../img/case2.png" /><br />
+따라서 1을 만날 확률은 1/3.
+</div>
+<div>
+그런데 사회자가 선택하지 않은 B, C 중 차가 없는 하나를 열어 준 상태는 다음과 같다 (염소가 2개인 경우 A>B>C 순으로 선택했다고 가정하자)<br />
+<img src="../img/case3.png" /><br />
+이미 선택한 A 가 아니라 열리지 않은 다른 문으로 선택을 변경하면 1이 나올 확률은 2/3.<br />
+<span class="b">이거구만. 이거였어.</span> <span style="text-decoration:line-through;">쳇 이게 직관적으로 다가오지 않았다니. 늙었구만.</span>
+</div>
+<div>
+비슷할 것이 자명하지만 굳이 B, C 를 처음에 선택한 경우까지 서술한다면<br />
+<img src="../img/case4.png" />
+</div>
+<div>
+<img src="../img/case5.png" /><br />
+가 되어 <span class="x">사랑은 움직이는</span> 선택을 변경해야 한다는 것이 명확해졌다.
+</div>
+<div>
+여기까지 하고 이 글을 쓰고 있다.<br />
+그런데 뭔가 하려고 한 것 같긴 한데 생각이 나지 않는다.<br />
+뭐 대수롭잖은 것이었겠지.
+</div>
+      </div>
+      <hr />
+      <div class="navigator">
+<a href="article-127.html">이전 글 가기</a> &nbsp; &nbsp; <a href="article-125.html">다음 글 보기</a>
+      </div>
+    </div>
+    <div class="footer">
+      Copyright endofhope.com All rights reserved.
+    </div>
+  </body>
+</html>
+<script type="text/javascript">
+  var img = document.getElementsByTagName("img");
+  for(let x=0; x<img.length; x++){
+      img.item(x).onclick=function(){window.open(this.src)};
+  }
+</script>

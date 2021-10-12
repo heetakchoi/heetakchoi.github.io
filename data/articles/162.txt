@@ -66,8 +66,8 @@ foreach ( sort {$a<=>$b} keys %n_count_hash ){
 }
 </pre> 
 
-그 결과는 <a href="data/card_result.xlsx">card result</a> 이며 이를 그래프로 그리면 아래와 같다.
-<img src="img/card.png" />
+그 결과는 <a href="../data/card_result.xlsx">card result</a> 이며 이를 그래프로 그리면 아래와 같다.
+<img src="../img/card.png" />
 뭐 믿음을 가지고 보면 맞는 것 같기도 하다.
 
 (조화급수가 \( \log n \) 로 어림지워지는 이야기는 나중에.)

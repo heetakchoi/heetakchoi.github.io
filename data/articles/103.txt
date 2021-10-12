@@ -30,5 +30,5 @@ Math::BigFloat 를 급하게 수배해서 새로 계산해 보니 결과값 0.00
 - 이건 낚시다 라는 감에만 의존하면 이런 포스팅 하게 된다 ㅡ.ㅡ;
 
 이쉥퀴 구라까고있네 라고 생각한 사람을 위해 준비했다.
-<a href="data/EohCalc.pm">EohCalc.pm</a>
-<a href="data/useEohCalc.plx">useEohCalc.plx</a>
+<a href="../data/EohCalc.pm">EohCalc.pm</a>
+<a href="../data/useEohCalc.plx">useEohCalc.plx</a>

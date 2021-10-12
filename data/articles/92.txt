@@ -11,11 +11,11 @@ java 로 뭔가 하면 뻑하면 flame 이 생기는 걸 보았던 터라 간만
 뭐 몇푼 되진 않지만, 그렇다고 이용하지 않는 계정을 놀릴 필요도 없고 해서 블로그를 써야할 마음이 들었다.
 
 첨부한 코드는 Java 로 10만 펙토리얼을 구하는 코드이다.
- <a href="data/Factorial.java">Factorial.java</a>
+ <a href="../data/Factorial.java">Factorial.java</a>
 
 argument 없이 돌리면 thread 를 4개 생성하여 부분곱을 구하고 나중에 해당 부분곱들의 결과를 합하여 최종 값을 구해 낸다.
 이 코드를 테스트할때 4개짜리 프로세서를 가진 기계에서 돌렸기 때문에 쓰레드를 3~4개가 가장 성능이 좋을 줄 알았는데, 쓰레드 숫자가 16개 까진 상당히 좋은 결과가 나와서 의외? 였다.
 결과는
-<a href="data/result.txt">result.txt</a>
+<a href="../data/result.txt">result.txt</a>
 
 4개 이상이면 context switching 비용이 분명 들 텐데, 분명 인생의 오묘함도 이런 게 아닐까?

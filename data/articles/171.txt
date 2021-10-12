@@ -9,16 +9,16 @@ h5. 8/11/2016
 2. 개미가 지나가면 격자의 색이 바뀐다.
 3. 개미는 흰 격자 위에서는 왼쪽으로 90도, 검은 격자 위에서는 오른쪽으로 90도 방향을 바꾼다.
 복잡해 보이지만 첫 몇 시행의 결과는 아래와 같다.
-<img src="img/ant.png" />
+<img src="../img/ant.png" />
 출처: <a href="http://biophilosophy.tistory.com/entry/%EB%9E%AD%ED%84%B4%EC%9D%98-%EA%B0%9C%EB%AF%B8Ants95%EC%9D%98-%EC%86%8C%EA%B0%9C-20031">랭턴의 개미</a>
 
 몇 번의 시행을 마치면 마치 짐승의 발자국이 눈 위에 남듯 개미의 발차취가 남게 된다. <span class="x">점 색깔이 파란 색으로 보이는 것은 눈의 착각입니다.</span>
 100번 시행 후
-<img src="img/100.png" />
+<img src="../img/100.png" />
 1000번 시행 후
-<img src="img/1000.png" />
+<img src="../img/1000.png" />
 10000번 시행 후
-<img src="img/10000.png" />
+<img src="../img/10000.png" />
 
 이것만 가지고선 별 재미도 없고 감동도 없겠지만 이것의 웃기는 점은 이렇게 별다른 규칙을 찾을 수 없이 마치 랜덤하게 움직이는 것 처럼 보이던 개미가 일정 시행 이후에는 <span class="x">전문 용어로 어떤 N이 존재해서 n > N 인 모든 n에 대하여 </span> 좌표 평면의 우 하단으로 열을 지어 행진하는 듯 움직인다는 것이라고 한다.
 그러면서 아직 증명되지는 않았으나 초기 상태가 어떻게 주어지든 - 다시말해 개미가 출발하기 전에 미리 검은 점을 어떻게 깔아놓든 간에 결국 개미는 우 하단으로 움직이는 것 처럼 보인다 는 말로 끝맺었던 것 같다.
@@ -26,7 +26,7 @@ h5. 8/11/2016
 불신 기반 삶의 신봉자로서 '정말 그런가' 에 대해 급 궁금해져 랭턴의 개미를 시뮬레이션하는 코드를 만들어 확인해 보았다.
 <a href="https://github.com/heetakchoi/spiegel/blob/develop/perl/ant/ant.pl">ant.pl</a>
 결과는?
-<img src="img/good_terran.jpg" />
-<img src="img/100000.png" />
+<img src="../img/good_terran.jpg" />
+<img src="../img/100000.png" />
 
 직접 숫자를 바꿔가며 확인해 볼 수 있다. 초기값을 변경해도 동일한 현상이 발생하는지 확인하려면 <a href="data/ant.cgi">ant.cgi</a> 의 black_hash 에 검은 점을 추가해주면 된다. <span class="x">갑자기 귀찮아졌다.</span>

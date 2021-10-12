@@ -7,12 +7,14 @@ use lib "../../volken/lib";
 use Volken::Mark;
 
 sub article_srno;
+sub book_srno;
 
 my $fh;
-my @skeleton_lines = ();
-open($fh, "<", "../template/skeleton.html");
+
+my @base_lines = ();
+open($fh, "<", "../template/base.html");
 while(<$fh>){
-    push(@skeleton_lines, $_);
+    push(@base_lines, $_);
 }
 close($fh);
 
@@ -23,12 +25,20 @@ while(<$fh>){
 }
 close($fh);
 
+my @book_lines = ();
+open($fh, "<", "../template/book.html");
+while(<$fh>){
+    push(@book_lines, $_);
+}
+close($fh);
+
 my $mark;
 
 # article
 my %article_hash = map { article_srno($_)=>$_ } grep /\/articles\/\d+\.txt$/, glob "../data/articles/*.txt";
 my @article_srnos = reverse sort {$a<=>$b} keys %article_hash;
-my $latest_article_link = sprintf "<a href=\"article-%d.html\">Article</a>", $article_srnos[0];
+my $latest_article_link = sprintf "<a href=\"articles/article-%d.html\">Article</a>", $article_srnos[0];
+my $latest_article_link_indepth = sprintf "<a href=\"../articles/article-%d.html\">Article</a>", $article_srnos[0];
 
 my $index = -1;
 foreach my $article_srno (@article_srnos){
@@ -56,23 +66,33 @@ foreach my $article_srno (@article_srnos){
 		}
 		$main_string .= "\n";
 	    }else{
-		die "____".$1."_ 은 기대하지 않은 값. A\n";
+		die "[".$1."] 은 기대하지 않은 값. 69\n";
 	    }
 	}else{
 	    $main_string .= $_;
 	}
     }
 
-    my $articlefile = sprintf "../docs/article-%d.html", $article_srno;
+    my $articlefile = sprintf "../docs/articles/article-%d.html", $article_srno;
     open(my $fh_article, ">", $articlefile);
-    foreach (@skeleton_lines){
-	if(/____(\w+)_/){
+    foreach (@base_lines){
+	if(/____(\w+)____/){
 	    if($1 eq "MAIN"){
 		print $fh_article $main_string;
-	    }elsif($1 eq "ARTICLELINK"){
+	    }elsif($1 eq "SCRIPT"){
+		print $fh_article "<script src=\"../script.js\"></script>", "\n";
+	    }elsif($1 eq "STYLESHEET"){
+		print $fh_article "<link rel=\"stylesheet\" href=\"../style.css\" />", "\n";
+	    }elsif($1 eq "MENUINDEX"){
+		print $fh_article "<a href=\"../index.html\">Home</a>", "\n";
+	    }elsif($1 eq "MENUARTICLE"){
 		print $fh_article $latest_article_link, "\n";
+	    }elsif($1 eq "MENUSF"){
+		print $fh_article "<a href=\"../sf.html\">SF</a>", "\n";
+	    }elsif($1 eq "MENUINFO"){
+		print $fh_article "<a href=\"../info.html\">Info</a>", "\n";
 	    }else{
-		die "____".$1."_ 은 기대하지 않은 값. B\n";
+		die "[".$1."] 는 기대하지 않은 값. 95\n";
 	    }
 	}else{
 	    print $fh_article $_;
@@ -80,6 +100,74 @@ foreach my $article_srno (@article_srnos){
     }
     close($fh_article);
 }
+
+####
+# book
+my %book_hash = map { book_srno($_)=>$_ } grep /\/books\/\d+\.txt$/, glob "../data/books/*.txt";
+my @book_srnos = reverse sort {$a<=>$b} keys %book_hash;
+my $latest_book_link = sprintf "<a href=\"book/book-%d.html\">Book</a>", $book_srnos[0];
+my $latest_book_link_indepth = sprintf "<a href=\"../book/book-%d.html\">Book</a>", $book_srnos[0];
+
+$index = -1;
+foreach my $book_srno (@book_srnos){
+    $index ++;
+    $mark = Volken::Mark->new->load_file($book_hash{$book_srno});
+    my $main_string = "";
+    foreach (@book_lines){
+	if(/____(\w+)_/){
+	    if($1 eq "BOOK"){
+		$main_string .= $mark->get_html();
+	    }elsif($1 eq "PREV"){
+		if($index >0){
+		    $main_string .= sprintf "<a href=\"book-%d.html\">이전 글 가기</a>", $book_srnos[$index-1];
+		}else{
+		    $main_string .= "최신입니다.";
+		}
+	    }elsif($1 eq "PADDING"){
+		$main_string .= sprintf " &nbsp; &nbsp; ";
+	    }elsif($1 eq "NEXT"){
+		if($index < $#book_srnos){
+		    $main_string .= sprintf "<a href=\"book-%d.html\">다음 글 보기</a>", $book_srnos[$index+1];
+		}else{
+		    $main_string .= "첫 글 입니다.";
+		}
+		$main_string .= "\n";
+	    }else{
+		die "[".$1."] 은 기대하지 않은 값. 136\n";
+	    }
+	}else{
+	    $main_string .= $_;
+	}
+    }
+
+    my $bookfile = sprintf "../docs/books/book-%d.html", $book_srno;
+    open(my $fh_book, ">", $bookfile);
+    foreach (@base_lines){
+	if(/____(\w+)____/){
+	    if($1 eq "MAIN"){
+		print $fh_book $main_string;
+	    }elsif($1 eq "SCRIPT"){
+		print $fh_book "<script src=\"../script.js\"></script>", "\n";
+	    }elsif($1 eq "STYLESHEET"){
+		print $fh_book "<link rel=\"stylesheet\" href=\"../style.css\" />", "\n";
+	    }elsif($1 eq "MENUINDEX"){
+		print $fh_book "<a href=\"../index.html\">Home</a>", "\n";
+	    }elsif($1 eq "MENUARTICLE"){
+		print $fh_book $latest_article_link_indepth, "\n";
+	    }elsif($1 eq "MENUSF"){
+		print $fh_book "<a href=\"../sf.html\">SF</a>", "\n";
+	    }elsif($1 eq "MENUINFO"){
+		print $fh_book "<a href=\"../info.html\">Info</a>", "\n";
+	    }else{
+		die "[".$1."] 는 기대하지 않은 값. 162\n";
+	    }
+	}else{
+	    print $fh_book $_;
+	}
+    }
+    close($fh_book);
+}
+####
 
 # front-file, info-file, sf-file 을 만든다.
 # data/front, data/info, data/sf 파일을 읽어들인 후 포매팅을 한 후, tmpl의 placeholder에 끼워 넣는다.
@@ -94,25 +182,32 @@ my $sfcontent = $mark->get_html();
 open(my $fh_index, ">", "../docs/index.html");
 open(my $fh_info, ">", "../docs/info.html");
 open(my $fh_sf, ">", "../docs/sf.html");
-foreach (@skeleton_lines){
-    if(/____(\w+)_/){
-	if($1 eq "MAIN"){
-	    print $fh_index $frontcontent;
-	    print $fh_info $infocontent;
-	    print $fh_sf $sfcontent;
-	}elsif($1 eq "ARTICLELINK"){
-	    print $fh_index $latest_article_link, "\n";
-	    print $fh_info $latest_article_link, "\n";
-	    print $fh_sf $latest_article_link, "\n";
+my @handlers = ($fh_index, $fh_info, $fh_sf);
+    foreach my $line (@base_lines){
+	if($line =~ /____(\w+)____/){
+	    if($1 eq "MAIN"){
+		print $fh_index $frontcontent;
+		print $fh_info $infocontent;
+		print $fh_sf $sfcontent;
+	    }elsif($1 eq "SCRIPT"){
+		map { print $_ "<script src=\"script.js\"></script>", "\n"} @handlers;
+	    }elsif($1 eq "STYLESHEET"){
+		map { print $_ "<link rel=\"stylesheet\" href=\"style.css\" />", "\n"} @handlers;
+	    }elsif($1 eq "MENUINDEX"){
+		map { print $_ "<a href=\"index.html\">Home</a>", "\n"} @handlers;
+	    }elsif($1 eq "MENUARTICLE"){
+		map { print $_ $latest_article_link, "\n"} @handlers;
+	    }elsif($1 eq "MENUSF"){
+		map { print $_ "<a href=\"sf.html\">SF</a>", "\n"} @handlers;
+	    }elsif($1 eq "MENUINFO"){
+		map { print $_ "<a href=\"info.html\">Info</a>", "\n"} @handlers;
+	    }else{
+		die "[".$1."] 는 기대하지 않은 값. 205\n";
+	    }
 	}else{
-	    die "____".$1."_ 은 기대하지 않은 값. C\n";
+	    map { print $_ $line } @handlers;
 	}
-    }else{
-	print $fh_index $_;
-	print $fh_info $_;
-	print $fh_sf $_;
     }
-}
 close($fh_index);
 close($fh_info);
 close($fh_sf);
@@ -120,5 +215,10 @@ close($fh_sf);
 sub article_srno{
     my ($article_name) = @_;
     $article_name =~ /\/articles\/(\d+)\.txt$/;
+    return $1;
+}
+sub book_srno{
+    my ($book_name) = @_;
+    $book_name =~ /\/books\/(\d+)\.txt$/;
     return $1;
 }

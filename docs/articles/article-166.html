@@ -1,0 +1,79 @@
+<html>
+  <head>
+    <title>Life Logging in github</title>
+<script src="../script.js"></script>
+<link rel="stylesheet" href="../style.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta charset="UTF-8">
+    <script type="text/javascript" async
+	    src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-MML-AM_CHTML">
+    </script>
+  </head>
+  <body>
+    <div class="header">
+      <h1>Life Logging</h1>
+      <ul>
+	<li>
+<a href="../index.html">Home</a>
+	</li>
+	<li>
+<a href="articles/article-185.html">Article</a>
+	</li>
+	<li>
+<a href="../sf.html">SF</a>
+	</li>
+	<li>
+<a href="../info.html">Info</a>
+	</li>
+      </ul>
+    </div>
+    <div class="main">
+      <div class="navigator">
+<a href="article-167.html">이전 글 가기</a> &nbsp; &nbsp; <a href="article-165.html">다음 글 보기</a>
+      </div>
+      <hr />
+      <div class="article">
+<div>
+  <h2>\( \pi \) 는 대체 얼마?</h2>
+  <h5>3/1/2016</h5>
+</div>
+<div>
+<span class="x">에드거 소텔</span> 얀 마텔이 쓴 <a href="http://www.yes24.com/24/Goods/1428195?Acode=101">파이 이야기</a> 라는 소설이 있다. 원제는 Life of pi 인데 영화로도 만들어졌고 포스터가 인상적인데, 소년과 호랑이가 말 그대로 한 배에 탄 모습이다.<br />
+<img src="../img/lifeofpi.jpg" /><br />
+영화는 보지 않았지만 책은 읽었고 주인공이 배를 타기까지만 버티면 그 뒤 내용은 순식간에 읽어내릴 수 있었다. 특히 열린 결말이라 더욱 여운이 오래 갔던 것으로 기억한다.<br />
+며칠 전 갑자기 이 포스터가 머리에 떠오르면서 아르키메데스가 원에 내/외접하는 다각형을 사용하여 원주율을 어림했다는 내용이 생각났다.<br />
+<span class="x">대체 왜 이런 생각이 나는 지는 모르겠으나</span> 어떻게 하면 될 지 한 번 해보고 싶어졌다.<br />
+반지름이 1인 원둘레는 \( 2 \pi \) 이고 삼각형을 외접시키면 이 삼각형의 둘레보다 작으므로<br />
+<img src="../img/triangle.jpg" /><br />
+\( 2 \pi < 6 x \) 가 되어 결국 \( \pi < 3 \tan60^{\circ} \sim 5.19 \)<br />
+사각형을 외접시키면<br />
+<img src="../img/square.jpg" /><br />
+동일하게 \( 2 \pi < 8 x \) 가 되어 결국 \( \pi < 4 \)<br />
+이쯤되면 대충 각이 나오는데 \( n \) 각형일 경우 아래와 같이<br />
+<img src="../img/nsquare.jpg" /><br />
+가 되어 결국 \( \pi < n \cdot \tan \theta_{n} = n \cdot \tan\frac{180^{\circ}}{n} \)<br />
+따라서 <span class="x">일단 삼각함수값은 삼각함수표가 계산한다 치면</span> \( n \) 이 1000 이면 \( \pi < 1000 \cdot \tan \frac{180^{\circ}}{1000} \sim 3.14160298 \cdots \) 가 되고 \( n \) 을 \( 10^{4} \) 로 하면 \( \pi < 10000 \cdot \tan 0.018 \sim 3.14159275694 \cdots \).<br />
+<span class="x">오오 무언가 굉장히 익숙한 숫자들의 배열이 나오고 있어.</span><br />
+이제 \( \pi \) 를 직접 구하는 대신 가능한 작은 \( \theta \) 에 대해 \( \frac{180^{\circ}}{\theta} \cdot \tan \theta \) 값을 구할 수 있는가의 문제로 바뀌게 된다.<br />
+먼저 \( \sin( 2 \theta) = 2 \cdot \sin \theta \cos \theta = 2 \cdot \sin \theta \cdot \sqrt{1 - \sin^{2} \theta} \) 가 되어 \( \sin 2n \) 을 \( \sin n \) 으로 나타낼 수 있으며<br />
+그런데 \( \tan \theta = \frac {\sin \theta}{\cos \theta} \) 이고 \( \sin^{2} \theta + \cos^{2} \theta = 1 \) 이므로 \( \tan \theta = \frac{\sin \theta}{\sqrt{1-\sin^{2} \theta}} \) 가 되어 \( \sin \) 값으로만 표현할 수 있다.<br />
+그러므로 \( \theta \) 의 값을 절반으로 계속 줄인 \( \sin \theta \) 의 값을 계산할 수 있으므로 <span class="x">굳이 나는 해 볼 생각이 없지만</span> 원하는 정확도 만큼 \( \pi \) 의 근사값을 구할 수 있게 된다.<br />
+이것 말고도 두 세가지 더 \( \pi \) 의 근사값을 구할 방법이 생각이 났지만 <span class="x">이미 여기까지 수식을 입력하는데 지쳐 왜 이걸 하고 있나 생각이 들어-)- 숨을 좀 고르고 다음을 기약하도록 한다.
+</div>
+      </div>
+      <hr />
+      <div class="navigator">
+<a href="article-167.html">이전 글 가기</a> &nbsp; &nbsp; <a href="article-165.html">다음 글 보기</a>
+      </div>
+    </div>
+    <div class="footer">
+      Copyright endofhope.com All rights reserved.
+    </div>
+  </body>
+</html>
+<script type="text/javascript">
+  var img = document.getElementsByTagName("img");
+  for(let x=0; x<img.length; x++){
+      img.item(x).onclick=function(){window.open(this.src)};
+  }
+</script>

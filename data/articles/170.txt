@@ -6,11 +6,11 @@ h5. 5/31/2016
 그러다보니 자연스럽게 업데이트 자체가 잘 되지 않고 있았고 이왕 유지를 하는 김에 어떻게 좀 더 손 볼 방법이 있을까 깊게 <span class="x">약 3초</span> 고민한 결과, 요즘 대세 인스타그램에 짧은 이야기를 올리고 그 사진을 메인에 보여주자 라고 결심했다.
 <span class="x">멋진 기획이 완성되면 이제 삽질의 고통이 시작되는 건 고조선 이래의 정석이라</span> 먼저 정석대로 <a href="https://www.instagram.com/developer/">인스타그램 API 문서</a> 부터 읽기 시작했다. 그리고 시킨 대로 순순히 사용자 토큰을 받아내기까지 성공했다.
 그런 다음 정작 데이터를 받아오는 API를 부르려는 순간, 이 호출이 HTTPS 로만 가능한 것을 발견했다.
-<img src="img/dicken.jpg" />
+<img src="../img/dicken.jpg" />
 뭐 SSL 소켓 하나 열지 뭐 라고 쿨하게 생각하고 꾸역 꾸역 코드를 만들었는데 동작시켜 보니 perl ssl 모듈이 설치가 되어 있지 않았다는 메시지와 함께 종료되었다.
 바로 공손히 호스팅 업체에 고객 문의로 "cpan 으로 module 하나만 설치해주세요 굽신굽신" 을 시전하였으나
-<img src="img/no.jpg" />
-<img src="img/no.png" />
+<img src="../img/no.jpg" />
+<img src="../img/no.png" />
 싸구려 손님이라 그런지 바로 문전 박대.jpg <span class="x">깨알같은 줄거운 의 압박, 못 해, 이용 해</span>
 
 <span class="x">아, SSH 로 호스팅 서버에 접근하니까 분명 이미 SSH 라이브러리는 깔려 있을테고 그냥</span>
@@ -21,7 +21,7 @@ root# cpan install SSL
 
 입맛을 다시다 왠지 아쉬워 호스팅 업체의 서비스 문구를 살펴보다 php 제공 이란 문구에 눈이 번쩍 뜨였다.
 호옥시 PHP 로는 접근 가능할 것 같다는 느낌이 온다. 결과는?
-<img src="img/plan.jpg" />
+<img src="../img/plan.jpg" />
 
 정리하자면 instagram HTTPS API는 php 에서 호출하도록 하고 perl cgi로는 이 php를 부르도록 해서 데이터를 얻어오게 했다.
 룰루랄라 대충 코드를 만든 다음 실제 내용을 빼내 보니 어럽쇼 instagram API 결과값이 JSON 타입인 것을 그제서야 발견했다.
@@ -59,4 +59,4 @@ foreach (@data){
 </pre>
 실은 아직 하나 더 문제가 남아있다.
 API 결과 중 한글 문자열이 \u 포맷의 유니코드로 변환되어 오는데 <span class="x">이미 덕력이 다했는지</span> 갑자기 급 피곤해져서 훗날을 기약하기로 한다.
-<img src="img/sorry.jpg" />
+<img src="../img/sorry.jpg" />

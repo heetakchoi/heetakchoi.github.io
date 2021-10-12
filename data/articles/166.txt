@@ -2,18 +2,18 @@ h2. \( \pi \) 는 대체 얼마?
 h5. 3/1/2016
 
 <span class="x">에드거 소텔</span> 얀 마텔이 쓴 <a href="http://www.yes24.com/24/Goods/1428195?Acode=101">파이 이야기</a> 라는 소설이 있다. 원제는 Life of pi 인데 영화로도 만들어졌고 포스터가 인상적인데, 소년과 호랑이가 말 그대로 한 배에 탄 모습이다.
-<img src="img/lifeofpi.jpg" />
+<img src="../img/lifeofpi.jpg" />
 영화는 보지 않았지만 책은 읽었고 주인공이 배를 타기까지만 버티면 그 뒤 내용은 순식간에 읽어내릴 수 있었다. 특히 열린 결말이라 더욱 여운이 오래 갔던 것으로 기억한다.
 며칠 전 갑자기 이 포스터가 머리에 떠오르면서 아르키메데스가 원에 내/외접하는 다각형을 사용하여 원주율을 어림했다는 내용이 생각났다.
 <span class="x">대체 왜 이런 생각이 나는 지는 모르겠으나</span> 어떻게 하면 될 지 한 번 해보고 싶어졌다.
 반지름이 1인 원둘레는 \( 2 \pi \) 이고 삼각형을 외접시키면 이 삼각형의 둘레보다 작으므로
-<img src="img/triangle.jpg" />
+<img src="../img/triangle.jpg" />
 \( 2 \pi < 6 x \) 가 되어 결국 \( \pi < 3 \tan60^{\circ} \sim 5.19 \)
 사각형을 외접시키면
-<img src="img/square.jpg" />
+<img src="../img/square.jpg" />
 동일하게 \( 2 \pi < 8 x \) 가 되어 결국 \( \pi < 4 \)
 이쯤되면 대충 각이 나오는데 \( n \) 각형일 경우 아래와 같이
-<img src="img/nsquare.jpg" />
+<img src="../img/nsquare.jpg" />
 가 되어 결국 \( \pi < n \cdot \tan \theta_{n} = n \cdot \tan\frac{180^{\circ}}{n} \)
 따라서 <span class="x">일단 삼각함수값은 삼각함수표가 계산한다 치면</span> \( n \) 이 1000 이면 \( \pi < 1000 \cdot \tan \frac{180^{\circ}}{1000} \sim 3.14160298 \cdots \) 가 되고 \( n \) 을 \( 10^{4} \) 로 하면 \( \pi < 10000 \cdot \tan 0.018 \sim 3.14159275694 \cdots \).
 <span class="x">오오 무언가 굉장히 익숙한 숫자들의 배열이 나오고 있어.</span>

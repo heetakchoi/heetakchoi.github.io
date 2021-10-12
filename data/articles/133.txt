@@ -2,4 +2,4 @@ h2. 30년 전통 오픈 기념
 h5. 8/22/2011
 
 30년 전통과 오픈 기념 이벤트의 오묘한 부조화﻿
-<img src="img/open.jpg" />
+<img src="../img/open.jpg" />

@@ -1,0 +1,134 @@
+<html>
+  <head>
+    <title>Life Logging in github</title>
+<script src="../script.js"></script>
+<link rel="stylesheet" href="../style.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta charset="UTF-8">
+    <script type="text/javascript" async
+	    src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-MML-AM_CHTML">
+    </script>
+  </head>
+  <body>
+    <div class="header">
+      <h1>Life Logging</h1>
+      <ul>
+	<li>
+<a href="../index.html">Home</a>
+	</li>
+	<li>
+<a href="articles/article-185.html">Article</a>
+	</li>
+	<li>
+<a href="../sf.html">SF</a>
+	</li>
+	<li>
+<a href="../info.html">Info</a>
+	</li>
+      </ul>
+    </div>
+    <div class="main">
+      <div class="navigator">
+<a href="article-163.html">이전 글 가기</a> &nbsp; &nbsp; <a href="article-157.html">다음 글 보기</a>
+      </div>
+      <hr />
+      <div class="article">
+<div>
+  <h2>정직한 가차 시스템에게 기대함</h2>
+  <h5>10/29/2015</h5>
+</div>
+<div>
+밥을 먹다가 누군가 요즘 모바일 게임에서는 대부분의 아이템이 <a href="https://namu.wiki/w/가챠">가차</a> 로 불리는 시스템을 사용하기 때문에 쓸만한 장비 풀 세트를 갖추기 위해서 최소한 어느 정도 이상의 금액은 결제해야한다 라는 이야기를 했다. 그 이야기를 들으면서 전체 종류가 n 개인 아이템이 있으며 구매 시 완전히 랜덤으로 배송될 때 모든 종류를 다 얻기 위해서 평균적으로 몇 번을 반복 구매해야 하는지가 궁금해졌다.
+</div>
+<div>
+전체 \( n \)개 중 \( i \)종류의 아이템을 가지고 있다고 하면 \( \frac{i}{n} \)의 확률로 이미 가지고 있는 아이템을 얻고 나머지 \( \frac{n-i}{n} \)가 가지고 있는 종류가 아닌 아이템을 얻는다.<br />
+따라서 \( j \)번째 구매후에야 기존에 없던 아이템을 얻을 확률은 \( {(\frac{i}{n})}^{j-1}\frac{n-i}{n} \)가 된다. 그러므로 \( j \)번째 구매에서 다시 새로운 종류를 얻기 위한 구매 횟수의 기대값은 \( \sum_{j>=1}{(\frac{i}{n})}^{j-1}(\frac{n-i}{n}) j \)이다. 그런데<br />
+\( \sum_{j \geq 1}{(\frac{i}{n})}^{j-1}(\frac{n-i}{n}) j<br />
+ \)<br />
+ \( = \sum_{j \geq 1}{(\frac{i}{n})}^{j-1}( 1 - \frac{i}{n}) j<br />
+ \)<br />
+ \( = \sum_{j \geq 1}{(\frac{i}{n})}^{j-1} j - \sum_{j \geq 1}{(\frac{i}{n})}^{j} j<br />
+\)<br />
+이고 \( j-1 = k \) 라 하면<br />
+\(  \sum_{k \geq 0}{(\frac{i}{n})}^{k} (k+1) - \sum_{j \geq 1}{(\frac{i}{n})}^{j} j<br />
+\)<br />
+\(  = \sum_{k \geq 0}{(\frac{i}{n})}^{k} k + \sum_{k \geq 0}{(\frac{i}{n})}^{k} - \sum_{j \geq 1}{(\frac{i}{n})}^{j} j<br />
+\)<br />
+\(  = 0 + \sum_{k \geq 1}{(\frac{i}{n})}^{k} k + \sum_{k \geq 0}{(\frac{i}{n})}^{k} \)<br />
+\( - \sum_{j \geq 1}{(\frac{i}{n})}^{j} j<br />
+\)<br />
+\( = \sum_{k \geq 0}{(\frac{i}{n})}^{k}<br />
+\)<br />
+\( = \frac{1}{ 1 - \frac{i}{n} }<br />
+\)<br />
+\( = \frac{n}{n-i}<br />
+\) 가 된다.
+</div>
+<div>
+이제 전체 종류를 모두 구하기 위해 필요한 구매 수의 기대값은 위에서 구한 각각의 구매 기대값의 합 이므로<br />
+\( \sum_{i=0}^{n-1} \frac{n}{n-i}<br />
+\)<br />
+\( = n\sum_{i=0}^{n-1} \frac{1}{n-i} \)<br />
+\( = n( \frac{1}{n} + \frac{1}{n-1} + \frac{1}{n-2}  \ldots  + 1)<br />
+\)<br />
+\( = n H_{n} \) 단 \( H_{n} \) 은 조화급수
+</div>
+<div>
+그런데 조화급수 \( H_{n} \) 은 \( \log n \) 으로 어림지워지므로 결국 \( \frac{1}{n} \) 의 확률로 나오는 서로 다른 아이템 n 개를 얻기 위해서는 평균적으로 \( n\log n \) 번 구매를 반복할 필요가 있다.
+</div>
+<div>
+정말 그런지 실재 랜덤신의 가호를 받아 처리해 보자<br />
+아래는 카드의 종류를 \( n \)을 10부터 1000까지 변경하면서 시뮬레이션하는 코드이다.
+</div>
+<pre>
+#!/usr/bin/perl
+
+use strict;
+use warnings;
+
+my %n_count_hash = ();
+foreach my $n ( (10..1000) ){
+  my %n_hash = ();
+  foreach ( (1..$n) ){
+    $n_hash{$_} = 1;
+  }
+
+  my $count = 0;
+  while( scalar(keys %n_hash) ){
+    my $current = int(rand($n))+1;
+    delete($n_hash{$current});
+    $count ++;
+  }
+  $n_count_hash{$n} = $count;
+}
+
+foreach ( sort {$a<=>$b} keys %n_count_hash ){
+  printf "% 4d % 8d\n"
+        , $_, $n_count_hash{$_};
+}
+</pre>
+<div>
+그 결과는 <a href="../data/card_result.xlsx">card result</a> 이며 이를 그래프로 그리면 아래와 같다.<br />
+<img src="../img/card.png" /><br />
+뭐 믿음을 가지고 보면 맞는 것 같기도 하다.
+</div>
+<div>
+(조화급수가 \( \log n \) 로 어림지워지는 이야기는 나중에.)
+</div>
+      </div>
+      <hr />
+      <div class="navigator">
+<a href="article-163.html">이전 글 가기</a> &nbsp; &nbsp; <a href="article-157.html">다음 글 보기</a>
+      </div>
+    </div>
+    <div class="footer">
+      Copyright endofhope.com All rights reserved.
+    </div>
+  </body>
+</html>
+<script type="text/javascript">
+  var img = document.getElementsByTagName("img");
+  for(let x=0; x<img.length; x++){
+      img.item(x).onclick=function(){window.open(this.src)};
+  }
+</script>

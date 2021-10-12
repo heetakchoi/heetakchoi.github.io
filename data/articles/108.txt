@@ -21,7 +21,7 @@ N 개로 잘라내서 f(t) 의 부호가 바뀌는 걸 확인한다면,
 따라서 단위 t 의 길이는 ( 2b / a )/N
 
 Java 로 만든 코드
- <a href="data/Calc.java">Calc.java</a>
+ <a href="../data/Calc.java">Calc.java</a>
 
 몇몇 결과 
 (a, b, c, d) = (1, 1, 1, 1) 이고 N 이 10 이라면
