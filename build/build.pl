@@ -10,13 +10,11 @@ sub get_array_from_file;
 sub article_srno;
 sub book_srno;
 
-my $fh;
+my $mark;
 
 my @base_lines = get_array_from_file("../template/base.html");
 my @article_lines = get_array_from_file("../template/article.html");
 my @book_lines = get_array_from_file("../template/book.html");
-
-my $mark;
 
 ################################################################################
 #  info article
@@ -204,7 +202,7 @@ close($fh_sf);
 sub get_array_from_file{
     my ($filename) = @_;
     my @lines = ();
-    open($fh, "<", $filename);
+    open(my $fh, "<", $filename);
     while(<$fh>){
 	push(@lines, $_);
     }
