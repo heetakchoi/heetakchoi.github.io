@@ -1,7 +1,7 @@
 @import url("//cdn.jsdelivr.net/gh/wan2land/d2coding/d2coding-full.css");
 body {
     background-color: gainsboro;
-    font-family: 'D2Coding', monospace;
+    /* font-family: 'D2Coding', monospace; */
 }
 a {
     text-decoration-line: none;
@@ -95,7 +95,7 @@ a:hover {
     width: 100%;
     /* height: 100%; */
     overflow: auto;
-    /* font-family: 'D2Coding', monospace; */
+    font-family: 'D2Coding', monospace;
     line-height: 1.2em;
     margin-top: 5px;
     margin-bottom: 5px;
