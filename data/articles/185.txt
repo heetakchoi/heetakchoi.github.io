@@ -12,7 +12,7 @@ Github Page 에 블로깅을 가능하게 해 준다는 Jekyll 이라는 것 잠
 <img src="../img/grammar.jpg" />
 예를 들어 <a href="info.html">Info</a>는 아래와 같이 구성할 수 있다.
 <pre>
-&lt;div style="text-align: center;" /&gt;
+&lt;div style="text-align: center;" &gt;
 &lt;img class="s_img" src="img/최희탁.jpg" /&gt;
 h3. 최 희탁 (Heetak Choi)
 h5. endofhope at naver.com

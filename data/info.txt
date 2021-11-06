@@ -1,4 +1,4 @@
-<div style="text-align: center;" />
+<div style="text-align: center;">
 <img class="s_img" src="img/최희탁.jpg" />
 h3. 최 희탁 (Heetak Choi)
 h5. endofhope at naver.com
