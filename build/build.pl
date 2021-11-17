@@ -20,13 +20,44 @@ my @book_lines = get_array_from_file("../template/book.html");
 #  info article
 my %article_hash = map { article_srno($_)=>$_ } grep /\/articles\/\d+\.txt$/, glob "../data/articles/*.txt";
 my @article_srnos = reverse sort {$a<=>$b} keys %article_hash;
-my $latest_article_link = sprintf "<a href=\"articles/article-%d.html\">Articles</a>", $article_srnos[0];
-my $latest_article_link_indepth = sprintf "<a href=\"../articles/article-%d.html\">Articles</a>", $article_srnos[0];
+my $latest_article_link = "<a onclick=\"javascript:move_to_latest_article();\">Articles</a>";
+my $latest_article_link_indepth = "<a onclick=\"javascript:move_to_latest_article_indepth();\">Articles</a>";
 #  info book
 my %book_hash = map { book_srno($_)=>$_ } grep /\/books\/\d+\.txt$/, glob "../data/books/*.txt";
 my @book_srnos = reverse sort {$a<=>$b} keys %book_hash;
-my $latest_book_link = sprintf "<a href=\"books/book-%d.html\">Books</a>", $book_srnos[0];
-my $latest_book_link_indepth = sprintf "<a href=\"../books/book-%d.html\">Books</a>", $book_srnos[0];
+my $latest_book_link = "<a onclick=\"javascript:move_to_latest_book();\">Books</a>";
+my $latest_book_link_indepth = "<a onclick=\"javascript:move_to_latest_book_indepth();\">Books</a>";
+################################################################################
+# make script.js
+my $latest_article_srno = $article_srnos[0];
+my $latest_book_srno = $book_srnos[0];
+my $script_document = <<"END_DOCUMENT";
+function move_to_latest_article(){
+    document.location = "articles/article-$latest_article_srno.html";
+}
+function move_to_latest_article_indepth(){
+    document.location = "../articles/article-$latest_article_srno.html";
+}
+function move_to_latest_book(){
+    document.location = "books/book-$latest_book_srno.html";
+}
+function move_to_latest_book_indepth(){
+    document.location = "../books/book-$latest_book_srno.html";
+}
+
+END_DOCUMENT
+
+open my $fh, ">", "../docs/script.js";
+print $fh $script_document;
+close $fh;
+################################################################################
+# redirect to latest
+open $fh, ">", "../docs/redirect_to_latest_article.html";
+printf $fh "<script> document.location = \"articles/article-%s.html\"; </script>\n", $latest_article_srno;
+close $fh;
+open $fh, ">", "../docs/redirect_to_latest_book.html";
+printf $fh "<script> document.location = \"books/book-%s.html\"; </script>\n", $latest_book_srno;
+close $fh;
 ################################################################################
 # write article down
 my $index = -1;

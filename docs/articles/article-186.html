@@ -18,11 +18,11 @@
 <a href="../index.html">Home</a>
 	</li>
 	<li>
-<a href="../articles/article-186.html">Articles</a>
+<a onclick="javascript:move_to_latest_article_indepth();">Articles</a>
 	</li>
 	<!-- <li> -->
-	<!--   MENUBOOK____ -->
-	<!-- </li> -->
+	  <!--   MENUBOOK____ -->
+	  <!-- </li> -->
 	<li>
 <a href="../sf.html">SF</a>
 	</li>
@@ -52,13 +52,15 @@
     - <a href="https://twitter.com/TYPE4GRAPHIC/status/324031246692937728">하상욱</a>
   </blockquote>
 </div>
+<br />
 <div>
   <blockquote>
-    항상 지금 이상을 원하는 주제에<br />
+    매번 더 나은 사람을 원하는 주제에<br />
     변하지 않는 사랑을 노래하지
   </blockquote>
 <iframe width="320" height="180" src="https://www.youtube.com/embed/3Um_xMmE8OA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 </div>
+<br />
 <div>
   <blockquote>
     자식 키우는 사람은 남의 자식 이야기 하는 것 아니다.<br />
@@ -74,11 +76,12 @@
     <div class="footer">
       Copyright endofhope.com All rights reserved.
     </div>
+    <script type="text/javascript">
+      var img = document.getElementsByTagName("img");
+      for(let x=0; x<img.length; x++){
+	  img.item(x).onclick=function(){window.open(this.src)};
+      }
+    </script>
   </body>
 </html>
-<script type="text/javascript">
-  var img = document.getElementsByTagName("img");
-  for(let x=0; x<img.length; x++){
-      img.item(x).onclick=function(){window.open(this.src)};
-  }
-</script>
+

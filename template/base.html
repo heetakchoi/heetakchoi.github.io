@@ -21,8 +21,8 @@
 	  ____MENUARTICLE____
 	</li>
 	<!-- <li> -->
-	<!--   MENUBOOK____ -->
-	<!-- </li> -->
+	  <!--   MENUBOOK____ -->
+	  <!-- </li> -->
 	<li>
 	  ____MENUSF____
 	</li>
@@ -37,11 +37,12 @@
     <div class="footer">
       Copyright endofhope.com All rights reserved.
     </div>
+    <script type="text/javascript">
+      var img = document.getElementsByTagName("img");
+      for(let x=0; x<img.length; x++){
+	  img.item(x).onclick=function(){window.open(this.src)};
+      }
+    </script>
   </body>
 </html>
-<script type="text/javascript">
-  var img = document.getElementsByTagName("img");
-  for(let x=0; x<img.length; x++){
-      img.item(x).onclick=function(){window.open(this.src)};
-  }
-</script>
+

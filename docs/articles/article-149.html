@@ -18,11 +18,11 @@
 <a href="../index.html">Home</a>
 	</li>
 	<li>
-<a href="../articles/article-186.html">Articles</a>
+<a onclick="javascript:move_to_latest_article_indepth();">Articles</a>
 	</li>
 	<!-- <li> -->
-	<!--   MENUBOOK____ -->
-	<!-- </li> -->
+	  <!--   MENUBOOK____ -->
+	  <!-- </li> -->
 	<li>
 <a href="../sf.html">SF</a>
 	</li>
@@ -56,11 +56,12 @@
     <div class="footer">
       Copyright endofhope.com All rights reserved.
     </div>
+    <script type="text/javascript">
+      var img = document.getElementsByTagName("img");
+      for(let x=0; x<img.length; x++){
+	  img.item(x).onclick=function(){window.open(this.src)};
+      }
+    </script>
   </body>
 </html>
-<script type="text/javascript">
-  var img = document.getElementsByTagName("img");
-  for(let x=0; x<img.length; x++){
-      img.item(x).onclick=function(){window.open(this.src)};
-  }
-</script>
+
