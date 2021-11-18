@@ -14,7 +14,7 @@
 }
 body {
     background-color: gainsboro;
-    font-family: 'Lora', 'Nanum Gothic';
+    font-family: 'Nanum Gothic', sans-serif;
     font-size: medium;
 }
 a {
@@ -35,7 +35,7 @@ a:hover {
 }
 .header h1 {
     text-align: center;
-    font-family: Lora Regular;
+    font-family: 'Lora Regular';
     font-size: 36px;
     font-weight: normal;
     line-height: 1.5;
@@ -72,6 +72,7 @@ a:hover {
     margin-bottom: 5px;
     line-height: 1.5;
     font-weight: normal;
+    font-family: 'Lora';
 }
 .main h2{
     font-size: 30px;
