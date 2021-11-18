@@ -51,6 +51,11 @@ open my $fh, ">", "../docs/script.js";
 print $fh $script_document;
 close $fh;
 ################################################################################
+# make index.html
+open $fh, ">", "../docs/index.html";
+print $fh "<script> document.location = 'https://endofhope.com'; </script>";
+close $fh;
+################################################################################
 # redirect to latest
 open $fh, ">", "../docs/redirect_to_latest_article.html";
 printf $fh "<script> document.location = \"articles/article-%s.html\"; </script>\n", $latest_article_srno;
@@ -185,24 +190,19 @@ foreach my $book_srno (@book_srnos){
     close($fh_book);
 }
 ################################################################################
-# front-file, info-file, sf-file 을 만든다.
-# data/front, data/info, data/sf 파일을 읽어들인 후 포매팅을 한 후, tmpl의 placeholder에 끼워 넣는다.
-$mark = Volken::Mark->new->load_file("../data/front.txt");
-my $frontcontent = $mark->get_html();
-$frontcontent =~ s/__ARTICLELINK_/$latest_article_link/g;
+# info-file, sf-file 을 만든다.
+# data/info, data/sf 파일을 읽어들인 후 포매팅을 한 후, tmpl의 placeholder에 끼워 넣는다.
 $mark = Volken::Mark->new->load_file("../data/info.txt");
 my $infocontent = $mark->get_html();
 $mark = Volken::Mark->new->load_file("../data/sf.txt");
 my $sfcontent = $mark->get_html();
 
-open(my $fh_index, ">", "../docs/index.html");
 open(my $fh_info, ">", "../docs/info.html");
 open(my $fh_sf, ">", "../docs/sf.html");
-my @handlers = ($fh_index, $fh_info, $fh_sf);
+my @handlers = ($fh_info, $fh_sf);
     foreach my $line (@base_lines){
 	if($line =~ /____(\w+)____/){
 	    if($1 eq "MAIN"){
-		print $fh_index $frontcontent;
 		print $fh_info $infocontent;
 		print $fh_sf $sfcontent;
 	    }elsif($1 eq "SCRIPT"){
@@ -226,7 +226,6 @@ my @handlers = ($fh_index, $fh_info, $fh_sf);
 	    map { print $_ $line } @handlers;
 	}
     }
-close($fh_index);
 close($fh_info);
 close($fh_sf);
 

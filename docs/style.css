@@ -1,7 +1,20 @@
 @import url("//cdn.jsdelivr.net/gh/wan2land/d2coding/d2coding-full.css");
+@font-face {
+    font-family: 'Lora';
+    font-style: normal;
+    font-weight: normal;
+    src: local('Lora'), url('./data/Lora.woff') format('woff');
+}
+@font-face {
+    font-family: 'Lora Regular';
+    font-style: normal;
+    font-weight: normal;
+    src: local('Lora Regular'), url('./data/Lora-Regular.woff') format('woff');
+}
 body {
     background-color: gainsboro;
-    /* font-family: 'D2Coding', monospace; */
+    font-family: 'Lora', 'D2Coding';
+    font-size: medium;
 }
 a {
     text-decoration-line: none;
@@ -21,6 +34,10 @@ a:hover {
 }
 .header h1 {
     text-align: center;
+    font-family: Lora Regular;
+    font-size: 36px;
+    font-weight: normal;
+    line-height: 1.5;
 }
 .footer {
     margin-top: 20px;
@@ -52,8 +69,11 @@ a:hover {
 .main h1, h2, h3, h4, h5 {
     margin-top: 10px;
     margin-bottom: 5px;
+    line-height: 1.5;
+    font-weight: normal;
 }
 .main h2{
+    font-size: 30px;
 }
 .main h3 {
 }
