@@ -32,6 +32,7 @@ a:hover {
     display:inline;
     list-style-type:none;
     margin-right: 2px;
+    font-family: 'Lora Regular';
 }
 .header h1 {
     text-align: center;
