@@ -19,9 +19,9 @@ h3. 사람은 얼마나 많은 <span class="x">땅이</span> 클래식 지식이
 를 발견했다.
 <span class="x">아아, 이미 이런 생각을 다들 했구나.</span> 뒷북을 쳤다는 민망함은 잠시 접어두고 전체 순위 100위 중 얼마나 알고 있는지 보자.
 소리로 제목을 맞출 자신이 있는 것만 O 로 표시하기로 한다.
-<img src="/img/1-25.jpg" />
-<img src="/img/26-48.jpg" />
-<img src="/img/48-76.jpg" />
-<img src="/img/76-95.jpg" />
-<img src="/img/100stats.jpg" />
+<img src="../img/1-25.jpg" />
+<img src="../img/26-48.jpg" />
+<img src="../img/48-76.jpg" />
+<img src="../img/76-95.jpg" />
+<img src="../img/100stats.jpg" />
 60점도 안 되다니. 더 열심히 정진하도록 하자.
