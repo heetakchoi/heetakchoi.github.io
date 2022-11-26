@@ -11,7 +11,9 @@ h5. 11/26/2022
 시간이 그래도 흘러 그러한지 약에 절여저서인지, 오후부턴 인간의 행동을 할 수 있게 되었다. 차마 책을 읽을 정신은 나지 않아 전에 구해 놓았던 오디오 인터페이스를 이용해 전기 피아노 소리를 녹음해 보았다.
 <img src="../img/오인페.jpg" />
 분명 예전에 꽤나 오래 연습해서 어느 정도 소리를 낼 줄 안다고 생각했지만 막상 녹음해 놓고 들어보니 내 실력이 이모양이구나를 다시금 느끼게 되었다. 그래도 여러 번 시도해서 그나마 하나 건진 걸 올려 본다. 이 정도 일상에서 벗어난 일이 생겼는데 뒤로 물러날 수는 없지.
-h3. Melody in F
-h5. Anton Rubinstein, Op.3 No.1
-<audio controls><source src="../data/Melody_in_F.mp3" type="audio/mpeg" /></audio>
+
+h2. 충분히 적절하게 연주했는지 알 수 없지만 안톤 루빈슈타인 선생의 F 장조 멜로디
+<audio controls autoplay><source src="../data/Melody_in_F.mp3" type="audio/mpeg" /></audio>
+
+
 <iframe style="width:100%;height:600px;" src="../data/Melody_in_F.pdf"></iframe>
