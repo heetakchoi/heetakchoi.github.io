@@ -101,7 +101,9 @@ foreach my $article_srno (@article_srnos){
     open(my $fh_article, ">", $articlefile);
     foreach (@base_lines){
 	if(/____(\w+)____/){
-	    if($1 eq "MAIN"){
+	    if($1 eq "TITLE"){
+		print $fh_article "Life Logging - Article ", $article_srno, "\n";
+	    }elsif($1 eq "MAIN"){
 		print $fh_article $main_string;
 	    }elsif($1 eq "SCRIPT"){
 		print $fh_article "<script src=\"../script.js\"></script>", "\n";
@@ -164,7 +166,9 @@ foreach my $book_srno (@book_srnos){
     open(my $fh_book, ">", $bookfile);
     foreach (@base_lines){
 	if(/____(\w+)____/){
-	    if($1 eq "MAIN"){
+	    if($1 eq "TITLE"){
+		print $fh_book "Life Logging - Book ", $book_srno, "\n";
+	    }elsif($1 eq "MAIN"){
 		print $fh_book $main_string;
 	    }elsif($1 eq "SCRIPT"){
 		print $fh_book "<script src=\"../script.js\"></script>", "\n";
@@ -205,7 +209,11 @@ open(my $fh_sf, ">", "../docs/sf.html");
 my @handlers = ($fh_index, $fh_info, $fh_sf);
     foreach my $line (@base_lines){
 	if($line =~ /____(\w+)____/){
-	    if($1 eq "MAIN"){
+	    if($1 eq "TITLE"){
+		print $fh_index "Life Logging - INDEX", "\n";
+		print $fh_info "Life Logging - INFO", "\n";
+		print $fh_sf "Life Logging - SF", "\n";
+	    }elsif($1 eq "MAIN"){
 		print $fh_index $indexcontent;
 		print $fh_info $infocontent;
 		print $fh_sf $sfcontent;
