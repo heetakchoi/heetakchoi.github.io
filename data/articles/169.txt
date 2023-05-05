@@ -81,7 +81,8 @@ foreach my $tick ( @total_ticks ){
     $hour = int($tick/60);
     my $minute = $tick - $hour * 60;
 
-    printf "%02d:%02d [%4d] %3d명 대기 (신규 %d명)\n", $hour, $minute, $waiting, $waiting_customer, $neo_customer;
+    printf "%02d:%02d [%4d] %3d명 대기 (신규 %d명)\n",
+    $hour, $minute, $waiting, $waiting_customer, $neo_customer;
 }
 my $total_tick = scalar(@total_ticks);
 printf "working ratio %.2f %d/%d, 평균 대기인 %.2f\n",
