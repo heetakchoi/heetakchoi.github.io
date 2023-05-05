@@ -95,7 +95,7 @@ root# cpan install SSL
   </ul>
 <img src="../img/고만해_미친놈들아.jpg" />
   <ul>
-    <li>결국 선택은 <span class="x">왠지 요즘 정신이 좀 나간 상태이긴 하다만</span> json parser 를 만들어보자 가 되었고 그 결과물이 <a href="https://github.com/heetakchoi/spiegel/blob/develop/perl/lib/Spiegel/Json.pm">Json.pm</a> 이다.</li>
+    <li>결국 선택은 <span class="x">왠지 요즘 정신이 좀 나간 상태이긴 하다만</span> json parser 를 만들어보자 가 되었고 그 결과물이 <a href="https://github.com/heetakchoi/volken/blob/develop/lib/Volken/Json.pm">Json.pm</a> 이다.</li>
   </ul>
 </div>
 <div>
@@ -107,23 +107,25 @@ root# cpan install SSL
 use strict;
 use warnings;
 
-use lib "lib";
-use Spiegel::Json;
+use lib "../lib";
+use Volken::Json;
 
-my $json = Spiegel::Json->new;
-$json->load_file("data.txt");
+my $json = Volken::Json->new;
+$json->load_file("data.json");
 my $init_node = $json->parse;
 my @data = $init_node
-            ->get("data")
-            ->array_gets();
+    ->get("data")
+    ->gets();
 foreach (@data){
-    printf "%s\n",
-            $_->get("images")
-            ->get("standard_resolution")
-            ->get("url")
-            ->get;
+    printf "%s\n", $_->get("images")
+	->get("standard_resolution")
+	->get("url")
+	->value;
 }
 </pre>
+<div>
+<a href="../data/data.json">data.json</a>
+</div>
 <div>
 실은 아직 하나 더 문제가 남아있다.<br />
 API 결과 중 한글 문자열이 \u 포맷의 유니코드로 변환되어 오는데 <span class="x">이미 덕력이 다했는지</span> 갑자기 급 피곤해져서 훗날을 기약하기로 한다.<br />
