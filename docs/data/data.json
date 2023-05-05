@@ -1,0 +1,59 @@
+{
+    "data" :
+    [
+	{
+	    "NAME" : "A",
+	    "images" :
+	    {
+		"standard_resolution" :
+		{
+		    "url" : "A image standard url"
+		},
+		"small_resolution" :
+		{
+		    "url" : "A image small url"
+		},
+		"big_resolution" :
+		{
+		    "url" : "A image big url"
+		}
+	    }
+	},
+	{
+	    "NAME" : "B",
+	    "images" :
+	    {
+		"standard_resolution" :
+		{
+		    "url" : "B image standard url"
+		},
+		"small_resolution" :
+		{
+		    "url" : "B image small url"
+		},
+		"big_resolution" :
+		{
+		    "url" : "B image big url"
+		}
+	    }
+	},
+	{
+	    "NAME" : "C",
+	    "images" :
+	    {
+		"standard_resolution" :
+		{
+		    "url" : "C image standard url"
+		},
+		"small_resolution" :
+		{
+		    "url" : "C image small url"
+		},
+		"big_resolution" :
+		{
+		    "url" : "C image big url"
+		}
+	    }
+	}
+    ]
+}
