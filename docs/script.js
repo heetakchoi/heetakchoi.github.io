@@ -1,8 +1,8 @@
 function move_to_latest_article(){
-    document.location = "articles/article-190.html";
+    document.location = "articles/article-191.html";
 }
 function move_to_latest_article_indepth(){
-    document.location = "../articles/article-190.html";
+    document.location = "../articles/article-191.html";
 }
 function move_to_latest_book(){
     document.location = "books/book-1.html";
