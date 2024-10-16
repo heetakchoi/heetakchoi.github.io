@@ -79,9 +79,28 @@ Life Logging - Article 174
     <script type="text/javascript">
       var img = document.getElementsByTagName("img");
       for(let x=0; x<img.length; x++){
-	  img.item(x).onclick=function(){window.open(this.src)};
+	  img.item(x).onclick=function(){
+
+              const imageUrl = this.src;
+              const newWindow = window.open('', '_blank');
+              newWindow.document.write(`
+<html>
+  <head>
+    <title>이미지 창</title>
+    <style>
+      body { margin: 0; display: flex; justify-content: center; align-items: center; height: 100vh; }
+      img { max-width: 100%; max-height: 100%; cursor: pointer; }
+    </style>
+  </head>
+  <body>
+    <img src="${imageUrl}" alt="Popup Image" onclick="window.close()">
+  </body>
+</html>
+                `);
+
+          };
       }
-    </script>
+      </script>
   </body>
 </html>
 
