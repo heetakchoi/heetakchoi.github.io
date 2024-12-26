@@ -1,0 +1,53 @@
+
+<!doctype html>
+<html lang="en-us">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title></title>
+  </head>
+  <body>
+    <hr/>
+    <span id="main_stdout"></span>
+    <hr>
+    <input type="text" id="left_one" size="4" />
+    <select id="operation">
+      <option value="plus">plus</option>
+      <option value="minus">minus</option>
+      <option value="multiply">multiply</option>
+      <option value="divide">divide</option>
+    </select>
+    <input type="text" id="right_one" size="4" />
+    <button id="call_operation_button">=</button>
+    <input type="text" id="result_one" size="8" />
+    <script type='text/javascript'>
+      var Module = {
+          print: (function() {
+              var element = document.getElementById('main_stdout');
+              if (element) element.value = ''; // clear browser cache
+              return (...args) => {
+		  var text = args.join(' ');
+		  console.log(text);
+		  if (element) {
+		      element.innerHTML = text;
+		  }
+              };
+          })(),
+      };
+
+      document.getElementById("call_operation_button").addEventListener("click", ()=>{
+	  var left_value = document.getElementById("left_one").value;
+	  var right_value = document.getElementById("right_one").value;
+	  var operation_value = document.getElementById("operation").value;
+	  var result_value = Module.ccall(
+	      operation_value,
+	      "number",
+	      ["number", "number"],
+	      [left_value, right_value]
+	  );
+	  document.getElementById("result_one").value = result_value;
+      });
+    </script>
+    <script async type="text/javascript" src="calculator.js"></script>    
+  </body>
+</html>
