@@ -1,4 +1,3 @@
-
 <!doctype html>
 <html lang="en-us">
   <head>
@@ -11,15 +10,15 @@
     <span id="main_stdout"></span>
     <hr>
     <input type="text" id="left_one" size="4" />
-    <select id="operation">
+    <select id="operator_one">
       <option value="plus">plus</option>
       <option value="minus">minus</option>
       <option value="multiply">multiply</option>
       <option value="divide">divide</option>
     </select>
     <input type="text" id="right_one" size="4" />
-    <button id="call_operation_button">=</button>
-    <input type="text" id="result_one" size="8" />
+    <button id="call_button_one">=</button>
+    <input type="text" id="result_one" />
     <script type='text/javascript'>
       var Module = {
           print: (function() {
@@ -35,17 +34,17 @@
           })(),
       };
 
-      document.getElementById("call_operation_button").addEventListener("click", ()=>{
-	  var left_value = document.getElementById("left_one").value;
-	  var right_value = document.getElementById("right_one").value;
-	  var operation_value = document.getElementById("operation").value;
-	  var result_value = Module.ccall(
-	      operation_value,
+      document.getElementById("call_button_one").addEventListener("click", ()=>{
+	  var left_one_value = document.getElementById("left_one").value;
+	  var right_one_value = document.getElementById("right_one").value;
+	  var operator_one_value = document.getElementById("operator_one").value;
+	  var result_one_value = Module.ccall(
+	      operator_one_value,
 	      "number",
 	      ["number", "number"],
-	      [left_value, right_value]
+	      [left_one_value, right_one_value]
 	  );
-	  document.getElementById("result_one").value = result_value;
+	  document.getElementById("result_one").value = result_one_value;
       });
     </script>
     <script async type="text/javascript" src="calculator.js"></script>    
