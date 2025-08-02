@@ -1,17 +1,6 @@
 @import url("//cdn.jsdelivr.net/gh/wan2land/d2coding/d2coding-full.css");
 @import url("https://fonts.googleapis.com/earlyaccess/nanumgothic.css");
-@font-face {
-    font-family: 'Lora';
-    font-style: normal;
-    font-weight: normal;
-    src: local('Lora'), url('./data/Lora.woff') format('woff');
-}
-@font-face {
-    font-family: 'Lora Regular';
-    font-style: normal;
-    font-weight: normal;
-    src: local('Lora Regular'), url('./data/Lora-Regular.woff') format('woff');
-}
+
 body {
     background-color: gainsboro;
     font-family: 'Nanum Gothic', sans-serif;
@@ -32,11 +21,9 @@ a:hover {
     display:inline;
     list-style-type:none;
     margin-right: 2px;
-    font-family: 'Lora Regular';
 }
 .header h1 {
     text-align: center;
-    font-family: 'Lora Regular';
     font-size: 36px;
     font-weight: normal;
     line-height: 1.5;
@@ -73,7 +60,6 @@ a:hover {
     margin-bottom: 5px;
     line-height: 1.5;
     font-weight: normal;
-    font-family: 'Lora';
 }
 .main h2{
     font-size: 30px;
