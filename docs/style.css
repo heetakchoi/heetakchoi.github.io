@@ -41,6 +41,7 @@ a:hover {
 }
 .main {
     line-height: 2.0em;
+    font-family: 'D2Coding', monospace;
 }
 .main img {
     width: 320px;
