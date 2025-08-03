@@ -1,10 +1,10 @@
 @import url("//cdn.jsdelivr.net/gh/wan2land/d2coding/d2coding-full.css");
-@import url("https://fonts.googleapis.com/earlyaccess/nanumgothic.css");
+@import url(https://cdn.jsdelivr.net/gh/moonspam/NanumSquare@2.0/nanumsquare.css);
 
 body {
     background-color: gainsboro;
-    font-family: 'Nanum Gothic', sans-serif;
     font-size: medium;
+    font-family: 'NanumSquare', sans-serif
 }
 a {
     text-decoration-line: none;
@@ -41,7 +41,6 @@ a:hover {
 }
 .main {
     line-height: 2.0em;
-    font-family: 'D2Coding', monospace;
 }
 .main img {
     width: 320px;
