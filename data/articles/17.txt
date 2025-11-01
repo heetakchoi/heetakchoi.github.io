@@ -1,5 +1,5 @@
 h2. Welcome back, Mr. McDonald - ラヂオの時間
-h5. 1/7/2010
+h5. 7/1/2010
 
 <iframe  src="https://www.youtube.com/embed/F5971jK4Gw4" frameborder="0" allowfullscreen></iframe>
 사회 생활을 하다 보면 점점 적응하게 된다.

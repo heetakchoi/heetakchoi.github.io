@@ -1,5 +1,5 @@
 h2. 몬티 홀 문제
-h5. 6/14/2014
+h5. 14/06/2014
 
 문득 “에르되시(에어디쉬)가 몬티 홀 문제의 결론을 받아들이지 못하다가 결국 <a href="http://ko.wikipedia.org/wiki/%EB%AA%AC%ED%85%8C%EC%B9%B4%EB%A5%BC%EB%A1%9C_%EB%B0%A9%EB%B2%95">몬테카를로 시행</a>을 하고 나서야 인정했다” 란 구절이 머릿속을 지나갔다.
 생각해 보니 <a href="http://ko.wikipedia.org/wiki/%EB%AA%AC%ED%8B%B0_%ED%99%80_%EB%AC%B8%EC%A0%9C">몬티 홀 문제</a>를 그렇게 명확하게 이해하였던 것 같지 않아 이번 기회에 몬테카를로 시행을 반복해 주는 코드를 만들어 <span style="text-decoration:line-through;">도랑치고 가재잡고</span> 몬티 홀 문제도 풀어볼 생각으로 시작했다.

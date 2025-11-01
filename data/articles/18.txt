@@ -1,5 +1,5 @@
 h2. Neurasthenia ver 0.1 Release
-h5. 1/21/2010
+h5. 21/01/2010
 
 Neurasthenia version 0.1 release 를 했다.
 
