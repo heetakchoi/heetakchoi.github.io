@@ -199,6 +199,7 @@ foreach my $book_srno (@book_srnos){
 $mark = Volken::Mark->new->load_file("../data/front.txt");
 my $indexcontent = $mark->get_html();
 $indexcontent =~ s/__ARTICLELINK__/$latest_article_link/g;
+$indexcontent =~ s/__BOOKLINK__/$latest_book_link/g;
 $mark = Volken::Mark->new->load_file("../data/info.txt");
 my $infocontent = $mark->get_html();
 $mark = Volken::Mark->new->load_file("../data/sf.txt");
