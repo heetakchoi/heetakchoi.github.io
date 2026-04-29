@@ -1,112 +1,234 @@
 @import url("https://cdn.jsdelivr.net/gh/wan2land/d2coding/d2coding-full.css");
 @import url(https://cdn.jsdelivr.net/gh/moonspam/NanumSquare@2.0/nanumsquare.css);
 
-body {
-    background-color: gainsboro;
-    font-size: medium;
-    font-family: 'NanumSquare', sans-serif
+*, *::before, *::after {
+    box-sizing: border-box;
 }
+
+body {
+    background-color: #f0ede8;
+    color: #2c2c2c;
+    font-size: 16px;
+    font-family: 'NanumSquare', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
 a {
-    text-decoration-line: none;
-    color: royalblue;
+    text-decoration: none;
+    color: #3355bb;
     cursor: pointer;
 }
 a:hover {
     text-decoration: underline;
 }
-.header ul {
-    text-align: right;
+
+/* ── 레이아웃 컨테이너 ── */
+.header, .main, .footer {
+    max-width: 720px;
+    margin: 0 auto;
+    padding-left: 20px;
+    padding-right: 20px;
 }
-.header li {
-    display:inline;
-    list-style-type:none;
-    margin-right: 2px;
+
+/* ── 헤더 ── */
+.header {
+    padding-top: 36px;
+    padding-bottom: 16px;
+    border-bottom: 1px solid #d0ccc6;
+    margin-bottom: 36px;
 }
+
 .header h1 {
     text-align: center;
-    font-size: 36px;
-    font-weight: normal;
-    line-height: 1.5;
+    font-size: 30px;
+    font-weight: bold;
+    margin: 0 0 14px;
+    line-height: 1.3;
+    color: #1a1a1a;
 }
-.footer {
-    margin-top: 20px;
+
+.header ul {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 6px 18px;
+    margin: 0;
+    padding: 0;
+    list-style: none;
     text-align: center;
-    font-size: small;
 }
+
+.header li {
+    display: inline;
+}
+
+.header a {
+    color: #555;
+    font-size: 14px;
+    letter-spacing: 0.3px;
+}
+
+.header a:hover {
+    color: #3355bb;
+    text-decoration: none;
+}
+
+/* ── 본문 ── */
+.main {
+    line-height: 1.95;
+    word-break: keep-all;
+    overflow-wrap: break-word;
+}
+
+.main h1, .main h2, .main h3, .main h4, .main h5 {
+    line-height: 1.4;
+    font-weight: bold;
+    margin-top: 24px;
+    margin-bottom: 8px;
+}
+
+.main h2 {
+    font-size: 22px;
+    color: #111;
+    margin-top: 28px;
+}
+
+.main h3 {
+    font-size: 17px;
+    color: #222;
+}
+
+.main h4 {
+    font-size: 15px;
+}
+
+.main h5 {
+    font-size: 13px;
+    font-weight: normal;
+    color: #888;
+    text-align: right;
+    margin-top: 4px;
+    margin-bottom: 20px;
+    margin-right: 0;
+}
+
+.main ul {
+    margin: 8px 0;
+    padding-left: 24px;
+    list-style-type: circle;
+}
+
+.main blockquote {
+    margin: 12px 0;
+    color: #5050a0;
+    border-left: 3px solid #c0bdb8;
+    padding-left: 16px;
+}
+
+/* ── 이미지 ── */
+.main img {
+    max-width: 100%;
+    width: auto;
+    height: auto;
+    cursor: pointer;
+    border: 1px solid #c8c4be;
+    display: block;
+    margin: 8px 0;
+}
+
+.main .s_img {
+    max-width: 160px;
+}
+
+/* ── 코드 블록 ── */
+.article pre {
+    background-color: #1c2626;
+    color: #e8e8e8;
+    border: 1px solid #3a4a4a;
+    border-radius: 4px;
+    padding: 12px 14px;
+    margin: 10px 0;
+    overflow-x: auto;
+    font-family: 'D2Coding', monospace;
+    font-size: 14px;
+    line-height: 1.45;
+    white-space: pre;
+    word-break: normal;
+    -webkit-overflow-scrolling: touch;
+}
+
+/* ── 네비게이터 (이전/다음) ── */
+.navigator {
+    margin: 16px 0;
+    font-size: 14px;
+    color: #666;
+}
+
+.navigator a {
+    color: #3355bb;
+}
+
+/* ── 유틸리티 ── */
 .x {
     text-decoration: line-through;
 }
+
 .b {
     font-weight: bold;
 }
-.main {
-    line-height: 2.0em;
-}
-.main img {
-    width: 320px;
-    cursor: pointer;
-    border-style: solid;
-    border-color: silver;
-}
-.main .s_img{
-    width: 160px;
-}
-#full_size_image {
-    with: 100%;
-    height: 100%;
-}
-.main h1, h2, h3, h4, h5 {
-    margin-top: 10px;
-    margin-bottom: 5px;
-    line-height: 1.5;
-    font-weight: normal;
-}
-.main h2{
-    font-size: 30px;
-}
-.main h3 {
-}
-.main h4 {
-}
-.main h5{
-    margin-top: 5px;
-    text-align: right;
-    margin-right: 20px;}
 
-.main ul {
-    margin-top: 5px;
-    margin-bottom: 5px;
-    list-style-type: circle;
+/* ── 푸터 ── */
+.footer {
+    margin-top: 48px;
+    margin-bottom: 32px;
+    padding-top: 16px;
+    border-top: 1px solid #d0ccc6;
+    text-align: center;
+    font-size: 13px;
+    color: #aaa;
 }
-.main blockquote {
-    margin: 5px;
-    color: MediumSlateBlue;
-    border-left-style: solid;
-    border-color: silver;
-    padding-left: 5px;
-}
-.main div{
 
-}
-.navigator{
-    margin-top: 10px;
-    margin-bottom: 10px;
-}
-.article{
-    /* margin-top:40px; */
-    /* margin-bottom: 40px; */
-}
-.article pre{
-    border-style: solid;
-    border-width: 1px;
-    background-color: darkslategrey;
-    color: white;
-    padding: 5px;
-    width: 96.5%;
-    /* height: 100%; */
-    overflow: auto;
-    font-family: 'D2Coding', monospace;
-    line-height: 1.2em;
-    margin-top: 5px;
-    margin-bottom: 5px;
+/* ── 모바일 (600px 이하) ── */
+@media (max-width: 600px) {
+    .header {
+        padding-top: 24px;
+        margin-bottom: 24px;
+    }
+
+    .header h1 {
+        font-size: 24px;
+        margin-bottom: 12px;
+    }
+
+    .header ul {
+        gap: 4px 14px;
+    }
+
+    .header a {
+        font-size: 13px;
+    }
+
+    .main {
+        font-size: 15px;
+        line-height: 1.85;
+    }
+
+    .main h2 {
+        font-size: 19px;
+    }
+
+    .main h3 {
+        font-size: 16px;
+    }
+
+    .article pre {
+        font-size: 13px;
+        padding: 10px 12px;
+    }
+
+    .footer {
+        margin-top: 32px;
+        margin-bottom: 20px;
+    }
 }
