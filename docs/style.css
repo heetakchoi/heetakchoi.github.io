@@ -126,6 +126,19 @@ a:hover {
     padding-left: 16px;
 }
 
+/* ── 문단 ── */
+.article > div + div {
+    margin-top: 24px;
+    text-indent: 1em;
+}
+
+.article > div ul,
+.article > div ol,
+.article > div pre,
+.article > div blockquote {
+    text-indent: 0;
+}
+
 /* ── 이미지 ── */
 .main img {
     max-width: 100%;
