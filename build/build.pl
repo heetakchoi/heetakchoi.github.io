@@ -102,9 +102,9 @@ foreach my $article_srno (@article_srnos){
     foreach (@base_lines){
 	if(/____(\w+)____/){
 	    if($1 eq "TITLE"){
-			my $first_line = $mark->get_first_line();
-			
-		print $fh_article "Life Logging - ", substr($first_line, 4), "\n";
+			my $first_line = substr($mark->get_first_line(), 4);
+			$first_line =~ s/<[^>]*>//g;
+		print $fh_article "Life Logging - ", $first_line, "\n";
 	    }elsif($1 eq "MAIN"){
 		print $fh_article $main_string;
 	    }elsif($1 eq "SCRIPT"){
