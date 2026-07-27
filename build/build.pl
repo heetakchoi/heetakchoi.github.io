@@ -290,8 +290,8 @@ foreach my $book_srno (@book_srnos){
 # 📜 전체 목록(Archive) 인덱스 HTML 생성
 # 1) Articles 목록
 {
-    my $archive_html = "<div class=\"archive-header\">총 " . scalar(@article_meta_list) . "개의 생각 조각들이 공유되어 있습니다.</div>\n";
-    $archive_html .= "<div style=\"margin-bottom: 24px;\"><a href=\"article-$latest_article_srno.html\" class=\"b\">✨ 최신 생각 바로 읽기 (Go to Latest)</a></div>\n";
+    my $archive_html = "<div class=\"archive-header\">총 " . scalar(@article_meta_list) . "개의 이야기가 공유되어 있습니다.</div>\n";
+    # $archive_html .= "<div style=\"margin-bottom: 24px;\"><a href=\"article-$latest_article_srno.html\" class=\"b\">✨ 최신 생각 바로 읽기 (Go to Latest)</a></div>\n";
     $archive_html .= "<ul class=\"archive-list\">\n";
     foreach my $item (@article_meta_list) {
         $archive_html .= "  <li class=\"archive-item\">\n";
@@ -338,8 +338,8 @@ foreach my $book_srno (@book_srnos){
 
 # 2) Books 목록
 {
-    my $archive_html = "<div class=\"archive-header\">총 " . scalar(@book_meta_list) . "권의 독서 리뷰가 기록되어 있습니다.</div>\n";
-    $archive_html .= "<div style=\"margin-bottom: 24px;\"><a href=\"book-$latest_book_srno.html\" class=\"b\">✨ 최신 리뷰 바로 읽기 (Go to Latest)</a></div>\n";
+    my $archive_html = "<div class=\"archive-header\">총 " . scalar(@book_meta_list) . "권의 리뷰가 기록되어 있습니다.</div>\n";
+    # $archive_html .= "<div style=\"margin-bottom: 24px;\"><a href=\"book-$latest_book_srno.html\" class=\"b\">✨ 최신 리뷰 바로 읽기 (Go to Latest)</a></div>\n";
     $archive_html .= "<ul class=\"archive-list\">\n";
     foreach my $item (@book_meta_list) {
         $archive_html .= "  <li class=\"archive-item\">\n";
