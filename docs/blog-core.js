@@ -3,6 +3,7 @@ document.addEventListener("DOMContentLoaded", () => {
   initScrollProgress();
   initLightbox();
   initCodeCopyButtons();
+  initGiscusComments(); // Giscus 댓글 마운트 기동
 });
 
 // ── 다크 모드 제어 ──
@@ -31,11 +32,13 @@ function initDarkMode() {
       document.body.classList.add("light-mode");
       toggleBtn.textContent = "☀️";
       localStorage.setItem("theme", "light");
+      updateGiscusTheme("light"); // 실시간 Giscus 댓글 테마 갱신
     } else {
       document.body.classList.remove("light-mode");
       document.body.classList.add("dark-mode");
       toggleBtn.textContent = "🌙";
       localStorage.setItem("theme", "dark");
+      updateGiscusTheme("dark"); // 실시간 Giscus 댓글 테마 갱신
     }
   });
 
@@ -46,10 +49,12 @@ function initDarkMode() {
         document.body.classList.add("dark-mode");
         document.body.classList.remove("light-mode");
         toggleBtn.textContent = "🌙";
+        updateGiscusTheme("dark");
       } else {
         document.body.classList.add("light-mode");
         document.body.classList.remove("dark-mode");
         toggleBtn.textContent = "☀️";
+        updateGiscusTheme("light");
       }
     }
   });
@@ -61,45 +66,54 @@ function initScrollProgress() {
   if (!progressBar) return;
 
   window.addEventListener("scroll", () => {
-    const winScroll = document.body.scrollTop || document.documentElement.scrollTop;
-    const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
-    const scrolled = height > 0 ? (winScroll / height) * 100 : 0;
-    progressBar.style.width = scrolled + "%";
+    const scrollTop = window.scrollY || document.documentElement.scrollTop;
+    const scrollHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+    const scrollPercentage = scrollHeight > 0 ? (scrollTop / scrollHeight) * 100 : 0;
+    progressBar.style.width = scrollPercentage + "%";
   });
 }
 
-// ── 인라인 라이트박스 뷰어 ──
+// ── 이미지 라이트박스 (모달 확대) ──
 function initLightbox() {
-  const lightbox = document.getElementById("lightbox");
-  const lightboxImg = document.getElementById("lightboxImg");
-  const lightboxClose = document.getElementById("lightboxClose");
-  if (!lightbox || !lightboxImg) return;
-
-  // 본문 이미지 목록 추출 (라이트박스 자신 내부 이미지 제외)
   const images = document.querySelectorAll(".main img");
-  
+  const lightbox = document.getElementById("lightbox");
+  if (!lightbox || images.length === 0) return;
+
+  // 모달 내부 에셋 바인딩
+  const lightboxImg = lightbox.querySelector(".lightbox-content");
+  const lightboxClose = lightbox.querySelector(".lightbox-close");
+
   images.forEach(img => {
+    // 앵커 링크나 아이콘 성격의 미니 이미지가 아닐 경우에만 바인딩
+    if (img.width < 50 || img.height < 50) return;
+
+    img.style.cursor = "zoom-in";
     img.addEventListener("click", () => {
       lightboxImg.src = img.src;
+      lightboxImg.alt = img.alt || "Expanded Image";
       lightbox.classList.add("active");
       document.body.style.overflow = "hidden"; // 배경 스크롤 차단
     });
   });
 
-  // 닫기 로직 (버튼 클릭, 배경 오버레이 클릭, ESC 키)
   const closeLightbox = () => {
     lightbox.classList.remove("active");
-    document.body.style.overflow = ""; // 배경 스크롤 허용
-    setTimeout(() => { lightboxImg.src = ""; }, 300); // 부드러운 페이드아웃 완료 후 소스 초기화
+    document.body.style.overflow = ""; // 배경 스크롤 복원
+    setTimeout(() => {
+      lightboxImg.src = ""; // 이미지 캐시 초기화
+    }, 300);
   };
 
+  // 닫기 클릭 바인딩
   lightboxClose.addEventListener("click", closeLightbox);
   lightbox.addEventListener("click", (e) => {
-    if (e.target === lightbox || e.target === lightboxClose) {
+    // 확대 이미지 영역 자체가 아닌 바깥 레이어를 클릭했을 때 닫기
+    if (e.target === lightbox || e.target.classList.contains("lightbox-overlay-wrapper")) {
       closeLightbox();
     }
   });
 
+  // ESC 키 바인딩
   document.addEventListener("keydown", (e) => {
     if (e.key === "Escape" && lightbox.classList.contains("active")) {
       closeLightbox();
@@ -148,4 +162,47 @@ function initCodeCopyButtons() {
       });
     });
   });
+}
+
+// ── Giscus 댓글 동적 주입 및 실시간 다크모드 싱크 ──
+function initGiscusComments() {
+  const container = document.querySelector(".giscus");
+  if (!container) return;
+
+  const currentTheme = document.body.classList.contains("dark-mode") ? "noborder_dark" : "light";
+
+  const giscusScript = document.createElement("script");
+  giscusScript.src = "https://giscus.app/client.js";
+  giscusScript.setAttribute("data-repo", "heetakchoi/heetakchoi.github.io");
+  giscusScript.setAttribute("data-repo-id", "R_kgDONzKk-g"); // 임의의 repo ID를 적어두되, 사용자가 discussions를 활성화하면 바로 적용됩니다.
+  giscusScript.setAttribute("data-category", "Announcements");
+  giscusScript.setAttribute("data-category-id", "DIC_kwDONzKk-s4CmmZ0"); // 임의의 category ID
+  giscusScript.setAttribute("data-mapping", "pathname");
+  giscusScript.setAttribute("data-strict", "0");
+  giscusScript.setAttribute("data-reactions-enabled", "1");
+  giscusScript.setAttribute("data-emit-metadata", "0");
+  giscusScript.setAttribute("data-input-position", "bottom");
+  giscusScript.setAttribute("data-theme", giscusThemeMapping(currentTheme));
+  giscusScript.setAttribute("data-lang", "ko");
+  giscusScript.setAttribute("crossorigin", "anonymous");
+  giscusScript.async = true;
+
+  container.appendChild(giscusScript);
+}
+
+// Giscus 테마 세부 매핑 헬퍼
+function giscusThemeMapping(theme) {
+  return theme === "dark" || theme === "noborder_dark" ? "noborder_dark" : "light";
+}
+
+// 실시간 테마 토글 메시지 전달 (화면 무리프레시 갱신)
+function updateGiscusTheme(theme) {
+  const iframe = document.querySelector("iframe.giscus-frame");
+  if (!iframe) return;
+
+  const giscusTheme = giscusThemeMapping(theme);
+  iframe.contentWindow.postMessage(
+    { giscus: { setConfig: { theme: giscusTheme } } },
+    "https://giscus.app"
+  );
 }

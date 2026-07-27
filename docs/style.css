@@ -514,3 +514,12 @@ a:hover {
     }
 }
 
+/* ── Giscus 댓글 컨테이너 스타일 ── */
+.giscus-comments-container {
+    margin-top: 48px;
+    margin-bottom: 24px;
+    padding-top: 16px;
+    border-top: 1px dashed var(--border-color);
+    transition: border-color 0.3s ease;
+}
+
