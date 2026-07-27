@@ -80,7 +80,7 @@ function initLightbox() {
   if (!lightbox || images.length === 0) return;
 
   // 모달 내부 에셋 바인딩
-  const lightboxImg = lightbox.querySelector(".lightbox-content");
+  const lightboxImg = lightbox.querySelector(".lightbox-img");
   const lightboxClose = lightbox.querySelector(".lightbox-close");
 
   images.forEach(img => {
@@ -174,9 +174,9 @@ function initGiscusComments() {
   const giscusScript = document.createElement("script");
   giscusScript.src = "https://giscus.app/client.js";
   giscusScript.setAttribute("data-repo", "heetakchoi/heetakchoi.github.io");
-  giscusScript.setAttribute("data-repo-id", "R_kgDONzKk-g"); // 임의의 repo ID를 적어두되, 사용자가 discussions를 활성화하면 바로 적용됩니다.
+  giscusScript.setAttribute("data-repo-id", "MDEwOlJlcG9zaXRvcnkxODM1NjEwNg=="); // 임의의 repo ID를 적어두되, 사용자가 discussions를 활성화하면 바로 적용됩니다.
   giscusScript.setAttribute("data-category", "Announcements");
-  giscusScript.setAttribute("data-category-id", "DIC_kwDONzKk-s4CmmZ0"); // 임의의 category ID
+  giscusScript.setAttribute("data-category-id", "DIC_kwDOARgXis4B_RFB"); // 임의의 category ID
   giscusScript.setAttribute("data-mapping", "pathname");
   giscusScript.setAttribute("data-strict", "0");
   giscusScript.setAttribute("data-reactions-enabled", "1");
