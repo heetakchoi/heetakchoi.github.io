@@ -6,13 +6,22 @@ Life Logging - 스킵 그리고 결정, 다시 생각해 보니.
 
     </title>
 <script src="../script.js"></script>
+<script src="../blog-core.js"></script>
 <link rel="stylesheet" href="../style.css" />
+    <meta name="description" content="스킵 그리고 결정, 다시 생각해 보니. 17/02/2016 예전에 엘리베이터를 타고 10층 건물을 올라가면서 구혼자를 선택하는 문제에 대해 글을 쓴 적이 있다. 그런데 답이 2차 방정식으로 너무 깔끔하게 나온 것이 내 인생이 이렇게 쉬울 리가 없어 이상하다 생각이..." />
+    <meta property="og:title" content="Life Logging - 스킵 그리고 결정, 다시 생각해 보니." />
+    <meta property="og:description" content="스킵 그리고 결정, 다시 생각해 보니. 17/02/2016 예전에 엘리베이터를 타고 10층 건물을 올라가면서 구혼자를 선택하는 문제에 대해 글을 쓴 적이 있다. 그런데 답이 2차 방정식으로 너무 깔끔하게 나온 것이 내 인생이 이렇게 쉬울 리가 없어 이상하다 생각이..." />
+    <meta property="og:type" content="article" />
+    <meta property="og:url" content="https://heetakchoi.github.io/articles/article-61.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta charset="UTF-8">
 	<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@4/tex-mml-chtml.js"></script>
     <link rel="shortcut icon" href="/favicon.ico"/>
   </head>
   <body>
+    <div class="scroll-progress-container">
+      <div class="scroll-progress-bar" id="scrollProgress"></div>
+    </div>
     <div class="header">
       <h1>Life Logging</h1>
       <ul>
@@ -20,16 +29,19 @@ Life Logging - 스킵 그리고 결정, 다시 생각해 보니.
 <a href="../index.html">Home</a>
 	</li>
 	<li>
-<a onclick="javascript:move_to_latest_article_indepth();">Articles</a>
+<a href="../articles/index.html">Articles</a>
 	</li>
 	<li>
-<a onclick="javascript:move_to_latest_book_indepth();">Books</a>
+<a href="../books/index.html">Books</a>
 	</li>
 	<li>
 <a href="../sf.html">SF</a>
 	</li>
 	<li>
 <a href="../info.html">Info</a>
+	</li>
+	<li>
+	  <button id="darkModeToggle" class="dark-mode-toggle" aria-label="Toggle Dark Mode" title="다크 모드 토글">☀️</button>
 	</li>
       </ul>
     </div>
@@ -62,10 +74,12 @@ Life Logging - 스킵 그리고 결정, 다시 생각해 보니.
     앞서 지나쳐온 구혼자들의 최대 매력도보다 더 큰 매력도를 가진 구혼자를 만나면 선택하는 전략
   </blockquote>
 이 의미를 가진다.<br />
-예를 들어 <table border="1" cellspacing="0" ><tr><th>층</th><td>1</td><td>2</td><td>3</td><td>4</td><td>5</td><td>6</td><td>7</td><td>8</td><td>9</td><td>10</td></tr><tr><th>매력도</th><td>23</td><td>57</td><td>31</td><td>80</td><td>75</td><td>16</td><td>43</td><td>99</td><td>66</td><td>48</td></tr></table>인 경우<br />
-1회 통과 후 비교 선택하는 전략인 경우 첫 번째 23이후 두 번째 57이 23보다 크므로 57을 선택한다.<br />
-2회 통과 후 비교 선택의 경우 23, 57을 보내고 기준점을 57로 설정한 후 비교를 시작한다 31은 57보다 작으므로 지나치고 그 다음 80은 57보다 크므로 선택한다.<br />
-3회 통과 후 비교 선택의 경우 23, 57, 31을 보내고 기준점을 57로 선택한다. 이 경우도 80이 선택된다.<br />
+예를 들어 <table border="1" cellspacing="0" ><tr><th>층</th><td>1</td><td>2</td><td>3</td><td>4</td><td>5</td><td>6</td><td>7</td><td>8</td><td>9</td><td>10</td></tr><tr><th>매력도</th><td>23</td><td>57</td><td>31</td><td>80</td><td>75</td><td>16</td><td>43</td><td>99</td><td>66</td><td>48</td></tr></table>인 경우
+  <ol>
+    <li></li>
+    <li></li>
+    <li>이 경우도 80이 선택된다.</li>
+  </ol>
 결국 경험을 많이 쌓을 수록 - 통과를 많이 시킬수록 좋은 선택을 할 가능성이 높아지나 남아있는 선택지가 줄어들기 때문에 인생의 오묘함의 한 단면을 엿볼 수 있다.<br />
 감상은 그만두고 正傳으로 돌아와 어떻게 최선의 선택을 할 수 있을지 생각해보자.<br />
 문제를 단순화 하기 위해 1점부터 10점까지 매력도가 있다고 가정하자.<br />
@@ -182,31 +196,9 @@ when k is 3, max ratio: 0.3987
     <div class="footer">
       
     </div>
-    <script type="text/javascript">
-      var img = document.getElementsByTagName("img");
-      for(let x=0; x<img.length; x++){
-	  img.item(x).onclick=function(){
-
-              const imageUrl = this.src;
-              const newWindow = window.open('', '_blank');
-              newWindow.document.write(`
-<html>
-  <head>
-    <title>이미지 창</title>
-    <style>
-      body { margin: 0; display: flex; justify-content: center; align-items: center; height: 100vh; }
-      img { max-width: 100%; max-height: 100%; cursor: pointer; }
-    </style>
-  </head>
-  <body>
-    <img src="${imageUrl}" alt="Popup Image" onclick="window.close()">
+    <div id="lightbox" class="lightbox-overlay">
+      <button class="lightbox-close" id="lightboxClose">&times;</button>
+      <img class="lightbox-img" id="lightboxImg" src="" alt="Zoomed Image">
+    </div>
   </body>
 </html>
-                `);
-
-          };
-      }
-      </script>
-  </body>
-</html>
-

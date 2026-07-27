@@ -6,13 +6,22 @@ Life Logging - 개미가 남동쪽으로 간 까닭은.
 
     </title>
 <script src="../script.js"></script>
+<script src="../blog-core.js"></script>
 <link rel="stylesheet" href="../style.css" />
+    <meta name="description" content="개미가 남동쪽으로 간 까닭은. 11/08/2016 스마트폰에 깔려있는 앱을 정리하다가 이걸 언제 작성했지 라고 스스로에게 되묻게 되는 Todo 리스트를 발견했다. 뭐 대단한 것이라도 있나 싶어 한 번 휙 둘러보았지만 대부분 이미 처리해 버렸거나 이젠 시간이 흘러 ..." />
+    <meta property="og:title" content="Life Logging - 개미가 남동쪽으로 간 까닭은." />
+    <meta property="og:description" content="개미가 남동쪽으로 간 까닭은. 11/08/2016 스마트폰에 깔려있는 앱을 정리하다가 이걸 언제 작성했지 라고 스스로에게 되묻게 되는 Todo 리스트를 발견했다. 뭐 대단한 것이라도 있나 싶어 한 번 휙 둘러보았지만 대부분 이미 처리해 버렸거나 이젠 시간이 흘러 ..." />
+    <meta property="og:type" content="article" />
+    <meta property="og:url" content="https://heetakchoi.github.io/articles/article-67.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta charset="UTF-8">
 	<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@4/tex-mml-chtml.js"></script>
     <link rel="shortcut icon" href="/favicon.ico"/>
   </head>
   <body>
+    <div class="scroll-progress-container">
+      <div class="scroll-progress-bar" id="scrollProgress"></div>
+    </div>
     <div class="header">
       <h1>Life Logging</h1>
       <ul>
@@ -20,16 +29,19 @@ Life Logging - 개미가 남동쪽으로 간 까닭은.
 <a href="../index.html">Home</a>
 	</li>
 	<li>
-<a onclick="javascript:move_to_latest_article_indepth();">Articles</a>
+<a href="../articles/index.html">Articles</a>
 	</li>
 	<li>
-<a onclick="javascript:move_to_latest_book_indepth();">Books</a>
+<a href="../books/index.html">Books</a>
 	</li>
 	<li>
 <a href="../sf.html">SF</a>
 	</li>
 	<li>
 <a href="../info.html">Info</a>
+	</li>
+	<li>
+	  <button id="darkModeToggle" class="dark-mode-toggle" aria-label="Toggle Dark Mode" title="다크 모드 토글">☀️</button>
 	</li>
       </ul>
     </div>
@@ -59,12 +71,18 @@ Life Logging - 개미가 남동쪽으로 간 까닭은.
 출처: <a href="http://biophilosophy.tistory.com/entry/%EB%9E%AD%ED%84%B4%EC%9D%98-%EA%B0%9C%EB%AF%B8Ants95%EC%9D%98-%EC%86%8C%EA%B0%9C-20031">랭턴의 개미</a>
 </div>
 <div>
-몇 번의 시행을 마치면 마치 짐승의 발자국이 눈 위에 남듯 개미의 발차취가 남게 된다. <span class="x">점 색깔이 파란 색으로 보이는 것은 눈의 착각입니다.</span><br />
-100번 시행 후<br />
-<img src="../img/100.png" /><br />
-1000번 시행 후<br />
-<img src="../img/1000.png" /><br />
-10000번 시행 후<br />
+몇 번의 시행을 마치면 마치 짐승의 발자국이 눈 위에 남듯 개미의 발차취가 남게 된다. <span class="x">점 색깔이 파란 색으로 보이는 것은 눈의 착각입니다.</span>
+  <ol>
+    <li>00번 시행 후</li>
+  </ol>
+<img src="../img/100.png" />
+  <ol>
+    <li>000번 시행 후</li>
+  </ol>
+<img src="../img/1000.png" />
+  <ol>
+    <li>0000번 시행 후</li>
+  </ol>
 <img src="../img/10000.png" />
 </div>
 <div>
@@ -92,31 +110,9 @@ Life Logging - 개미가 남동쪽으로 간 까닭은.
     <div class="footer">
       
     </div>
-    <script type="text/javascript">
-      var img = document.getElementsByTagName("img");
-      for(let x=0; x<img.length; x++){
-	  img.item(x).onclick=function(){
-
-              const imageUrl = this.src;
-              const newWindow = window.open('', '_blank');
-              newWindow.document.write(`
-<html>
-  <head>
-    <title>이미지 창</title>
-    <style>
-      body { margin: 0; display: flex; justify-content: center; align-items: center; height: 100vh; }
-      img { max-width: 100%; max-height: 100%; cursor: pointer; }
-    </style>
-  </head>
-  <body>
-    <img src="${imageUrl}" alt="Popup Image" onclick="window.close()">
+    <div id="lightbox" class="lightbox-overlay">
+      <button class="lightbox-close" id="lightboxClose">&times;</button>
+      <img class="lightbox-img" id="lightboxImg" src="" alt="Zoomed Image">
+    </div>
   </body>
 </html>
-                `);
-
-          };
-      }
-      </script>
-  </body>
-</html>
-

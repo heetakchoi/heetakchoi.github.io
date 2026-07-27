@@ -6,13 +6,22 @@ Life Logging - 우연과 낚시
 
     </title>
 <script src="../script.js"></script>
+<script src="../blog-core.js"></script>
 <link rel="stylesheet" href="../style.css" />
+    <meta name="description" content="우연과 낚시 10/12/2009 우연히 동전을 던진다는 것은 조작될 수 있다 란 취지의 기사를 보았다. 호주인지 영국인지 연구팀이 13 (!) 명 이라는 거대한 표본을 잡아서 300번씩 동전을 던지게 한 결과 조금의 요령으로도 &quot;과반수&quot; 인 7명..." />
+    <meta property="og:title" content="Life Logging - 우연과 낚시" />
+    <meta property="og:description" content="우연과 낚시 10/12/2009 우연히 동전을 던진다는 것은 조작될 수 있다 란 취지의 기사를 보았다. 호주인지 영국인지 연구팀이 13 (!) 명 이라는 거대한 표본을 잡아서 300번씩 동전을 던지게 한 결과 조금의 요령으로도 &quot;과반수&quot; 인 7명..." />
+    <meta property="og:type" content="article" />
+    <meta property="og:url" content="https://heetakchoi.github.io/articles/article-14.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta charset="UTF-8">
 	<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@4/tex-mml-chtml.js"></script>
     <link rel="shortcut icon" href="/favicon.ico"/>
   </head>
   <body>
+    <div class="scroll-progress-container">
+      <div class="scroll-progress-bar" id="scrollProgress"></div>
+    </div>
     <div class="header">
       <h1>Life Logging</h1>
       <ul>
@@ -20,16 +29,19 @@ Life Logging - 우연과 낚시
 <a href="../index.html">Home</a>
 	</li>
 	<li>
-<a onclick="javascript:move_to_latest_article_indepth();">Articles</a>
+<a href="../articles/index.html">Articles</a>
 	</li>
 	<li>
-<a onclick="javascript:move_to_latest_book_indepth();">Books</a>
+<a href="../books/index.html">Books</a>
 	</li>
 	<li>
 <a href="../sf.html">SF</a>
 	</li>
 	<li>
 <a href="../info.html">Info</a>
+	</li>
+	<li>
+	  <button id="darkModeToggle" class="dark-mode-toggle" aria-label="Toggle Dark Mode" title="다크 모드 토글">☀️</button>
 	</li>
       </ul>
     </div>
@@ -49,7 +61,9 @@ Life Logging - 우연과 낚시
 일단 여기까지만 해도 바로 낚시 기사의 스멜이 강하게 풍겨와서 계산을 좀 해 보기로 했다.
 </div>
 <div>
-300번 동전을 던져 앞면이 68% 이상 나올 확률을 계산해 보자.<br />
+  <ol>
+    <li></li>
+  </ol>
 동전의 앞면이 나올 확률은 1/2 인 이항분포이고 300번이 상당히 많은 수행 이라고 하면 B(300, 1/2) -> N(300*(1/2), 300*(1/2)*(1/2)) 이므로<br />
 N(150, (8.6)^2) 가 되어 Z = (X-150)/8.6 가 된다.<br />
 300회의 68% 면 204회이므로<br />
@@ -59,10 +73,14 @@ Z=(204-150)/8.6  => 6.2 가 되는데 3 이상은 표준 정규 분포표에도 
 여기서 그럼 이 기사는 낚시가 아니네 라고 생각하다가 300회는 적당히 크려니, 따라서 정규분포려니 하는 생각을 접고 그냥 쌩으로 확률을 계산해보자 란 생각이 들었다.
 </div>
 <div>
-일단 300회 시행에 모두 앞면이 나올 확률은 300C300(1/2)^300 이고<br />
-299번 앞면이 나올 확률은 300C299(1/2)^299<br />
-...<br />
-204번 앞면이 나올 확률은 300C204(1/2)^300 이다.<br />
+일단 300회 시행에 모두 앞면이 나올 확률은 300C300(1/2)^300 이고
+  <ol>
+    <li>99번 앞면이 나올 확률은 300C299(1/2)^299</li>
+  </ol>
+...
+  <ol>
+    <li></li>
+  </ol>
 이걸 구하려고 script 를 하나 짰더니 overflow 가 났다.
 </div>
 <div>
@@ -94,31 +112,9 @@ Math::BigFloat 를 급하게 수배해서 새로 계산해 보니 결과값 0.00
     <div class="footer">
       
     </div>
-    <script type="text/javascript">
-      var img = document.getElementsByTagName("img");
-      for(let x=0; x<img.length; x++){
-	  img.item(x).onclick=function(){
-
-              const imageUrl = this.src;
-              const newWindow = window.open('', '_blank');
-              newWindow.document.write(`
-<html>
-  <head>
-    <title>이미지 창</title>
-    <style>
-      body { margin: 0; display: flex; justify-content: center; align-items: center; height: 100vh; }
-      img { max-width: 100%; max-height: 100%; cursor: pointer; }
-    </style>
-  </head>
-  <body>
-    <img src="${imageUrl}" alt="Popup Image" onclick="window.close()">
+    <div id="lightbox" class="lightbox-overlay">
+      <button class="lightbox-close" id="lightboxClose">&times;</button>
+      <img class="lightbox-img" id="lightboxImg" src="" alt="Zoomed Image">
+    </div>
   </body>
 </html>
-                `);
-
-          };
-      }
-      </script>
-  </body>
-</html>
-

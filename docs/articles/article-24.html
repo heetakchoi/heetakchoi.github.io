@@ -6,13 +6,22 @@ Life Logging - 지난 한 달
 
     </title>
 <script src="../script.js"></script>
+<script src="../blog-core.js"></script>
 <link rel="stylesheet" href="../style.css" />
+    <meta name="description" content="지난 한 달 16/05/2010 나는 학교를 90년대에 다녔다. 그때 참으로 많이 들었던 말이 &quot;치열하게 살기&quot; 였다. 무엇을 하더라도 그냥 열심히 정도가 아니라 치열하게 였다. 너는 혹은 나는 얼마나 치열하게 살고 있는가 가 대화의 많은 포션을..." />
+    <meta property="og:title" content="Life Logging - 지난 한 달" />
+    <meta property="og:description" content="지난 한 달 16/05/2010 나는 학교를 90년대에 다녔다. 그때 참으로 많이 들었던 말이 &quot;치열하게 살기&quot; 였다. 무엇을 하더라도 그냥 열심히 정도가 아니라 치열하게 였다. 너는 혹은 나는 얼마나 치열하게 살고 있는가 가 대화의 많은 포션을..." />
+    <meta property="og:type" content="article" />
+    <meta property="og:url" content="https://heetakchoi.github.io/articles/article-24.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta charset="UTF-8">
 	<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@4/tex-mml-chtml.js"></script>
     <link rel="shortcut icon" href="/favicon.ico"/>
   </head>
   <body>
+    <div class="scroll-progress-container">
+      <div class="scroll-progress-bar" id="scrollProgress"></div>
+    </div>
     <div class="header">
       <h1>Life Logging</h1>
       <ul>
@@ -20,16 +29,19 @@ Life Logging - 지난 한 달
 <a href="../index.html">Home</a>
 	</li>
 	<li>
-<a onclick="javascript:move_to_latest_article_indepth();">Articles</a>
+<a href="../articles/index.html">Articles</a>
 	</li>
 	<li>
-<a onclick="javascript:move_to_latest_book_indepth();">Books</a>
+<a href="../books/index.html">Books</a>
 	</li>
 	<li>
 <a href="../sf.html">SF</a>
 	</li>
 	<li>
 <a href="../info.html">Info</a>
+	</li>
+	<li>
+	  <button id="darkModeToggle" class="dark-mode-toggle" aria-label="Toggle Dark Mode" title="다크 모드 토글">☀️</button>
 	</li>
       </ul>
     </div>
@@ -117,31 +129,9 @@ A의 아내, 사망. 빈소는 ...<br />
     <div class="footer">
       
     </div>
-    <script type="text/javascript">
-      var img = document.getElementsByTagName("img");
-      for(let x=0; x<img.length; x++){
-	  img.item(x).onclick=function(){
-
-              const imageUrl = this.src;
-              const newWindow = window.open('', '_blank');
-              newWindow.document.write(`
-<html>
-  <head>
-    <title>이미지 창</title>
-    <style>
-      body { margin: 0; display: flex; justify-content: center; align-items: center; height: 100vh; }
-      img { max-width: 100%; max-height: 100%; cursor: pointer; }
-    </style>
-  </head>
-  <body>
-    <img src="${imageUrl}" alt="Popup Image" onclick="window.close()">
+    <div id="lightbox" class="lightbox-overlay">
+      <button class="lightbox-close" id="lightboxClose">&times;</button>
+      <img class="lightbox-img" id="lightboxImg" src="" alt="Zoomed Image">
+    </div>
   </body>
 </html>
-                `);
-
-          };
-      }
-      </script>
-  </body>
-</html>
-

@@ -6,13 +6,22 @@ Life Logging - 여유가 왜 필요한가에 대한 이야기
 
     </title>
 <script src="../script.js"></script>
+<script src="../blog-core.js"></script>
 <link rel="stylesheet" href="../style.css" />
+    <meta name="description" content="여유가 왜 필요한가에 대한 이야기 03/05/2016 왜 우리는 집단에서 바보가 되었는가 : 조직의 모든 어리석음에 대한 고찰을 읽었다. 괴팅겐 오오 말로만 듣던 그 괴팅겐, 힐베르트가 세상을 지배하던 그 괴팅겐 수학과를 나와 독일 IBM CTO 을 역임한 저자가..." />
+    <meta property="og:title" content="Life Logging - 여유가 왜 필요한가에 대한 이야기" />
+    <meta property="og:description" content="여유가 왜 필요한가에 대한 이야기 03/05/2016 왜 우리는 집단에서 바보가 되었는가 : 조직의 모든 어리석음에 대한 고찰을 읽었다. 괴팅겐 오오 말로만 듣던 그 괴팅겐, 힐베르트가 세상을 지배하던 그 괴팅겐 수학과를 나와 독일 IBM CTO 을 역임한 저자가..." />
+    <meta property="og:type" content="article" />
+    <meta property="og:url" content="https://heetakchoi.github.io/articles/article-65.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta charset="UTF-8">
 	<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@4/tex-mml-chtml.js"></script>
     <link rel="shortcut icon" href="/favicon.ico"/>
   </head>
   <body>
+    <div class="scroll-progress-container">
+      <div class="scroll-progress-bar" id="scrollProgress"></div>
+    </div>
     <div class="header">
       <h1>Life Logging</h1>
       <ul>
@@ -20,16 +29,19 @@ Life Logging - 여유가 왜 필요한가에 대한 이야기
 <a href="../index.html">Home</a>
 	</li>
 	<li>
-<a onclick="javascript:move_to_latest_article_indepth();">Articles</a>
+<a href="../articles/index.html">Articles</a>
 	</li>
 	<li>
-<a onclick="javascript:move_to_latest_book_indepth();">Books</a>
+<a href="../books/index.html">Books</a>
 	</li>
 	<li>
 <a href="../sf.html">SF</a>
 	</li>
 	<li>
 <a href="../info.html">Info</a>
+	</li>
+	<li>
+	  <button id="darkModeToggle" class="dark-mode-toggle" aria-label="Toggle Dark Mode" title="다크 모드 토글">☀️</button>
 	</li>
       </ul>
     </div>
@@ -154,31 +166,9 @@ printf "working ratio %.2f %d/%d, 평균 대기인 %.2f\n",
     <div class="footer">
       
     </div>
-    <script type="text/javascript">
-      var img = document.getElementsByTagName("img");
-      for(let x=0; x<img.length; x++){
-	  img.item(x).onclick=function(){
-
-              const imageUrl = this.src;
-              const newWindow = window.open('', '_blank');
-              newWindow.document.write(`
-<html>
-  <head>
-    <title>이미지 창</title>
-    <style>
-      body { margin: 0; display: flex; justify-content: center; align-items: center; height: 100vh; }
-      img { max-width: 100%; max-height: 100%; cursor: pointer; }
-    </style>
-  </head>
-  <body>
-    <img src="${imageUrl}" alt="Popup Image" onclick="window.close()">
+    <div id="lightbox" class="lightbox-overlay">
+      <button class="lightbox-close" id="lightboxClose">&times;</button>
+      <img class="lightbox-img" id="lightboxImg" src="" alt="Zoomed Image">
+    </div>
   </body>
 </html>
-                `);
-
-          };
-      }
-      </script>
-  </body>
-</html>
-

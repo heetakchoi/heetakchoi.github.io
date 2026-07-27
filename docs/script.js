@@ -10,4 +10,3 @@ function move_to_latest_book(){
 function move_to_latest_book_indepth(){
     document.location = "../books/book-2.html";
 }
-

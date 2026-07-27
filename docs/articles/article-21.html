@@ -6,13 +6,22 @@ Life Logging - 모토로이
 
     </title>
 <script src="../script.js"></script>
+<script src="../blog-core.js"></script>
 <link rel="stylesheet" href="../style.css" />
+    <meta name="description" content="모토로이 11/02/2010 아이폰과 비교하자면 지금까지는 매우 만족스럽다. 몇몇을 나열하자면, 첫 번째로 외부 파일 이용이 쉽다는 것을 들 수 있겠다. USB를 꼽으면 외장 SD 카드 (배터리 위에 있기 때문에 빼려면 뒷 뚜껑을 떼긴 해야 한다) 가 USB dr..." />
+    <meta property="og:title" content="Life Logging - 모토로이" />
+    <meta property="og:description" content="모토로이 11/02/2010 아이폰과 비교하자면 지금까지는 매우 만족스럽다. 몇몇을 나열하자면, 첫 번째로 외부 파일 이용이 쉽다는 것을 들 수 있겠다. USB를 꼽으면 외장 SD 카드 (배터리 위에 있기 때문에 빼려면 뒷 뚜껑을 떼긴 해야 한다) 가 USB dr..." />
+    <meta property="og:type" content="article" />
+    <meta property="og:url" content="https://heetakchoi.github.io/articles/article-21.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta charset="UTF-8">
 	<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@4/tex-mml-chtml.js"></script>
     <link rel="shortcut icon" href="/favicon.ico"/>
   </head>
   <body>
+    <div class="scroll-progress-container">
+      <div class="scroll-progress-bar" id="scrollProgress"></div>
+    </div>
     <div class="header">
       <h1>Life Logging</h1>
       <ul>
@@ -20,16 +29,19 @@ Life Logging - 모토로이
 <a href="../index.html">Home</a>
 	</li>
 	<li>
-<a onclick="javascript:move_to_latest_article_indepth();">Articles</a>
+<a href="../articles/index.html">Articles</a>
 	</li>
 	<li>
-<a onclick="javascript:move_to_latest_book_indepth();">Books</a>
+<a href="../books/index.html">Books</a>
 	</li>
 	<li>
 <a href="../sf.html">SF</a>
 	</li>
 	<li>
 <a href="../info.html">Info</a>
+	</li>
+	<li>
+	  <button id="darkModeToggle" class="dark-mode-toggle" aria-label="Toggle Dark Mode" title="다크 모드 토글">☀️</button>
 	</li>
       </ul>
     </div>
@@ -44,7 +56,9 @@ Life Logging - 모토로이
   <h5>11/02/2010</h5>
 </div>
 <div>
-6년 가까이 쓰던 핸드폰을 퇴역시키고 첫 출시된 안드로이드폰인 모토로이를 예약 구매하여 3일째 쓰고 있다.
+  <ol>
+    <li></li>
+  </ol>
 </div>
 <div>
 아이폰과 비교하자면 지금까지는 매우 만족스럽다.<br />
@@ -62,8 +76,10 @@ mini USB 코드를 꼽았다 뺐다가 하는게 귀찮으면 전화기 내장 �
 <div>
 세 번째로는 토착화된 기능이라고 해야 할 듯 싶은데, 지상파 DMB 가 된다.<br />
 이거 뭐 중요한가 생각을 했었는데 다가오는 설 연휴에 집사람이 무진장 기대하고 있다. 나야 뭐 운전한다고 볼 일도 없겠지만.<br />
-또한 필기 입력을 지원한다.<br />
-5년 전 PDA 에서 필기 입력의 수준과는 다르게 적절한 인식률을 보여 준다.<br />
+또한 필기 입력을 지원한다.
+  <ol>
+    <li></li>
+  </ol>
 쥐똥만한 쿼티 키보드로 입력하다가 슥슥 쓰는 기분도 나쁘지 않다.
 </div>
 <div>
@@ -97,31 +113,9 @@ Linux/Java 프로그래머인 나에게는 안드로이드폰이 가진 장점�
     <div class="footer">
       
     </div>
-    <script type="text/javascript">
-      var img = document.getElementsByTagName("img");
-      for(let x=0; x<img.length; x++){
-	  img.item(x).onclick=function(){
-
-              const imageUrl = this.src;
-              const newWindow = window.open('', '_blank');
-              newWindow.document.write(`
-<html>
-  <head>
-    <title>이미지 창</title>
-    <style>
-      body { margin: 0; display: flex; justify-content: center; align-items: center; height: 100vh; }
-      img { max-width: 100%; max-height: 100%; cursor: pointer; }
-    </style>
-  </head>
-  <body>
-    <img src="${imageUrl}" alt="Popup Image" onclick="window.close()">
+    <div id="lightbox" class="lightbox-overlay">
+      <button class="lightbox-close" id="lightboxClose">&times;</button>
+      <img class="lightbox-img" id="lightboxImg" src="" alt="Zoomed Image">
+    </div>
   </body>
 </html>
-                `);
-
-          };
-      }
-      </script>
-  </body>
-</html>
-

@@ -6,13 +6,22 @@ Life Logging - English the happy way.
 
     </title>
 <script src="../script.js"></script>
+<script src="../blog-core.js"></script>
 <link rel="stylesheet" href="../style.css" />
+    <meta name="description" content="English the happy way. 04/07/2020 원래 내가 영어를 잘 못하는 것은 알고 있었다. 영어라곤 중학교 1학년 겨울 방학 때 성문 기본 영어를 좀 열심히 봤다 정도고 그 이후로 영어를 열심히 한 기억은 없다. 물론 대학 때나 이후 일하면서도 ..." />
+    <meta property="og:title" content="Life Logging - English the happy way." />
+    <meta property="og:description" content="English the happy way. 04/07/2020 원래 내가 영어를 잘 못하는 것은 알고 있었다. 영어라곤 중학교 1학년 겨울 방학 때 성문 기본 영어를 좀 열심히 봤다 정도고 그 이후로 영어를 열심히 한 기억은 없다. 물론 대학 때나 이후 일하면서도 ..." />
+    <meta property="og:type" content="article" />
+    <meta property="og:url" content="https://heetakchoi.github.io/articles/article-73.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta charset="UTF-8">
 	<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@4/tex-mml-chtml.js"></script>
     <link rel="shortcut icon" href="/favicon.ico"/>
   </head>
   <body>
+    <div class="scroll-progress-container">
+      <div class="scroll-progress-bar" id="scrollProgress"></div>
+    </div>
     <div class="header">
       <h1>Life Logging</h1>
       <ul>
@@ -20,16 +29,19 @@ Life Logging - English the happy way.
 <a href="../index.html">Home</a>
 	</li>
 	<li>
-<a onclick="javascript:move_to_latest_article_indepth();">Articles</a>
+<a href="../articles/index.html">Articles</a>
 	</li>
 	<li>
-<a onclick="javascript:move_to_latest_book_indepth();">Books</a>
+<a href="../books/index.html">Books</a>
 	</li>
 	<li>
 <a href="../sf.html">SF</a>
 	</li>
 	<li>
 <a href="../info.html">Info</a>
+	</li>
+	<li>
+	  <button id="darkModeToggle" class="dark-mode-toggle" aria-label="Toggle Dark Mode" title="다크 모드 토글">☀️</button>
 	</li>
       </ul>
     </div>
@@ -44,8 +56,10 @@ Life Logging - English the happy way.
   <h5>04/07/2020</h5>
 </div>
 <div>
-원래 내가 영어를 잘 못하는 것은 알고 있었다. 영어라곤 중학교 1학년 겨울 방학 때 성문 기본 영어를 좀 열심히 봤다 정도고 그 이후로 영어를 열심히 한 기억은 없다. 물론 대학 때나 이후 일하면서도 꾸준히 영어로 쓰여진 책을 읽어야 했지만 수학이나 CS 관련 책을 아무리 읽었다 한들 "Cash or charge" 가 무슨 뜻인지 알 수 있을리가 없다.<br />
-2년 전에 싱가포르로 여름 휴가를 갔었다. 싱가포르로 떠나게 된 이유가 범상하지 않는데, 얘의 초등학교 친구가 아버지 직장 관계로 싱가포르 이민을 갔고 다들 국민학교 다니던 옛날 생각으로는 한 번 놀러 오라는 편지나 몇 번 오고 가다 슬며시 소식이 끊어지는 게 자연스런 전개였겠지만 카톡 이라는 문명의 이기로 무장한 현생 초딩들이 매주 영상통화로
+원래 내가 영어를 잘 못하는 것은 알고 있었다. 영어라곤 중학교 1학년 겨울 방학 때 성문 기본 영어를 좀 열심히 봤다 정도고 그 이후로 영어를 열심히 한 기억은 없다. 물론 대학 때나 이후 일하면서도 꾸준히 영어로 쓰여진 책을 읽어야 했지만 수학이나 CS 관련 책을 아무리 읽었다 한들 "Cash or charge" 가 무슨 뜻인지 알 수 있을리가 없다.
+  <ol>
+    <li> 전에 싱가포르로 여름 휴가를 갔었다. 싱가포르로 떠나게 된 이유가 범상하지 않는데, 얘의 초등학교 친구가 아버지 직장 관계로 싱가포르 이민을 갔고 다들 국민학교 다니던 옛날 생각으로는 한 번 놀러 오라는 편지나 몇 번 오고 가다 슬며시 소식이 끊어지는 게 자연스런 전개였겠지만 카톡 이라는 문명의 이기로 무장한 현생 초딩들이 매주 영상통화로</li>
+  </ol>
   <blockquote>
     "언제 놀러올거야?"<br />
     "이번 휴가 때 간데."<br />
@@ -95,31 +109,9 @@ Life Logging - English the happy way.
     <div class="footer">
       
     </div>
-    <script type="text/javascript">
-      var img = document.getElementsByTagName("img");
-      for(let x=0; x<img.length; x++){
-	  img.item(x).onclick=function(){
-
-              const imageUrl = this.src;
-              const newWindow = window.open('', '_blank');
-              newWindow.document.write(`
-<html>
-  <head>
-    <title>이미지 창</title>
-    <style>
-      body { margin: 0; display: flex; justify-content: center; align-items: center; height: 100vh; }
-      img { max-width: 100%; max-height: 100%; cursor: pointer; }
-    </style>
-  </head>
-  <body>
-    <img src="${imageUrl}" alt="Popup Image" onclick="window.close()">
+    <div id="lightbox" class="lightbox-overlay">
+      <button class="lightbox-close" id="lightboxClose">&times;</button>
+      <img class="lightbox-img" id="lightboxImg" src="" alt="Zoomed Image">
+    </div>
   </body>
 </html>
-                `);
-
-          };
-      }
-      </script>
-  </body>
-</html>
-

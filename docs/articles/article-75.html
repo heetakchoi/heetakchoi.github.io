@@ -6,13 +6,22 @@ Life Logging - 누구든 마음 한 편엔 '은전 한 닢'을 가지고 싶은 
 
     </title>
 <script src="../script.js"></script>
+<script src="../blog-core.js"></script>
 <link rel="stylesheet" href="../style.css" />
+    <meta name="description" content="누구든 마음 한 편엔 &#39;은전 한 닢&#39;을 가지고 싶은 법이다. 14/10/2020 처음 시작은 π를 구하는 코드였다. 아르키메데스로 연원이 거슬러가는 이 유서 깊은 값을 이런 저런 방법 ( π 는 대체 얼마?, 또 다른 π 에 대한 근사값) 등으로 구..." />
+    <meta property="og:title" content="Life Logging - 누구든 마음 한 편엔 '은전 한 닢'을 가지고 싶은 법이다." />
+    <meta property="og:description" content="누구든 마음 한 편엔 &#39;은전 한 닢&#39;을 가지고 싶은 법이다. 14/10/2020 처음 시작은 π를 구하는 코드였다. 아르키메데스로 연원이 거슬러가는 이 유서 깊은 값을 이런 저런 방법 ( π 는 대체 얼마?, 또 다른 π 에 대한 근사값) 등으로 구..." />
+    <meta property="og:type" content="article" />
+    <meta property="og:url" content="https://heetakchoi.github.io/articles/article-75.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta charset="UTF-8">
 	<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@4/tex-mml-chtml.js"></script>
     <link rel="shortcut icon" href="/favicon.ico"/>
   </head>
   <body>
+    <div class="scroll-progress-container">
+      <div class="scroll-progress-bar" id="scrollProgress"></div>
+    </div>
     <div class="header">
       <h1>Life Logging</h1>
       <ul>
@@ -20,16 +29,19 @@ Life Logging - 누구든 마음 한 편엔 '은전 한 닢'을 가지고 싶은 
 <a href="../index.html">Home</a>
 	</li>
 	<li>
-<a onclick="javascript:move_to_latest_article_indepth();">Articles</a>
+<a href="../articles/index.html">Articles</a>
 	</li>
 	<li>
-<a onclick="javascript:move_to_latest_book_indepth();">Books</a>
+<a href="../books/index.html">Books</a>
 	</li>
 	<li>
 <a href="../sf.html">SF</a>
 	</li>
 	<li>
 <a href="../info.html">Info</a>
+	</li>
+	<li>
+	  <button id="darkModeToggle" class="dark-mode-toggle" aria-label="Toggle Dark Mode" title="다크 모드 토글">☀️</button>
 	</li>
       </ul>
     </div>
@@ -97,31 +109,9 @@ Life Logging - 누구든 마음 한 편엔 '은전 한 닢'을 가지고 싶은 
     <div class="footer">
       
     </div>
-    <script type="text/javascript">
-      var img = document.getElementsByTagName("img");
-      for(let x=0; x<img.length; x++){
-	  img.item(x).onclick=function(){
-
-              const imageUrl = this.src;
-              const newWindow = window.open('', '_blank');
-              newWindow.document.write(`
-<html>
-  <head>
-    <title>이미지 창</title>
-    <style>
-      body { margin: 0; display: flex; justify-content: center; align-items: center; height: 100vh; }
-      img { max-width: 100%; max-height: 100%; cursor: pointer; }
-    </style>
-  </head>
-  <body>
-    <img src="${imageUrl}" alt="Popup Image" onclick="window.close()">
+    <div id="lightbox" class="lightbox-overlay">
+      <button class="lightbox-close" id="lightboxClose">&times;</button>
+      <img class="lightbox-img" id="lightboxImg" src="" alt="Zoomed Image">
+    </div>
   </body>
 </html>
-                `);
-
-          };
-      }
-      </script>
-  </body>
-</html>
-

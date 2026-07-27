@@ -6,13 +6,22 @@ Life Logging - 소리로 사람을 즐겁게 하는 것은
 
     </title>
 <script src="../script.js"></script>
+<script src="../blog-core.js"></script>
 <link rel="stylesheet" href="../style.css" />
+    <meta name="description" content="소리로 사람을 즐겁게 하는 것은 30/10/2020 어렸을 때는 서양 고전 음악을 들어야만 해야 할 것 같아서 교과서에 나오는 음악가의 곡을 찾아서 듣곤 했다. 이제 돌이켜 생각하니 클래식이라고 다들 엄숙하기만 한 건 아니었고 대부분은 지루했지만 조금 나사가 좀 ..." />
+    <meta property="og:title" content="Life Logging - 소리로 사람을 즐겁게 하는 것은" />
+    <meta property="og:description" content="소리로 사람을 즐겁게 하는 것은 30/10/2020 어렸을 때는 서양 고전 음악을 들어야만 해야 할 것 같아서 교과서에 나오는 음악가의 곡을 찾아서 듣곤 했다. 이제 돌이켜 생각하니 클래식이라고 다들 엄숙하기만 한 건 아니었고 대부분은 지루했지만 조금 나사가 좀 ..." />
+    <meta property="og:type" content="article" />
+    <meta property="og:url" content="https://heetakchoi.github.io/articles/article-77.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta charset="UTF-8">
 	<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@4/tex-mml-chtml.js"></script>
     <link rel="shortcut icon" href="/favicon.ico"/>
   </head>
   <body>
+    <div class="scroll-progress-container">
+      <div class="scroll-progress-bar" id="scrollProgress"></div>
+    </div>
     <div class="header">
       <h1>Life Logging</h1>
       <ul>
@@ -20,16 +29,19 @@ Life Logging - 소리로 사람을 즐겁게 하는 것은
 <a href="../index.html">Home</a>
 	</li>
 	<li>
-<a onclick="javascript:move_to_latest_article_indepth();">Articles</a>
+<a href="../articles/index.html">Articles</a>
 	</li>
 	<li>
-<a onclick="javascript:move_to_latest_book_indepth();">Books</a>
+<a href="../books/index.html">Books</a>
 	</li>
 	<li>
 <a href="../sf.html">SF</a>
 	</li>
 	<li>
 <a href="../info.html">Info</a>
+	</li>
+	<li>
+	  <button id="darkModeToggle" class="dark-mode-toggle" aria-label="Toggle Dark Mode" title="다크 모드 토글">☀️</button>
 	</li>
       </ul>
     </div>
@@ -70,8 +82,10 @@ Life Logging - 소리로 사람을 즐겁게 하는 것은
 대중 음악이라서 수준이 낮은 것이 아니라 대중이 연주하다 보니 프로가 연주하는 음악보다 못하게 느껴질 뿐. <span class="x">대체 얼마나 연습을 해야 저 정도가 될 수 있을지</span><br />
 <span class="b">When You Want'em, You Can't Get'Em, When You've Got'Em, You Don't Want'Em</span><br />
 <iframe width="320" height="180" src="https://www.youtube.com/embed/iy1OgwZisyM" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe><br />
-<hr /><br />
-8분 20초 기다리시면 기대하던 바로 그 부분이 나옵니.. 원래 영웅은 나중에 본색을 드러내는 법입죠.<br />
+<hr />
+  <ol>
+    <li> 원래 영웅은 나중에 본색을 드러내는 법입죠.</li>
+  </ol>
 <span class="b">윌리엄 텔 서곡</span><br />
 <iframe width="320" height="180" src="https://www.youtube.com/embed/e4COv8-cHNU?start=520" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe><br />
 <hr /><br />
@@ -154,31 +168,9 @@ Life Logging - 소리로 사람을 즐겁게 하는 것은
     <div class="footer">
       
     </div>
-    <script type="text/javascript">
-      var img = document.getElementsByTagName("img");
-      for(let x=0; x<img.length; x++){
-	  img.item(x).onclick=function(){
-
-              const imageUrl = this.src;
-              const newWindow = window.open('', '_blank');
-              newWindow.document.write(`
-<html>
-  <head>
-    <title>이미지 창</title>
-    <style>
-      body { margin: 0; display: flex; justify-content: center; align-items: center; height: 100vh; }
-      img { max-width: 100%; max-height: 100%; cursor: pointer; }
-    </style>
-  </head>
-  <body>
-    <img src="${imageUrl}" alt="Popup Image" onclick="window.close()">
+    <div id="lightbox" class="lightbox-overlay">
+      <button class="lightbox-close" id="lightboxClose">&times;</button>
+      <img class="lightbox-img" id="lightboxImg" src="" alt="Zoomed Image">
+    </div>
   </body>
 </html>
-                `);
-
-          };
-      }
-      </script>
-  </body>
-</html>
-

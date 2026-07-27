@@ -6,13 +6,22 @@ Life Logging - 웃기는 혹은 이상한
 
     </title>
 <script src="../script.js"></script>
+<script src="../blog-core.js"></script>
 <link rel="stylesheet" href="../style.css" />
+    <meta name="description" content="웃기는 혹은 이상한 13/10/2024 최근 이사를 갔다. 한 곳에 10년을 넘게 살면서 무심하게 흘리던 것들이 &quot;헤어실 결심&quot; 을 하고나니 또 새로운 모습으로 다가온다. 백 세 시대라 39세까지 청년이라고 한다. 대중 교통 이용하면 무제한 환급..." />
+    <meta property="og:title" content="Life Logging - 웃기는 혹은 이상한" />
+    <meta property="og:description" content="웃기는 혹은 이상한 13/10/2024 최근 이사를 갔다. 한 곳에 10년을 넘게 살면서 무심하게 흘리던 것들이 &quot;헤어실 결심&quot; 을 하고나니 또 새로운 모습으로 다가온다. 백 세 시대라 39세까지 청년이라고 한다. 대중 교통 이용하면 무제한 환급..." />
+    <meta property="og:type" content="article" />
+    <meta property="og:url" content="https://heetakchoi.github.io/articles/article-86.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta charset="UTF-8">
 	<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@4/tex-mml-chtml.js"></script>
     <link rel="shortcut icon" href="/favicon.ico"/>
   </head>
   <body>
+    <div class="scroll-progress-container">
+      <div class="scroll-progress-bar" id="scrollProgress"></div>
+    </div>
     <div class="header">
       <h1>Life Logging</h1>
       <ul>
@@ -20,16 +29,19 @@ Life Logging - 웃기는 혹은 이상한
 <a href="../index.html">Home</a>
 	</li>
 	<li>
-<a onclick="javascript:move_to_latest_article_indepth();">Articles</a>
+<a href="../articles/index.html">Articles</a>
 	</li>
 	<li>
-<a onclick="javascript:move_to_latest_book_indepth();">Books</a>
+<a href="../books/index.html">Books</a>
 	</li>
 	<li>
 <a href="../sf.html">SF</a>
 	</li>
 	<li>
 <a href="../info.html">Info</a>
+	</li>
+	<li>
+	  <button id="darkModeToggle" class="dark-mode-toggle" aria-label="Toggle Dark Mode" title="다크 모드 토글">☀️</button>
 	</li>
       </ul>
     </div>
@@ -51,8 +63,10 @@ Life Logging - 웃기는 혹은 이상한
 백 세 시대라 39세까지 청년이라고 한다. 대중 교통 이용하면 무제한 환급까지 해 준다니 더할나위 없다. 이렇게 좋은 공익 광고에 모델로 서는 것도 자랑스러운 일일 테다. 다만 특정 부위에 불이 들어온다는 것은 예상하지 못했을 것이다.
 </div>
 <div>
-<img src="../img/지하4층.jpg" /><br />
-15년 전에 지어진 예전 사옥은 그 때만 해도 온갖 실험적인 시도가 있었다. 예를 들어 지하 주차장 각 층 마다 서로 다른 종류의 소리를 틀어놓는 것이다. 그래서 "아, 나 차 몇 층에 댔었지?" 라는 상황에서 "그래 차에서 내리고 나니 파도 소리가 들렸어. 그렇다면 지하 4층임에 틀림없지" 라는 상황을 기대했었다.
+<img src="../img/지하4층.jpg" />
+  <ol>
+    <li>예를 들어 지하 주차장 각 층 마다 서로 다른 종류의 소리를 틀어놓는 것이다. 그래서 "아, 나 차 몇 층에 댔었지?" 라는 상황에서 "그래 차에서 내리고 나니 파도 소리가 들렸어. 그렇다면 지하 4층임에 틀림없지" 라는 상황을 기대했었다.</li>
+  </ol>
   <ul>
     <li>아 물론 매일 출근하는 - 그래서 기억에 남은 귀뚜라미 소리가 어제 들었던 건지 오늘 들었던 건지 확신이 없는 경우가 대부분이었다는 건만 제외하곤 꽤 그럴싸한 시도였다.</li>
   </ul>
@@ -91,31 +105,9 @@ Life Logging - 웃기는 혹은 이상한
     <div class="footer">
       
     </div>
-    <script type="text/javascript">
-      var img = document.getElementsByTagName("img");
-      for(let x=0; x<img.length; x++){
-	  img.item(x).onclick=function(){
-
-              const imageUrl = this.src;
-              const newWindow = window.open('', '_blank');
-              newWindow.document.write(`
-<html>
-  <head>
-    <title>이미지 창</title>
-    <style>
-      body { margin: 0; display: flex; justify-content: center; align-items: center; height: 100vh; }
-      img { max-width: 100%; max-height: 100%; cursor: pointer; }
-    </style>
-  </head>
-  <body>
-    <img src="${imageUrl}" alt="Popup Image" onclick="window.close()">
+    <div id="lightbox" class="lightbox-overlay">
+      <button class="lightbox-close" id="lightboxClose">&times;</button>
+      <img class="lightbox-img" id="lightboxImg" src="" alt="Zoomed Image">
+    </div>
   </body>
 </html>
-                `);
-
-          };
-      }
-      </script>
-  </body>
-</html>
-

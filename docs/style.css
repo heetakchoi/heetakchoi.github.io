@@ -1,25 +1,114 @@
 @import url("https://cdn.jsdelivr.net/gh/wan2land/d2coding/d2coding-full.css");
 @import url(https://cdn.jsdelivr.net/gh/moonspam/NanumSquare@2.0/nanumsquare.css);
 
+:root {
+    --bg-color: #f0ede8;
+    --text-color: #2c2c2c;
+    --border-color: #d0ccc6;
+    --link-color: #3355bb;
+    --link-hover-color: #113399;
+    --header-link-color: #555555;
+    --heading-color: #1a1a1a;
+    --heading2-color: #111111;
+    --heading3-color: #222222;
+    --blockquote-color: #5050a0;
+    --blockquote-border: #c0bdb8;
+    --code-bg: #1c2626;
+    --code-text: #e8e8e8;
+    --code-border: #3a4a4a;
+    --navigator-color: #666666;
+    --progress-bar-color: #3355bb;
+    --lightbox-bg: rgba(0, 0, 0, 0.85);
+    --shadow-color: rgba(0, 0, 0, 0.05);
+}
+
+@media (prefers-color-scheme: dark) {
+    :root {
+        --bg-color: #1a1a1a;
+        --text-color: #dfdfdf;
+        --border-color: #333333;
+        --link-color: #79a1eb;
+        --link-hover-color: #9cbaff;
+        --header-link-color: #a0a0a0;
+        --heading-color: #ffffff;
+        --heading2-color: #eeeeee;
+        --heading3-color: #dddddd;
+        --blockquote-color: #8f9fc2;
+        --blockquote-border: #444444;
+        --code-bg: #121818;
+        --code-text: #e0e6e6;
+        --code-border: #2a3535;
+        --navigator-color: #999999;
+        --progress-bar-color: #79a1eb;
+        --lightbox-bg: rgba(0, 0, 0, 0.92);
+        --shadow-color: rgba(0, 0, 0, 0.3);
+    }
+}
+
+body.dark-mode {
+    --bg-color: #1a1a1a;
+    --text-color: #dfdfdf;
+    --border-color: #333333;
+    --link-color: #79a1eb;
+    --link-hover-color: #9cbaff;
+    --header-link-color: #a0a0a0;
+    --heading-color: #ffffff;
+    --heading2-color: #eeeeee;
+    --heading3-color: #dddddd;
+    --blockquote-color: #8f9fc2;
+    --blockquote-border: #444444;
+    --code-bg: #121818;
+    --code-text: #e0e6e6;
+    --code-border: #2a3535;
+    --navigator-color: #999999;
+    --progress-bar-color: #79a1eb;
+    --lightbox-bg: rgba(0, 0, 0, 0.92);
+    --shadow-color: rgba(0, 0, 0, 0.3);
+}
+
+body.light-mode {
+    --bg-color: #f0ede8;
+    --text-color: #2c2c2c;
+    --border-color: #d0ccc6;
+    --link-color: #3355bb;
+    --link-hover-color: #113399;
+    --header-link-color: #555555;
+    --heading-color: #1a1a1a;
+    --heading2-color: #111111;
+    --heading3-color: #222222;
+    --blockquote-color: #5050a0;
+    --blockquote-border: #c0bdb8;
+    --code-bg: #1c2626;
+    --code-text: #e8e8e8;
+    --code-border: #3a4a4a;
+    --navigator-color: #666666;
+    --progress-bar-color: #3355bb;
+    --lightbox-bg: rgba(0, 0, 0, 0.85);
+    --shadow-color: rgba(0, 0, 0, 0.05);
+}
+
 *, *::before, *::after {
     box-sizing: border-box;
 }
 
 body {
-    background-color: #f0ede8;
-    color: #2c2c2c;
+    background-color: var(--bg-color);
+    color: var(--text-color);
     font-size: 16px;
     font-family: 'NanumSquare', sans-serif;
     margin: 0;
     padding: 0;
+    transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 a {
     text-decoration: none;
-    color: #3355bb;
+    color: var(--link-color);
     cursor: pointer;
+    transition: color 0.3s ease, text-decoration 0.3s ease;
 }
 a:hover {
+    color: var(--link-hover-color);
     text-decoration: underline;
 }
 
@@ -35,7 +124,7 @@ a:hover {
 .header {
     padding-top: 36px;
     padding-bottom: 16px;
-    border-bottom: 1px solid #d0ccc6;
+    border-bottom: 1px solid var(--border-color);
     margin-bottom: 36px;
 }
 
@@ -45,12 +134,13 @@ a:hover {
     font-weight: bold;
     margin: 0 0 14px;
     line-height: 1.3;
-    color: #1a1a1a;
+    color: var(--heading-color);
 }
 
 .header ul {
     display: flex;
     justify-content: center;
+    align-items: center;
     flex-wrap: wrap;
     gap: 6px 18px;
     margin: 0;
@@ -60,17 +150,19 @@ a:hover {
 }
 
 .header li {
-    display: inline;
+    display: inline-flex;
+    align-items: center;
 }
 
 .header a {
-    color: #555;
+    color: var(--header-link-color);
     font-size: 14px;
     letter-spacing: 0.3px;
+    transition: color 0.3s ease;
 }
 
 .header a:hover {
-    color: #3355bb;
+    color: var(--link-color);
     text-decoration: none;
 }
 
@@ -86,17 +178,18 @@ a:hover {
     font-weight: bold;
     margin-top: 24px;
     margin-bottom: 8px;
+    color: var(--heading-color);
 }
 
 .main h2 {
     font-size: 22px;
-    color: #111;
+    color: var(--heading2-color);
     margin-top: 28px;
 }
 
 .main h3 {
     font-size: 17px;
-    color: #222;
+    color: var(--heading3-color);
 }
 
 .main h4 {
@@ -106,7 +199,7 @@ a:hover {
 .main h5 {
     font-size: 13px;
     font-weight: normal;
-    color: #888;
+    color: var(--navigator-color);
     text-align: right;
     margin-top: 4px;
     margin-bottom: 20px;
@@ -121,8 +214,8 @@ a:hover {
 
 .main blockquote {
     margin: 12px 0;
-    color: #5050a0;
-    border-left: 3px solid #c0bdb8;
+    color: var(--blockquote-color);
+    border-left: 3px solid var(--blockquote-border);
     padding-left: 16px;
 }
 
@@ -145,23 +238,29 @@ a:hover {
     width: auto;
     height: auto;
     cursor: pointer;
-    border: 1px solid #c8c4be;
+    border: 1px solid var(--border-color);
     display: block;
     margin: 8px 0;
+    transition: border-color 0.3s ease;
 }
 
 .main .s_img {
     max-width: 160px;
 }
 
-/* ── 코드 블록 ── */
-.article pre {
-    background-color: #1c2626;
-    color: #e8e8e8;
-    border: 1px solid #3a4a4a;
+/* ── 코드 블록 및 복사 스킨 ── */
+.code-block-wrapper {
+    position: relative;
+    margin: 10px 0;
+}
+
+.article pre, .book pre {
+    background-color: var(--code-bg);
+    color: var(--code-text);
+    border: 1px solid var(--code-border);
     border-radius: 4px;
     padding: 12px 14px;
-    margin: 10px 0;
+    margin: 0;
     overflow-x: auto;
     font-family: 'D2Coding', monospace;
     font-size: 14px;
@@ -169,17 +268,49 @@ a:hover {
     white-space: pre;
     word-break: normal;
     -webkit-overflow-scrolling: touch;
+    transition: background-color 0.3s ease, border-color 0.3s ease, color 0.3s ease;
+}
+
+.copy-button {
+    position: absolute;
+    top: 8px;
+    right: 8px;
+    background: rgba(255, 255, 255, 0.12);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    border-radius: 4px;
+    color: #e8e8e8;
+    font-size: 11px;
+    padding: 4px 8px;
+    cursor: pointer;
+    opacity: 0;
+    transition: opacity 0.2s ease, background 0.2s ease, border-color 0.2s ease;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+}
+
+.code-block-wrapper:hover .copy-button {
+    opacity: 1;
+}
+
+.copy-button:hover {
+    background: rgba(255, 255, 255, 0.25);
+    border-color: rgba(255, 255, 255, 0.3);
+}
+
+.copy-button.copied {
+    background: #2ea44f;
+    border-color: #2ea44f;
+    color: white;
 }
 
 /* ── 네비게이터 (이전/다음) ── */
 .navigator {
     margin: 16px 0;
     font-size: 14px;
-    color: #666;
+    color: var(--navigator-color);
 }
 
 .navigator a {
-    color: #3355bb;
+    color: var(--link-color);
 }
 
 /* ── 유틸리티 ── */
@@ -196,10 +327,136 @@ a:hover {
     margin-top: 48px;
     margin-bottom: 32px;
     padding-top: 16px;
-    border-top: 1px solid #d0ccc6;
+    border-top: 1px solid var(--border-color);
     text-align: center;
     font-size: 13px;
-    color: #aaa;
+    color: var(--navigator-color);
+    transition: border-top-color 0.3s ease;
+}
+
+/* ── 다크모드 토글 버튼 ── */
+.dark-mode-toggle {
+    background: none;
+    border: none;
+    color: var(--header-link-color);
+    font-size: 16px;
+    cursor: pointer;
+    padding: 4px 8px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    transition: color 0.3s ease, transform 0.2s ease;
+    border-radius: 4px;
+}
+.dark-mode-toggle:hover {
+    color: var(--link-color);
+    transform: scale(1.1);
+}
+
+/* ── 스크롤 진행 바 ── */
+.scroll-progress-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 4px;
+    background: transparent;
+    z-index: 1000;
+}
+.scroll-progress-bar {
+    height: 100%;
+    width: 0%;
+    background: var(--progress-bar-color);
+    transition: width 0.1s ease-out;
+}
+
+/* ── 인라인 라이트박스 뷰어 ── */
+.lightbox-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: var(--lightbox-bg);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 2000;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s ease;
+}
+.lightbox-overlay.active {
+    opacity: 1;
+    pointer-events: auto;
+}
+.lightbox-img {
+    max-width: 90%;
+    max-height: 90%;
+    box-shadow: 0 10px 30px var(--shadow-color);
+    transform: scale(0.95);
+    transition: transform 0.3s ease;
+    border: none !important;
+}
+.lightbox-overlay.active .lightbox-img {
+    transform: scale(1);
+}
+.lightbox-close {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background: none;
+    border: none;
+    color: #ffffff;
+    font-size: 32px;
+    cursor: pointer;
+    opacity: 0.6;
+    transition: opacity 0.2s ease, transform 0.2s ease;
+}
+.lightbox-close:hover {
+    opacity: 1;
+    transform: scale(1.1);
+}
+
+/* ── 아카이브 리스트 컴포넌트 ── */
+.archive-list {
+    list-style: none;
+    padding: 0;
+    margin: 24px 0;
+}
+.archive-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    padding: 12px 0;
+    border-bottom: 1px dashed var(--border-color);
+}
+.archive-date {
+    font-size: 14px;
+    color: var(--navigator-color);
+    font-family: monospace;
+    margin-right: 20px;
+    flex-shrink: 0;
+}
+.archive-title {
+    font-weight: 500;
+    text-align: left;
+    flex-grow: 1;
+}
+.archive-title a {
+    color: var(--text-color);
+    transition: color 0.2s ease;
+}
+.archive-title a:hover {
+    color: var(--link-color);
+    text-decoration: none;
+}
+.archive-header {
+    margin-bottom: 30px;
+    font-size: 15px;
+    color: var(--navigator-color);
+    border-bottom: 1px solid var(--border-color);
+    padding-bottom: 12px;
 }
 
 /* ── 모바일 (600px 이하) ── */
@@ -235,7 +492,7 @@ a:hover {
         font-size: 16px;
     }
 
-    .article pre {
+    .article pre, .book pre {
         font-size: 13px;
         padding: 10px 12px;
     }
@@ -244,4 +501,16 @@ a:hover {
         margin-top: 32px;
         margin-bottom: 20px;
     }
+
+    .archive-item {
+        flex-direction: column-reverse;
+        align-items: flex-start;
+        gap: 4px;
+        padding: 14px 0;
+    }
+    .archive-date {
+        margin-right: 0;
+        font-size: 12px;
+    }
 }
+

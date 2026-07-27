@@ -6,13 +6,22 @@ Life Logging - 나라고 특별한 건 없다.
 
     </title>
 <script src="../script.js"></script>
+<script src="../blog-core.js"></script>
 <link rel="stylesheet" href="../style.css" />
+    <meta name="description" content="나라고 특별한 건 없다. 21/10/2009 퇴근길 지하철을 기다리다 기둥에 1608이란 숫자가 쓰여있는 걸 봤다. 정리하자면 608 = 8*3*67 그래도 지하철이 오지 않아서 n,n+1 스타일의 수는 몇개가 소수인지 세었다. 지하철은 이후로도 한참을 더 기다려..." />
+    <meta property="og:title" content="Life Logging - 나라고 특별한 건 없다." />
+    <meta property="og:description" content="나라고 특별한 건 없다. 21/10/2009 퇴근길 지하철을 기다리다 기둥에 1608이란 숫자가 쓰여있는 걸 봤다. 정리하자면 608 = 8*3*67 그래도 지하철이 오지 않아서 n,n+1 스타일의 수는 몇개가 소수인지 세었다. 지하철은 이후로도 한참을 더 기다려..." />
+    <meta property="og:type" content="article" />
+    <meta property="og:url" content="https://heetakchoi.github.io/articles/article-8.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta charset="UTF-8">
 	<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@4/tex-mml-chtml.js"></script>
     <link rel="shortcut icon" href="/favicon.ico"/>
   </head>
   <body>
+    <div class="scroll-progress-container">
+      <div class="scroll-progress-bar" id="scrollProgress"></div>
+    </div>
     <div class="header">
       <h1>Life Logging</h1>
       <ul>
@@ -20,16 +29,19 @@ Life Logging - 나라고 특별한 건 없다.
 <a href="../index.html">Home</a>
 	</li>
 	<li>
-<a onclick="javascript:move_to_latest_article_indepth();">Articles</a>
+<a href="../articles/index.html">Articles</a>
 	</li>
 	<li>
-<a onclick="javascript:move_to_latest_book_indepth();">Books</a>
+<a href="../books/index.html">Books</a>
 	</li>
 	<li>
 <a href="../sf.html">SF</a>
 	</li>
 	<li>
 <a href="../info.html">Info</a>
+	</li>
+	<li>
+	  <button id="darkModeToggle" class="dark-mode-toggle" aria-label="Toggle Dark Mode" title="다크 모드 토글">☀️</button>
 	</li>
       </ul>
     </div>
@@ -44,15 +56,19 @@ Life Logging - 나라고 특별한 건 없다.
   <h5>21/10/2009</h5>
 </div>
 <div>
-퇴근길 지하철을 기다리다 기둥에 1608이란 숫자가 쓰여있는 걸 봤다.<br />
-1608은 8과 201이고 201은 자릿수의 합이 3인걸 봐서 3과 67로 분해했다.<br />
-67은 64와 81 사이이니 2,3,5 7 4개만 보면 되는데, 홀수이니 2는 아니고 자릿수의 합이 13이니 3도 아니며 끝자리가 7이니 5도 아니고 마지막으로 70-3 이니 결국 소수인걸 알아냈다.<br />
+퇴근길 지하철을 기다리다 기둥에 1608이란 숫자가 쓰여있는 걸 봤다.
+  <ol>
+    <li></li>
+    <li></li>
+  </ol>
 정리하자면
   <ol>
     <li>608 = 8*3*67</li>
   </ol>
-그래도 지하철이 오지 않아서 n,n+1 스타일의 수는 몇개가 소수인지 세었다.<br />
-23은 맞고 짝수는 아니고 45는 9*5 이고 67은 방금 한 놈이고 89는 소수더라.<br />
+그래도 지하철이 오지 않아서 n,n+1 스타일의 수는 몇개가 소수인지 세었다.
+  <ol>
+    <li></li>
+  </ol>
 지하철은 이후로도 한참을 더 기다려야 했고 갑자기 이런 짓을 한 이유는 엑셀에서 2차 다항식의 근을 구하는 함수를 못 찾아서 손으로 계산하려 했었는데 갑자기 근의 공식이 생각나지 않아 유도했다.<br />
 그런데 예전처럼 당연하고 매끄럽게 되지 않고 버벅거린 것에 충격을 받았기 때문이다.
 </div>
@@ -68,31 +84,9 @@ Life Logging - 나라고 특별한 건 없다.
     <div class="footer">
       
     </div>
-    <script type="text/javascript">
-      var img = document.getElementsByTagName("img");
-      for(let x=0; x<img.length; x++){
-	  img.item(x).onclick=function(){
-
-              const imageUrl = this.src;
-              const newWindow = window.open('', '_blank');
-              newWindow.document.write(`
-<html>
-  <head>
-    <title>이미지 창</title>
-    <style>
-      body { margin: 0; display: flex; justify-content: center; align-items: center; height: 100vh; }
-      img { max-width: 100%; max-height: 100%; cursor: pointer; }
-    </style>
-  </head>
-  <body>
-    <img src="${imageUrl}" alt="Popup Image" onclick="window.close()">
+    <div id="lightbox" class="lightbox-overlay">
+      <button class="lightbox-close" id="lightboxClose">&times;</button>
+      <img class="lightbox-img" id="lightboxImg" src="" alt="Zoomed Image">
+    </div>
   </body>
 </html>
-                `);
-
-          };
-      }
-      </script>
-  </body>
-</html>
-
