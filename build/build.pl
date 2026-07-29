@@ -253,7 +253,7 @@ foreach my $book_srno (@book_srnos){
     foreach (@base_lines){
 	if(/____(\w+)____/){
 	    if($1 eq "TITLE"){
-		print $fh_book "Life Logging - Book ", $book_srno, "\n";
+		print $fh_book "Life Logging - Book: ", $raw_title, "\n";
 	    }elsif($1 eq "METATAGS"){
 		print $fh_book "    <meta name=\"description\" content=\"$clean_desc\" />\n";
 		print $fh_book "    <meta property=\"og:title\" content=\"Life Logging - Book: $raw_title\" />\n";
