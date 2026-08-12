@@ -91,7 +91,7 @@ foreach my $article_srno (@article_srnos){
     
     # 아티클 메타 정보 추출 (첫 줄 제목, 둘째 줄 날짜)
     my $file_path = $article_hash{$article_srno};
-    open(my $fh_file, "<:utf8", $file_path);
+    open(my $fh_file, "<:encoding(UTF-8)", $file_path);
     my $raw_title = <$fh_file> || "";
     my $raw_date = <$fh_file> || "";
     close($fh_file);
@@ -152,7 +152,7 @@ foreach my $article_srno (@article_srnos){
     push @sitemap_urls, "https://heetakchoi.github.io/articles/article-$article_srno.html";
 
     my $articlefile = sprintf "../docs/articles/article-%d.html", $article_srno;
-    open(my $fh_article, ">:utf8", $articlefile);
+    open(my $fh_article, ">:encoding(UTF-8)", $articlefile);
     foreach (@base_lines){
 	if(/____(\w+)____/){
 	    if($1 eq "TITLE"){
@@ -200,7 +200,7 @@ foreach my $book_srno (@book_srnos){
     
     # 북 리뷰 메타 정보 추출
     my $file_path = $book_hash{$book_srno};
-    open(my $fh_file, "<:utf8", $file_path);
+    open(my $fh_file, "<:encoding(UTF-8)", $file_path);
     my $raw_title = <$fh_file> || "";
     my $raw_date = <$fh_file> || "";
     close($fh_file);
@@ -250,7 +250,7 @@ foreach my $book_srno (@book_srnos){
     push @sitemap_urls, "https://heetakchoi.github.io/books/book-$book_srno.html";
 
     my $bookfile = sprintf "../docs/books/book-%d.html", $book_srno;
-    open(my $fh_book, ">:utf8", $bookfile);
+    open(my $fh_book, ">:encoding(UTF-8)", $bookfile);
     foreach (@base_lines){
 	if(/____(\w+)____/){
 	    if($1 eq "TITLE"){
@@ -302,7 +302,7 @@ foreach my $book_srno (@book_srnos){
     }
     $archive_html .= "</ul>\n";
 
-    open(my $fh_archive, ">:utf8", "../docs/articles/index.html");
+    open(my $fh_archive, ">:encoding(UTF-8)", "../docs/articles/index.html");
     foreach (@base_lines){
         if(/____(\w+)____/){
             if($1 eq "TITLE"){
@@ -350,7 +350,7 @@ foreach my $book_srno (@book_srnos){
     }
     $archive_html .= "</ul>\n";
 
-    open(my $fh_archive, ">:utf8", "../docs/books/index.html");
+    open(my $fh_archive, ">:encoding(UTF-8)", "../docs/books/index.html");
     foreach (@base_lines){
         if(/____(\w+)____/){
             if($1 eq "TITLE"){
@@ -397,9 +397,9 @@ my $infocontent = $mark->get_html();
 $mark = Volken::Mark->new->load_file("../data/sf.txt");
 my $sfcontent = $mark->get_html();
 
-open(my $fh_index, ">:utf8", "../docs/index.html");
-open(my $fh_info, ">:utf8", "../docs/info.html");
-open(my $fh_sf, ">:utf8", "../docs/sf.html");
+open(my $fh_index, ">:encoding(UTF-8)", "../docs/index.html");
+open(my $fh_info, ">:encoding(UTF-8)", "../docs/info.html");
+open(my $fh_sf, ">:encoding(UTF-8)", "../docs/sf.html");
 my @handlers = ($fh_index, $fh_info, $fh_sf);
 
 foreach my $line (@base_lines){
@@ -450,7 +450,7 @@ close($fh_sf);
 
 ################################################################################
 # 🌐 Sitemap.xml 생성
-open(my $fh_sitemap, ">:utf8", "../docs/sitemap.xml") or die "Cannot open sitemap.xml";
+open(my $fh_sitemap, ">:encoding(UTF-8)", "../docs/sitemap.xml") or die "Cannot open sitemap.xml";
 print $fh_sitemap "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n";
 print $fh_sitemap "<urlset xmlns=\"http://www.sitemaps.org/schemas/sitemap/0.9\">\n";
 foreach my $url (@sitemap_urls) {
@@ -465,7 +465,7 @@ close($fh_sitemap);
 
 ################################################################################
 # 📡 RSS Feed (feed.xml) 생성
-open(my $fh_feed, ">:utf8", "../docs/feed.xml") or die "Cannot open feed.xml";
+open(my $fh_feed, ">:encoding(UTF-8)", "../docs/feed.xml") or die "Cannot open feed.xml";
 print $fh_feed "<?xml version=\"1.0\" encoding=\"UTF-8\" ?>\n";
 print $fh_feed "<rss version=\"2.0\" xmlns:atom=\"http://www.w3.org/2005/Atom\">\n";
 print $fh_feed "<channel>\n";
@@ -496,7 +496,7 @@ close($fh_feed);
 sub get_array_from_file{
     my ($filename) = @_;
     my @lines = ();
-    open(my $fh, "<:utf8", $filename) or die "Cannot open $filename";
+    open(my $fh, "<:encoding(UTF-8)", $filename) or die "Cannot open $filename";
     while(<$fh>){
 	push(@lines, $_);
     }
