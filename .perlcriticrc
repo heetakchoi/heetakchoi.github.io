@@ -1,0 +1,5 @@
+# Perl::Critic 프로젝트 설정
+# build.pl 이 템플릿 루프 동안 파일핸들 여러 개를 열어두고 출력하므로
+# open~close 허용 구간을 기본값(9줄)에서 100줄로 늘림.
+[InputOutput::RequireBriefOpen]
+lines = 100

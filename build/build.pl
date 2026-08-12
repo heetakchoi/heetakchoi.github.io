@@ -21,11 +21,11 @@ my @article_lines = get_array_from_file("../template/article.html");
 my @book_lines = get_array_from_file("../template/book.html");
 
 # info article
-my %article_hash = map { article_srno($_)=>$_ } grep /\/articles\/\d+\.txt$/, glob "../data/articles/*.txt";
+my %article_hash = map { article_srno($_)=>$_ } grep { /\/articles\/\d+\.txt$/ } glob "../data/articles/*.txt";
 my @article_srnos = reverse sort {$a<=>$b} keys %article_hash;
 
 # info book
-my %book_hash = map { book_srno($_)=>$_ } grep /\/books\/\d+\.txt$/, glob "../data/books/*.txt";
+my %book_hash = map { book_srno($_)=>$_ } grep { /\/books\/\d+\.txt$/ } glob "../data/books/*.txt";
 my @book_srnos = reverse sort {$a<=>$b} keys %book_hash;
 
 # 메뉴 링크 고도화 (최신 글 바로 가기 링크는 그대로 유지하되, 주 헤더 메뉴는 목록 index.html로 유도)
