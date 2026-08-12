@@ -4,7 +4,8 @@ use strict;
 use warnings;
 use utf8;
 
-use lib "../../volken/lib";
+use FindBin;
+use lib "$FindBin::Bin/../../volken/lib";
 use Volken::Mark;
 
 sub get_array_from_file;
